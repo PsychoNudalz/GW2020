@@ -19,6 +19,8 @@ public class PlayerMovementScript : MonoBehaviour
     public float maxDistance;
     [Header("Aiming Weapon")]
     public GameObject gun;
+    [Header("Animator")]
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Update()
     {
         playerControls();
+        updateAnimation();
         setMidPosition();
         aimWeapon();
     }
@@ -123,4 +126,11 @@ public class PlayerMovementScript : MonoBehaviour
         }
         gun.transform.localScale = originalScale;
     }
+
+    private void updateAnimation()
+    {
+        animator.SetFloat("Speed", playerInput.normalized.magnitude);
+        //print(animator.GetFloat("Speed"));
+    }
+
 }

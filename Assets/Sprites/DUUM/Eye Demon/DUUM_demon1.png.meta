@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9c4323693cccbdf4fab9a7e330370cd7
+guid: 85de41ac235184a45a822f8ce35a65f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2126728256611370526
-    second: DUUMguy_SpriteSheet_0
+      213: 5532875847822644953
+    second: DUUM_demon1_0
   - first:
-      213: 3985473813439517217
-    second: DUUMguy_SpriteSheet_1
+      213: 2071836243879945654
+    second: DUUM_demon1_1
   - first:
-      213: 7971695875920432
-    second: DUUMguy_SpriteSheet_2
+      213: 5807154788347283556
+    second: DUUM_demon1_2
   - first:
-      213: -8756214158140219954
-    second: DUUMguy_SpriteSheet_3
+      213: 3983336912596622
+    second: DUUM_demon1_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,7 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DUUMguy_SpriteSheet_0
+      name: DUUM_demon1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,14 +113,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9b4e22be75c72e0800000000000000
-      internalID: -2126728256611370526
+      spriteID: 9d69ec7e449b8cc40800000000000000
+      internalID: 5532875847822644953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DUUMguy_SpriteSheet_1
+      name: DUUM_demon1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1221faf315f3f4730800000000000000
-      internalID: 3985473813439517217
+      spriteID: 6b56e353614a0cc10800000000000000
+      internalID: 2071836243879945654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DUUMguy_SpriteSheet_2
+      name: DUUM_demon1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03211f417325c1000800000000000000
-      internalID: 7971695875920432
+      spriteID: 468062b2388279050800000000000000
+      internalID: 5807154788347283556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DUUMguy_SpriteSheet_3
+      name: DUUM_demon1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecd5ec69d9dab7680800000000000000
-      internalID: -8756214158140219954
+      spriteID: e8e22b5e2d62e0000800000000000000
+      internalID: 3983336912596622
       vertices: []
       indices: 
       edges: []
