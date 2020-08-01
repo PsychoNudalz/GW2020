@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 7868093750151994099}
   - component: {fileID: 7868093750151994109}
   - component: {fileID: 7868093750151994108}
+  - component: {fileID: 958008346}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -166,6 +167,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &958008346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868093750151994097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7392e0273f765a4d82b7dae5b4d08c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 1079763995}
 --- !u!1 &7868093750802002686
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7868093750802002687}
+  - component: {fileID: 1079763995}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -198,6 +213,35 @@ Transform:
   m_Father: {fileID: 7868093750151994098}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1079763995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868093750802002686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41e911609ef3ab459d994f48b798e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: 2
+  shootingProjectile: {fileID: 6533508861881584018, guid: 4a82af4697b03bf4f939e52446ad8de2,
+    type: 3}
+  shootingPoint: {fileID: 7868093751180948416}
+  ammo: 100
+  Ammo_Max: 0
+  Ammo_Cost: 1
+  maxInMag: 0
+  currentMag: 1
+  autoload: 1
+  autoloadRate: 0.1
+  rpm: 30
+  projectilePerShot: 8
+  spreadAngle: 20
+  timeBetweenShot: 0
+  timeNow: 0
+  spin: 0
 --- !u!1 &7868093751180948416
 GameObject:
   m_ObjectHideFlags: 0
