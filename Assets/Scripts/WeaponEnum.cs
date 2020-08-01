@@ -6,6 +6,9 @@ enum WeaponEnum
 {
     Pistol,
     Claw,
-    Shotgun
-
+    Shotgun,
+    Hook,
+    Grab,
+    Echo,
+    Interact
 }

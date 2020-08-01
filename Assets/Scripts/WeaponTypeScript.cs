@@ -8,6 +8,7 @@ public class WeaponTypeScript : MonoBehaviour
     //[SerializeField] private ShootingScript shootingScript;
     public GameObject shootingProjectile;
     public GameObject shootingPoint;
+    public Animator animator;
 
 
     //public GameObject aimerGameObject;
@@ -29,7 +30,6 @@ public class WeaponTypeScript : MonoBehaviour
     [SerializeField] private float timeBetweenShot;
     [SerializeField] private float timeNow;
     public float TimeNow { get => timeNow; set => timeNow = value; }
-    
 
     //public bool fireWhenFull;
     //[SerializeField] private bool full;
@@ -44,9 +44,11 @@ public class WeaponTypeScript : MonoBehaviour
 
     private void Update()
     {
-
+        animator.SetBool("Reload", false);
         if (timeNow > 0)
         {
+            animator.SetBool("Reload", true);
+
             timeNow -= Time.deltaTime;
         }
     }

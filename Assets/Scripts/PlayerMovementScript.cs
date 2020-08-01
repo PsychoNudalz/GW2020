@@ -111,17 +111,17 @@ public class PlayerMovementScript : MonoBehaviour
 
         UnityEngine.Vector2 dir = midpoint.transform.position - transform.position;
         dir.Normalize();
-        gun.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, transform.right), transform.forward);
         //print(gun.transform.rotation.eulerAngles.z);
         Vector3 originalScale = gun.transform.localScale;
-        if (gun.transform.rotation.eulerAngles.z < 270f && gun.transform.rotation.eulerAngles.z > 90f)
+        gun.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
+        if (gun.transform.rotation.eulerAngles.z < 180f && gun.transform.rotation.eulerAngles.z > 0)
         {
-            originalScale.y = -1;
+            originalScale.x = 1;
 
         }
         else
         {
-            originalScale.y = 1;
+            originalScale.x = -1;
 
         }
         gun.transform.localScale = originalScale;

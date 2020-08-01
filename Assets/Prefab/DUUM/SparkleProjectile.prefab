@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 637135037772179341}
   - component: {fileID: 359431953319876010}
   - component: {fileID: 1338338341300053025}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SparkSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,9 +114,9 @@ GameObject:
   - component: {fileID: 3417774490431857037}
   - component: {fileID: 5568405172337894315}
   - component: {fileID: 609954264171538702}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SparkleProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,12 +150,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5568405172337894315}
   projectileforce: 500
-  damage: 10
+  maxVelocity: 0
+  damage: 7
   timeToLive: 0.5
+  isSeeker: 0
+  targetTag: Player
+  target: {fileID: 0}
   spin: 500
   tagList:
   - Enemy
   - Object
+  - Obstacle
 --- !u!50 &5568405172337894315
 Rigidbody2D:
   serializedVersion: 4
