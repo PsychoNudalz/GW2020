@@ -242,7 +242,6 @@ MonoBehaviour:
   rb: {fileID: 7868093750151994108}
   moveSpeed: 5
   playerInput: {x: 0, y: 0, z: 0}
-  camera: {fileID: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 7868093749533679557}
   midScale: 0.005
@@ -365,15 +364,22 @@ MonoBehaviour:
   ammo: 100
   Ammo_Max: 0
   Ammo_Cost: 1
-  maxInMag: 0
+  maxInMag: 1
   currentMag: 1
-  autoload: 1
+  reloadTime: 1.2
+  timeNow_reload: 0
+  isReloading: 0
+  autoload: 0
   autoloadRate: 0.1
   rpm: 45
+  spreadIncreaseRate: 0
+  spreadDecreaseRate: 0
   projectilePerShot: 8
   spreadAngle: 30
+  spreadDebug: 0
+  currentSpread: 0
   timeBetweenShot: 0
-  timeNow: 0
+  timeNow_rpm: 0
 --- !u!114 &2926540081131492961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,10 +401,12 @@ MonoBehaviour:
   tagList:
   - Enemy
   isUsing: 0
+  isUsing_Extra: 0
   extraGameObject: {fileID: 482521689}
   extraTransform: {fileID: 7868093751180948417}
   rb: {fileID: 7868093750151994108}
   extraGOForce: 70000
+  timeToDisappear: 0
 --- !u!1 &7868093751180948416
 GameObject:
   m_ObjectHideFlags: 0

@@ -593,22 +593,22 @@ MonoBehaviour:
   shootingProjectile: {fileID: 6334255365484478367, guid: 96e90ebfcf9f06b44bfbafa879c29cb0,
     type: 3}
   shootingPoint: {fileID: 8845117446913875372}
-  animator: {fileID: 1725229264911784911}
+  animator: {fileID: 0}
   ammo: 50
   Ammo_Max: 50
   Ammo_Cost: 1
   maxInMag: 8
   currentMag: 8
-  reloadTime: 4
+  reloadTime: 3
   timeNow_reload: 0
   isReloading: 0
   autoload: 0
   autoloadRate: 0.1
   rpm: 110
-  spreadIncreaseRate: 10
+  spreadIncreaseRate: 15
   spreadDecreaseRate: 7
   projectilePerShot: 1
-  spreadAngle: 15
+  spreadAngle: 20
   spreadDebug: 1
   currentSpread: 0
   timeBetweenShot: 0
@@ -627,16 +627,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponEnum: 4
   target: {fileID: 0}
-  range: 10
+  range: 5
   layerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2048
   tagList:
-  - Enemy
+  - Object
   isUsing: 0
-  extraGameObject: {fileID: 1725229264820214837}
+  isUsing_Extra: 0
+  extraGameObject: {fileID: 0}
   extraTransform: {fileID: 0}
   rb: {fileID: 0}
   extraGOForce: 70000
-  scaleUpRate: 1.1
-  timeToDisappear: 3
+  timeToDisappear: 1

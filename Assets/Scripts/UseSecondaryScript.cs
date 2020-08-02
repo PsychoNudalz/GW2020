@@ -18,7 +18,6 @@ public class UseSecondaryScript : MonoBehaviour
     public Rigidbody2D rb;
     public float extraGOForce;
     Vector2 oldMousePosition;
-    [SerializeField] float scaleUpRate;
     public float timeToDisappear;
 
     // Start is called before the first frame update
@@ -30,6 +29,7 @@ public class UseSecondaryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print(transform.position);
 
         if (target != (null))
         {
@@ -77,7 +77,7 @@ public class UseSecondaryScript : MonoBehaviour
         if ((target.transform.position - transform.position).magnitude > range)
         {
             target = null;
-            extraGameObject.SetActive(false);
+            //extraGameObject.SetActive(false);
         }
     }
 
@@ -158,8 +158,15 @@ public class UseSecondaryScript : MonoBehaviour
         if (flick > 0 && !isUsing_Extra)
         {
             isUsing_Extra = true;
-            extraGameObject.GetComponent<VRHandMovementScript>().pickUp();
-            Destroy(target, timeToDisappear);
+            extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
+            //target.transform.SetParent(extraGameObject.transform);
+            //Destroy(target, timeToDisappear);
+        } else if (flick < 0)
+        {
+            isUsing = false;
+            isUsing_Extra = false;
+
+            return;
         }
 
         if (isUsing_Extra)
@@ -167,8 +174,6 @@ public class UseSecondaryScript : MonoBehaviour
             target.GetComponent<BoxCollider2D>().enabled = false;
             rb = target.GetComponent<Rigidbody2D>();
             //rb.gravityScale = 1;
-            target.transform.position = Vector2.Lerp(target.transform.position, extraTransform.position, Time.deltaTime * 1.5f);
-            target.transform.localScale += target.transform.localScale * scaleUpRate * Time.deltaTime;
             //print("moving " + target.name + target.transform.position);
         }
     }

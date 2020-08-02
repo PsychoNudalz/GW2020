@@ -54,13 +54,13 @@ public class WeaponTypeScript : MonoBehaviour
         if (timeNow_rpm > 0)
         {
             timeNow_rpm -= Time.deltaTime;
-
+            if (currentMag == 0)
+            {
+                reload();
+            }
         }
 
-        if (currentMag == 0)
-        {
-            reload();
-        }
+
 
         //print(canFire());
         if (isReloading)
@@ -101,13 +101,10 @@ public class WeaponTypeScript : MonoBehaviour
 
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
 
         }
-        print("out1");
+        
         return false;
 
 
@@ -192,19 +189,18 @@ public class WeaponTypeScript : MonoBehaviour
         if (!isReloading)
         {
             timeNow_reload = reloadTime;
+            animator.SetTrigger("Reload");
         }
         isReloading = true;
-        //animator.SetBool("Reload", false);
+
         if (timeNow_reload > 0)
         {
-            //animator.SetBool("Reload", true);
 
             timeNow_reload -= Time.deltaTime;
             return false;
         }
         else
         {
-            //animator.SetBool("Reload", false);
             isReloading = false;
             Ammo -= maxInMag - currentMag;
             currentMag = maxInMag;
@@ -230,6 +226,9 @@ public class WeaponTypeScript : MonoBehaviour
 
     void pistolShot()
     {
+        //animator.SetBool("Shoot", true);
+        animator.SetTrigger("Shoot");
+
         if (currentSpread > spreadAngle)
         {
             currentSpread = spreadAngle - spreadIncreaseRate;

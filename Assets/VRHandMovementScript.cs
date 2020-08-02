@@ -10,6 +10,9 @@ public class VRHandMovementScript : MonoBehaviour
     [SerializeField] Vector3 left_INITIAL;
     public Transform leftPickup;
     public Transform leftDropoff;
+    public GameObject pickedUpObject;
+    [SerializeField] float scaleUpRate;
+
     [SerializeField] bool pickingUp;
     [SerializeField] bool phase1 = false;
     [SerializeField] bool phase2 = false;
@@ -20,9 +23,12 @@ public class VRHandMovementScript : MonoBehaviour
     public Transform rightHand;
     public Animator rightHandAnimator;
     [SerializeField] Vector3 right_INITIAL;
+    public Transform reloadPoint;
+    public WeaponTypeScript weapon;
 
     [Header("Mouse Movement")]
     [SerializeField] Vector3 mousePosition = new Vector3();
+    public Camera camera;
     public float midScale = 0.2f;
     public float maxDistance;
 
@@ -30,20 +36,29 @@ public class VRHandMovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        left_INITIAL = leftHand.localPosition;
-        right_INITIAL = rightHand.localPosition;
-        leftHand.position = left_INITIAL;
-        rightHand.position = right_INITIAL;
+        //left_INITIAL = leftHand.localPosition;
+        //right_INITIAL = rightHand.localPosition;
+        //leftHand.position = left_INITIAL;
+        //rightHand.position = right_INITIAL;
+        leftHand.position = left_INITIAL + transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //print(transform.position);
+        //print(transform.localPosition);
+
         setHandPosition();
 
         if (pickingUp)
         {
             leftHandPickUp();
+        }
+        else
+        {
+            leftHandHelpReload();
         }
     }
     void setHandPosition()
@@ -54,55 +69,96 @@ public class VRHandMovementScript : MonoBehaviour
         {
             displace = displace.normalized * maxDistance;
         }
-        transform.localPosition = new Vector3(displace.x,displace.y,5);
+        transform.position = new Vector3(displace.x + camera.transform.position.x, displace.y + camera.transform.position.y, 0);
         //transform.localPosition.z = 0f;
         //print(mousePosition + ", " + transform.position + ", " + midpoint.transform.position + ", " + new Vector3(Screen.width / 2, Screen.height / 2));
     }
 
     void leftHandPickUp()
     {
-        
-        print((leftPickup.position - leftHand.position).magnitude+"  "+ leftPickup.position + "  " + leftHand.position);
+
+        //print((leftPickup.position - leftHand.position).magnitude+"  "+ leftPickup.position + "  " + leftHand.position);
         if (!pickingUp)
         {
 
             pickingUp = true;
         }
-        if ((leftPickup.position-leftHand.position).magnitude > 2f && !phase1)
+        if (pickedUpObject != null)
         {
-            leftHand.position = Vector2.Lerp(leftHand.position, leftPickup.position,Time.deltaTime*1.5f);
-            print("moving to Pick");
-            leftHandAnimator.SetBool("PickUp", true);
+            if (pickedUpObject.transform.lossyScale.x < 3f && !phase1 && pickedUpObject != null)
+            {
 
-        } else if ((leftDropoff.position - leftHand.position).magnitude > 7f &&!phase2)
-        {
-            print("moving to Drop");
-            phase1 = true;
-            leftHand.position = Vector2.Lerp(leftHand.position, leftDropoff.position,Time.deltaTime*3f);
+                pickedUpObject.transform.localScale += pickedUpObject.transform.localScale * scaleUpRate * Time.deltaTime;
+                pickedUpObject.transform.position = Vector2.Lerp(pickedUpObject.transform.position, leftHand.position, Time.deltaTime * 1.5f);
+
+                leftHand.position = Vector2.Lerp(leftHand.position, leftPickup.position, Time.deltaTime * 1.5f);
+
+                print("moving to Pick: " + (leftPickup.position - leftHand.position).magnitude);
+
+            }
+            else if ((leftDropoff.position - leftHand.position).magnitude > .7f && !phase2 && pickedUpObject != null)
+            {
+                leftHandAnimator.SetBool("PickUp", true);
+                print("moving to Drop: " + (leftDropoff.position - leftHand.position).magnitude);
+                phase1 = true;
+                leftHand.position = Vector2.Lerp(leftHand.position, leftDropoff.position, Time.deltaTime * 3f);
+            }
+            else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
+            {
+                Destroy(pickedUpObject);
+
+
+
+            }
         }
-        else if ((left_INITIAL - leftHand.position).magnitude > 5f)
+        else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
         {
-            leftHand.position = Vector2.Lerp(leftHand.position, left_INITIAL, Time.deltaTime * 3f); ;
+            Destroy(pickedUpObject);
+
+            leftHand.position = Vector2.Lerp(leftHand.position, left_INITIAL + transform.position, Time.deltaTime * 3f); ;
             leftHandAnimator.SetBool("PickUp", false);
             phase2 = true;
+
         }
         else
         {
-            leftHand.localPosition = left_INITIAL;
+            leftHand.position = left_INITIAL + transform.position;
             pickingUp = false;
             phase1 = false;
             phase2 = false;
 
         }
     }
-    public void pickUp()
+    public void pickUp(GameObject g)
     {
         phase1 = false;
         phase2 = false;
         pickingUp = true;
         leftHandAnimator.SetBool("PickUp", false);
-        leftHandAnimator.SetBool("PickUp", true);
+        //leftHandAnimator.SetBool("PickUp", true);
+        pickedUpObject = g;
+        g.transform.SetParent(leftHand);
 
 
+    }
+
+    void leftHandHelpReload()
+    {
+        if (weapon.isReloading)
+        {
+            print("reloading");
+            leftHandAnimator.SetTrigger("Reload");
+            leftHand.position = Vector2.Lerp(leftHand.position, reloadPoint.position, Time.deltaTime * 2f);
+
+
+        }
+        else
+        {
+            leftHandAnimator.SetTrigger("FinishReload");
+
+            leftHand.position = Vector2.Lerp(leftHand.position, left_INITIAL + transform.position, Time.deltaTime * 3f); ;
+            //leftHand.position = left_INITIAL + transform.position;
+
+        }
     }
 }
