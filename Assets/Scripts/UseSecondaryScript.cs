@@ -16,6 +16,10 @@ public class UseSecondaryScript : MonoBehaviour
     public Transform extraTransform;
     public Rigidbody2D rb;
     public float extraGOForce;
+    Vector2 oldMousePosition;
+    [SerializeField] float scaleUpRate;
+    public float timeToDisappear;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,6 +46,9 @@ public class UseSecondaryScript : MonoBehaviour
             {
                 case WeaponEnum.Hook:
                     shootHook();
+                    break;
+                case WeaponEnum.Grab:
+                    grabObject();
                     break;
             }
         }
@@ -87,13 +94,25 @@ public class UseSecondaryScript : MonoBehaviour
     }
     public void stop()
     {
-        isUsing = false;
-        if (extraGameObject.activeSelf)
-        {
-            extraGameObject.SetActive(false);
 
+        switch (weaponEnum)
+        {
+            case WeaponEnum.Hook:
+                isUsing = false;
+                if (extraGameObject.activeSelf)
+                {
+                    extraGameObject.SetActive(false);
+
+                }
+                if (rb != null)
+                {
+                    rb.velocity = new Vector2(0, 0);
+
+                }
+                break;
+            case WeaponEnum.Grab:
+                break;
         }
-        rb.velocity = new Vector2(0, 0);
     }
 
     void shootHook()
@@ -111,7 +130,28 @@ public class UseSecondaryScript : MonoBehaviour
         extraGameObject.transform.localScale = new Vector3(1, (target.transform.position - extraTransform.position).magnitude * transform.localScale.y * 2f, 1);
         Vector2 dir = (target.transform.position - extraTransform.position).normalized;
         rb.AddForce(dir * extraGOForce * Time.deltaTime);
+    }
 
+    void grabObject()
+    {
+        print("Grabing " + target.name);
+        if (oldMousePosition.y == 0f)
+        {
+            oldMousePosition = Input.mousePosition;
+            return;
+        }
+        float flick = Input.mousePosition.y - oldMousePosition.y;
+        if (flick <= 0)
+        {
+            //target.GetComponent<BoxCollider2D>().enabled = true;
 
+            stop();
+            return;
+        }
+        target.GetComponent<BoxCollider2D>().enabled = false;
+        rb = target.GetComponent<Rigidbody2D>();
+        //rb.gravityScale = 1;
+        target.transform.position = Vector2.Lerp(target.transform.position, extraGameObject.transform.position, Time.deltaTime);
+        Destroy(target, 5f);
     }
 }
