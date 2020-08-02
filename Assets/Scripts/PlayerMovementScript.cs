@@ -12,7 +12,6 @@ public class PlayerMovementScript : MonoBehaviour
     public float moveSpeed = 10;
     [SerializeField] Vector3 playerInput = new Vector3();
     [Header("Camera")]
-    public Camera camera;
     [SerializeField] Vector3 mousePosition = new Vector3();
     public GameObject midpoint;
     public float midScale = 0.2f;
