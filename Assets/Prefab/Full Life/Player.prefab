@@ -181,7 +181,6 @@ MonoBehaviour:
   rb: {fileID: 8845117445844956304}
   moveSpeed: 5
   playerInput: {x: 0, y: 0, z: 0}
-  camera: {fileID: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 8845117446329741737}
   midScale: 0.005
@@ -569,7 +568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8845117447073897618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32, y: -0.257, z: 0}
+  m_LocalPosition: {x: -0.32, y: -0.22, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8845117446622022741}
@@ -605,12 +604,12 @@ MonoBehaviour:
   isReloading: 0
   autoload: 0
   autoloadRate: 0.1
-  rpm: 80
-  spreadIncreaseRate: 0
-  spreadDecreaseRate: 0
+  rpm: 110
+  spreadIncreaseRate: 10
+  spreadDecreaseRate: 7
   projectilePerShot: 1
-  spreadAngle: 5
-  spreadDebug: 0
+  spreadAngle: 15
+  spreadDebug: 1
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
@@ -626,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2211f28b4bd9849a5f43fc5011eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 3
+  weaponEnum: 4
   target: {fileID: 0}
   range: 10
   layerMask:
@@ -636,6 +635,8 @@ MonoBehaviour:
   - Enemy
   isUsing: 0
   extraGameObject: {fileID: 1725229264820214837}
-  extraTransform: {fileID: 8845117446913875373}
-  rb: {fileID: 8845117445844956304}
+  extraTransform: {fileID: 0}
+  rb: {fileID: 0}
   extraGOForce: 70000
+  scaleUpRate: 1.1
+  timeToDisappear: 3

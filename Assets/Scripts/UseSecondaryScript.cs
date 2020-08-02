@@ -12,6 +12,7 @@ public class UseSecondaryScript : MonoBehaviour
     public string[] tagList;
     public bool isUsing;
     [Header("Extra")]
+    public bool isUsing_Extra;
     public GameObject extraGameObject;
     public Transform extraTransform;
     public Rigidbody2D rb;
@@ -111,6 +112,8 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 break;
             case WeaponEnum.Grab:
+                //oldMousePosition.y = 0;
+
                 break;
         }
     }
@@ -120,6 +123,7 @@ public class UseSecondaryScript : MonoBehaviour
         print((target.transform.position - transform.position).magnitude);
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
+            
             stop();
             return;
         }
@@ -134,24 +138,40 @@ public class UseSecondaryScript : MonoBehaviour
 
     void grabObject()
     {
-        print("Grabing " + target.name);
-        if (oldMousePosition.y == 0f)
+        if (target == null)
         {
-            oldMousePosition = Input.mousePosition;
-            return;
-        }
-        float flick = Input.mousePosition.y - oldMousePosition.y;
-        if (flick <= 0)
-        {
-            //target.GetComponent<BoxCollider2D>().enabled = true;
-
+            //print("stoping");
+            isUsing_Extra = false;
+            isUsing = false;
             stop();
             return;
         }
-        target.GetComponent<BoxCollider2D>().enabled = false;
-        rb = target.GetComponent<Rigidbody2D>();
-        //rb.gravityScale = 1;
-        target.transform.position = Vector2.Lerp(target.transform.position, extraGameObject.transform.position, Time.deltaTime);
-        Destroy(target, 5f);
+        //print("Grabing " + target.name);
+
+        if (oldMousePosition.y == 0f)
+        {
+            oldMousePosition = Input.mousePosition;
+
+            return;
+        }
+        float flick = Input.mousePosition.y - oldMousePosition.y;
+        if (flick > 0 && !isUsing_Extra)
+        {
+            isUsing_Extra = true;
+            extraGameObject.GetComponent<VRHandMovementScript>().pickUp();
+            Destroy(target, timeToDisappear);
+        }
+
+        if (isUsing_Extra)
+        {
+            target.GetComponent<BoxCollider2D>().enabled = false;
+            rb = target.GetComponent<Rigidbody2D>();
+            //rb.gravityScale = 1;
+            target.transform.position = Vector2.Lerp(target.transform.position, extraTransform.position, Time.deltaTime * 1.5f);
+            target.transform.localScale += target.transform.localScale * scaleUpRate * Time.deltaTime;
+            //print("moving " + target.name + target.transform.position);
+        }
     }
+
+
 }
