@@ -21,15 +21,22 @@ public class WeaponTypeScript : MonoBehaviour
     public float Ammo_Cost = 10;
     public float maxInMag;
     public float currentMag;
+    public float reloadTime;
+    [SerializeField] private float timeNow_reload;
+    public bool isReloading;
     public bool autoload = true;
     public float autoloadRate = 10f;
     [Header("Fire Behaviour")]
     public float rpm;
+    public float spreadIncreaseRate;
+    public float spreadDecreaseRate;
     public int projectilePerShot;
     public float spreadAngle;
+    public bool spreadDebug;
+    [SerializeField] private float currentSpread = 0;
     [SerializeField] private float timeBetweenShot;
-    [SerializeField] private float timeNow;
-    public float TimeNow { get => timeNow; set => timeNow = value; }
+    [SerializeField] private float timeNow_rpm;
+    public float TimeNow { get => timeNow_rpm; set => timeNow_rpm = value; }
 
     //public bool fireWhenFull;
     //[SerializeField] private bool full;
@@ -44,29 +51,53 @@ public class WeaponTypeScript : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool("Reload", false);
-        if (timeNow > 0)
+        if (timeNow_rpm > 0)
         {
-            animator.SetBool("Reload", true);
+            timeNow_rpm -= Time.deltaTime;
 
-            timeNow -= Time.deltaTime;
+        }
+
+        if (currentMag == 0)
+        {
+            reload();
+        }
+
+        //print(canFire());
+        if (isReloading)
+        {
+            print("reloading");
+            reload();
+        }
+        if (currentSpread > 0)
+        {
+            currentSpread -= spreadDecreaseRate * Time.deltaTime;
+        }
+        else if (currentSpread < 0)
+        {
+            currentSpread = 0;
+        }
+
+        if (spreadDebug)
+        {
+            //Debug
+            Quaternion randomSpread1 = Quaternion.AngleAxis(currentSpread, Vector3.forward);
+            Quaternion randomSpread2 = Quaternion.AngleAxis(-currentSpread, Vector3.forward);
+            Debug.DrawRay(transform.position, randomSpread1 * transform.up * 10f, Color.green, 0f);
+            Debug.DrawRay(transform.position, randomSpread2 * transform.up * 10f, Color.green, 0f);
+
+
         }
     }
 
     public bool canFire()
     {
-        if (timeNow <= 0)
+        if (timeNow_rpm <= 0 && !isReloading)
         {
-            if (isFull())
-            {
-                timeNow = timeBetweenShot;
 
-                return true;
-            }
 
-            if (ammo >= Ammo_Cost)
+            if (currentMag >= Ammo_Cost)
             {
-                timeNow = timeBetweenShot;
+                timeNow_rpm = timeBetweenShot;
 
                 return true;
             }
@@ -76,14 +107,20 @@ public class WeaponTypeScript : MonoBehaviour
             }
 
         }
+        print("out1");
         return false;
 
 
     }
 
-    public bool isFull()
+    public bool isFullAmmo()
     {
         bool full = Ammo >= Ammo_Max;
+        return full;
+    }
+    public bool isFullClip()
+    {
+        bool full = currentMag >= Ammo_Max;
         return full;
     }
 
@@ -91,7 +128,7 @@ public class WeaponTypeScript : MonoBehaviour
     {
         if (canFire())
         {
-            ammo -= Ammo_Cost;
+            currentMag -= Ammo_Cost;
             return true;
         }
         return false;
@@ -108,6 +145,7 @@ public class WeaponTypeScript : MonoBehaviour
                     //launcher.GetComponent<MissileLaunchPointScript>().fire();
                     break;
                 case WeaponEnum.Pistol:
+                    pistolShot();
                     //launcher.GetComponent<TrapLaunchPointScript>().fire();
                     break;
                 case WeaponEnum.Claw:
@@ -144,6 +182,36 @@ public class WeaponTypeScript : MonoBehaviour
         return name;
     }
 
+    public bool reload()
+    {
+        if (currentMag >= maxInMag)
+        {
+            return false;
+        }
+        currentSpread = 0;
+        if (!isReloading)
+        {
+            timeNow_reload = reloadTime;
+        }
+        isReloading = true;
+        //animator.SetBool("Reload", false);
+        if (timeNow_reload > 0)
+        {
+            //animator.SetBool("Reload", true);
+
+            timeNow_reload -= Time.deltaTime;
+            return false;
+        }
+        else
+        {
+            //animator.SetBool("Reload", false);
+            isReloading = false;
+            Ammo -= maxInMag - currentMag;
+            currentMag = maxInMag;
+            return false;
+        }
+    }
+
 
     //Weapon Fire
 
@@ -154,11 +222,26 @@ public class WeaponTypeScript : MonoBehaviour
         for (int i = 0; i < projectilePerShot; i++)
         {
             randomSpread = Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.forward);
-            projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread*shootingPoint.transform.rotation);
+            projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
             projectile.GetComponent<ProjectileScript>().shoot();
-            print("fire "+i);
+            print("fire " + i);
         }
     }
 
+    void pistolShot()
+    {
+        if (currentSpread > spreadAngle)
+        {
+            currentSpread = spreadAngle - spreadIncreaseRate;
+        }
+        GameObject projectile;
+        Quaternion randomSpread;
+        randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
+        projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
+        projectile.GetComponent<ProjectileScript>().shoot();
+        currentSpread += spreadIncreaseRate;
+
+
+    }
 
 }

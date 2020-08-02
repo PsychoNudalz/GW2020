@@ -29,5 +29,9 @@ public class ShootingScript : MonoBehaviour
         {
             secondary.stop();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            weapon.reload();
+        }
     }
 }
