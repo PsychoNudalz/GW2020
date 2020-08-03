@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 464628036188201250}
   - component: {fileID: 464628036188201249}
   - component: {fileID: 464628036188201248}
-  - component: {fileID: 94448183444264843}
   - component: {fileID: 1001274111729364271}
   - component: {fileID: 5487504411218607814}
   m_Layer: 9
@@ -185,8 +184,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5f5cc9e5b05ba44beb955346a3ad38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAttackScript: {fileID: 1001274111729364271}
   maxHealth: 50
   currentHealth: 0
+  Player: {fileID: 0}
+  des: {fileID: 464628036188201248}
+  rangeToFindPlayer: 20
+  inSight: 0
+  playerLastPosition: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4352
   enemySpawnWaveHandler: {fileID: 0}
 --- !u!61 &3400123327421134140
 BoxCollider2D:
@@ -227,8 +235,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -313,19 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &94448183444264843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8460897108495026944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fb300a8b4cbda49a4ea1656d24a12f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  des: {fileID: 464628036188201248}
 --- !u!114 &1001274111729364271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +336,6 @@ MonoBehaviour:
   projectile: {fileID: 136968695066540787, guid: 8bdf71b49400db04aadf9e2007fe06f2,
     type: 3}
   weaponTypeScript: {fileID: 5487504411218607814}
-  timeNow: 0
 --- !u!114 &5487504411218607814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,22 +353,22 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 4715143882362509847}
   animator: {fileID: 8460897108318988547}
-  ammo: 0
-  Ammo_Max: 0
-  Ammo_Cost: 10
-  maxInMag: 0
-  currentMag: 0
-  reloadTime: 0
+  ammo: 999999
+  Ammo_Max: 999999
+  Ammo_Cost: 1
+  maxInMag: 5
+  currentMag: 5
+  reloadTime: 2
   timeNow_reload: 0
   isReloading: 0
-  autoload: 1
+  autoload: 0
   autoloadRate: 10
-  rpm: 0
-  spreadIncreaseRate: 0
-  spreadDecreaseRate: 0
+  rpm: 450
+  spreadIncreaseRate: 10
+  spreadDecreaseRate: 7
   projectilePerShot: 0
-  spreadAngle: 0
-  spreadDebug: 0
+  spreadAngle: 45
+  spreadDebug: 1
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0

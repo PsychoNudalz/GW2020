@@ -11,8 +11,9 @@ public class EnemyAttackScript : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public void shoot()
+    public void shoot(Vector3 v)
     {
+        weaponTypeScript.shootingPoint.transform.up = v;
         weaponTypeScript.fireWeapon();
     }
 }

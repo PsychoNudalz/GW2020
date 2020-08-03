@@ -217,6 +217,14 @@ public class WeaponTypeScript : MonoBehaviour
         }
     }
 
+    /*
+    public LayerMask getLayermask()
+    {
+        return shootingProjectile.
+    }
+
+    */
+
 
     //Weapon Fire
 
