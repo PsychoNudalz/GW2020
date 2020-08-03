@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_E7F27FFB:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 731ce0beec302410299a12fa1da2dc54, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex:
@@ -40,12 +40,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EnableExternalAlpha: 0
+    - _Outline: 0
     - _Outline_1: 0.99
+    - _Outline_Size: 1
     - _Power: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Outline: {r: 1, g: 0.6261432, b: 0, a: 0}
+    - _Outline_Colour: {r: 1, g: 0.6261432, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

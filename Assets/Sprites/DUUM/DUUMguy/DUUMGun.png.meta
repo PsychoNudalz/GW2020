@@ -14,6 +14,27 @@ TextureImporter:
   - first:
       213: -6389127010341670899
     second: DUUMGun_3
+  - first:
+      213: -742692524859860901
+    second: DUUMGun_0
+  - first:
+      213: -2164455017250290277
+    second: DUUMGun_1
+  - first:
+      213: 3237953105468404469
+    second: DUUMGun_2
+  - first:
+      213: 2914047282890554232
+    second: DUUMGun_3
+  - first:
+      213: -5066402361220559887
+    second: DUUMGun_4
+  - first:
+      213: -7399955936679551927
+    second: DUUMGun_5
+  - first:
+      213: -8586492331357071841
+    second: DUUMGun_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3559fbc4f87b4a560800000000000000
-      internalID: 7324180720107099475
+      spriteID: b58d366651d61b5f0800000000000000
+      internalID: -742692524859860901
       vertices: []
       indices: 
       edges: []
@@ -134,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e4e5e9d11251190800000000000000
-      internalID: -7992445552604328359
+      spriteID: b950c7c21af46f1e0800000000000000
+      internalID: -2164455017250290277
       vertices: []
       indices: 
       edges: []
@@ -155,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4105f1f627034b0800000000000000
-      internalID: -5462740526408133397
+      spriteID: 5f231daa1358fec20800000000000000
+      internalID: 3237953105468404469
       vertices: []
       indices: 
       edges: []
@@ -176,8 +197,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d003bbbc5d24557a0800000000000000
-      internalID: -6389127010341670899
+      spriteID: 87b32638096c07820800000000000000
+      internalID: 2914047282890554232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DUUMGun_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb8f3a35e580b9b0800000000000000
+      internalID: -5066402361220559887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DUUMGun_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c1ca048431e4990800000000000000
+      internalID: -7399955936679551927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DUUMGun_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1698d2c7b6a6d880800000000000000
+      internalID: -8586492331357071841
       vertices: []
       indices: 
       edges: []

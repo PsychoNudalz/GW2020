@@ -104,7 +104,7 @@ public class WeaponTypeScript : MonoBehaviour
 
 
         }
-        
+
         return false;
 
 
@@ -181,7 +181,7 @@ public class WeaponTypeScript : MonoBehaviour
 
     public bool reload()
     {
-        if (currentMag >= maxInMag)
+        if (currentMag >= maxInMag || Ammo == 0)
         {
             return false;
         }
@@ -202,8 +202,17 @@ public class WeaponTypeScript : MonoBehaviour
         else
         {
             isReloading = false;
-            Ammo -= maxInMag - currentMag;
-            currentMag = maxInMag;
+            if (Ammo +currentMag < maxInMag)
+            {
+                currentMag += Ammo;
+                Ammo  = 0;
+            }
+            else
+            {
+                Ammo -= maxInMag - currentMag;
+                currentMag = maxInMag;
+
+            }
             return false;
         }
     }

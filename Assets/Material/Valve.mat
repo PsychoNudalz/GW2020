@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MagPickup
+  m_Name: Valve
   m_Shader: {fileID: -6465566751694194690, guid: baf41ae65edb24a4eaea1721d7e5e129,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -20,16 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_E7F27FFB:
-        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8f11fda6095f3354383c69190f05fc1c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -41,18 +37,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f11fda6095f3354383c69190f05fc1c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Active: 1
     - _EnableExternalAlpha: 0
     - _Outline: 0
-    - _Outline_1: 0
-    - _Outline_Size: 1
+    - _Outline_Size: 0.25
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _Outline: {r: 1, g: 0.6261432, b: 0, a: 1}
     - _Outline_Colour: {r: 1, g: 0.6261432, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

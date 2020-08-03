@@ -88,8 +88,8 @@ public class PlayerMovementScript : MonoBehaviour
         */
         playerInput.x = Input.GetAxisRaw("Horizontal");
         playerInput.y = Input.GetAxisRaw("Vertical");
-        rb.velocity = playerInput.normalized * moveSpeed ;
-
+        //rb.velocity = playerInput.normalized * moveSpeed ;
+        transform.position += playerInput.normalized * moveSpeed*Time.deltaTime;
     }
 
     void setMidPosition()

@@ -61,14 +61,6 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
         
-        if (target == null && isUsing_Extra)
-        {
-            print("stoping");
-            isUsing_Extra = false;
-            isUsing = false;
-            stop();
-        }
-        
 
 
         if (isUsing)
@@ -86,7 +78,7 @@ public class UseSecondaryScript : MonoBehaviour
                     if ((target == null && storedObject != null))
                     {
 
-                        StartCoroutine(cooldownTillGrab());
+                        //StartCoroutine(cooldownTillGrab());
                         throwObject();
                         grabMode = false;
                     }
@@ -125,7 +117,16 @@ public class UseSecondaryScript : MonoBehaviour
             }
         }
 
-        Debug.DrawRay(transform.position, (transform.right) *range, Color.green);
+        //Debug.DrawRay(transform.position, (transform.right) *range, Color.green);
+        
+        if (target == null && isUsing_Extra)
+        {
+            print("stoping");
+            isUsing_Extra = false;
+            isUsing = false;
+            storedFlag = false;
+            stop();
+        }
     }
 
     void clearTarget()
@@ -192,6 +193,8 @@ public class UseSecondaryScript : MonoBehaviour
             print("stoping");
             isUsing_Extra = false;
             isUsing = false;
+            storedFlag = false;
+
             stop();
             return;
         }
@@ -276,6 +279,9 @@ public class UseSecondaryScript : MonoBehaviour
         {
             interactableObjectScript.YEET();
         }
+        isUsing = false;
+        storedFlag = false;
+        throwFlag = false;
         Destroy(storedObject);
         //StartCoroutine(cooldownTillGrab());
     }
@@ -291,6 +297,9 @@ public class UseSecondaryScript : MonoBehaviour
         storedObject.transform.position = newPoint;
         storedObject.transform.rotation = Quaternion.identity;
         storedObject = null;
+        isUsing = false;
+        storedFlag = false;
+        throwFlag = false;
         //GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
 
         //Destroy(storedObject);
@@ -300,7 +309,7 @@ public class UseSecondaryScript : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         isUsing = false;
-        //storedFlag = false;
+        storedFlag = false;
         throwFlag = false;
         print("finish cooldown");
 

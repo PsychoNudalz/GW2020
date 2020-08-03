@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableObjectScript : MonoBehaviour
 {
-    public Renderer renderer;
+    public SpriteRenderer renderer;
     public float decayValue = 1f;
     public GameObject prefab;
     [Header("YEEEET! values")]
@@ -15,7 +15,7 @@ public class InteractableObjectScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void Update()
