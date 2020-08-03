@@ -627,7 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponEnum: 4
   target: {fileID: 0}
-  range: 5
+  range: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -635,15 +635,17 @@ MonoBehaviour:
   - Object
   - Pickup
   isUsing: 0
-  timeTillNewTarget: 1
-  timeNow: 0
+  timeTillNewTarget: 0.7
+  timeNo_timeTillNewTarget: 0
   extraGameObject: {fileID: 0}
   extraTransform: {fileID: 0}
   rb: {fileID: 0}
   extraGOForce: 70000
-  grabMode: 0
+  grabMode: 1
   isUsing_Extra: 0
+  oldMousePosition: {x: 0, y: 0}
   storedObject: {fileID: 0}
   storedFlag: 0
   throwPoint: {fileID: 8845117446913875373}
   throwFlag: 0
+  grabCooldown: 3

@@ -168,7 +168,7 @@ public class VRHandMovementScript : MonoBehaviour
     {
         for (int i = 0; i < leftHand.childCount; i++)
         {
-            Destroy(leftHand.GetChild(i).gameObject);
+            Destroy(leftHand.GetChild(i).gameObject,1f);
         }
     }
 }

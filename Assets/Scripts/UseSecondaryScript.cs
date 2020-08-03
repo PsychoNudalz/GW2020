@@ -13,7 +13,7 @@ public class UseSecondaryScript : MonoBehaviour
     public string[] tagList;
     public bool isUsing;
     public float timeTillNewTarget = .5f;
-    [SerializeField] float timeNow;
+    [SerializeField] float timeNo_timeTillNewTarget;
     [Header("Extra")]
     public GameObject extraGameObject;
     public Transform extraTransform;
@@ -27,6 +27,7 @@ public class UseSecondaryScript : MonoBehaviour
     [SerializeField] bool storedFlag;
     public Transform throwPoint;
     [SerializeField] bool throwFlag;
+    public float grabCooldown = 3f;
 
     // Start is called before the first frame update
     void Awake()
@@ -59,14 +60,15 @@ public class UseSecondaryScript : MonoBehaviour
             stop();
         }
 
+        
         if (target == null && isUsing_Extra)
         {
             print("stoping");
             isUsing_Extra = false;
             isUsing = false;
             stop();
-            return;
         }
+        
 
 
         if (isUsing)
@@ -106,19 +108,19 @@ public class UseSecondaryScript : MonoBehaviour
                 if (tagList.Contains(hit.collider.tag))
                 {
                     target = hit.collider.gameObject;
-                    timeNow = timeTillNewTarget;
+                    timeNo_timeTillNewTarget = timeTillNewTarget;
                 }
             }
             else
             {
-                if (timeNow <= 0)
+                if (timeNo_timeTillNewTarget <= 0)
                 {
                     target = null;
 
                 }
                 else
                 {
-                    timeNow -= Time.deltaTime;
+                    timeNo_timeTillNewTarget -= Time.deltaTime;
                 }
             }
         }
@@ -286,9 +288,12 @@ public class UseSecondaryScript : MonoBehaviour
         storedObject.SetActive(true);
 
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1.2f;
-        GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
+        storedObject.transform.position = newPoint;
+        storedObject.transform.rotation = Quaternion.identity;
+        storedObject = null;
+        //GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
 
-        Destroy(storedObject);
+        //Destroy(storedObject);
     }
 
     IEnumerator cooldownTillGrab()
