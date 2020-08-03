@@ -27,7 +27,7 @@ public class UseSecondaryScript : MonoBehaviour
     [SerializeField] bool storedFlag;
     public Transform throwPoint;
     [SerializeField] bool throwFlag;
-    public float grabCooldown = 3f;
+    //public float grabCooldown = 3f;
 
     // Start is called before the first frame update
     void Awake()

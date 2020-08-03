@@ -226,8 +226,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_LinearDrag: 10
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -648,4 +648,3 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 8845117446913875373}
   throwFlag: 0
-  grabCooldown: 3

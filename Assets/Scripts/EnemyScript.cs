@@ -5,13 +5,29 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public EnemyAttackScript enemyAttackScript;
+    [Header("States")]
     public float maxHealth;
     [SerializeField] float currentHealth;
+    [Header("Player Finder")]
+    public GameObject Player;
+    public float rangeToFindPlayer;
+    public bool shareProjectileLayerMask;
+    [SerializeField] LayerMask layerMask;
+    [Header("Spawn")]
     [SerializeField] EnemySpawnWaveHandler enemySpawnWaveHandler;
 
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        if (shareProjectileLayerMask)
+        {
+
+        }
+        
+        
+        
         currentHealth = maxHealth;
         try
         {
@@ -25,6 +41,9 @@ public class EnemyScript : MonoBehaviour
         {
 
         }
+
+
+
     }
 
     private void Awake()
@@ -53,6 +72,9 @@ public class EnemyScript : MonoBehaviour
         return currentHealth;
     }
 
+    void getProjectileLayerMask()
+    {
 
+    }
     
 }
