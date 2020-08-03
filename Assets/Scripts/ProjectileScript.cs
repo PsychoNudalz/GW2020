@@ -74,10 +74,16 @@ public class ProjectileScript : MonoBehaviour
         if (tagList.Contains(collision.tag))
         {
             Destroy(gameObject);
-            EnemyScript e;
-            if (collision.TryGetComponent<EnemyScript>(out e))
+            EnemyScript e1;
+            PlayerStates e2;
+            if (collision.TryGetComponent<EnemyScript>(out e1))
             {
-                collision.GetComponent<EnemyScript>().takeDamage(damage);
+                e1.takeDamage(damage);
+
+            }
+            if (collision.TryGetComponent<PlayerStates>(out e2))
+            {
+                e2.takeDamage(damage);
 
             }
         }

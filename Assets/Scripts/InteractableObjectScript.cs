@@ -9,9 +9,13 @@ public class InteractableObjectScript : MonoBehaviour
     public GameObject prefab;
     [Header("YEEEET! values")]
     public Rigidbody2D rb;
-    public float damage;
     public float force;
     public float spin;
+    [Header("Collision Damage")]
+    public float damage;
+    public float minVelocity;
+    [SerializeField] List<GameObject> hitRecord = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +38,28 @@ public class InteractableObjectScript : MonoBehaviour
 
     public void YEET()
     {
+        hitRecord = new List<GameObject>();
         rb.AddForce(transform.up * force);
         rb.AddTorque(spin);
         print(name + " Yeet ");
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (rb.velocity.magnitude > minVelocity)
+        {
+            if (!hitRecord.Contains(collision.gameObject))
+            {
+                hitRecord.Add(collision.gameObject);
+                EnemyScript e1;
+                if (collision.gameObject.TryGetComponent<EnemyScript>(out e1))
+                {
+                    print(name + " hit " + collision.gameObject.name);
+                    e1.takeDamage(damage);
+
+                }
+            }
+        }
+        
+    }
+    
 }

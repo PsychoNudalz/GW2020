@@ -97,9 +97,11 @@ MonoBehaviour:
   decayValue: 1
   prefab: {fileID: 2996902643277740694}
   rb: {fileID: 2973825687676680168}
-  damage: 5
   force: 50000
   spin: 10000
+  damage: 5
+  minVelocity: 2
+  hitRecord: []
 --- !u!1 &3881543107894719939
 GameObject:
   m_ObjectHideFlags: 0

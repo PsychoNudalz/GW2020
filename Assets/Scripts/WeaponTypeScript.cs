@@ -65,7 +65,7 @@ public class WeaponTypeScript : MonoBehaviour
         //print(canFire());
         if (isReloading)
         {
-            print("reloading");
+            //print("reloading");
             reload();
         }
         if (currentSpread > 0)

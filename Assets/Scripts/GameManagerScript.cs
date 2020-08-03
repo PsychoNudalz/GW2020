@@ -9,20 +9,25 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemySpawnWaveHandlers[wave].Enemies.Count == 0)
+        if (wave < enemySpawnWaveHandlers.Count)
         {
-            wave += 1;
-        } else
-        {
-            if (!enemySpawnWaveHandlers[wave].startWave)
+
+            if (enemySpawnWaveHandlers[wave].Enemies.Count == 0)
             {
-                enemySpawnWaveHandlers[wave].setStartWave(true);
+                wave += 1;
+            }
+            else
+            {
+                if (!enemySpawnWaveHandlers[wave].startWave)
+                {
+                    enemySpawnWaveHandlers[wave].setStartWave(true);
+                }
             }
         }
     }

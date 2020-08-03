@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -263032631
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -4383721837329740935, guid: e7e4d772a04e8c6479139569a99fae89,
     type: 3}
@@ -151,7 +151,7 @@ MonoBehaviour:
   rb: {fileID: 4614666794846918054}
   projectileforce: 1000
   maxVelocity: 0
-  damage: 7
+  damage: 15
   timeToLive: 4
   isSeeker: 0
   seekerforce: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   - Enemy
   - Object
   - Obstacle
+  - MovableObject
 --- !u!50 &4614666794846918054
 Rigidbody2D:
   serializedVersion: 4
