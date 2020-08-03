@@ -27,7 +27,8 @@ public class UseSecondaryScript : MonoBehaviour
     [SerializeField] bool storedFlag;
     public Transform throwPoint;
     [SerializeField] bool throwFlag;
-    //public float grabCooldown = 3f;
+    public float grabCooldown = 1f;
+    [SerializeField] float timeNow_grabCooldown;
 
     // Start is called before the first frame update
     void Awake()
@@ -60,8 +61,11 @@ public class UseSecondaryScript : MonoBehaviour
             stop();
         }
 
-        
 
+        if (timeNow_grabCooldown > 0)
+        {
+            timeNow_grabCooldown -= Time.deltaTime;
+        }
 
         if (isUsing)
         {
@@ -75,18 +79,26 @@ public class UseSecondaryScript : MonoBehaviour
                     }
                     break;
                 case WeaponEnum.Grab:
-                    if ((target == null && storedObject != null))
+                    if (timeNow_grabCooldown <= 0)
+                    {
+                        if ((target == null && storedObject != null))
+                        {
+
+                            //StartCoroutine(cooldownTillGrab());
+                            throwObject();
+                            grabMode = false;
+                        }
+                        else if (!throwFlag)
+                        {
+                            grabObject();
+                            grabMode = true;
+                        }
+                    }
+                    else
                     {
 
-                        //StartCoroutine(cooldownTillGrab());
-                        throwObject();
-                        grabMode = false;
                     }
-                    else if (!throwFlag)
-                    {
-                        grabObject();
-                        grabMode = true;
-                    }
+
                     break;
             }
         }
@@ -118,7 +130,7 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
         //Debug.DrawRay(transform.position, (transform.right) *range, Color.green);
-        
+
         if (target == null && isUsing_Extra)
         {
             print("stoping");
@@ -264,6 +276,8 @@ public class UseSecondaryScript : MonoBehaviour
             //rb.gravityScale = 1;
             //print("moving " + target.name + target.transform.position);
         }
+        timeNow_grabCooldown = grabCooldown;
+
     }
 
     public void throwObject()
@@ -307,7 +321,7 @@ public class UseSecondaryScript : MonoBehaviour
 
     IEnumerator cooldownTillGrab()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(grabCooldown);
         isUsing = false;
         storedFlag = false;
         throwFlag = false;
