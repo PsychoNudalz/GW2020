@@ -594,7 +594,7 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 8845117446913875372}
   animator: {fileID: 0}
-  ammo: 50
+  ammo: 10
   Ammo_Max: 50
   Ammo_Cost: 1
   maxInMag: 8
@@ -633,6 +633,7 @@ MonoBehaviour:
     m_Bits: 2048
   tagList:
   - Object
+  - Pickup
   isUsing: 0
   isUsing_Extra: 0
   extraGameObject: {fileID: 0}

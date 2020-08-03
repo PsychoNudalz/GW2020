@@ -33,8 +33,18 @@ public class UseSecondaryScript : MonoBehaviour
 
         if (target != (null))
         {
+            if (target.CompareTag("Pickup") || target.CompareTag("Object"))
+            {
+                try
+                {
+                    target.GetComponent<InteractableObjectScript>().setOutline(1f);
+                }
+                catch (System.Exception e)
+                {
+                    print("ERROR");
+                }
+            }
             clearTarget();
-
         }
         if (target == null)
         {
@@ -123,7 +133,7 @@ public class UseSecondaryScript : MonoBehaviour
         print((target.transform.position - transform.position).magnitude);
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
-            
+
             stop();
             return;
         }
@@ -161,7 +171,8 @@ public class UseSecondaryScript : MonoBehaviour
             extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
             //target.transform.SetParent(extraGameObject.transform);
             //Destroy(target, timeToDisappear);
-        } else if (flick < 0)
+        }
+        else if (flick < 0)
         {
             isUsing = false;
             isUsing_Extra = false;
@@ -173,6 +184,21 @@ public class UseSecondaryScript : MonoBehaviour
         {
             target.GetComponent<BoxCollider2D>().enabled = false;
             rb = target.GetComponent<Rigidbody2D>();
+            if (target.CompareTag("Pickup"))
+            {
+                try
+                {
+                    if (!target.GetComponent<PickupScript>().used)
+                    {
+                        GetComponent<WeaponTypeScript>().Ammo += target.GetComponent<PickupScript>().amout;
+                        target.GetComponent<PickupScript>().used = true;
+                    }
+                }
+                catch (System.Exception e)
+                {
+
+                }
+            }
             //rb.gravityScale = 1;
             //print("moving " + target.name + target.transform.position);
         }
