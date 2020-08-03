@@ -8,7 +8,7 @@ public class PlayerStates : MonoBehaviour
     public float MaxHealth = 100;
     [Header("Current States")]
     public float currentHealth;
-
+    
     // Start is called before the first frame update
     void Start()
     {

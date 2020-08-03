@@ -10,6 +10,7 @@ public class PlayerMovementScript : MonoBehaviour
     [Header("Movement")]
     public Rigidbody2D rb;
     public float moveSpeed = 10;
+    public bool isPlayer;
     [SerializeField] Vector3 playerInput = new Vector3();
     [Header("Camera")]
     [SerializeField] Vector3 mousePosition = new Vector3();
@@ -38,54 +39,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void playerControls()
     {
-        /*
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-            playerInput += new Vector3(1, 0);
-        }
-        else if (Input.GetAxis("Horizontal") < 0)
-        {
-            playerInput += new Vector3(-1, 0);
-        }
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            playerInput += new Vector3(0, 1);
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-
-        {
-            playerInput += new Vector3(0, -1);
-            print(Input.GetAxis("Horizontal"));
-
-        }
-
-        playerInput = new Vector3(math.floor(Input.GetAxis("Horizontal")), (int)(Input.GetAxis("Vertical") + 0.1f));
-        //print(playerInput);
-        transform.position += playerInput.normalized * moveSpeed * Time.deltaTime;
-        */
-        /*
-        playerInput = new Vector3();
-        if (Input.GetKey(KeyCode.W))
-        {
-            playerInput.y = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            playerInput.y = -1;
-
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            playerInput.x = 1;
-
-        }
-        else if (Input.GetKey(KeyCode.A))
-
-        {
-            playerInput.x = -1;
-
-        }
-        */
+        
         playerInput.x = Input.GetAxisRaw("Horizontal");
         playerInput.y = Input.GetAxisRaw("Vertical");
         //rb.velocity = playerInput.normalized * moveSpeed ;

@@ -17,6 +17,9 @@ public class UIHandlerScript : MonoBehaviour
     public Image image;
     public UseSecondaryScript useSecondaryScript;
     public Sprite emptySprite;
+    [Header("Logger")]
+    public bool isLogger;
+    
     // Start is called before the first frame update
     void Start()
     {

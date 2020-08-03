@@ -28,7 +28,7 @@ public class VRHandMovementScript : MonoBehaviour
 
     [Header("Mouse Movement")]
     [SerializeField] Vector3 mousePosition = new Vector3();
-    public Camera camera;
+    public GameObject followTarget;
     public float midScale = 0.2f;
     public float maxDistance;
 
@@ -69,7 +69,7 @@ public class VRHandMovementScript : MonoBehaviour
         {
             displace = displace.normalized * maxDistance;
         }
-        transform.position = new Vector3(displace.x + camera.transform.position.x, displace.y + camera.transform.position.y, 0);
+        transform.position = new Vector3(displace.x + followTarget.transform.position.x, displace.y + followTarget.transform.position.y, 0);
         //transform.localPosition.z = 0f;
         //print(mousePosition + ", " + transform.position + ", " + midpoint.transform.position + ", " + new Vector3(Screen.width / 2, Screen.height / 2));
     }
