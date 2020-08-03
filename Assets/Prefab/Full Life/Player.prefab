@@ -116,7 +116,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -263032631
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1e1f74c0d1e8964686177886c50d285, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -225,7 +225,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   spreadDecreaseRate: 7
   projectilePerShot: 1
   spreadAngle: 20
-  spreadDebug: 1
+  spreadDebug: 0
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
@@ -635,9 +635,15 @@ MonoBehaviour:
   - Object
   - Pickup
   isUsing: 0
-  isUsing_Extra: 0
+  timeTillNewTarget: 1
+  timeNow: 0
   extraGameObject: {fileID: 0}
   extraTransform: {fileID: 0}
   rb: {fileID: 0}
   extraGOForce: 70000
-  timeToDisappear: 1
+  grabMode: 0
+  isUsing_Extra: 0
+  storedObject: {fileID: 0}
+  storedFlag: 0
+  throwPoint: {fileID: 8845117446913875373}
+  throwFlag: 0

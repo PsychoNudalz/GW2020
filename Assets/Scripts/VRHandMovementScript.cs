@@ -83,7 +83,7 @@ public class VRHandMovementScript : MonoBehaviour
 
             pickingUp = true;
         }
-        if (pickedUpObject != null)
+        if (pickedUpObject.activeSelf)
         {
             if (pickedUpObject.transform.lossyScale.x < 3f && !phase1 && pickedUpObject != null)
             {
@@ -93,19 +93,20 @@ public class VRHandMovementScript : MonoBehaviour
 
                 leftHand.position = Vector2.Lerp(leftHand.position, leftPickup.position, Time.deltaTime * 1.5f);
 
-                print("moving to Pick: " + (leftPickup.position - leftHand.position).magnitude);
+                //print("moving to Pick: " + (leftPickup.position - leftHand.position).magnitude);
 
             }
             else if ((leftDropoff.position - leftHand.position).magnitude > .7f && !phase2 && pickedUpObject != null)
             {
                 leftHandAnimator.SetBool("PickUp", true);
-                print("moving to Drop: " + (leftDropoff.position - leftHand.position).magnitude);
+                //print("moving to Drop: " + (leftDropoff.position - leftHand.position).magnitude);
                 phase1 = true;
                 leftHand.position = Vector2.Lerp(leftHand.position, leftDropoff.position, Time.deltaTime * 3f);
             }
             else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
             {
-                Destroy(pickedUpObject);
+                pickedUpObject.SetActive(false);
+                Destroy(pickedUpObject,2f);
 
 
 
@@ -113,7 +114,7 @@ public class VRHandMovementScript : MonoBehaviour
         }
         else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
         {
-            Destroy(pickedUpObject);
+            //Destroy(pickedUpObject);
 
             leftHand.position = Vector2.Lerp(leftHand.position, left_INITIAL + transform.position, Time.deltaTime * 3f); ;
             leftHandAnimator.SetBool("PickUp", false);
@@ -131,6 +132,7 @@ public class VRHandMovementScript : MonoBehaviour
     }
     public void pickUp(GameObject g)
     {
+        clearLeftHand();
         phase1 = false;
         phase2 = false;
         pickingUp = true;
@@ -159,6 +161,14 @@ public class VRHandMovementScript : MonoBehaviour
             leftHand.position = Vector2.Lerp(leftHand.position, left_INITIAL + transform.position, Time.deltaTime * 3f); ;
             //leftHand.position = left_INITIAL + transform.position;
 
+        }
+    }
+
+    void clearLeftHand()
+    {
+        for (int i = 0; i < leftHand.childCount; i++)
+        {
+            Destroy(leftHand.GetChild(i).gameObject);
         }
     }
 }

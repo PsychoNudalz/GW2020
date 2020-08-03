@@ -47,15 +47,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Effect
-    uniqueID: 4031934665
+  - name: Ground
+    uniqueID: 728566763
     locked: 0
-  - name: Character
-    uniqueID: 1810196705
+  - name: Object
+    uniqueID: 999911685
     locked: 0
   - name: Enemy
     uniqueID: 627371981
     locked: 0
-  - name: Ground
-    uniqueID: 728566763
+  - name: Character
+    uniqueID: 1810196705
+    locked: 0
+  - name: Effect
+    uniqueID: 4031934665
+    locked: 0
+  - name: UI
+    uniqueID: 3953159445
     locked: 0

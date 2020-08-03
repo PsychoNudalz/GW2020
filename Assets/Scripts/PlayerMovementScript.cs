@@ -88,7 +88,7 @@ public class PlayerMovementScript : MonoBehaviour
         */
         playerInput.x = Input.GetAxisRaw("Horizontal");
         playerInput.y = Input.GetAxisRaw("Vertical");
-        transform.position += playerInput.normalized * moveSpeed * Time.deltaTime;
+        rb.velocity = playerInput.normalized * moveSpeed ;
 
     }
 
