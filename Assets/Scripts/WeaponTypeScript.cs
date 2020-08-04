@@ -179,11 +179,11 @@ public class WeaponTypeScript : MonoBehaviour
         return name;
     }
 
-    public bool reload()
+    public void reload()
     {
         if (currentMag >= maxInMag || Ammo == 0)
         {
-            return false;
+            return;
         }
         currentSpread = 0;
         if (!isReloading)
@@ -197,7 +197,7 @@ public class WeaponTypeScript : MonoBehaviour
         {
 
             timeNow_reload -= Time.deltaTime;
-            return false;
+            return;
         }
         else
         {
@@ -213,7 +213,7 @@ public class WeaponTypeScript : MonoBehaviour
                 currentMag = maxInMag;
 
             }
-            return false;
+            return;
         }
     }
 

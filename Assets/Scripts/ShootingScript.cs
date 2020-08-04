@@ -17,6 +17,7 @@ public class ShootingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetAxisRaw("Fire1") != 0)
         {
             weapon.fireWeapon();
@@ -33,5 +34,6 @@ public class ShootingScript : MonoBehaviour
         {
             weapon.reload();
         }
+        */
     }
 }

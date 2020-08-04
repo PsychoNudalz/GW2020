@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UseSecondaryScript : MonoBehaviour
 {
@@ -150,10 +151,10 @@ public class UseSecondaryScript : MonoBehaviour
         }
     }
 
-    public bool use()
+    public void use()
     {
         isUsing = true;
-        return false;
+        return;
     }
     public void stop()
     {
@@ -200,6 +201,7 @@ public class UseSecondaryScript : MonoBehaviour
 
     void grabObject()
     {
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
         if (target == null)
         {
             print("stoping");
@@ -214,11 +216,12 @@ public class UseSecondaryScript : MonoBehaviour
 
         if (oldMousePosition.y == 0f)
         {
-            oldMousePosition = Input.mousePosition;
+
+            oldMousePosition = mousePosition;
 
             return;
         }
-        float flick = Input.mousePosition.y - oldMousePosition.y;
+        float flick = mousePosition.y - oldMousePosition.y;
         if (flick > 0 && !isUsing_Extra)
         {
             isUsing_Extra = true;

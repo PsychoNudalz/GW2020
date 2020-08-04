@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -40,15 +41,29 @@ public class PlayerMovementScript : MonoBehaviour
     void playerControls()
     {
         
-        playerInput.x = Input.GetAxisRaw("Horizontal");
-        playerInput.y = Input.GetAxisRaw("Vertical");
+        //playerInput.x = Input.GetAxisRaw("Horizontal");
+        //playerInput.y = Input.GetAxisRaw("Vertical");
         //rb.velocity = playerInput.normalized * moveSpeed ;
         transform.position += playerInput.normalized * moveSpeed*Time.deltaTime;
     }
 
-    void setMidPosition()
+    public void inputPlayerControls(InputAction.CallbackContext context)
     {
-        mousePosition = (Input.mousePosition);
+        playerInput = context.ReadValue<Vector2>();
+    }
+
+
+    public void playerControls(Vector2 v)
+    {
+
+        playerInput = v;
+        //rb.velocity = playerInput.normalized * moveSpeed ;
+        //transform.position += playerInput.normalized * moveSpeed * Time.deltaTime;
+    }
+
+    public void setMidPosition()
+    {
+        mousePosition = Mouse.current.position.ReadValue();
         Vector3 displace = ((mousePosition - transform.position - new Vector3(Screen.width / 2, Screen.height / 2)) * midScale);
         if (displace.magnitude > maxDistance)
         {
@@ -58,7 +73,7 @@ public class PlayerMovementScript : MonoBehaviour
         //print(mousePosition + ", " + transform.position + ", " + midpoint.transform.position + ", " + new Vector3(Screen.width / 2, Screen.height / 2));
     }
 
-    void aimWeapon()
+    public void aimWeapon()
     {
         //gun.transform.LookAt((Vector2)midpoint.transform.position);
 
@@ -78,6 +93,11 @@ public class PlayerMovementScript : MonoBehaviour
 
         }
         gun.transform.localScale = originalScale;
+    }
+
+    public void setMousePosition(Vector3 v)
+    {
+        mousePosition = v;
     }
 
     private void updateAnimation()

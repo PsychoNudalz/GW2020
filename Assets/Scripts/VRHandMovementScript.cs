@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class VRHandMovementScript : MonoBehaviour
 {
@@ -63,7 +65,8 @@ public class VRHandMovementScript : MonoBehaviour
     }
     void setHandPosition()
     {
-        mousePosition = (Input.mousePosition);
+        mousePosition = Mouse.current.position.ReadValue();
+
         Vector3 displace = ((mousePosition - transform.position - new Vector3(Screen.width / 2, Screen.height / 2)) * midScale);
         if (displace.magnitude > maxDistance)
         {
@@ -148,7 +151,7 @@ public class VRHandMovementScript : MonoBehaviour
     {
         if (weapon.isReloading)
         {
-            print("reloading");
+            //print("reloading");
             leftHandAnimator.SetTrigger("Reload");
             leftHand.position = Vector2.Lerp(leftHand.position, reloadPoint.position, Time.deltaTime * 2f);
 
