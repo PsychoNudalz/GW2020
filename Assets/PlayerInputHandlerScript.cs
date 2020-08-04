@@ -170,7 +170,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             {
                 endEvent();
                 resetEvent();
-                setEventList(currentEvents);
+                replayEvents();
                 playerInputComponent.enabled = false;
             }
             else
@@ -181,6 +181,13 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 currentEvents = new List<EventType>();
             }
         }
+        else
+        {
+            if (AI)
+            {
+                replayEvents();
+            }
+        }
 
     }
 
@@ -188,6 +195,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         savedEvents = e;
         startTime = Time.time;
+
+    }
+
+    public void replayEvents()
+    {
+        setEventList(currentEvents);
 
     }
 
@@ -234,6 +247,9 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 playerMovementScript.aimWeapon(et.mouseLocation);
 
                 weaponTypeScript.fireWeapon();
+            } else if (s.Equals("Reload"))
+            {
+                weaponTypeScript.reload();
             }
         }
     }

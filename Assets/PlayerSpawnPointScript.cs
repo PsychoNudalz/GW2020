@@ -40,6 +40,12 @@ public class PlayerSpawnPointScript : MonoBehaviour
     void Update()
     {
         kb = InputSystem.GetDevice<Keyboard>();
+        if (kb.iKey.isPressed)
+        {
+            currentCharacter.GetComponent<PlayerInputHandlerScript>().replayEvents();
+            Rewind();
+
+        }
         if (kb.pKey.isPressed)
         {
             currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
