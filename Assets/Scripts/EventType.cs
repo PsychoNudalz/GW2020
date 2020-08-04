@@ -14,6 +14,7 @@ public class EventType
     {
         timeStart = Time.time;
         mouseLocation = v;
+        
     }
 
     public void addLog(string s)

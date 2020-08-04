@@ -13,6 +13,7 @@ public class UseSecondaryScript : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     public string[] tagList;
     public bool isUsing;
+    public bool activatingSecondary;
     public float timeTillNewTarget = .5f;
     [SerializeField] float timeNo_timeTillNewTarget;
     [Header("Extra")]
@@ -23,6 +24,7 @@ public class UseSecondaryScript : MonoBehaviour
     [Header("Grabing")]
     [SerializeField] bool grabMode;
     public bool isUsing_Extra;
+    [SerializeField] Vector2 currentMousePosition;
     [SerializeField] Vector2 oldMousePosition;
     public GameObject storedObject;
     [SerializeField] bool storedFlag;
@@ -38,9 +40,18 @@ public class UseSecondaryScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //print(transform.position);
+
+        if (isUsing)
+        {
+            use();
+        }
+        else
+        {
+            stop();
+        }
 
         if (target != (null))
         {
@@ -57,7 +68,7 @@ public class UseSecondaryScript : MonoBehaviour
             }
             clearTarget();
         }
-        if (target == null)
+        if (target == null && activatingSecondary)
         {
             stop();
         }
@@ -68,7 +79,18 @@ public class UseSecondaryScript : MonoBehaviour
             timeNow_grabCooldown -= Time.deltaTime;
         }
 
-        if (isUsing)
+        if ((target == null && storedObject != null))
+        {
+
+            //StartCoroutine(cooldownTillGrab());
+            grabMode = false;
+        }
+        else if (!throwFlag)
+        {
+            grabMode = true;
+        }
+
+        if (activatingSecondary)
         {
             switch (weaponEnum)
             {
@@ -82,17 +104,13 @@ public class UseSecondaryScript : MonoBehaviour
                 case WeaponEnum.Grab:
                     if (timeNow_grabCooldown <= 0)
                     {
-                        if ((target == null && storedObject != null))
-                        {
-
-                            //StartCoroutine(cooldownTillGrab());
-                            throwObject();
-                            grabMode = false;
-                        }
-                        else if (!throwFlag)
+                        if (grabMode)
                         {
                             grabObject();
-                            grabMode = true;
+                        }
+                        else
+                        {
+                            throwObject();
                         }
                     }
                     else
@@ -136,7 +154,7 @@ public class UseSecondaryScript : MonoBehaviour
         {
             print("stoping");
             isUsing_Extra = false;
-            isUsing = false;
+            activatingSecondary = false;
             storedFlag = false;
             stop();
         }
@@ -153,7 +171,7 @@ public class UseSecondaryScript : MonoBehaviour
 
     public void use()
     {
-        isUsing = true;
+        activatingSecondary = true;
         return;
     }
     public void stop()
@@ -162,7 +180,7 @@ public class UseSecondaryScript : MonoBehaviour
         switch (weaponEnum)
         {
             case WeaponEnum.Hook:
-                isUsing = false;
+                activatingSecondary = false;
                 if (extraGameObject.activeSelf)
                 {
                     extraGameObject.SetActive(false);
@@ -175,10 +193,19 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 break;
             case WeaponEnum.Grab:
-                //oldMousePosition.y = 0;
+                print("old mouse reset");
+                oldMousePosition = new Vector2(-3000, -3000);
 
                 break;
         }
+    }
+
+
+    public void toggleUse(InputAction.CallbackContext context)
+    {
+        isUsing = context.performed;
+        print("toggle Using: " + isUsing);
+
     }
 
     void shootHook()
@@ -201,85 +228,89 @@ public class UseSecondaryScript : MonoBehaviour
 
     void grabObject()
     {
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        currentMousePosition = Mouse.current.position.ReadValue();
         if (target == null)
         {
             print("stoping");
             isUsing_Extra = false;
-            isUsing = false;
+            activatingSecondary = false;
             storedFlag = false;
 
             stop();
-            return;
+            //return;
         }
-        //print("Grabing " + target.name);
-
-        if (oldMousePosition.y == 0f)
+        else
         {
 
-            oldMousePosition = mousePosition;
+            print("Grabing " + target.name);
 
-            return;
-        }
-        float flick = mousePosition.y - oldMousePosition.y;
-        if (flick > 0 && !isUsing_Extra)
-        {
-            isUsing_Extra = true;
-            extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
-
-            //target.transform.SetParent(extraGameObject.transform);
-            //Destroy(target, timeToDisappear);
-        }
-        else if (flick < 0)
-        {
-            isUsing = false;
-            isUsing_Extra = false;
-            storedFlag = false;
-
-            return;
-        }
-
-        if (isUsing_Extra)
-        {
-            target.GetComponent<BoxCollider2D>().enabled = false;
-            //rb = target.GetComponent<Rigidbody2D>();
-            if (target.CompareTag("Pickup"))
+            if (oldMousePosition.y <= 0f)
             {
-                try
+                print("updating old mouse");
+                oldMousePosition = currentMousePosition;
+
+            }
+
+            float flick = currentMousePosition.y - oldMousePosition.y;
+            if (flick > 1 && !isUsing_Extra)
+            {
+                isUsing_Extra = true;
+                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
+
+                //target.transform.SetParent(extraGameObject.transform);
+                //Destroy(target, timeToDisappear);
+            }
+            else if (flick <= 0)
+            {
+                activatingSecondary = false;
+                isUsing_Extra = false;
+                storedFlag = false;
+
+            }
+
+            if (isUsing_Extra)
+            {
+                //rb = target.GetComponent<Rigidbody2D>();
+                if (target.CompareTag("Pickup"))
                 {
-                    if (!target.GetComponent<PickupScript>().used)
+                    try
                     {
-                        GetComponent<WeaponTypeScript>().Ammo += target.GetComponent<PickupScript>().amout;
-                        target.GetComponent<PickupScript>().used = true;
+                        if (!target.GetComponent<PickupScript>().used)
+                        {
+                            GetComponent<WeaponTypeScript>().Ammo += target.GetComponent<PickupScript>().amout;
+                            target.GetComponent<PickupScript>().used = true;
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        print("Error: " + e.Message);
                     }
                 }
-                catch (System.Exception e)
+                else if (target.CompareTag("Object") && !storedFlag)
                 {
-                    print("Error: " + e.Message);
-                }
-            }
-            else if (target.CompareTag("Object") && !storedFlag)
-            {
-                if (storedObject != null)
-                {
-                    dropObject();
-                }
-                InteractableObjectScript interactableObjectScript;
-                if (target.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
-                {
-                    storedObject = Instantiate(interactableObjectScript.prefab);
-                    storedObject.transform.localScale = new Vector3(1, 1, 1);
-                    storedObject.GetComponent<BoxCollider2D>().enabled = true;
-                    storedObject.SetActive(false);
-                    storedFlag = true;
-                    print("storing: " + target.name);
+                    if (storedObject != null)
+                    {
+                        dropObject();
+                    }
+                    InteractableObjectScript interactableObjectScript;
+                    if (target.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
+                    {
+                        storedObject = Instantiate(interactableObjectScript.prefab);
+                        storedObject.transform.localScale = new Vector3(1, 1, 1);
+                        storedObject.GetComponent<BoxCollider2D>().enabled = true;
+                        storedObject.SetActive(false);
+                        storedFlag = true;
+                        print("storing: " + target.name);
 
+                    }
                 }
+                target.GetComponent<BoxCollider2D>().enabled = false;
+
+                //rb.gravityScale = 1;
+                //print("moving " + target.name + target.transform.position);
             }
-            //rb.gravityScale = 1;
-            //print("moving " + target.name + target.transform.position);
+            timeNow_grabCooldown = grabCooldown;
         }
-        timeNow_grabCooldown = grabCooldown;
 
     }
 
@@ -296,7 +327,7 @@ public class UseSecondaryScript : MonoBehaviour
         {
             interactableObjectScript.YEET();
         }
-        isUsing = false;
+        activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;
         Destroy(storedObject);
@@ -314,7 +345,7 @@ public class UseSecondaryScript : MonoBehaviour
         storedObject.transform.position = newPoint;
         storedObject.transform.rotation = Quaternion.identity;
         storedObject = null;
-        isUsing = false;
+        activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;
         //GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
@@ -322,10 +353,12 @@ public class UseSecondaryScript : MonoBehaviour
         //Destroy(storedObject);
     }
 
+
+
     IEnumerator cooldownTillGrab()
     {
         yield return new WaitForSeconds(grabCooldown);
-        isUsing = false;
+        activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;
         print("finish cooldown");

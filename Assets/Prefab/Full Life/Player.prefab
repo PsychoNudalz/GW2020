@@ -274,7 +274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8845117445844956317}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
   m_Name: 
@@ -283,6 +283,8 @@ MonoBehaviour:
   weaponTypeScript: {fileID: 1725229265952098935}
   UseSecondaryScript: {fileID: 4570052267440093197}
   AI: 0
+  moveDir: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
 --- !u!114 &1793785021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,9 +313,20 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725229265952098935}
-        m_MethodName: fireWeapon
-        m_Mode: 1
+      - m_Target: {fileID: 3289350285936893998}
+        m_MethodName: shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3289350285936893998}
+        m_MethodName: recordEvent
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -326,8 +339,8 @@ MonoBehaviour:
     m_ActionName: Player/Shoot[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8845117445844956319}
-        m_MethodName: inputPlayerControls
+      - m_Target: {fileID: 3289350285936893998}
+        m_MethodName: movePlayer
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -341,9 +354,9 @@ MonoBehaviour:
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4570052267440093197}
-        m_MethodName: use
-        m_Mode: 1
+      - m_Target: {fileID: 3289350285936893998}
+        m_MethodName: useWeapon
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -356,9 +369,9 @@ MonoBehaviour:
     m_ActionName: Player/Use[/Mouse/rightButton,/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725229265952098935}
+      - m_Target: {fileID: 3289350285936893998}
         m_MethodName: reload
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -735,16 +748,17 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 8845117446913875372}
   animator: {fileID: 6840636839630347643}
-  ammo: 10
-  Ammo_Max: 50
+  ammo: 500
+  Ammo_Max: 999
   Ammo_Cost: 1
-  maxInMag: 8
-  currentMag: 8
+  maxInMag: 15
+  currentMag: 15
   reloadTime: 2
   timeNow_reload: 0
   isReloading: 0
   autoload: 0
   autoloadRate: 0.1
+  isFiring: 0
   rpm: 160
   spreadIncreaseRate: 10
   spreadDecreaseRate: 10
@@ -768,7 +782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponEnum: 4
   target: {fileID: 0}
-  range: 2
+  range: 3
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -784,6 +798,7 @@ MonoBehaviour:
   extraGOForce: 70000
   grabMode: 1
   isUsing_Extra: 0
+  currentMousePosition: {x: 0, y: 0}
   oldMousePosition: {x: 0, y: 0}
   storedObject: {fileID: 0}
   storedFlag: 0

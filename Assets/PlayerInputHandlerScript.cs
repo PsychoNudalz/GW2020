@@ -17,6 +17,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
     [Header("AI")]
     public bool AI = false;
     public List<EventType> events = new List<EventType>();
+    public Vector2 moveDir;
+    public Vector2 mousePosition;
     Keyboard kb;
     Mouse m;
     Pointer p;
@@ -34,7 +36,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         */
     }
 
-
+   
     private void Update()
     {
         events = new List<EventType>();
@@ -46,23 +48,26 @@ public class PlayerInputHandlerScript : MonoBehaviour
             //recordEvent(kb.IsPressed());
         }
     }
-    void movePlayer(Vector2 v)
+    public void movePlayer(InputAction.CallbackContext context)
     {
-        print(v);
-        playerMovementScript.playerControls(v);
+        moveDir = context.ReadValue<Vector2>();
+        playerMovementScript.playerControls(moveDir);
     }
 
-    void shoot()
+    public void shoot(InputAction.CallbackContext context)
     {
-        weaponTypeScript.fireWeapon();
+        mousePosition = Mouse.current.position.ReadValue();
+        weaponTypeScript.toggleFIring(context);
     }
-    void useWeapon(bool b)
+    public void useWeapon(InputAction.CallbackContext context)
     {
-        UseSecondaryScript.use();
+        mousePosition = Mouse.current.position.ReadValue();
+        UseSecondaryScript.toggleUse(context);
+
     }
 
 
-    void reload()
+    public void reload(InputAction.CallbackContext context)
     {
         weaponTypeScript.reload();
     }
