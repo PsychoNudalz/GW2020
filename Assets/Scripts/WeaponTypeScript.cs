@@ -141,7 +141,7 @@ public class WeaponTypeScript : MonoBehaviour
     public void toggleFiring(bool context)
     {
         isFiring = context;
-        print("toggle Firing: " + isFiring);
+        //print("toggle Firing: " + isFiring);
     }
 
     public void fireWeapon()
@@ -167,7 +167,7 @@ public class WeaponTypeScript : MonoBehaviour
         {
             //activeFire = false;
         }
-        print("shoot at "+transform.up);
+        //print("shoot at "+transform.up);
 
     }
 

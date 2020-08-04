@@ -213,7 +213,8 @@ public class UseSecondaryScript : MonoBehaviour
 
     void shootHook()
     {
-        print((target.transform.position - transform.position).magnitude);
+        print("Hooking");
+        //print((target.transform.position - transform.position).magnitude);
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
 
@@ -249,10 +250,10 @@ public class UseSecondaryScript : MonoBehaviour
 
             print("Grabing " + target.name);
 
-            if (isUsing_Extra || checkGrab())
+            if (checkGrab())
             {
-                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
-
+                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target,target.transform.position, target.transform.rotation));
+                target.SetActive(false);
                 //rb = target.GetComponent<Rigidbody2D>();
                 if (target.CompareTag("Pickup"))
                 {
@@ -271,24 +272,10 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 else if (target.CompareTag("Object") && !storedFlag)
                 {
-                    if (storedObject != null)
-                    {
-                        dropObject();
-                    }
-                    InteractableObjectScript interactableObjectScript;
-                    if (target.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
-                    {
-                        storedObject = Instantiate(interactableObjectScript.prefab);
-                        storedObject.transform.localScale = new Vector3(1, 1, 1);
-                        storedObject.GetComponent<BoxCollider2D>().enabled = true;
-                        storedObject.SetActive(false);
-                        storedFlag = true;
-                        print("storing: " + target.name);
-
-                    }
+                    storeObject();
                 }
-                target.GetComponent<BoxCollider2D>().enabled = false;
-
+                activatingSecondary = false;
+                //target = null;
                 //rb.gravityScale = 1;
                 //print("moving " + target.name + target.transform.position);
             }
@@ -324,14 +311,42 @@ public class UseSecondaryScript : MonoBehaviour
         return false;
     }
 
+    public void storeObject()
+    {
+        if (storedObject != null)
+        {
+            dropObject();
+        }
+        InteractableObjectScript interactableObjectScript;
+        if (target.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
+        {
+            storedObject = target;
+            target.GetComponent<BoxCollider2D>().enabled = false;
+
+            storedFlag = true;
+            print("storing: " + target.name);
+
+        }
+    }
+
+
+    void resetStoreObject(Vector3 v,Quaternion q)
+    {
+        storedObject.transform.localScale = new Vector3(1, 1, 1);
+        storedObject.transform.position = v;
+        storedObject.transform.rotation = q;
+        storedObject.GetComponent<BoxCollider2D>().enabled = true;
+        storedObject.SetActive(true);
+    }
+
     public void throwObject()
     {
         throwFlag = true;
-        storedObject.GetComponent<BoxCollider2D>().enabled = true;
-        storedObject.SetActive(true);
 
+        GameObject throwObject = storedObject;
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1f;
-        GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
+        resetStoreObject(newPoint,throwPoint.rotation);
+        throwObject.SetActive(true);
         InteractableObjectScript interactableObjectScript;
         if (throwObject.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
         {
@@ -340,7 +355,8 @@ public class UseSecondaryScript : MonoBehaviour
         activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;
-        Destroy(storedObject);
+        storedObject = null;
+        //Destroy(storedObject);
         //StartCoroutine(cooldownTillGrab());
     }
 
@@ -348,14 +364,11 @@ public class UseSecondaryScript : MonoBehaviour
     {
         print("droping: " + storedObject.name);
         //throwFlag = true;
-        storedObject.GetComponent<BoxCollider2D>().enabled = true;
-        storedObject.SetActive(true);
+
 
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1.2f;
-        storedObject.transform.position = newPoint;
-        storedObject.transform.rotation = Quaternion.identity;
+        resetStoreObject(newPoint,throwPoint.rotation);
         storedObject = null;
-        activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;
         //GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);

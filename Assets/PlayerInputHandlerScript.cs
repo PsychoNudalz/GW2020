@@ -77,7 +77,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void movePlayer(InputAction.CallbackContext context)
     {
         moveDir = context.ReadValue<Vector2>();
-        print("moving player " + moveDir);
+        //print("moving player " + moveDir);
         playerMovementScript.playerControls(moveDir);
         playerMovementScript.aimWeapon(mousePosition);
 
@@ -213,7 +213,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             return;
         }
         currentEvent = savedEvents[currentEventPointer];
-        print(currentEvent);
+        //print(currentEvent);
         if (Time.time - startTime < currentEvent.duration)
         {
             playEvent(currentEvent);
@@ -236,7 +236,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         foreach (LogType l in et.logs)
         {
             s = l.inputType;
-            print("Replaying " +s+ (et.moveDir) + (et.mouseLocation));
+            //print("Replaying " +s+ (et.moveDir) + (et.mouseLocation));
             if (s.Equals("Move"))
             {
 
@@ -254,8 +254,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
             } else if (s.Equals("Use"))
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
-
-                useSecondaryScript.use();
+                print("AI using");
+                useSecondaryScript.isUsing = true;
             }
         }
     }

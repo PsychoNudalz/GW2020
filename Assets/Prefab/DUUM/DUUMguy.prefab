@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 7868093750151994099}
   - component: {fileID: 7868093750151994109}
   - component: {fileID: 7868093750151994108}
+  - component: {fileID: 2183118846252424406}
   - component: {fileID: 349751094640037398}
   - component: {fileID: 7068625388550635107}
   m_Layer: 8
@@ -298,6 +299,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2183118846252424406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868093750151994097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ef5df3dace8a04f99b947a699c4b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 200
+  currentHealth: 0
 --- !u!114 &349751094640037398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,10 +497,10 @@ MonoBehaviour:
   shootingPoint: {fileID: 7868093751180948416}
   animator: {fileID: 39450019}
   ammo: 100
-  Ammo_Max: 0
-  Ammo_Cost: 1
-  maxInMag: 1
-  currentMag: 1
+  Ammo_Max: 100
+  Ammo_Cost: 2
+  maxInMag: 2
+  currentMag: 2
   reloadTime: 1.75
   timeNow_reload: 0
   isReloading: 0
@@ -528,7 +543,7 @@ MonoBehaviour:
   extraGameObject: {fileID: 482521689}
   extraTransform: {fileID: 7868093751180948417}
   rb: {fileID: 7868093750151994108}
-  extraGOForce: 22500
+  extraGOForce: 2500
   grabMode: 0
   isUsing_Extra: 0
   currentMousePosition: {x: 0, y: 0}

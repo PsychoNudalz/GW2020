@@ -13,6 +13,7 @@ public class VRHandMovementScript : MonoBehaviour
     public Transform leftPickup;
     public Transform leftDropoff;
     public GameObject pickedUpObject;
+    [SerializeField] Transform pickedUpObject_Parent;
     [SerializeField] float scaleUpRate;
 
     [SerializeField] bool pickingUp;
@@ -85,7 +86,7 @@ public class VRHandMovementScript : MonoBehaviour
 
             pickingUp = true;
         }
-        if (pickedUpObject.activeSelf)
+        if (pickedUpObject.activeSelf && pickedUpObject != null)
         {
             if (pickedUpObject.transform.lossyScale.x < 3f && !phase1 && pickedUpObject != null)
             {
@@ -108,10 +109,7 @@ public class VRHandMovementScript : MonoBehaviour
             else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
             {
                 pickedUpObject.SetActive(false);
-                Destroy(pickedUpObject,2f);
-
-
-
+                //Destroy(pickedUpObject,2f);
             }
         }
         else if ((left_INITIAL + transform.position - leftHand.position).magnitude > .5f)
@@ -141,6 +139,8 @@ public class VRHandMovementScript : MonoBehaviour
         leftHandAnimator.SetBool("PickUp", false);
         //leftHandAnimator.SetBool("PickUp", true);
         pickedUpObject = g;
+        pickedUpObject.GetComponent<BoxCollider2D>().enabled = false;
+        //pickedUpObject_Parent = pickedUpObject.transform.parent;
         g.transform.SetParent(leftHand);
 
 
@@ -170,6 +170,7 @@ public class VRHandMovementScript : MonoBehaviour
     {
         for (int i = 0; i < leftHand.childCount; i++)
         {
+            //leftHand.GetChild(i).gameObject.transform.SetParent(pickedUpObject_Parent);
             Destroy(leftHand.GetChild(i).gameObject,1f);
         }
     }
