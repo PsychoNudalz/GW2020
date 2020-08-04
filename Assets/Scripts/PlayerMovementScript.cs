@@ -20,6 +20,7 @@ public class PlayerMovementScript : MonoBehaviour
     public float maxDistance;
     [Header("Aiming Weapon")]
     public GameObject gun;
+    public bool AI = false;
     [Header("Animator")]
     public Animator animator;
 
@@ -32,10 +33,16 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!AI)
+        {
+        mousePosition= Mouse.current.position.ReadValue();
+            
+        }
+
         playerControls();
         updateAnimation();
+        aimWeapon(mousePosition);
         setMidPosition();
-        aimWeapon();
     }
 
     void playerControls()
@@ -63,21 +70,21 @@ public class PlayerMovementScript : MonoBehaviour
 
     public void setMidPosition()
     {
-        mousePosition = Mouse.current.position.ReadValue();
-        Vector3 displace = ((mousePosition - transform.position - new Vector3(Screen.width / 2, Screen.height / 2)) * midScale);
+        Vector3 displace = (mousePosition - transform.position) * midScale;
         if (displace.magnitude > maxDistance)
         {
             displace = displace.normalized * maxDistance;
         }
-        midpoint.transform.position = transform.position + displace;
+        midpoint.transform.position = Vector2.Lerp(midpoint.transform.position, transform.position + displace,Time.deltaTime*3f) ;
         //print(mousePosition + ", " + transform.position + ", " + midpoint.transform.position + ", " + new Vector3(Screen.width / 2, Screen.height / 2));
     }
 
-    public void aimWeapon()
+    public void aimWeapon(Vector2 v)
     {
         //gun.transform.LookAt((Vector2)midpoint.transform.position);
+        setMousePosition(v);
 
-        UnityEngine.Vector2 dir = midpoint.transform.position - transform.position;
+        Vector2 dir = mousePosition - transform.position;
         dir.Normalize();
         //print(gun.transform.rotation.eulerAngles.z);
         Vector3 originalScale = gun.transform.localScale;
@@ -95,9 +102,9 @@ public class PlayerMovementScript : MonoBehaviour
         gun.transform.localScale = originalScale;
     }
 
-    public void setMousePosition(Vector3 v)
+    public void setMousePosition(Vector2 v)
     {
-        mousePosition = v;
+        mousePosition = v - new Vector2(Screen.width / 2, Screen.height / 2);
     }
 
     private void updateAnimation()

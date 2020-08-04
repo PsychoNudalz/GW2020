@@ -10,9 +10,10 @@ public class EventType
     public float duration = -1;
     public float timeStart;
 
-    public EventType(Vector2 v)
+    public EventType(Vector2 d, Vector2 v)
     {
         timeStart = Time.time;
+        moveDir = d;
         mouseLocation = v;
         
     }
@@ -24,12 +25,12 @@ public class EventType
 
     public void endLog()
     {
-        duration = Time.time - duration;
+        duration = Time.time - timeStart;
     }
 
     public override string ToString()
     {
-        return ("Logs: " + logs.Count + " Duration: " + duration);
+        return ("Logs: " + logs.Count + "    Duration: " + duration+"\n"+ moveDir + "\n");
     }
 
 }

@@ -8,7 +8,9 @@ enum InputEnum
     Down,
     Left,
     Right,
+    Move,
     Shoot,
     Use,
+    Reload,
     NA
 }

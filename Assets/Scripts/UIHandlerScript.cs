@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class UIHandlerScript : MonoBehaviour
 {
+    public PlayerSpawnPointScript playerSpawn;
+    [SerializeField] GameObject currentChaaracter;
+
     [Header("Health")]
     public PlayerStates playerStates;
     public TextMeshProUGUI healthTextBox;
-
     [Header("Ammo")]
     public WeaponTypeScript weaponTypeScript;
     public TextMeshProUGUI ammoTextBox;
@@ -26,15 +28,23 @@ public class UIHandlerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (playerSpawn != null)
+        {
+            updateCurrentCharacter();
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         displayHealth();
         displayAmmo();
         displayGrab();
+        if (isLogger)
+        {
+
+        displayLog();
+        }
     }
 
     void displayHealth()
@@ -44,7 +54,7 @@ public class UIHandlerScript : MonoBehaviour
 
     void displayAmmo()
     {
-        ammoTextBox.text = weaponTypeScript.currentMag + "/" + weaponTypeScript.Ammo;
+        ammoTextBox.text = weaponTypeScript.currentMag + "/" + weaponTypeScript.Ammo+"\n";
 
     }
 
@@ -75,6 +85,20 @@ public class UIHandlerScript : MonoBehaviour
             text += e.ToString();
         }
         eventTextBox.text = text;
+    }
+
+    public void updateCurrentCharacter()
+    {
+        if (!currentChaaracter.Equals(playerSpawn.currentCharacter))
+        {
+            currentChaaracter = playerSpawn.currentCharacter;
+            playerStates = currentChaaracter.GetComponent<PlayerStates>();
+            playerInput = currentChaaracter.GetComponent<PlayerInputHandlerScript>();
+            weaponTypeScript = playerInput.weaponTypeScript;
+            useSecondaryScript = playerInput.UseSecondaryScript;
+
+
+        }
     }
 
 

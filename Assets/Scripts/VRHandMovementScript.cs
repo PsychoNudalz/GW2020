@@ -29,7 +29,7 @@ public class VRHandMovementScript : MonoBehaviour
     public WeaponTypeScript weapon;
 
     [Header("Mouse Movement")]
-    [SerializeField] Vector3 mousePosition = new Vector3();
+    [SerializeField] Transform midPointPosition;
     public GameObject followTarget;
     public float midScale = 0.2f;
     public float maxDistance;
@@ -52,7 +52,7 @@ public class VRHandMovementScript : MonoBehaviour
         //print(transform.position);
         //print(transform.localPosition);
 
-        setHandPosition();
+        //setHandPosition();
 
         if (pickingUp)
         {
@@ -65,9 +65,8 @@ public class VRHandMovementScript : MonoBehaviour
     }
     void setHandPosition()
     {
-        mousePosition = Mouse.current.position.ReadValue();
 
-        Vector3 displace = ((mousePosition - transform.position - new Vector3(Screen.width / 2, Screen.height / 2)) * midScale);
+        Vector3 displace = (midPointPosition.position);
         if (displace.magnitude > maxDistance)
         {
             displace = displace.normalized * maxDistance;

@@ -7,9 +7,11 @@ public class LogType
 {
 
     [SerializeField] private InputEnum inputEnum;
+    public string inputType;
 
     public LogType(string s)
     {
+        inputType = s;
         if (s.Equals("Up"))
         {
             inputEnum = InputEnum.Up;
@@ -29,6 +31,10 @@ public class LogType
             inputEnum = InputEnum.Right;
 
         }
+        else if (s.Equals("Move"))
+        {
+            inputEnum = InputEnum.Move;
+        }
         else if (s.Equals("Shoot"))
         {
             inputEnum = InputEnum.Shoot;
@@ -38,6 +44,13 @@ public class LogType
         {
             inputEnum = InputEnum.Use;
 
+        } else if (s.Equals("Reload"))
+        {
+            inputEnum = InputEnum.Reload;
+        }
+        else
+        {
+            inputEnum = InputEnum.NA;
         }
     }
 

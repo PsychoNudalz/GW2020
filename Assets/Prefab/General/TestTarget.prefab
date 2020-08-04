@@ -82,8 +82,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5f5cc9e5b05ba44beb955346a3ad38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAttackScript: {fileID: 3598923002379409353}
   maxHealth: 100000000
   currentHealth: 0
+  Player: {fileID: 0}
+  des: {fileID: 4208187946899971014}
+  rangeToFindPlayer: 0
+  inSight: 0
+  playerLastPosition: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enemySpawnWaveHandler: {fileID: 0}
 --- !u!61 &1385813727388258266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -236,8 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 136968695066540787, guid: 8bdf71b49400db04aadf9e2007fe06f2,
     type: 3}
-  timeBetweenShoot: 5
-  timeNow: 0
+  weaponTypeScript: {fileID: 0}
 --- !u!1 &5296207939270956007
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +297,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,8 +315,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 627371981
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5532875847822644953, guid: 85de41ac235184a45a822f8ce35a65f4,
     type: 3}

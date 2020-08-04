@@ -193,7 +193,7 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 break;
             case WeaponEnum.Grab:
-                print("old mouse reset");
+                //print("old mouse reset");
                 oldMousePosition = new Vector2(-3000, -3000);
 
                 break;
@@ -226,12 +226,14 @@ public class UseSecondaryScript : MonoBehaviour
         rb.AddForce(dir * extraGOForce * Time.deltaTime);
     }
 
+
+
     void grabObject()
     {
         currentMousePosition = Mouse.current.position.ReadValue();
         if (target == null)
         {
-            print("stoping");
+            //print("stoping");
             isUsing_Extra = false;
             activatingSecondary = false;
             storedFlag = false;
@@ -246,7 +248,7 @@ public class UseSecondaryScript : MonoBehaviour
 
             if (oldMousePosition.y <= 0f)
             {
-                print("updating old mouse");
+                //print("updating old mouse");
                 oldMousePosition = currentMousePosition;
 
             }

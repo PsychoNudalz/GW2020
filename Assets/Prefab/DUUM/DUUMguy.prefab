@@ -202,9 +202,10 @@ GameObject:
   - component: {fileID: 7868093750151994099}
   - component: {fileID: 7868093750151994109}
   - component: {fileID: 7868093750151994108}
-  - component: {fileID: 958008346}
+  - component: {fileID: 349751094640037398}
+  - component: {fileID: 7068625388550635107}
   m_Layer: 8
-  m_Name: Player
+  m_Name: DUUMguy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,12 +242,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7868093750151994108}
   moveSpeed: 5
+  isPlayer: 0
   playerInput: {x: 0, y: 0, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 7868093749533679557}
-  midScale: 0.005
-  maxDistance: 3
+  midScale: 0.01
+  maxDistance: 5
   gun: {fileID: 7868093750802002686}
+  AI: 0
   animator: {fileID: 7868093751398536989}
 --- !u!61 &7868093750151994109
 BoxCollider2D:
@@ -295,7 +298,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &958008346
+--- !u!114 &349751094640037398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,11 +307,128 @@ MonoBehaviour:
   m_GameObject: {fileID: 7868093750151994097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7392e0273f765a4d82b7dae5b4d08c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 1079763995}
-  secondary: {fileID: 2926540081131492961}
+  m_Actions: {fileID: -944628639613478452, guid: 23e9f05bb35a8954c84a21a347d8572a,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7068625388550635107}
+        m_MethodName: shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3cec82c1-0bdb-4a13-9281-16bb4935fcb3
+    m_ActionName: Player/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7068625388550635107}
+        m_MethodName: movePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a26ce9dd-9ce7-403e-8743-13020b73c3f4
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7068625388550635107}
+        m_MethodName: useWeapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3c858d45-16a9-4280-b226-116c7ba37a14
+    m_ActionName: Player/Use[/Mouse/rightButton,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7068625388550635107}
+        m_MethodName: reload
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ff018bb-b5bf-46b7-a9d1-26f5db8c2763
+    m_ActionName: Player/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d8650891-aa4c-4670-a502-9523664ff27e
+    m_ActionName: Player/Look[/Mouse/delta]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: M&K
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &7068625388550635107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868093750151994097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovementScript: {fileID: 7868093750151994099}
+  weaponTypeScript: {fileID: 1079763995}
+  UseSecondaryScript: {fileID: 2926540081131492961}
+  playerInputComponent: {fileID: 349751094640037398}
+  AI: 0
+  moveDir: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  isFiring: 0
+  isUsing: 0
+  isReloading: 0
+  startTime: 0
+  currentEventPointer: 0
+  timeNow_playBack: 0
 --- !u!1 &7868093750802002686
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +491,7 @@ MonoBehaviour:
   isReloading: 0
   autoload: 0
   autoloadRate: 0.1
+  isFiring: 0
   rpm: 45
   spreadIncreaseRate: 0
   spreadDecreaseRate: 0
@@ -401,6 +522,7 @@ MonoBehaviour:
   tagList:
   - Enemy
   isUsing: 0
+  activatingSecondary: 0
   timeTillNewTarget: 0.5
   timeNo_timeTillNewTarget: 0
   extraGameObject: {fileID: 482521689}
@@ -409,12 +531,14 @@ MonoBehaviour:
   extraGOForce: 22500
   grabMode: 0
   isUsing_Extra: 0
+  currentMousePosition: {x: 0, y: 0}
   oldMousePosition: {x: 0, y: 0}
   storedObject: {fileID: 0}
   storedFlag: 0
   throwPoint: {fileID: 0}
   throwFlag: 0
   grabCooldown: 3
+  timeNow_grabCooldown: 0
 --- !u!1 &7868093751180948416
 GameObject:
   m_ObjectHideFlags: 0

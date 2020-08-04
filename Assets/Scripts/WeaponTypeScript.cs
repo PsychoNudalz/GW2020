@@ -138,9 +138,9 @@ public class WeaponTypeScript : MonoBehaviour
         return false;
     }
 
-    public void toggleFIring(InputAction.CallbackContext context)
+    public void toggleFiring(bool context)
     {
-        isFiring = context.performed;
+        isFiring = context;
         print("toggle Firing: " + isFiring);
     }
 
@@ -238,6 +238,14 @@ public class WeaponTypeScript : MonoBehaviour
     }
 
     */
+
+    public void Rewind()
+    {
+        Ammo = Ammo_Max;
+        currentMag = maxInMag;
+        isFiring = false;
+        isReloading = false;
+    }
 
 
     //Weapon Fire

@@ -14,11 +14,18 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public PlayerMovementScript playerMovementScript;
     public WeaponTypeScript weaponTypeScript;
     public UseSecondaryScript UseSecondaryScript;
+    public PlayerInput playerInputComponent;
     [Header("AI")]
     public bool AI = false;
     public List<EventType> events = new List<EventType>();
     public Vector2 moveDir;
     public Vector2 mousePosition;
+    public bool isFiring = false;
+    public bool isUsing = false;
+    public bool isReloading = false;
+    public float startTime;
+    public int currentEventPointer;
+    [SerializeField] float timeNow_playBack;
     Keyboard kb;
     Mouse m;
     Pointer p;
@@ -36,33 +43,61 @@ public class PlayerInputHandlerScript : MonoBehaviour
         */
     }
 
-   
+    private void Start()
+    {
+        newEvent();
+    }
+
+
     private void Update()
     {
-        events = new List<EventType>();
-        if (!AI)
+        /*
+        kb = InputSystem.GetDevice<Keyboard>();
+        if (kb.pKey.isPressed)
         {
-            kb = InputSystem.GetDevice<Keyboard>();
-            m = InputSystem.GetDevice<Mouse>();
-            p = InputSystem.GetDevice<Pointer>();
-            //recordEvent(kb.IsPressed());
+            activeAI(false);
+        }
+        else if (kb.oKey.isPressed)
+        {
+            activeAI(true);
+
+        }
+        */
+
+        //events = new List<EventType>();
+
+
+        if (AI)
+        {
+            playBackEvents();
         }
     }
     public void movePlayer(InputAction.CallbackContext context)
     {
         moveDir = context.ReadValue<Vector2>();
+        print("moving player " + moveDir);
         playerMovementScript.playerControls(moveDir);
+        playerMovementScript.aimWeapon(Mouse.current.position.ReadValue());
+
+        recordEvent(context);
     }
 
     public void shoot(InputAction.CallbackContext context)
     {
         mousePosition = Mouse.current.position.ReadValue();
-        weaponTypeScript.toggleFIring(context);
+        playerMovementScript.aimWeapon(Mouse.current.position.ReadValue());
+        weaponTypeScript.toggleFiring(context.performed);
+        isFiring = context.performed;
+        recordEvent(context);
+
     }
     public void useWeapon(InputAction.CallbackContext context)
     {
         mousePosition = Mouse.current.position.ReadValue();
         UseSecondaryScript.toggleUse(context);
+        isUsing = context.performed;
+        recordEvent(context);
+
 
     }
 
@@ -70,20 +105,147 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void reload(InputAction.CallbackContext context)
     {
         weaponTypeScript.reload();
+        isReloading = context.performed;
+        recordEvent(context);
+
+    }
+    public void newEvent()
+    {
+        endEvent();
+        currentEvent = new EventType(moveDir, Mouse.current.position.ReadValue());
+
+
     }
 
-
-    public void recordEvent(InputAction.CallbackContext context)
+    public void endEvent()
     {
         if (currentEvent != null)
         {
             currentEvent.endLog();
+            events.Add(currentEvent);
         }
-        currentEvent = new EventType(Mouse.current.position.ReadValue());
-        if (controls.Player.Shoot.enabled)
+        currentEvent = null;
+    }
+
+    public void recordEvent(InputAction.CallbackContext context)
+    {
+        newEvent();
+        //print(context.action.actionMap.ToString());
+        if (moveDir.magnitude > 0)
         {
-            //print("recorder detected");
+
+            //print("Logging move");
+
+            currentEvent.addLog("Move");
         }
+        if (isFiring)
+        {
+            //print("Logging shoot");
+            currentEvent.addLog("Shoot");
+        }
+
+        if (isUsing)
+        {
+            currentEvent.addLog("Use");
+        }
+
+        if (isReloading)
+        {
+            currentEvent.addLog("Reload");
+        }
+
+
+    }
+
+    public void activeAI(bool b)
+    {
+        if (AI != b)
+        {
+            AI = b;
+
+            playerMovementScript.AI = AI;
+            if (AI)
+            {
+                endEvent();
+                resetEvent();
+                playerInputComponent.enabled = false;
+            }
+            else
+            {
+                resetEvent();
+                newEvent();
+                playerInputComponent.enabled = true;
+                events = new List<EventType>();
+            }
+        }
+
+    }
+
+    public void setEventList(List<EventType> e)
+    {
+        events = e;
+        startTime = Time.time;
+
+    }
+
+    public void playBackEvents()
+    {
+        if (currentEventPointer >= events.Count)
+        {
+            //print(name + " event empty");
+            return;
+        }
+        currentEvent = events[currentEventPointer];
+        print(currentEvent);
+        if (Time.time - startTime < currentEvent.duration)
+        {
+            playEvent(currentEvent);
+        }
+        else
+        {
+            startTime = Time.time;
+            currentEventPointer++;
+        }
+    }
+
+
+    public void playEvent(EventType et)
+    {
+        //print(et);
+        string s;
+        playerMovementScript.playerControls(new Vector2(0, 0));
+        playerMovementScript.aimWeapon(et.mouseLocation);
+
+        foreach (LogType l in et.logs)
+        {
+            s = l.inputType;
+            if (s.Equals("Move"))
+            {
+                print("moving " + (et.moveDir) + (et.mouseLocation));
+
+                playerMovementScript.playerControls(et.moveDir);
+                playerMovementScript.aimWeapon(et.mouseLocation);
+            }
+            else if (s.Equals("Shoot"))
+            {
+                playerMovementScript.aimWeapon(et.mouseLocation);
+
+                weaponTypeScript.fireWeapon();
+            }
+        }
+    }
+
+    void resetEvent()
+    {
+        startTime = Time.time;
+        currentEvent = null;
+    }
+
+
+    public void Rewind()
+    {
+        currentEventPointer = 0;
+        weaponTypeScript.Rewind();
     }
 
     private void OnEnable()
