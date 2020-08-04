@@ -35,8 +35,8 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (!AI)
         {
-        mousePosition= Mouse.current.position.ReadValue();
-            
+            mousePosition= Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+
         }
 
         playerControls();
@@ -104,7 +104,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     public void setMousePosition(Vector2 v)
     {
-        mousePosition = v - new Vector2(Screen.width / 2, Screen.height / 2);
+        mousePosition = v;
+        //mousePosition = v - new Vector2(Screen.width / 2, Screen.height / 2);
     }
 
     private void updateAnimation()

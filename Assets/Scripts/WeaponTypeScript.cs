@@ -167,7 +167,7 @@ public class WeaponTypeScript : MonoBehaviour
         {
             //activeFire = false;
         }
-        //print(ammo);
+        print("shoot at "+transform.up);
 
     }
 

@@ -25,10 +25,15 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         characterPool.Add(DUUMguy);
         characterPool.Add(VRguy);
+        spawnPool.Add(DUUMguy_spawn);
+        spawnPool.Add(VRguy_spawn);
         pickChracterVRguy();
-        currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-
+        currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
         Rewind();
+
+        currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+        Rewind();
+
     }
 
     // Update is called once per frame
@@ -52,10 +57,10 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public void Rewind()
     {
-        foreach (GameObject character in characterPool)
+        for (int i = 0; i< spawnPool.Count && i <characterPool.Count;i++)
         {
-            character.GetComponent<PlayerInputHandlerScript>().Rewind();
-            character.transform.position = ;
+            characterPool[i].GetComponent<PlayerInputHandlerScript>().Rewind();
+            characterPool[i].transform.position = spawnPool[i].transform.position;
 
         }
     }

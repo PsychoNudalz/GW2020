@@ -80,7 +80,7 @@ public class UIHandlerScript : MonoBehaviour
     void displayLog()
     {
         string text = "";
-        foreach(EventType e in playerInput.events)
+        foreach(EventType e in playerInput.savedEvents)
         {
             text += e.ToString();
         }

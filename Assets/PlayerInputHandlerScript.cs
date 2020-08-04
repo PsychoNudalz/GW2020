@@ -17,7 +17,9 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public PlayerInput playerInputComponent;
     [Header("AI")]
     public bool AI = false;
-    public List<EventType> events = new List<EventType>();
+    public List<EventType> currentEvents = new List<EventType>();
+    public List<EventType> savedEvents = new List<EventType>();
+
     public Vector2 moveDir;
     public Vector2 mousePosition;
     public bool isFiring = false;
@@ -65,7 +67,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         */
 
         //events = new List<EventType>();
-
+        getMousePosition();
 
         if (AI)
         {
@@ -77,7 +79,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         moveDir = context.ReadValue<Vector2>();
         print("moving player " + moveDir);
         playerMovementScript.playerControls(moveDir);
-        playerMovementScript.aimWeapon(Mouse.current.position.ReadValue());
+        playerMovementScript.aimWeapon(mousePosition);
 
         recordEvent(context);
     }
@@ -85,7 +87,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void shoot(InputAction.CallbackContext context)
     {
         mousePosition = Mouse.current.position.ReadValue();
-        playerMovementScript.aimWeapon(Mouse.current.position.ReadValue());
+        //playerMovementScript.aimWeapon(mousePosition);
         weaponTypeScript.toggleFiring(context.performed);
         isFiring = context.performed;
         recordEvent(context);
@@ -112,7 +114,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void newEvent()
     {
         endEvent();
-        currentEvent = new EventType(moveDir, Mouse.current.position.ReadValue());
+        currentEvent = new EventType(moveDir, getMousePosition());
 
 
     }
@@ -122,7 +124,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         if (currentEvent != null)
         {
             currentEvent.endLog();
-            events.Add(currentEvent);
+            currentEvents.Add(currentEvent);
         }
         currentEvent = null;
     }
@@ -168,6 +170,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             {
                 endEvent();
                 resetEvent();
+                setEventList(currentEvents);
                 playerInputComponent.enabled = false;
             }
             else
@@ -175,7 +178,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 resetEvent();
                 newEvent();
                 playerInputComponent.enabled = true;
-                events = new List<EventType>();
+                currentEvents = new List<EventType>();
             }
         }
 
@@ -183,19 +186,19 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void setEventList(List<EventType> e)
     {
-        events = e;
+        savedEvents = e;
         startTime = Time.time;
 
     }
 
     public void playBackEvents()
     {
-        if (currentEventPointer >= events.Count)
+        if (currentEventPointer >= savedEvents.Count)
         {
             //print(name + " event empty");
             return;
         }
-        currentEvent = events[currentEventPointer];
+        currentEvent = savedEvents[currentEventPointer];
         print(currentEvent);
         if (Time.time - startTime < currentEvent.duration)
         {
@@ -214,17 +217,17 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //print(et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
-        playerMovementScript.aimWeapon(et.mouseLocation);
+        //playerMovementScript.aimWeapon(et.mouseLocation);
 
         foreach (LogType l in et.logs)
         {
             s = l.inputType;
+            print("Replaying " +s+ (et.moveDir) + (et.mouseLocation));
             if (s.Equals("Move"))
             {
-                print("moving " + (et.moveDir) + (et.mouseLocation));
 
                 playerMovementScript.playerControls(et.moveDir);
-                playerMovementScript.aimWeapon(et.mouseLocation);
+                //playerMovementScript.aimWeapon(et.mouseLocation);
             }
             else if (s.Equals("Shoot"))
             {
@@ -246,6 +249,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
+    }
+
+    Vector2 getMousePosition()
+    {
+        mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+
+        mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+        return mousePosition;
     }
 
     private void OnEnable()
