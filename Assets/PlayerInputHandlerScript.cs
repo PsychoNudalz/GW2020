@@ -13,7 +13,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     [Header("Scripts")]
     public PlayerMovementScript playerMovementScript;
     public WeaponTypeScript weaponTypeScript;
-    public UseSecondaryScript UseSecondaryScript;
+    public UseSecondaryScript useSecondaryScript;
     public PlayerInput playerInputComponent;
     [Header("AI")]
     public bool AI = false;
@@ -96,7 +96,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void useWeapon(InputAction.CallbackContext context)
     {
         mousePosition = Mouse.current.position.ReadValue();
-        UseSecondaryScript.toggleUse(context);
+        useSecondaryScript.toggleUse(context);
         isUsing = context.performed;
         recordEvent(context);
 
@@ -166,6 +166,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             AI = b;
 
             playerMovementScript.AI = AI;
+            useSecondaryScript.AI = AI;
             if (AI)
             {
                 endEvent();
@@ -230,7 +231,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //print(et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
-        //playerMovementScript.aimWeapon(et.mouseLocation);
+        playerMovementScript.aimWeapon(et.mouseLocation);
 
         foreach (LogType l in et.logs)
         {
@@ -244,12 +245,17 @@ public class PlayerInputHandlerScript : MonoBehaviour
             }
             else if (s.Equals("Shoot"))
             {
-                playerMovementScript.aimWeapon(et.mouseLocation);
+                //playerMovementScript.aimWeapon(et.mouseLocation);
 
                 weaponTypeScript.fireWeapon();
             } else if (s.Equals("Reload"))
             {
                 weaponTypeScript.reload();
+            } else if (s.Equals("Use"))
+            {
+                //playerMovementScript.aimWeapon(et.mouseLocation);
+
+                useSecondaryScript.use();
             }
         }
     }

@@ -418,7 +418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovementScript: {fileID: 7868093750151994099}
   weaponTypeScript: {fileID: 1079763995}
-  UseSecondaryScript: {fileID: 2926540081131492961}
+  useSecondaryScript: {fileID: 2926540081131492961}
   playerInputComponent: {fileID: 349751094640037398}
   AI: 0
   moveDir: {x: 0, y: 0}
@@ -539,6 +539,7 @@ MonoBehaviour:
   throwFlag: 0
   grabCooldown: 3
   timeNow_grabCooldown: 0
+  AI: 0
 --- !u!1 &7868093751180948416
 GameObject:
   m_ObjectHideFlags: 0

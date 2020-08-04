@@ -33,6 +33,9 @@ public class UseSecondaryScript : MonoBehaviour
     public float grabCooldown = 1f;
     [SerializeField] float timeNow_grabCooldown;
 
+    [Header("AI")]
+    public bool AI = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -239,39 +242,17 @@ public class UseSecondaryScript : MonoBehaviour
             storedFlag = false;
 
             stop();
-            //return;
+            return;
         }
         else
         {
 
             print("Grabing " + target.name);
 
-            if (oldMousePosition.y <= 0f)
+            if (isUsing_Extra || checkGrab())
             {
-                //print("updating old mouse");
-                oldMousePosition = currentMousePosition;
-
-            }
-
-            float flick = currentMousePosition.y - oldMousePosition.y;
-            if (flick > 1 && !isUsing_Extra)
-            {
-                isUsing_Extra = true;
                 extraGameObject.GetComponent<VRHandMovementScript>().pickUp(target);
 
-                //target.transform.SetParent(extraGameObject.transform);
-                //Destroy(target, timeToDisappear);
-            }
-            else if (flick <= 0)
-            {
-                activatingSecondary = false;
-                isUsing_Extra = false;
-                storedFlag = false;
-
-            }
-
-            if (isUsing_Extra)
-            {
                 //rb = target.GetComponent<Rigidbody2D>();
                 if (target.CompareTag("Pickup"))
                 {
@@ -311,9 +292,36 @@ public class UseSecondaryScript : MonoBehaviour
                 //rb.gravityScale = 1;
                 //print("moving " + target.name + target.transform.position);
             }
-            timeNow_grabCooldown = grabCooldown;
         }
 
+    }
+
+    public bool checkGrab()
+    {
+
+        if (oldMousePosition.y <= 0f)
+        {
+            //print("updating old mouse");
+            oldMousePosition = currentMousePosition;
+
+        }
+
+        float flick = currentMousePosition.y - oldMousePosition.y;
+        if ((flick > 1 && !isUsing_Extra)||AI)
+        {
+            isUsing_Extra = true;
+            timeNow_grabCooldown = grabCooldown;
+
+            return true;
+        }
+        else if (flick <= 0)
+        {
+            activatingSecondary = false;
+            isUsing_Extra = false;
+            storedFlag = false;
+
+        }
+        return false;
     }
 
     public void throwObject()

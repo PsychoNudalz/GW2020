@@ -21,7 +21,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     Keyboard kb;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         characterPool.Add(DUUMguy);
         characterPool.Add(VRguy);

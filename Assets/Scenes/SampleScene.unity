@@ -9785,6 +9785,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5743953362179787852, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: grabCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7088307432791613047, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: m_RootOrder
