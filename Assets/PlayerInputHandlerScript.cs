@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,24 +16,28 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public UseSecondaryScript UseSecondaryScript;
     [Header("AI")]
     public bool AI = false;
+    public List<EventType> events = new List<EventType>();
     Keyboard kb;
     Mouse m;
     Pointer p;
+    [SerializeField] EventType currentEvent;
 
     // Start is called before the first frame update
     private void Awake()
     {
-
         controls = new InputMaster();
+        /*
         controls.Player.Movement.performed += ctx => movePlayer(ctx.ReadValue<Vector2>());
         controls.Player.Shoot.performed += ctx => shoot();
         controls.Player.Use.performed += ctx => useWeapon(ctx.ReadValueAsButton());
         controls.Player.Reload.performed += ctx => reload();
+        */
     }
 
 
     private void Update()
     {
+        events = new List<EventType>();
         if (!AI)
         {
             kb = InputSystem.GetDevice<Keyboard>();
@@ -63,9 +68,17 @@ public class PlayerInputHandlerScript : MonoBehaviour
     }
 
 
-    public void recordEvent(bool b)
+    public void recordEvent(InputAction.CallbackContext context)
     {
-
+        if (currentEvent != null)
+        {
+            currentEvent.endLog();
+        }
+        currentEvent = new EventType(Mouse.current.position.ReadValue());
+        if (controls.Player.Shoot.enabled)
+        {
+            //print("recorder detected");
+        }
     }
 
     private void OnEnable()

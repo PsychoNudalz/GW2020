@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponTypeScript : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class WeaponTypeScript : MonoBehaviour
     public bool autoload = true;
     public float autoloadRate = 10f;
     [Header("Fire Behaviour")]
+    [SerializeField] bool isFiring = false;
     public float rpm;
     public float spreadIncreaseRate;
     public float spreadDecreaseRate;
@@ -51,6 +53,11 @@ public class WeaponTypeScript : MonoBehaviour
 
     private void Update()
     {
+        if (isFiring)
+        {
+            fireWeapon();
+        }
+
         if (timeNow_rpm > 0)
         {
             timeNow_rpm -= Time.deltaTime;
@@ -130,6 +137,13 @@ public class WeaponTypeScript : MonoBehaviour
         }
         return false;
     }
+
+    public void toggleFIring(InputAction.CallbackContext context)
+    {
+        isFiring = context.performed;
+        print("toggle Firing: " + isFiring);
+    }
+
     public void fireWeapon()
     {
         if (consumeAmmo())

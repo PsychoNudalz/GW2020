@@ -1039,6 +1039,16 @@ PrefabInstance:
       propertyPath: useSecondaryScript
       value: 
       objectReference: {fileID: 1522811550}
+    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
+        type: 3}
+      propertyPath: eventTextBox
+      value: 
+      objectReference: {fileID: 439254701}
+    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
+        type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 770956450}
     - target: {fileID: 8454812653477447547, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1213,7 +1223,7 @@ GameObject:
   - component: {fileID: 439254702}
   - component: {fileID: 439254701}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: EventTextLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1514,6 +1524,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &770956450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3289350285936893998, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8845117445995296904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822713065
 GameObject:
   m_ObjectHideFlags: 0
@@ -9299,6 +9321,59 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 770956450}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: recordEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleFIring
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725229265952098935, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: ammo
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725229265952098935, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: Ammo_Max
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725229265952098935, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: maxInMag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725229265952098935, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: currentMag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289350285936893998, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8845117445844956317, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}
       propertyPath: m_Name

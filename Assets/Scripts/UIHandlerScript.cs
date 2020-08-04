@@ -19,7 +19,10 @@ public class UIHandlerScript : MonoBehaviour
     public Sprite emptySprite;
     [Header("Logger")]
     public bool isLogger;
-    
+    public PlayerInputHandlerScript playerInput;
+    public TextMeshProUGUI eventTextBox;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +65,16 @@ public class UIHandlerScript : MonoBehaviour
         {
             print("Error");
         }
+    }
+
+    void displayLog()
+    {
+        string text = "";
+        foreach(EventType e in playerInput.events)
+        {
+            text += e.ToString();
+        }
+        eventTextBox.text = text;
     }
 
 

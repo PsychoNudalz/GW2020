@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventType
 {
     public List<LogType> logs = new List<LogType>();
+    public Vector2 moveDir;
     public Vector2 mouseLocation;
     public float duration = -1;
     public float timeStart;
