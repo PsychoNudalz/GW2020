@@ -43,6 +43,13 @@ public class InteractableObjectScript : MonoBehaviour
         rb.AddTorque(spin);
         print(name + " Yeet ");
     }
+
+    public void Rewind()
+    {
+        rb.velocity = new Vector2(0,0);
+        rb.angularVelocity = 0;
+        
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (rb.velocity.magnitude > minVelocity)

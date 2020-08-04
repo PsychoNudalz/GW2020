@@ -8,5 +8,8 @@ public class PickupScript : MonoBehaviour
     public float amout;
     public bool used = false;
     // Start is called before the first frame update
-
+    public void Rewind()
+    {
+        used = true;
+    }
 }

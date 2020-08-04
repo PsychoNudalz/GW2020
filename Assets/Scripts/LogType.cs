@@ -6,12 +6,13 @@ using UnityEngine;
 public class LogType
 {
 
-    [SerializeField] private InputEnum inputEnum;
+    //[SerializeField] private InputEnum inputEnum;
     public string inputType;
 
     public LogType(string s)
     {
         inputType = s;
+        /*
         if (s.Equals("Up"))
         {
             inputEnum = InputEnum.Up;
@@ -52,6 +53,7 @@ public class LogType
         {
             inputEnum = InputEnum.NA;
         }
+        */
     }
 
 

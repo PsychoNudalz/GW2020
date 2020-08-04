@@ -27,8 +27,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
         characterPool.Add(VRguy);
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
-        //pickChracterVRguy();
-        pickCharacterDUUMguy();
+        pickChracterVRguy();
+        //pickCharacterDUUMguy();
         currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
         Rewind();
 

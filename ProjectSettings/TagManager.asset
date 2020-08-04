@@ -11,6 +11,7 @@ TagManager:
   - Projectile
   - Pickup
   - MovableObject
+  - RewindObject
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Obstacle
   - Projectile
   - MovableObject
-  - 
+  - Rewind
   - 
   - 
   - 

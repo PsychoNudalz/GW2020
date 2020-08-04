@@ -213,7 +213,7 @@ public class UseSecondaryScript : MonoBehaviour
 
     void shootHook()
     {
-        print("Hooking");
+        //print("Hooking");
         //print((target.transform.position - transform.position).magnitude);
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
