@@ -538,7 +538,7 @@ MonoBehaviour:
   - Enemy
   isUsing: 0
   activatingSecondary: 0
-  timeTillNewTarget: 0.5
+  timeTillNewTarget: 0
   timeNo_timeTillNewTarget: 0
   extraGameObject: {fileID: 482521689}
   extraTransform: {fileID: 7868093751180948417}

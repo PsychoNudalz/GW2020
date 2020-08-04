@@ -151,7 +151,7 @@ public class UseSecondaryScript : MonoBehaviour
             }
         }
 
-        //Debug.DrawRay(transform.position, (transform.right) *range, Color.green);
+        Debug.DrawRay(transform.position, (transform.up) *range, Color.green);
 
         if (target == null && isUsing_Extra)
         {

@@ -150,6 +150,11 @@ public class PlayerInputHandlerScript : MonoBehaviour
         {
             currentEvent.addLog("Use");
         }
+        else
+        {
+            currentEvent.addLog("StopUse");
+        }
+
 
         if (isReloading)
         {
@@ -254,8 +259,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
             } else if (s.Equals("Use"))
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
-                print("AI using");
+                //print("AI using");
                 useSecondaryScript.isUsing = true;
+            } else if (s.Equals("StopUse"))
+            {
+                useSecondaryScript.isUsing = false;
+
             }
         }
     }
