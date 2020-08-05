@@ -284,7 +284,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         if (currentEventPointer >= currentEvents.Count)
         {
-            print(name + " event empty");
+            //print(name + " event empty");
             return;
         }
         currentEvent = currentEvents[currentEventPointer];

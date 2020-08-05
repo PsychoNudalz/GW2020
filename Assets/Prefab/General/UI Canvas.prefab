@@ -281,7 +281,8 @@ MonoBehaviour:
   image: {fileID: 8454812655152777633}
   useSecondaryScript: {fileID: 0}
   emptySprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  isLogger: 1
+  isLogger: 0
+  updateLogger: 1
   playerInput: {fileID: 0}
   eventTextBox: {fileID: 439254701}
 --- !u!1 &8454812653477904414

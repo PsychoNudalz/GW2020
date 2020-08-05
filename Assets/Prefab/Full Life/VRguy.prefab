@@ -625,11 +625,11 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 8845117446913875372}
   animator: {fileID: 6840636839630347643}
-  ammo: 500
-  Ammo_Max: 999
+  ammo: 20
+  Ammo_Max: 20
   Ammo_Cost: 1
-  maxInMag: 15
-  currentMag: 15
+  maxInMag: 8
+  currentMag: 8
   reloadTime: 2
   timeNow_reload: 0
   isReloading: 0
@@ -659,10 +659,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponEnum: 4
   target: {fileID: 0}
-  range: 3
+  range: 1.5
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  outlineColour: {r: 1, g: 0.61538076, b: 0, a: 1}
   tagList:
   - Object
   - Pickup

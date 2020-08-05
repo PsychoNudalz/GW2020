@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7817216494770995954}
   - component: {fileID: 9207481535965971666}
+  - component: {fileID: 6274811189975340163}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -47,3 +48,20 @@ MonoBehaviour:
   spawnEffect: {fileID: 5161739359911575715, guid: 0717ec5e5d34c104592494bf83a57683,
     type: 3}
   startWave: 0
+  waveClear: 0
+--- !u!114 &6274811189975340163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745719557408328485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be441ecb6ef3b494f96833eb3a604ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewindObjects: []
+  initialPosition: []
+  initialRotation: []
+  currentObject: {fileID: 0}

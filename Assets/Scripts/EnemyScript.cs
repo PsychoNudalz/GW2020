@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -12,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] float currentHealth;
     [Header("Player Finder")]
     public GameObject Player;
+    public GameObject[] PlayerPool;
     public AIDestinationSetter des;
     public float rangeToFindPlayer;
     [SerializeField] bool inSight;
@@ -24,14 +26,15 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerPool = GameObject.FindGameObjectsWithTag("Player");
+        /*
         /*
         if (shareProjectileLayerMask)
         {
 
         }
         */
-            updatePlayerPosition();
+        updatePlayerPosition();
 
 
 
@@ -44,7 +47,8 @@ public class EnemyScript : MonoBehaviour
                 gameObject.SetActive(false);
                 enemySpawnWaveHandler.Enemies.Add(gameObject);
             }
-        } catch (System.Exception e)
+        }
+        catch (System.Exception e)
         {
 
         }
@@ -55,16 +59,17 @@ public class EnemyScript : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        updatePlayerPosition();
         inSight = checkPlayerInsight();
         shootOnShot();
         checkDie();
-        
+
     }
 
     void checkDie()
@@ -92,7 +97,7 @@ public class EnemyScript : MonoBehaviour
         Vector3 dir = (Player.transform.position - transform.position).normalized;
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, dir, rangeToFindPlayer, layerMask);
-        Debug.DrawRay(transform.position, (dir) *rangeToFindPlayer, Color.green);
+        Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.green);
 
         if (hit)
         {
@@ -107,20 +112,31 @@ public class EnemyScript : MonoBehaviour
     }
     void updatePlayerPosition()
     {
-        des.target = Player.transform;
+        double dis;
+        double closestDis = double.PositiveInfinity;
+        foreach (GameObject p in PlayerPool)
+        {
+            dis = (transform.position - p.transform.position).magnitude;
+            if ( dis < closestDis)
+            {
+                closestDis = dis;
+                Player = p;
+            }
+        }
     }
 
     void shootOnShot()
     {
         if (inSight)
         {
-            
+
             enemyAttackScript.shoot((playerLastPosition - transform.position).normalized);
         }
     }
-    
-    void Rewind()
+
+    public void Rewind()
     {
+        currentHealth = maxHealth;
 
     }
 }

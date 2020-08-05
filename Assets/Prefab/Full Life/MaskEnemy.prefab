@@ -80,7 +80,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0d2cf440f2eaf4e499ba8ae215ba84ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,8 +149,9 @@ GameObject:
   - component: {fileID: 464628036188201248}
   - component: {fileID: 1001274111729364271}
   - component: {fileID: 5487504411218607814}
+  - component: {fileID: 5913470431184217240}
   m_Layer: 9
-  m_Name: Combine
+  m_Name: MaskEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   Player: {fileID: 0}
+  PlayerPool: []
   des: {fileID: 464628036188201248}
   rangeToFindPlayer: 20
   inSight: 0
@@ -363,6 +365,7 @@ MonoBehaviour:
   isReloading: 0
   autoload: 0
   autoloadRate: 10
+  isFiring: 0
   rpm: 450
   spreadIncreaseRate: 10
   spreadDecreaseRate: 7
@@ -372,6 +375,20 @@ MonoBehaviour:
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
+--- !u!114 &5913470431184217240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460897108495026944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f23e8465de40d43a8656b8ab72b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 0}
+  decayValue: 1
 --- !u!1 &8460897109137172613
 GameObject:
   m_ObjectHideFlags: 0

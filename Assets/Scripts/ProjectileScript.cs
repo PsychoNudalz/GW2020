@@ -18,7 +18,7 @@ public class ProjectileScript : MonoBehaviour
     [SerializeField] Transform target;
     [Header("Extra")]
     public float spin;
-    public string[] tagList = { "Enemy", "Object", "Obstacle" };
+    public string[] tagList = { "Enemy", "Object", "Obstacle", "MovableObject" };
 
 
     public void Awake()
@@ -76,6 +76,7 @@ public class ProjectileScript : MonoBehaviour
             Destroy(gameObject);
             EnemyScript e1;
             PlayerStates e2;
+            DestructableScript e3;
             if (collision.TryGetComponent<EnemyScript>(out e1))
             {
                 e1.takeDamage(damage);
@@ -85,6 +86,10 @@ public class ProjectileScript : MonoBehaviour
             {
                 e2.takeDamage(damage);
 
+            }
+            if (collision.TryGetComponent<DestructableScript>(out e3))
+            {
+                e3.takeDamage(damage);
             }
         }
     }

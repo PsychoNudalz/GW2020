@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crowbar
+  m_Name: MaskEnemy
   m_Shader: {fileID: -6465566751694194690, guid: 6fff6e305e334cf45bc2bd4cb837a2f7,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -20,8 +20,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_E7F27FFB:
-        m_Texture: {fileID: 2800000, guid: 5408748c82532be4dafbee430b1c41b2, type: 3}
+    - Texture2D_14B4913:
+        m_Texture: {fileID: 2800000, guid: e6ea885029c20634b93520a2efbc06bd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex:
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5408748c82532be4dafbee430b1c41b2, type: 3}
+        m_Texture: {fileID: 2800000, guid: e6ea885029c20634b93520a2efbc06bd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -40,17 +40,29 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture:
-        m_Texture: {fileID: 2800000, guid: 5408748c82532be4dafbee430b1c41b2, type: 3}
+    - _Texture2DAsset_46509764_Out_0:
+        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_87AFEA99_Out_0:
+        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_93F6E51B_Out_0:
+        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_9E8F15A7_Out_0:
+        m_Texture: {fileID: 2800000, guid: 87df3ea6e7375024dab978312bc9c66c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EnableExternalAlpha: 0
     - _Outline: 0
-    - _Outline_Size: 1
+    - _Outline_Size: 0.52
     m_Colors:
+    - Color_985898F1: {r: 1, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColour: {r: 1, g: 0.6261432, b: 0, a: 1}
-    - _Outline_Colour: {r: 1, g: 0.6261432, b: 0, a: 1}
+    - _Outline_Colour: {r: 1, g: 0, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

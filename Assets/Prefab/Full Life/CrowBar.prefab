@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 3867884601069492342}
   - component: {fileID: 3867884601069492345}
   - component: {fileID: 312577967698808164}
+  - component: {fileID: 1601753281949617996}
   m_Layer: 11
   m_Name: CrowBar
   m_TagString: Object
@@ -181,5 +182,20 @@ MonoBehaviour:
   force: 50000
   spin: 10000
   damage: 10
+  objectDamageMultiplier: 5
   minVelocity: 2
   hitRecord: []
+--- !u!114 &1601753281949617996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854933030064526600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f23e8465de40d43a8656b8ab72b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3654387156095623235}
+  decayValue: 1

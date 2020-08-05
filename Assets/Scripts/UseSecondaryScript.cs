@@ -11,6 +11,7 @@ public class UseSecondaryScript : MonoBehaviour
     public GameObject target;
     public float range;
     [SerializeField] LayerMask layerMask;
+    public Color outlineColour;
     public string[] tagList;
     public bool isUsing;
     public bool activatingSecondary;
@@ -56,21 +57,8 @@ public class UseSecondaryScript : MonoBehaviour
             stop();
         }
 
-        if (target != (null))
-        {
-            if (target.CompareTag("Pickup") || target.CompareTag("Object"))
-            {
-                try
-                {
-                    target.GetComponent<InteractableObjectScript>().setOutline(1f);
-                }
-                catch (System.Exception e)
-                {
-                    print("ERROR: " + e.Message);
-                }
-            }
-            clearTarget();
-        }
+        highlightCurrentTarget();
+
         if (target == null && activatingSecondary)
         {
             stop();
@@ -129,7 +117,7 @@ public class UseSecondaryScript : MonoBehaviour
             findTarget();
         }
 
-        Debug.DrawRay(transform.position, (transform.up) *range, Color.green);
+        Debug.DrawRay(transform.position, (transform.up) * range, Color.green);
 
         /*
         if (target == null)
@@ -142,6 +130,28 @@ public class UseSecondaryScript : MonoBehaviour
             stop();
         }
         */
+    }
+    void highlightCurrentTarget()
+    {
+        if (target != (null))
+        {
+            try
+            {
+                //print(target.name + " update outline");
+                target.GetComponent<OutlineSpriteScript>().setOutline(1f);
+                target.GetComponent<OutlineSpriteScript>().setColour(outlineColour);
+            }
+            catch (System.Exception e)
+            {
+                print("ERROR: " + e.Message);
+            }
+            /*
+            if (target.CompareTag("Pickup") || target.CompareTag("Object"))
+            {
+            }
+            */
+            clearTarget();
+        }
     }
 
     void findTarget()
@@ -261,7 +271,7 @@ public class UseSecondaryScript : MonoBehaviour
 
             if (checkGrab())
             {
-                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target,target.transform.position, target.transform.rotation));
+                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target, target.transform.position, target.transform.rotation));
                 target.SetActive(false);
                 //rb = target.GetComponent<Rigidbody2D>();
                 if (target.CompareTag("Pickup"))
@@ -309,7 +319,7 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
         float flick = currentMousePosition.y - oldMousePosition.y;
-        if ((flick > 1)||AI)
+        if ((flick > 1) || AI)
         {
             //isUsing_Extra = true;
             timeNow_grabCooldown = grabCooldown;
@@ -347,7 +357,7 @@ public class UseSecondaryScript : MonoBehaviour
     }
 
 
-    void resetStoreObject(Vector3 v,Quaternion q)
+    void resetStoreObject(Vector3 v, Quaternion q)
     {
         storedObject.transform.localScale = new Vector3(1, 1, 1);
         storedObject.transform.position = v;
@@ -362,7 +372,7 @@ public class UseSecondaryScript : MonoBehaviour
 
         GameObject throwObject = storedObject;
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1f;
-        resetStoreObject(newPoint,throwPoint.rotation);
+        resetStoreObject(newPoint, throwPoint.rotation);
         throwObject.SetActive(true);
         InteractableObjectScript interactableObjectScript;
         if (throwObject.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
@@ -385,7 +395,7 @@ public class UseSecondaryScript : MonoBehaviour
 
 
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1.2f;
-        resetStoreObject(newPoint,throwPoint.rotation);
+        resetStoreObject(newPoint, throwPoint.rotation);
         storedObject = null;
         storedFlag = false;
         throwFlag = false;

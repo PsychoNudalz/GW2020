@@ -40,7 +40,11 @@ public class RewindObjectScript : MonoBehaviour
             currentObject.transform.rotation = initialRotation[j];
             if (currentObject.CompareTag("Enemy"))
             {
-
+                EnemyScript i;
+                if (currentObject.TryGetComponent<EnemyScript>(out i))
+                {
+                    i.Rewind();
+                }
             }
             else if (currentObject.CompareTag("Object"))
             {
@@ -55,6 +59,13 @@ public class RewindObjectScript : MonoBehaviour
             {
                 PickupScript i;
                 if (currentObject.TryGetComponent<PickupScript>(out i))
+                {
+                    i.Rewind();
+                }
+            } else if (currentObject.CompareTag("MovableObject"))
+            {
+                DestructableScript i;
+                if (currentObject.TryGetComponent<DestructableScript>(out i))
                 {
                     i.Rewind();
                 }

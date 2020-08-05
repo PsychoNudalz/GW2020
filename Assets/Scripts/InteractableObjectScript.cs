@@ -13,6 +13,7 @@ public class InteractableObjectScript : MonoBehaviour
     public float spin;
     [Header("Collision Damage")]
     public float damage;
+    public float objectDamageMultiplier = 1f;
     public float minVelocity;
     [SerializeField] List<GameObject> hitRecord = new List<GameObject>();
 
@@ -46,9 +47,9 @@ public class InteractableObjectScript : MonoBehaviour
 
     public void Rewind()
     {
-        rb.velocity = new Vector2(0,0);
+        rb.velocity = new Vector2(0, 0);
         rb.angularVelocity = 0;
-        
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -57,16 +58,30 @@ public class InteractableObjectScript : MonoBehaviour
             if (!hitRecord.Contains(collision.gameObject))
             {
                 hitRecord.Add(collision.gameObject);
-                EnemyScript e1;
-                if (collision.gameObject.TryGetComponent<EnemyScript>(out e1))
+                if (collision.collider.CompareTag("Enemy"))
                 {
-                    print(name + " hit " + collision.gameObject.name);
-                    e1.takeDamage(damage);
+                    EnemyScript e1;
+                    if (collision.gameObject.TryGetComponent<EnemyScript>(out e1))
+                    {
+                        print(name + " hit " + collision.gameObject.name);
+                        e1.takeDamage(damage);
 
+                    }
+
+                }
+                else if (collision.collider.CompareTag("MovableObject"))
+                {
+                    DestructableScript e1;
+                    if (collision.gameObject.TryGetComponent<DestructableScript>(out e1))
+                    {
+                        print(name + " hit " + collision.gameObject.name);
+                        e1.takeDamage(damage * objectDamageMultiplier);
+
+                    }
                 }
             }
         }
-        
+
     }
-    
+
 }
