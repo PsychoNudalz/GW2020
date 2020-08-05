@@ -17,6 +17,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
     [Header("VRguy")]
     public GameObject VRguy;
     public Transform VRguy_spawn;
+    [Header("VengfulGirl")]
+    public GameObject VengfulGirl;
+    public Transform VengfulGirl_spawn;
 
     Keyboard kb;
 
@@ -25,8 +28,10 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         characterPool.Add(DUUMguy);
         characterPool.Add(VRguy);
+        characterPool.Add(VengfulGirl);
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
+        spawnPool.Add(VengfulGirl_spawn);
         pickChracterVRguy();
         //pickCharacterDUUMguy();
 
@@ -57,6 +62,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
             //Rewind();
             pickCharacterDUUMguy();
+        } else if (kb.lKey.isPressed)
+        {
+            pickCharacterVG();
         }
     }
 
@@ -74,24 +82,34 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public void pickChracterVRguy()
     {
         pickCharacter(VRguy);
-        DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
 
     }
 
     public void pickCharacterDUUMguy()
     {
         pickCharacter(DUUMguy);
-        VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
 
         
     }
+    public void pickCharacterVG()
+    {
+        pickCharacter(VengfulGirl);
+        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+
+
+    }
+
 
     void pickCharacter(GameObject g)
     {
         currentCharacter = g;
-        /*
+        Rewind();
+
         foreach (GameObject character in characterPool)
         {
             if (!character.Equals(currentCharacter))
@@ -104,7 +122,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
             }
         }
-        */
+        
         setCNFocus(currentCharacter);
         Rewind();
     }

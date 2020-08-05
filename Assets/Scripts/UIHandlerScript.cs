@@ -95,9 +95,9 @@ public class UIHandlerScript : MonoBehaviour
         {
             currentChaaracter = playerSpawn.currentCharacter;
             playerStates = currentChaaracter.GetComponent<PlayerStates>();
-            playerInput = currentChaaracter.GetComponent<PlayerInputHandlerScript>();
-            weaponTypeScript = playerInput.weaponTypeScript;
-            useSecondaryScript = playerInput.useSecondaryScript;
+            PlayerInputHandlerScript pi = currentChaaracter.GetComponent<PlayerInputHandlerScript>();
+            weaponTypeScript = pi.weaponTypeScript;
+            useSecondaryScript = pi.useSecondaryScript;
 
 
         }

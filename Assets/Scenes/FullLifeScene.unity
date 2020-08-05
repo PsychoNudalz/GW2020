@@ -15226,6 +15226,11 @@ PrefabInstance:
       propertyPath: cinemachine
       value: 
       objectReference: {fileID: 244496535}
+    - target: {fileID: 2056049239072857369, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4062737966260310221, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: m_LocalPosition.x

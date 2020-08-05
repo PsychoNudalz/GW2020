@@ -32,6 +32,9 @@ public class PlayerInputHandlerScript : MonoBehaviour
     Mouse m;
     Pointer p;
     [SerializeField] EventType currentEvent;
+    [SerializeField] int currentCounter;
+    [SerializeField] int savedCounter;
+    [SerializeField] bool isCurrentEventEmpty;
 
     // Start is called before the first frame update
     private void Awake()
@@ -73,6 +76,10 @@ public class PlayerInputHandlerScript : MonoBehaviour
         {
             playBackEvents();
         }
+
+        currentCounter = currentEvents.Count;
+        savedCounter = savedEvents.Count;
+        isCurrentEventEmpty = currentEvent == null;
     }
     public void movePlayer(InputAction.CallbackContext context)
     {
@@ -126,14 +133,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
         if (currentEvent != null)
         {
             currentEvent.endLog();
-            currentEvents.Add(currentEvent);
+            savedEvents.Add(currentEvent);
         }
         currentEvent = null;
     }
 
     public void recordEvent()
     {
-        print("new record");
+        print(name + " new record");
         newEvent();
         //print(context.action.actionMap.ToString());
         if (moveDir.magnitude > 0)
@@ -170,23 +177,37 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void activeAI(bool b)
     {
+        resetStartTime();
+
+        if (AI != b)
+        {
+            if (b)
+            {
+                print(name + " swapping to AI");
+                endEvent();
+                //saveEventList();
+
+            }
+            else
+            {
+                print(name + " swapping to Player");
+
+            }
+        }
+
         AI = b;
 
         playerMovementScript.AI = AI;
         useSecondaryScript.AI = AI;
         if (AI)
         {
-            //playerInputComponent.
+            loadEventList();
             playerInputComponent.enabled = false;
-            endEvent();
-            resetEvent();
-            replayEvents();
         }
         else
         {
             playerInputComponent.enabled = true;
             currentEvents = new List<EventType>();
-            resetEvent();
             //recordEvent();
             newEvent();
         }
@@ -206,25 +227,58 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void setEventList(List<EventType> e)
     {
-        savedEvents = e;
+        savedEvents = new List<EventType>();
+        //savedEvents = e;
+        foreach (EventType eventType in e)
+        {
+            savedEvents.Add(eventType);
+        }
+
+        startTime = Time.time;
+
+    }
+    public void saveEventList()
+    {
+        savedEvents = new List<EventType>();
+        //savedEvents = e;
+        foreach (EventType eventType in currentEvents)
+        {
+            savedEvents.Add(eventType);
+        }
+
         startTime = Time.time;
 
     }
 
+    public void loadEventList()
+    {
+        currentEvents = new List<EventType>();
+        print(name + " loading " + savedEvents.Count + " Events");
+        //savedEvents = e;
+        foreach (EventType eventType in savedEvents)
+        {
+            currentEvents.Add(eventType);
+        }
+
+        startTime = Time.time;
+    }
+
+    /*
     public void replayEvents()
     {
-        setEventList(currentEvents);
+        loadEventList();
 
     }
+    */
 
     public void playBackEvents()
     {
-        if (currentEventPointer >= savedEvents.Count)
+        if (currentEventPointer >= currentEvents.Count)
         {
             //print(name + " event empty");
             return;
         }
-        currentEvent = savedEvents[currentEventPointer];
+        currentEvent = currentEvents[currentEventPointer];
         //print(currentEvent);
         if (Time.time - startTime < currentEvent.duration)
         {
@@ -240,7 +294,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void playEvent(EventType et)
     {
-        //print(et);
+        print(name + "Current Event: " + et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
         playerMovementScript.setMousePosition(et.mouseLocation);
@@ -290,7 +344,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     }
 
-    void resetEvent()
+    void resetStartTime()
     {
         startTime = Time.time;
     }
@@ -298,7 +352,10 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void Rewind()
     {
-        endEvent();
+        //endEvent();
+        //print("Rewind to current"+currentEvent);
+        //replayEvents();
+        //loadEventList();
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
         useSecondaryScript.Rewind();
