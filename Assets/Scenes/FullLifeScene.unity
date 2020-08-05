@@ -7659,7 +7659,7 @@ PrefabInstance:
     - target: {fileID: 1036027621774574424, guid: 9e2e323b5a62e5a4dae793a63aa34d07,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1036027621774574430, guid: 9e2e323b5a62e5a4dae793a63aa34d07,
         type: 3}
@@ -15214,7 +15214,12 @@ PrefabInstance:
     - target: {fileID: 843650176699271827, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843650176699271827, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1484018411462098370, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
@@ -15274,6 +15279,16 @@ PrefabInstance:
     - target: {fileID: 4062737966260310221, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743953362179787852, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: grabCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8131963212514314492, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -97349,7 +97364,7 @@ PrefabInstance:
     - target: {fileID: 1036027621774574424, guid: 9e2e323b5a62e5a4dae793a63aa34d07,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1036027621774574430, guid: 9e2e323b5a62e5a4dae793a63aa34d07,
         type: 3}

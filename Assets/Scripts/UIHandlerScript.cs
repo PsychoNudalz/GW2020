@@ -37,6 +37,8 @@ public class UIHandlerScript : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        updateCurrentCharacter();
+
         displayHealth();
         displayAmmo();
         displayGrab();

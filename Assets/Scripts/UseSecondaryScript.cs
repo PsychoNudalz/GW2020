@@ -284,10 +284,16 @@ public class UseSecondaryScript : MonoBehaviour
                     storeObject();
                 }
                 activatingSecondary = false;
+                throwFlag = false;
+
                 //target = null;
                 //rb.gravityScale = 1;
                 //print("moving " + target.name + target.transform.position);
             }
+            //activatingSecondary = false;
+            //storedFlag = false;
+            //storedObject = null;
+            //timeNow_grabCooldown = grabCooldown;
         }
 
     }

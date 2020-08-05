@@ -27,7 +27,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         characterPool.Add(VRguy);
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
-        //pickChracterVRguy();
+        pickChracterVRguy();
         //pickCharacterDUUMguy();
 
 
@@ -74,17 +74,24 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public void pickChracterVRguy()
     {
         pickCharacter(VRguy);
+        DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+        VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+
     }
 
     public void pickCharacterDUUMguy()
     {
         pickCharacter(DUUMguy);
+        VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+        DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+
+        
     }
 
     void pickCharacter(GameObject g)
     {
         currentCharacter = g;
-
+        /*
         foreach (GameObject character in characterPool)
         {
             if (!character.Equals(currentCharacter))
@@ -97,6 +104,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
             }
         }
+        */
         setCNFocus(currentCharacter);
         Rewind();
     }

@@ -81,7 +81,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         playerMovementScript.playerControls(moveDir);
         playerMovementScript.setMousePosition(mousePosition);
 
-        recordEvent(context);
+        recordEvent();
     }
 
     public void shoot(InputAction.CallbackContext context)
@@ -91,7 +91,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         getMousePosition();
         weaponTypeScript.toggleFiring(context.performed);
         isFiring = context.performed;
-        recordEvent(context);
+        recordEvent();
 
     }
     public void useWeapon(InputAction.CallbackContext context)
@@ -100,7 +100,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         getMousePosition();
         useSecondaryScript.toggleUse(context);
         isUsing = context.performed;
-        recordEvent(context);
+        recordEvent();
 
 
     }
@@ -110,7 +110,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         weaponTypeScript.reload();
         isReloading = context.performed;
-        recordEvent(context);
+        recordEvent();
 
     }
     public void newEvent()
@@ -131,7 +131,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         currentEvent = null;
     }
 
-    public void recordEvent(InputAction.CallbackContext context)
+    public void recordEvent()
     {
         print("new record");
         newEvent();
@@ -176,6 +176,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         useSecondaryScript.AI = AI;
         if (AI)
         {
+            //playerInputComponent.
             playerInputComponent.enabled = false;
             endEvent();
             resetEvent();
@@ -186,6 +187,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             playerInputComponent.enabled = true;
             currentEvents = new List<EventType>();
             resetEvent();
+            //recordEvent();
             newEvent();
         }
         /*
@@ -291,7 +293,6 @@ public class PlayerInputHandlerScript : MonoBehaviour
     void resetEvent()
     {
         startTime = Time.time;
-        currentEvent = null;
     }
 
 
