@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6098664633620602090}
   - component: {fileID: 6098664633620602093}
   - component: {fileID: 6098664633620602091}
+  - component: {fileID: 1403450194125162709}
   m_Layer: 14
   m_Name: HazardBarrel
   m_TagString: MovableObject
@@ -80,6 +81,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1403450194125162709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098664633620602092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5cbac10e924ba4e8a74fdafe5e6985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6098664635001068140
 GameObject:
   m_ObjectHideFlags: 0
