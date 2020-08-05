@@ -53,7 +53,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         /*
         kb = InputSystem.GetDevice<Keyboard>();
@@ -131,7 +131,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         if (currentEvent != null)
         {
-            currentEvent.endLog();
+            currentEvent.endLog(transform.position);
             savedEvents.Add(currentEvent);
         }
         currentEvent = null;
@@ -140,7 +140,9 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void endRecording()
     {
         endEvent();
-        savedEvents.Add(new EventType(new Vector2(), new Vector2()));
+        currentEvent = new EventType(new Vector2(), new Vector2());
+        currentEvent.endLog(transform.position);
+        savedEvents.Add(currentEvent);
         currentEvent = null;
     }
 
@@ -282,7 +284,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         if (currentEventPointer >= currentEvents.Count)
         {
-            //print(name + " event empty");
+            print(name + " event empty");
             return;
         }
         currentEvent = currentEvents[currentEventPointer];
@@ -293,10 +295,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
         }
         else
         {
+            //when current event finish
+            setEndPosition(currentEvent.characterLocation);
             startTime = Time.time;
             currentEventPointer++;
         }
     }
+
+
 
 
     public void playEvent(EventType et)
@@ -379,6 +385,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
         mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
 
         return mousePosition;
+    }
+
+    void setEndPosition(Vector3 loc)
+    {
+        transform.position = loc;
+        print(name + " position set to " + loc);
     }
 
     private void OnEnable()

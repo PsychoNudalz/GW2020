@@ -9,6 +9,7 @@ public class EventType
     public Vector2 mouseLocation;
     public float duration = 0;
     public float timeStart;
+    public Vector3 characterLocation;
 
     public EventType(Vector2 d, Vector2 v)
     {
@@ -23,9 +24,11 @@ public class EventType
         logs.Add(new LogType(s));
     }
 
-    public void endLog()
+    public void endLog(Vector3 loc)
     {
         duration = Time.time - timeStart;
+        characterLocation = loc;
+
     }
 
     public override string ToString()
