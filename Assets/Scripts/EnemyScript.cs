@@ -71,8 +71,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            enemySpawnWaveHandler.Enemies.Remove(gameObject);
+            gameObject.SetActive(false);
+            //enemySpawnWaveHandler.Enemies.Remove(gameObject);
         }
     }
 
@@ -119,4 +119,8 @@ public class EnemyScript : MonoBehaviour
         }
     }
     
+    void Rewind()
+    {
+
+    }
 }

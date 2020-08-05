@@ -21,6 +21,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public GameObject VengfulGirl;
     public Transform VengfulGirl_spawn;
 
+    [Header("Input")]
+    public PlayerInput playerInputComponent;
+
     Keyboard kb;
 
     // Start is called before the first frame update
@@ -32,7 +35,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
         spawnPool.Add(VengfulGirl_spawn);
-        //pickChracterVRguy();
+        pickChracterVRguy();
         //pickCharacterDUUMguy();
 
 
@@ -133,5 +136,34 @@ public class PlayerSpawnPointScript : MonoBehaviour
         Transform t = g.GetComponent<PlayerMovementScript>().midpoint.transform;
         cinemachine.LookAt = t;
         cinemachine.Follow = t;
+    }
+
+
+
+
+
+    //Input
+
+    public void movePlayer(InputAction.CallbackContext context)
+    {
+        currentCharacter.GetComponent < PlayerInputHandlerScript>().movePlayer(context);
+    }
+
+    public void shoot(InputAction.CallbackContext context)
+    {
+        currentCharacter.GetComponent<PlayerInputHandlerScript>().shoot(context);
+
+
+    }
+    public void useWeapon(InputAction.CallbackContext context)
+    {
+
+        currentCharacter.GetComponent<PlayerInputHandlerScript>().useWeapon(context);
+
+    }
+    public void reload(InputAction.CallbackContext context)
+    {
+        currentCharacter.GetComponent<PlayerInputHandlerScript>().reload(context);
+
     }
 }

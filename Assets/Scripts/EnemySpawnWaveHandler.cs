@@ -7,6 +7,7 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     public List<GameObject> Enemies = new List<GameObject>();
     public GameObject spawnEffect;
     public bool startWave;
+    [SerializeField]  bool waveClear = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,8 +40,21 @@ public class EnemySpawnWaveHandler : MonoBehaviour
         return startWave;
     }
 
-    public void cleanList()
+    public bool isWaveClear()
     {
-        
+        if (!startWave)
+        {
+            return false;
+        }
+        waveClear = true;
+        foreach(GameObject g in Enemies)
+        {
+            if (g.activeSelf)
+            {
+                waveClear = false;
+                
+            }
+        }
+        return waveClear;
     }
 }

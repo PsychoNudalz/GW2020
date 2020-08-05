@@ -36,7 +36,7 @@ public class GameManagerScript : MonoBehaviour
         if (wave < enemySpawnWaveHandlers.Count)
         {
 
-            if (enemySpawnWaveHandlers[wave].Enemies.Count == 0)
+            if (enemySpawnWaveHandlers[wave].isWaveClear())
             {
                 wave += 1;
             }

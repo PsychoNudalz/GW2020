@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4062737966260310221}
   - component: {fileID: 1484018411462098370}
+  - component: {fileID: 1752289130}
   m_Layer: 8
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -28,11 +29,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 423791178750360583}
-  - {fileID: 4834097904673107041}
   - {fileID: 7088307432791613047}
-  - {fileID: 8442068968486875990}
+  - {fileID: 4834097904673107041}
+  - {fileID: 423791178750360583}
   - {fileID: 728072412916990175}
+  - {fileID: 8442068968486875990}
   - {fileID: 5318016001156032324}
   - {fileID: 8458614093802326525}
   - {fileID: 1430483489426230211}
@@ -51,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c2018176311594098b3f08d32d65f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCharacter: {fileID: 728072412916990172}
+  currentCharacter: {fileID: 0}
   characterPool: []
   spawnPool: []
   cinemachine: {fileID: 0}
@@ -61,6 +62,102 @@ MonoBehaviour:
   VRguy_spawn: {fileID: 5318016001156032324}
   VengfulGirl: {fileID: 8458614093802326526}
   VengfulGirl_spawn: {fileID: 1430483489426230211}
+  playerInputComponent: {fileID: 1752289130}
+--- !u!114 &1752289130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218354885438670627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 23e9f05bb35a8954c84a21a347d8572a,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1484018411462098370}
+        m_MethodName: shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3cec82c1-0bdb-4a13-9281-16bb4935fcb3
+    m_ActionName: Player/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1484018411462098370}
+        m_MethodName: movePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a26ce9dd-9ce7-403e-8743-13020b73c3f4
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1484018411462098370}
+        m_MethodName: useWeapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3c858d45-16a9-4280-b226-116c7ba37a14
+    m_ActionName: Player/Use[/Mouse/rightButton,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1484018411462098370}
+        m_MethodName: reload
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ff018bb-b5bf-46b7-a9d1-26f5db8c2763
+    m_ActionName: Player/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d8650891-aa4c-4670-a502-9523664ff27e
+    m_ActionName: Player/Look[/Mouse/delta]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &670471018498760682
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4062737966260310221}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5987063089724046536
 GameObject:
@@ -196,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 434726103099023504, guid: 0717ec5e5d34c104592494bf83a57683,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 434726103099023504, guid: 0717ec5e5d34c104592494bf83a57683,
         type: 3}
@@ -233,6 +330,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4062737966260310221}
     m_Modifications:
+    - target: {fileID: 349751094640037398, guid: 00ac04859f92dab43ac602b485b758a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7868093750151994097, guid: 00ac04859f92dab43ac602b485b758a7,
         type: 3}
       propertyPath: m_Name
@@ -281,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 7868093750151994098, guid: 00ac04859f92dab43ac602b485b758a7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7868093750151994098, guid: 00ac04859f92dab43ac602b485b758a7,
         type: 3}
@@ -319,6 +421,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4062737966260310221}
     m_Modifications:
+    - target: {fileID: 349751094640037398, guid: 00ac04859f92dab43ac602b485b758a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7868093750151994097, guid: 00ac04859f92dab43ac602b485b758a7,
         type: 3}
       propertyPath: m_Name
@@ -495,6 +602,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4062737966260310221}
     m_Modifications:
+    - target: {fileID: 1793785021, guid: e3a514d2d6d5d7e4c845a08873c044f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570052267440093197, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8845117445844956317, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}
       propertyPath: m_Name
@@ -543,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 8845117445844956318, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8845117445844956318, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}

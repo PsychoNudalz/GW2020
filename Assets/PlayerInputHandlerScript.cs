@@ -14,7 +14,6 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public PlayerMovementScript playerMovementScript;
     public WeaponTypeScript weaponTypeScript;
     public UseSecondaryScript useSecondaryScript;
-    public PlayerInput playerInputComponent;
     [Header("AI")]
     public bool AI = false;
     public List<EventType> currentEvents = new List<EventType>();
@@ -209,11 +208,11 @@ public class PlayerInputHandlerScript : MonoBehaviour
         if (AI)
         {
             loadEventList();
-            playerInputComponent.enabled = false;
+            //playerInputComponent.enabled = false;
         }
         else
         {
-            playerInputComponent.enabled = true;
+            //playerInputComponent.enabled = true;
             currentEvents = new List<EventType>();
             savedEvents = new List<EventType>();
             //recordEvent();
