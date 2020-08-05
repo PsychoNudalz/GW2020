@@ -21,6 +21,7 @@ public class UIHandlerScript : MonoBehaviour
     public Sprite emptySprite;
     [Header("Logger")]
     public bool isLogger;
+    public bool updateLogger = true;
     public PlayerInputHandlerScript playerInput;
     public TextMeshProUGUI eventTextBox;
 
@@ -98,6 +99,10 @@ public class UIHandlerScript : MonoBehaviour
             PlayerInputHandlerScript pi = currentChaaracter.GetComponent<PlayerInputHandlerScript>();
             weaponTypeScript = pi.weaponTypeScript;
             useSecondaryScript = pi.useSecondaryScript;
+            if (updateLogger)
+            {
+                playerInput = pi;
+            }
 
 
         }

@@ -32,7 +32,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
         spawnPool.Add(VengfulGirl_spawn);
-        pickChracterVRguy();
+        //pickChracterVRguy();
         //pickCharacterDUUMguy();
 
 

@@ -50,7 +50,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     private void Start()
     {
-        newEvent();
+        //newEvent();
     }
 
 
@@ -138,6 +138,13 @@ public class PlayerInputHandlerScript : MonoBehaviour
         currentEvent = null;
     }
 
+    public void endRecording()
+    {
+        endEvent();
+        savedEvents.Add(new EventType(new Vector2(), new Vector2()));
+        currentEvent = null;
+    }
+
     public void recordEvent()
     {
         print(name + " new record");
@@ -177,14 +184,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void activeAI(bool b)
     {
-        resetStartTime();
+        resetRewind();
 
         if (AI != b)
         {
             if (b)
             {
                 print(name + " swapping to AI");
-                endEvent();
+                endRecording();
                 //saveEventList();
 
             }
@@ -208,6 +215,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         {
             playerInputComponent.enabled = true;
             currentEvents = new List<EventType>();
+            savedEvents = new List<EventType>();
             //recordEvent();
             newEvent();
         }
@@ -294,7 +302,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void playEvent(EventType et)
     {
-        print(name + "Current Event: " + et);
+        //print(name + "Current Event: " + et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
         playerMovementScript.setMousePosition(et.mouseLocation);
@@ -344,8 +352,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     }
 
-    void resetStartTime()
+    void resetRewind()
     {
+        //currentEvent = null;
+        moveDir = new Vector2();
+        mousePosition = new Vector2();
+        isFiring = false;
+        isUsing = false;
+        isReloading = false;
         startTime = Time.time;
     }
 
