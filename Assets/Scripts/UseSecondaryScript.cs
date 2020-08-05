@@ -214,7 +214,7 @@ public class UseSecondaryScript : MonoBehaviour
     public void toggleUse(InputAction.CallbackContext context)
     {
         isUsing = context.performed;
-        print("toggle Using: " + isUsing);
+        //print("toggle Using: " + isUsing);
 
     }
 

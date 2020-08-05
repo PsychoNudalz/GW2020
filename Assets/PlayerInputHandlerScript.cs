@@ -133,6 +133,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void recordEvent(InputAction.CallbackContext context)
     {
+        print("new record");
         newEvent();
         //print(context.action.actionMap.ToString());
         if (moveDir.magnitude > 0)
@@ -150,7 +151,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
         if (isUsing)
         {
-            currentEvent.mouseLocation=getMousePosition();
+            currentEvent.mouseLocation = getMousePosition();
             currentEvent.addLog("Use");
         }
         else
@@ -169,26 +170,28 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void activeAI(bool b)
     {
+        AI = b;
+
+        playerMovementScript.AI = AI;
+        useSecondaryScript.AI = AI;
+        if (AI)
+        {
+            playerInputComponent.enabled = false;
+            endEvent();
+            resetEvent();
+            replayEvents();
+        }
+        else
+        {
+            playerInputComponent.enabled = true;
+            currentEvents = new List<EventType>();
+            resetEvent();
+            newEvent();
+        }
+        /*
+        }
         if (AI != b)
         {
-            AI = b;
-
-            playerMovementScript.AI = AI;
-            useSecondaryScript.AI = AI;
-            if (AI)
-            {
-                endEvent();
-                resetEvent();
-                replayEvents();
-                playerInputComponent.enabled = false;
-            }
-            else
-            {
-                resetEvent();
-                newEvent();
-                playerInputComponent.enabled = true;
-                currentEvents = new List<EventType>();
-            }
         }
         else
         {
@@ -196,8 +199,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             {
                 replayEvents();
             }
-        }
-
+        */
     }
 
     public void setEventList(List<EventType> e)
@@ -256,16 +258,19 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 //playerMovementScript.aimWeapon(et.mouseLocation);
 
                 weaponTypeScript.fireWeapon();
-            } else if (s.Equals("Reload"))
+            }
+            else if (s.Equals("Reload"))
             {
                 weaponTypeScript.reload();
-            } else if (s.Equals("Use"))
+            }
+            else if (s.Equals("Use"))
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
                 //print("AI using");
 
                 useSecondaryScript.activatingSecondary = true;
-            } else if (s.Equals("StopUse"))
+            }
+            else if (s.Equals("StopUse"))
             {
                 //print("AI stop using");
 
@@ -292,6 +297,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void Rewind()
     {
+        endEvent();
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
         useSecondaryScript.Rewind();
