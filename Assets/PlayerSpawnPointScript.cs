@@ -28,12 +28,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
         pickChracterVRguy();
-        //pickCharacterDUUMguy();
-        currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        Rewind();
+        pickCharacterDUUMguy();
 
-        currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-        Rewind();
 
     }
 
@@ -43,21 +39,24 @@ public class PlayerSpawnPointScript : MonoBehaviour
         kb = InputSystem.GetDevice<Keyboard>();
         if (kb.iKey.isPressed)
         {
-            currentCharacter.GetComponent<PlayerInputHandlerScript>().replayEvents();
+            //currentCharacter.GetComponent<PlayerInputHandlerScript>().replayEvents();
             Rewind();
 
         }
         if (kb.pKey.isPressed)
         {
-            currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-            Rewind();
+            //currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
+
+            //Rewind();
+            pickChracterVRguy();
 
         }
         else if (kb.oKey.isPressed)
         {
-            currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
+            //currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
 
-            Rewind();
+            //Rewind();
+            pickCharacterDUUMguy();
         }
     }
 
@@ -85,6 +84,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     void pickCharacter(GameObject g)
     {
         currentCharacter = g;
+
         foreach (GameObject character in characterPool)
         {
             if (!character.Equals(currentCharacter))
@@ -98,6 +98,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
             }
         }
         setCNFocus(currentCharacter);
+        Rewind();
     }
 
 

@@ -126,43 +126,50 @@ public class UseSecondaryScript : MonoBehaviour
         }
         else
         {
-            RaycastHit2D hit;
-            hit = Physics2D.Raycast(transform.position, transform.up, range, layerMask);
-
-            if (hit)
-            {
-                if (tagList.Contains(hit.collider.tag))
-                {
-                    target = hit.collider.gameObject;
-                    timeNo_timeTillNewTarget = timeTillNewTarget;
-                }
-            }
-            else
-            {
-                if (timeNo_timeTillNewTarget <= 0)
-                {
-                    target = null;
-
-                }
-                else
-                {
-                    timeNo_timeTillNewTarget -= Time.deltaTime;
-                }
-            }
+            findTarget();
         }
 
         Debug.DrawRay(transform.position, (transform.up) *range, Color.green);
 
-        if (target == null && isUsing_Extra)
+        /*
+        if (target == null)
+        //if (target == null && isUsing_Extra)
         {
             print("stoping");
-            isUsing_Extra = false;
+            //isUsing_Extra = false;
             activatingSecondary = false;
             storedFlag = false;
             stop();
         }
+        */
     }
 
+    void findTarget()
+    {
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(transform.position, transform.up, range, layerMask);
+
+        if (hit)
+        {
+            if (tagList.Contains(hit.collider.tag))
+            {
+                target = hit.collider.gameObject;
+                timeNo_timeTillNewTarget = timeTillNewTarget;
+            }
+        }
+        else
+        {
+            if (timeNo_timeTillNewTarget <= 0)
+            {
+                target = null;
+
+            }
+            else
+            {
+                timeNo_timeTillNewTarget -= Time.deltaTime;
+            }
+        }
+    }
     void clearTarget()
     {
         if ((target.transform.position - transform.position).magnitude > range)
@@ -234,11 +241,13 @@ public class UseSecondaryScript : MonoBehaviour
 
     void grabObject()
     {
-        currentMousePosition = Mouse.current.position.ReadValue();
+        findTarget();
+        currentMousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
         if (target == null)
         {
+            print("No target to grab");
             //print("stoping");
-            isUsing_Extra = false;
+            //isUsing_Extra = false;
             activatingSecondary = false;
             storedFlag = false;
 
@@ -294,20 +303,22 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
         float flick = currentMousePosition.y - oldMousePosition.y;
-        if ((flick > 1 && !isUsing_Extra)||AI)
+        if ((flick > 1)||AI)
         {
-            isUsing_Extra = true;
+            //isUsing_Extra = true;
             timeNow_grabCooldown = grabCooldown;
-
+            print("Grab Successful");
             return true;
         }
         else if (flick <= 0)
         {
             activatingSecondary = false;
-            isUsing_Extra = false;
+            //isUsing_Extra = false;
             storedFlag = false;
 
         }
+        print("Grab Failed");
+
         return false;
     }
 
@@ -356,6 +367,7 @@ public class UseSecondaryScript : MonoBehaviour
         storedFlag = false;
         throwFlag = false;
         storedObject = null;
+        timeNow_grabCooldown = grabCooldown;
         //Destroy(storedObject);
         //StartCoroutine(cooldownTillGrab());
     }
@@ -374,6 +386,14 @@ public class UseSecondaryScript : MonoBehaviour
         //GameObject throwObject = Instantiate(storedObject, newPoint, throwPoint.rotation);
 
         //Destroy(storedObject);
+    }
+
+    public void Rewind()
+    {
+        if (storedObject != null)
+        {
+            dropObject();
+        }
     }
 
 

@@ -203,8 +203,8 @@ GameObject:
   - component: {fileID: 7868093750151994109}
   - component: {fileID: 7868093750151994108}
   - component: {fileID: 2183118846252424406}
-  - component: {fileID: 349751094640037398}
   - component: {fileID: 7068625388550635107}
+  - component: {fileID: 349751094640037398}
   m_Layer: 8
   m_Name: DUUMguy
   m_TagString: Player
@@ -313,6 +313,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 200
   currentHealth: 0
+--- !u!114 &7068625388550635107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868093750151994097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovementScript: {fileID: 7868093750151994099}
+  weaponTypeScript: {fileID: 1079763995}
+  useSecondaryScript: {fileID: 2926540081131492961}
+  playerInputComponent: {fileID: 349751094640037398}
+  AI: 0
+  moveDir: {x: 0, y: 0}
+  mousePosition: {x: 0, y: 0}
+  isFiring: 0
+  isUsing: 0
+  isReloading: 0
+  startTime: 0
+  currentEventPointer: 0
+  timeNow_playBack: 0
 --- !u!114 &349751094640037398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,31 +444,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7068625388550635107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868093750151994097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovementScript: {fileID: 7868093750151994099}
-  weaponTypeScript: {fileID: 1079763995}
-  useSecondaryScript: {fileID: 2926540081131492961}
-  playerInputComponent: {fileID: 349751094640037398}
-  AI: 0
-  moveDir: {x: 0, y: 0}
-  mousePosition: {x: 0, y: 0}
-  isFiring: 0
-  isUsing: 0
-  isReloading: 0
-  startTime: 0
-  currentEventPointer: 0
-  timeNow_playBack: 0
 --- !u!1 &7868093750802002686
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -653,8 +653,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1810196705
+  m_SortingLayer: 4
   m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: f1c01e641fe7ffe4bb809eb2d8fd9245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -736,7 +736,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -754,8 +754,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1810196705
+  m_SortingLayer: 4
   m_SortingOrder: 51
   m_Sprite: {fileID: 7324180720107099475, guid: 7d39ea74e8b27ae49a580f4fe42eb66a,
     type: 3}

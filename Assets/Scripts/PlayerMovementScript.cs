@@ -82,13 +82,14 @@ public class PlayerMovementScript : MonoBehaviour
     public void aimWeapon(Vector2 v)
     {
         //gun.transform.LookAt((Vector2)midpoint.transform.position);
-        setMousePosition(v);
+        //setMousePosition(v);
 
         Vector2 dir = mousePosition - transform.position;
         dir.Normalize();
         //print(gun.transform.rotation.eulerAngles.z);
         Vector3 originalScale = gun.transform.localScale;
-        gun.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
+        Quaternion angle = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
+        gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, angle, 0.9f);
         if (gun.transform.rotation.eulerAngles.z < 180f && gun.transform.rotation.eulerAngles.z > 0)
         {
             originalScale.x = 1;

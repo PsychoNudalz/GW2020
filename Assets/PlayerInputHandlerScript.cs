@@ -65,7 +65,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
         }
         */
-
+        //print(isUsing);
         //events = new List<EventType>();
         getMousePosition();
 
@@ -79,15 +79,16 @@ public class PlayerInputHandlerScript : MonoBehaviour
         moveDir = context.ReadValue<Vector2>();
         //print("moving player " + moveDir);
         playerMovementScript.playerControls(moveDir);
-        playerMovementScript.aimWeapon(mousePosition);
+        playerMovementScript.setMousePosition(mousePosition);
 
         recordEvent(context);
     }
 
     public void shoot(InputAction.CallbackContext context)
     {
-        mousePosition = Mouse.current.position.ReadValue();
+        //mousePosition = Mouse.current.position.ReadValue();
         //playerMovementScript.aimWeapon(mousePosition);
+        getMousePosition();
         weaponTypeScript.toggleFiring(context.performed);
         isFiring = context.performed;
         recordEvent(context);
@@ -95,7 +96,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
     }
     public void useWeapon(InputAction.CallbackContext context)
     {
-        mousePosition = Mouse.current.position.ReadValue();
+        //mousePosition = Mouse.current.position.ReadValue();
+        getMousePosition();
         useSecondaryScript.toggleUse(context);
         isUsing = context.performed;
         recordEvent(context);
@@ -148,6 +150,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
         if (isUsing)
         {
+            currentEvent.mouseLocation=getMousePosition();
             currentEvent.addLog("Use");
         }
         else
@@ -236,8 +239,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //print(et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
-        playerMovementScript.aimWeapon(et.mouseLocation);
-
+        playerMovementScript.setMousePosition(et.mouseLocation);
+        //StartCoroutine(waitForAim(0.1f));
         foreach (LogType l in et.logs)
         {
             s = l.inputType;
@@ -260,13 +263,24 @@ public class PlayerInputHandlerScript : MonoBehaviour
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
                 //print("AI using");
-                useSecondaryScript.isUsing = true;
+
+                useSecondaryScript.activatingSecondary = true;
             } else if (s.Equals("StopUse"))
             {
-                useSecondaryScript.isUsing = false;
+                //print("AI stop using");
+
+                useSecondaryScript.activatingSecondary = false;
 
             }
         }
+    }
+
+    IEnumerator waitForAim(float f)
+    {
+        print("waiting");
+        yield return new WaitForSeconds(f);
+        print("wait finish");
+
     }
 
     void resetEvent()
@@ -280,13 +294,13 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
+        useSecondaryScript.Rewind();
     }
 
     Vector2 getMousePosition()
     {
         mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
 
-        mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
         return mousePosition;
     }
 
