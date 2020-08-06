@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class UseSecondaryScript : MonoBehaviour
 {
+    [Header("Weapon States")]
     [SerializeField] private WeaponEnum weaponEnum;
     public GameObject target;
     public float range;
@@ -37,10 +38,15 @@ public class UseSecondaryScript : MonoBehaviour
     [Header("AI")]
     public bool AI = false;
 
+    [Header("Sound")]
+    public SoundManager soundManager;
+    public Sound sound_Use1;
+    public Sound sound_Use2;
+
     // Start is called before the first frame update
     void Awake()
     {
-
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -251,12 +257,18 @@ public class UseSecondaryScript : MonoBehaviour
         //print("Hooking");
         //print((target.transform.position - transform.position).magnitude);
         findTarget();
+        if (target == null)
+        {
+            stop();
+            return;
+        }
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
 
             stop();
             return;
         }
+        playSound_Use1();
         extraGameObject.SetActive(true);
         extraGameObject.transform.position = target.transform.position;
         Vector2 chainDir = (extraTransform.position - target.transform.position).normalized;
@@ -292,6 +304,7 @@ public class UseSecondaryScript : MonoBehaviour
             {
                 extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target, target.transform.position, target.transform.rotation));
                 target.SetActive(false);
+                playSound_Use1();
                 //rb = target.GetComponent<Rigidbody2D>();
                 if (target.CompareTag("Pickup"))
                 {
@@ -392,6 +405,7 @@ public class UseSecondaryScript : MonoBehaviour
     public void throwObject()
     {
         throwFlag = true;
+        playSound_Use2();
 
         GameObject throwObject = storedObject;
         Vector3 newPoint = throwPoint.position + throwPoint.up * 1f;
@@ -435,7 +449,7 @@ public class UseSecondaryScript : MonoBehaviour
         }
     }
 
-
+    
 
     IEnumerator cooldownTillGrab()
     {
@@ -447,5 +461,20 @@ public class UseSecondaryScript : MonoBehaviour
 
     }
 
+
+    //Sound
+
+
+
+    void playSound_Use1()
+    {
+        soundManager.Play(sound_Use1.name);
+
+    }
+    void playSound_Use2()
+    {
+        soundManager.Play(sound_Use2.name);
+
+    }
 
 }

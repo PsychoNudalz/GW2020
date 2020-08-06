@@ -40,6 +40,11 @@ public class WeaponTypeScript : MonoBehaviour
     [SerializeField] private float timeNow_rpm;
     public float TimeNow { get => timeNow_rpm; set => timeNow_rpm = value; }
 
+    [Header("Sound")]
+    public SoundManager soundManager;
+
+    public Sound sound_Fire;
+
     //public bool fireWhenFull;
     //[SerializeField] private bool full;
     //[SerializeField] private bool activeFire;
@@ -48,6 +53,8 @@ public class WeaponTypeScript : MonoBehaviour
     private void Awake()
     {
         timeBetweenShot = 60f / rpm;
+        soundManager = FindObjectOfType<SoundManager>();
+
 
     }
 
@@ -148,6 +155,7 @@ public class WeaponTypeScript : MonoBehaviour
     {
         if (consumeAmmo())
         {
+            playSound_Fire();
             //activeFire = true;
             switch (weapon)
             {
@@ -279,6 +287,12 @@ public class WeaponTypeScript : MonoBehaviour
         projectile.GetComponent<ProjectileScript>().shoot();
         currentSpread += spreadIncreaseRate;
 
+
+    }
+
+    void playSound_Fire()
+    {
+        soundManager.Play(sound_Fire.name);
 
     }
 

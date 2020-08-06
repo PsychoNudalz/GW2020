@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 
 	public Sound[] sounds;
 
-	void Awake()
+	void Start()
 	{
 		/*
 		if (instance != null)
@@ -37,6 +37,11 @@ public class SoundManager : MonoBehaviour
 			s.source = gameObject.AddComponent<AudioSource>();
 			s.source.clip = s.clip;
 			s.source.loop = s.loop;
+			s.source.spatialBlend = s.spatialBlend;
+			s.source.reverbZoneMix = s.reverbZoneMix;
+			s.source.minDistance = s.minDistance;
+			s.source.maxDistance = s.maxDistance;
+
 		}
 
 	}

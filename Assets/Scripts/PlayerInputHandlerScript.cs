@@ -12,6 +12,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public InputMaster controls;
     [Header("Scripts")]
     public PlayerMovementScript playerMovementScript;
+    public PlayerStates playerStates;
     public WeaponTypeScript weaponTypeScript;
     public UseSecondaryScript useSecondaryScript;
     [Header("AI")]
@@ -378,6 +379,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
         useSecondaryScript.Rewind();
+        playerStates.Rewind();
     }
 
     Vector2 getMousePosition()

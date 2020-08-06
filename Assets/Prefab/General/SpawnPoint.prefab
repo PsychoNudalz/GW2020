@@ -295,11 +295,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: RewindFinish
+  isUnique: 0
   clip: {fileID: 8300000, guid: 26da09d5b77fee44eb9b41dce854e777, type: 3}
-  volume: 0.75
+  volume: 1
   volumeVariance: 0.1
   pitch: 1
   pitchVariance: 0.1
+  spatialBlend: 0
+  minDistance: 1
+  maxDistance: 20
   loop: 0
   source: {fileID: 0}
 --- !u!1001 &282018970986699927

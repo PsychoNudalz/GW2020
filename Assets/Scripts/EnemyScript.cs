@@ -23,9 +23,15 @@ public class EnemyScript : MonoBehaviour
     [Header("Spawn")]
     [SerializeField] EnemySpawnWaveHandler enemySpawnWaveHandler;
 
+    [Header("Sound")]
+    public SoundManager soundManager;
+    public Sound sound_Death;
+    public Sound sound_Hit;
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
+
         PlayerPool = GameObject.FindGameObjectsWithTag("Player");
         /*
         /*
@@ -35,9 +41,6 @@ public class EnemyScript : MonoBehaviour
         }
         */
         updatePlayerPosition();
-
-
-
         currentHealth = maxHealth;
         try
         {
@@ -68,7 +71,6 @@ public class EnemyScript : MonoBehaviour
         updatePlayerPosition();
         inSight = checkPlayerInsight();
         shootOnShot();
-        checkDie();
 
     }
 
@@ -76,6 +78,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            playSound_Death();
             gameObject.SetActive(false);
             //enemySpawnWaveHandler.Enemies.Remove(gameObject);
         }
@@ -83,7 +86,10 @@ public class EnemyScript : MonoBehaviour
 
     public float takeDamage(float damage)
     {
+        playSound_Hit();
         currentHealth -= damage;
+        checkDie();
+
         return currentHealth;
     }
 
@@ -137,6 +143,16 @@ public class EnemyScript : MonoBehaviour
     public void Rewind()
     {
         currentHealth = maxHealth;
+
+    }
+    void playSound_Hit()
+    {
+        soundManager.Play(sound_Hit.name);
+    }
+
+    void playSound_Death()
+    {
+        soundManager.Play(sound_Death.name);
 
     }
 }
