@@ -26,11 +26,7 @@ public class PlayerStates : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public string getHeathUI()
     {
@@ -44,15 +40,15 @@ public class PlayerStates : MonoBehaviour
         checkDie();
         return currentHealth;
     }
-    void checkDie()
+    public bool checkDie()
     {
         if (currentHealth <= 0)
         {
-            playSound_Death();
             gameObject.SetActive(false);
             isDead = true;
             //enemySpawnWaveHandler.Enemies.Remove(gameObject);
         }
+        return isDead;
     }
 
     public void Rewind()
@@ -70,6 +66,8 @@ public class PlayerStates : MonoBehaviour
 
     void playSound_Death()
     {
+        print("play death sound");
+
         soundManager.Play(sound_Death.name);
 
     }

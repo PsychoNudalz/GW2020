@@ -448,9 +448,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 10
+  slowdownDistance: 7
   pickNextWaypointDist: 10
-  endReachedDistance: 7
+  endReachedDistance: 3
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -532,8 +532,8 @@ MonoBehaviour:
   ammo: 999999
   Ammo_Max: 999999
   Ammo_Cost: 1
-  maxInMag: 5
-  currentMag: 5
+  maxInMag: 20
+  currentMag: 20
   reloadTime: 2
   timeNow_reload: 0
   isReloading: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   spreadIncreaseRate: 10
   spreadDecreaseRate: 7
   projectilePerShot: 0
-  spreadAngle: 45
+  spreadAngle: 20
   spreadDebug: 0
   currentSpread: 0
   timeBetweenShot: 0

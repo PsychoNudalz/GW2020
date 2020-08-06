@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public PlayerSpawnPointScript playerSpawnPointScript;
+
     public List<EnemySpawnWaveHandler> enemySpawnWaveHandlers = new List<EnemySpawnWaveHandler>();
     [SerializeField] int wave;
     public List<RewindObjectScript> rewindList = new List<RewindObjectScript>();
@@ -21,6 +23,7 @@ public class GameManagerScript : MonoBehaviour
                 rewindList.Add(r);
             }
         }
+        playerSpawnPointScript = FindObjectOfType<PlayerSpawnPointScript>();
     }
 
     // Update is called once per frame
@@ -64,6 +67,7 @@ public class GameManagerScript : MonoBehaviour
     public void Rewind()
     {
         wave = 0;
+        playerSpawnPointScript.Rewind();
         foreach(RewindObjectScript r in rewindList)
         {
             r.Rewind();

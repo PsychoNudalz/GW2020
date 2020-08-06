@@ -1,0 +1,6668 @@
+fileFormatVersion: 2
+guid: d6c5ebd8d2b89be429c87e09fbd2fab0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2956002968565947762
+    second: forestgraveyardgameassets_Fulltilemap_0
+  - first:
+      213: 7661338936472405756
+    second: forestgraveyardgameassets_Fulltilemap_1
+  - first:
+      213: -679023435681955105
+    second: forestgraveyardgameassets_Fulltilemap_2
+  - first:
+      213: -4861637371943723682
+    second: forestgraveyardgameassets_Fulltilemap_3
+  - first:
+      213: 8025374605710567503
+    second: forestgraveyardgameassets_Fulltilemap_4
+  - first:
+      213: 6015719484054219741
+    second: forestgraveyardgameassets_Fulltilemap_5
+  - first:
+      213: 3283703025825078368
+    second: forestgraveyardgameassets_Fulltilemap_6
+  - first:
+      213: -1526931068104750014
+    second: forestgraveyardgameassets_Fulltilemap_7
+  - first:
+      213: -2692977589895273742
+    second: forestgraveyardgameassets_Fulltilemap_8
+  - first:
+      213: 5500570435042637408
+    second: forestgraveyardgameassets_Fulltilemap_9
+  - first:
+      213: 4961927186948669388
+    second: forestgraveyardgameassets_Fulltilemap_10
+  - first:
+      213: -4971461368261779240
+    second: forestgraveyardgameassets_Fulltilemap_11
+  - first:
+      213: 8363539953879628882
+    second: forestgraveyardgameassets_Fulltilemap_12
+  - first:
+      213: 8887702390878720326
+    second: forestgraveyardgameassets_Fulltilemap_13
+  - first:
+      213: -5525625887497617334
+    second: forestgraveyardgameassets_Fulltilemap_14
+  - first:
+      213: -7504029522237309673
+    second: forestgraveyardgameassets_Fulltilemap_15
+  - first:
+      213: -2221707917507606122
+    second: forestgraveyardgameassets_Fulltilemap_16
+  - first:
+      213: 3860447661131294757
+    second: forestgraveyardgameassets_Fulltilemap_17
+  - first:
+      213: 1594661930040952251
+    second: forestgraveyardgameassets_Fulltilemap_18
+  - first:
+      213: -4999051312537571031
+    second: forestgraveyardgameassets_Fulltilemap_19
+  - first:
+      213: -4685408134351838398
+    second: forestgraveyardgameassets_Fulltilemap_20
+  - first:
+      213: 2079851041232858692
+    second: forestgraveyardgameassets_Fulltilemap_21
+  - first:
+      213: 1309718310051044005
+    second: forestgraveyardgameassets_Fulltilemap_22
+  - first:
+      213: -3531455781442606951
+    second: forestgraveyardgameassets_Fulltilemap_23
+  - first:
+      213: -5186016551084187097
+    second: forestgraveyardgameassets_Fulltilemap_24
+  - first:
+      213: -3462223875067278418
+    second: forestgraveyardgameassets_Fulltilemap_25
+  - first:
+      213: 5187751229360753826
+    second: forestgraveyardgameassets_Fulltilemap_26
+  - first:
+      213: -5417514332458725825
+    second: forestgraveyardgameassets_Fulltilemap_27
+  - first:
+      213: 3752227333502337539
+    second: forestgraveyardgameassets_Fulltilemap_28
+  - first:
+      213: 3768188148513019057
+    second: forestgraveyardgameassets_Fulltilemap_29
+  - first:
+      213: 6966594833556421095
+    second: forestgraveyardgameassets_Fulltilemap_30
+  - first:
+      213: 8508325619469094491
+    second: forestgraveyardgameassets_Fulltilemap_31
+  - first:
+      213: 7241535687785939987
+    second: forestgraveyardgameassets_Fulltilemap_32
+  - first:
+      213: -8735285303456772276
+    second: forestgraveyardgameassets_Fulltilemap_33
+  - first:
+      213: -7422197137886617516
+    second: forestgraveyardgameassets_Fulltilemap_34
+  - first:
+      213: 4331844415574453050
+    second: forestgraveyardgameassets_Fulltilemap_35
+  - first:
+      213: 97695409343872750
+    second: forestgraveyardgameassets_Fulltilemap_36
+  - first:
+      213: 7608027951633898121
+    second: forestgraveyardgameassets_Fulltilemap_37
+  - first:
+      213: 8912779871315965252
+    second: forestgraveyardgameassets_Fulltilemap_38
+  - first:
+      213: -5832670894088156593
+    second: forestgraveyardgameassets_Fulltilemap_39
+  - first:
+      213: -2903041181806958044
+    second: forestgraveyardgameassets_Fulltilemap_40
+  - first:
+      213: -7815384371552992544
+    second: forestgraveyardgameassets_Fulltilemap_41
+  - first:
+      213: 5933324080762273667
+    second: forestgraveyardgameassets_Fulltilemap_42
+  - first:
+      213: 8513048973258130107
+    second: forestgraveyardgameassets_Fulltilemap_43
+  - first:
+      213: -5026914921660363825
+    second: forestgraveyardgameassets_Fulltilemap_44
+  - first:
+      213: -4794409293612141875
+    second: forestgraveyardgameassets_Fulltilemap_45
+  - first:
+      213: -3039666643879792850
+    second: forestgraveyardgameassets_Fulltilemap_46
+  - first:
+      213: 1977968020901223369
+    second: forestgraveyardgameassets_Fulltilemap_47
+  - first:
+      213: -8255197645186757595
+    second: forestgraveyardgameassets_Fulltilemap_48
+  - first:
+      213: -4658493986814119105
+    second: forestgraveyardgameassets_Fulltilemap_49
+  - first:
+      213: -2412392328363262758
+    second: forestgraveyardgameassets_Fulltilemap_50
+  - first:
+      213: -6647042267608012894
+    second: forestgraveyardgameassets_Fulltilemap_51
+  - first:
+      213: -8361228347824935228
+    second: forestgraveyardgameassets_Fulltilemap_52
+  - first:
+      213: 5442225673490330149
+    second: forestgraveyardgameassets_Fulltilemap_53
+  - first:
+      213: 117248403115676692
+    second: forestgraveyardgameassets_Fulltilemap_54
+  - first:
+      213: -2389333759116722261
+    second: forestgraveyardgameassets_Fulltilemap_55
+  - first:
+      213: -3842709137689919552
+    second: forestgraveyardgameassets_Fulltilemap_56
+  - first:
+      213: 9100351094679251051
+    second: forestgraveyardgameassets_Fulltilemap_57
+  - first:
+      213: -2941016680950262758
+    second: forestgraveyardgameassets_Fulltilemap_58
+  - first:
+      213: 8203915487331026506
+    second: forestgraveyardgameassets_Fulltilemap_59
+  - first:
+      213: -5640166427874179186
+    second: forestgraveyardgameassets_Fulltilemap_60
+  - first:
+      213: 996927412763852249
+    second: forestgraveyardgameassets_Fulltilemap_61
+  - first:
+      213: -6587808744387624317
+    second: forestgraveyardgameassets_Fulltilemap_62
+  - first:
+      213: -1867938038273821993
+    second: forestgraveyardgameassets_Fulltilemap_63
+  - first:
+      213: 6531747920807502695
+    second: forestgraveyardgameassets_Fulltilemap_64
+  - first:
+      213: -6417340101397840058
+    second: forestgraveyardgameassets_Fulltilemap_65
+  - first:
+      213: -975224579085313296
+    second: forestgraveyardgameassets_Fulltilemap_66
+  - first:
+      213: 6901757089563381933
+    second: forestgraveyardgameassets_Fulltilemap_67
+  - first:
+      213: -1918285193220483214
+    second: forestgraveyardgameassets_Fulltilemap_68
+  - first:
+      213: 5046445929005911394
+    second: forestgraveyardgameassets_Fulltilemap_69
+  - first:
+      213: 8089530468648920299
+    second: forestgraveyardgameassets_Fulltilemap_70
+  - first:
+      213: 5356618000079949671
+    second: forestgraveyardgameassets_Fulltilemap_71
+  - first:
+      213: 1690392887758146886
+    second: forestgraveyardgameassets_Fulltilemap_72
+  - first:
+      213: 5877916738051314260
+    second: forestgraveyardgameassets_Fulltilemap_73
+  - first:
+      213: 1931556455678944888
+    second: forestgraveyardgameassets_Fulltilemap_74
+  - first:
+      213: -6822776240601812597
+    second: forestgraveyardgameassets_Fulltilemap_75
+  - first:
+      213: 2332529467297036269
+    second: forestgraveyardgameassets_Fulltilemap_76
+  - first:
+      213: -8262027373660561400
+    second: forestgraveyardgameassets_Fulltilemap_77
+  - first:
+      213: 3881613236619172465
+    second: forestgraveyardgameassets_Fulltilemap_78
+  - first:
+      213: -3213064918445234147
+    second: forestgraveyardgameassets_Fulltilemap_79
+  - first:
+      213: -6010967873955627773
+    second: forestgraveyardgameassets_Fulltilemap_80
+  - first:
+      213: -3587767570284895814
+    second: forestgraveyardgameassets_Fulltilemap_81
+  - first:
+      213: -2394536768079861787
+    second: forestgraveyardgameassets_Fulltilemap_82
+  - first:
+      213: 1327900128548356924
+    second: forestgraveyardgameassets_Fulltilemap_83
+  - first:
+      213: 8438200622012626294
+    second: forestgraveyardgameassets_Fulltilemap_84
+  - first:
+      213: 2349445922259713108
+    second: forestgraveyardgameassets_Fulltilemap_85
+  - first:
+      213: -3684116815673488542
+    second: forestgraveyardgameassets_Fulltilemap_86
+  - first:
+      213: -343256045320183812
+    second: forestgraveyardgameassets_Fulltilemap_87
+  - first:
+      213: 3192512248589240189
+    second: forestgraveyardgameassets_Fulltilemap_88
+  - first:
+      213: -2730913107935767932
+    second: forestgraveyardgameassets_Fulltilemap_89
+  - first:
+      213: -4758093524874310997
+    second: forestgraveyardgameassets_Fulltilemap_90
+  - first:
+      213: 1502187374188793620
+    second: forestgraveyardgameassets_Fulltilemap_91
+  - first:
+      213: -2613610432670254793
+    second: forestgraveyardgameassets_Fulltilemap_92
+  - first:
+      213: -7808279073290863020
+    second: forestgraveyardgameassets_Fulltilemap_93
+  - first:
+      213: 2603960592546938095
+    second: forestgraveyardgameassets_Fulltilemap_94
+  - first:
+      213: -3429864279043232783
+    second: forestgraveyardgameassets_Fulltilemap_95
+  - first:
+      213: 1426842687823288037
+    second: forestgraveyardgameassets_Fulltilemap_96
+  - first:
+      213: -5258458968829636027
+    second: forestgraveyardgameassets_Fulltilemap_97
+  - first:
+      213: -8795450810672471778
+    second: forestgraveyardgameassets_Fulltilemap_98
+  - first:
+      213: -1337894262523265197
+    second: forestgraveyardgameassets_Fulltilemap_99
+  - first:
+      213: -1124473320617099096
+    second: forestgraveyardgameassets_Fulltilemap_100
+  - first:
+      213: -1342857923560516164
+    second: forestgraveyardgameassets_Fulltilemap_101
+  - first:
+      213: 3548944600227719923
+    second: forestgraveyardgameassets_Fulltilemap_102
+  - first:
+      213: 1408652758403801923
+    second: forestgraveyardgameassets_Fulltilemap_103
+  - first:
+      213: 9170091200850564552
+    second: forestgraveyardgameassets_Fulltilemap_104
+  - first:
+      213: -5879480941881093278
+    second: forestgraveyardgameassets_Fulltilemap_105
+  - first:
+      213: -2820938254570683461
+    second: forestgraveyardgameassets_Fulltilemap_106
+  - first:
+      213: 4468838439984053186
+    second: forestgraveyardgameassets_Fulltilemap_107
+  - first:
+      213: 3777427297919435676
+    second: forestgraveyardgameassets_Fulltilemap_108
+  - first:
+      213: -8810569631543040343
+    second: forestgraveyardgameassets_Fulltilemap_109
+  - first:
+      213: -5377266362544374398
+    second: forestgraveyardgameassets_Fulltilemap_110
+  - first:
+      213: 122923493247375791
+    second: forestgraveyardgameassets_Fulltilemap_111
+  - first:
+      213: -3156721123799098221
+    second: forestgraveyardgameassets_Fulltilemap_112
+  - first:
+      213: -1176352932502167108
+    second: forestgraveyardgameassets_Fulltilemap_113
+  - first:
+      213: -2994200306564468640
+    second: forestgraveyardgameassets_Fulltilemap_114
+  - first:
+      213: 1841338582995316144
+    second: forestgraveyardgameassets_Fulltilemap_115
+  - first:
+      213: -3900808602512207228
+    second: forestgraveyardgameassets_Fulltilemap_116
+  - first:
+      213: -7063668071799509011
+    second: forestgraveyardgameassets_Fulltilemap_117
+  - first:
+      213: 2459829884672432888
+    second: forestgraveyardgameassets_Fulltilemap_118
+  - first:
+      213: -5388247753758484407
+    second: forestgraveyardgameassets_Fulltilemap_119
+  - first:
+      213: -5566862995942806655
+    second: forestgraveyardgameassets_Fulltilemap_120
+  - first:
+      213: 1845366015603752183
+    second: forestgraveyardgameassets_Fulltilemap_121
+  - first:
+      213: 9023339706181861461
+    second: forestgraveyardgameassets_Fulltilemap_122
+  - first:
+      213: -1665764662847035159
+    second: forestgraveyardgameassets_Fulltilemap_123
+  - first:
+      213: -752350123403060755
+    second: forestgraveyardgameassets_Fulltilemap_124
+  - first:
+      213: -3207280302951020530
+    second: forestgraveyardgameassets_Fulltilemap_125
+  - first:
+      213: 3359227440951275380
+    second: forestgraveyardgameassets_Fulltilemap_126
+  - first:
+      213: 5808805318068388850
+    second: forestgraveyardgameassets_Fulltilemap_127
+  - first:
+      213: 7737444644038843187
+    second: forestgraveyardgameassets_Fulltilemap_128
+  - first:
+      213: -7107853786137294722
+    second: forestgraveyardgameassets_Fulltilemap_129
+  - first:
+      213: 3073343220447367034
+    second: forestgraveyardgameassets_Fulltilemap_130
+  - first:
+      213: 8048588873878024753
+    second: forestgraveyardgameassets_Fulltilemap_131
+  - first:
+      213: 7674380479767533109
+    second: forestgraveyardgameassets_Fulltilemap_132
+  - first:
+      213: 8677905308992790882
+    second: forestgraveyardgameassets_Fulltilemap_133
+  - first:
+      213: -7177227769302258315
+    second: forestgraveyardgameassets_Fulltilemap_134
+  - first:
+      213: 204251475386807973
+    second: forestgraveyardgameassets_Fulltilemap_135
+  - first:
+      213: 8870266755540457738
+    second: forestgraveyardgameassets_Fulltilemap_136
+  - first:
+      213: -5741182953007372402
+    second: forestgraveyardgameassets_Fulltilemap_137
+  - first:
+      213: -2739508825378943804
+    second: forestgraveyardgameassets_Fulltilemap_138
+  - first:
+      213: 146045744407824020
+    second: forestgraveyardgameassets_Fulltilemap_139
+  - first:
+      213: 6841940907416549096
+    second: forestgraveyardgameassets_Fulltilemap_140
+  - first:
+      213: -3141548734323802965
+    second: forestgraveyardgameassets_Fulltilemap_141
+  - first:
+      213: 8296320901659358228
+    second: forestgraveyardgameassets_Fulltilemap_142
+  - first:
+      213: 4796068013711988758
+    second: forestgraveyardgameassets_Fulltilemap_143
+  - first:
+      213: -6783695297521070233
+    second: forestgraveyardgameassets_Fulltilemap_144
+  - first:
+      213: -6471898642289613828
+    second: forestgraveyardgameassets_Fulltilemap_145
+  - first:
+      213: -6918167347619114129
+    second: forestgraveyardgameassets_Fulltilemap_146
+  - first:
+      213: 4623476693758713495
+    second: forestgraveyardgameassets_Fulltilemap_147
+  - first:
+      213: -3469557011490814145
+    second: forestgraveyardgameassets_Fulltilemap_148
+  - first:
+      213: 5869835953798243815
+    second: forestgraveyardgameassets_Fulltilemap_149
+  - first:
+      213: 1177185151108955930
+    second: forestgraveyardgameassets_Fulltilemap_150
+  - first:
+      213: -1452233401093710864
+    second: forestgraveyardgameassets_Fulltilemap_151
+  - first:
+      213: 7900425161049142116
+    second: forestgraveyardgameassets_Fulltilemap_152
+  - first:
+      213: -2994761466007382438
+    second: forestgraveyardgameassets_Fulltilemap_153
+  - first:
+      213: -4555201053370984948
+    second: forestgraveyardgameassets_Fulltilemap_154
+  - first:
+      213: 7735221713415987111
+    second: forestgraveyardgameassets_Fulltilemap_155
+  - first:
+      213: 7177343649927213532
+    second: forestgraveyardgameassets_Fulltilemap_156
+  - first:
+      213: -4513779913055465861
+    second: forestgraveyardgameassets_Fulltilemap_157
+  - first:
+      213: 7110105401196887766
+    second: forestgraveyardgameassets_Fulltilemap_158
+  - first:
+      213: -618258975721396915
+    second: forestgraveyardgameassets_Fulltilemap_159
+  - first:
+      213: 8741022902318548436
+    second: forestgraveyardgameassets_Fulltilemap_160
+  - first:
+      213: -1114957715144734026
+    second: forestgraveyardgameassets_Fulltilemap_161
+  - first:
+      213: -6114886835852204503
+    second: forestgraveyardgameassets_Fulltilemap_162
+  - first:
+      213: -2133688475837743272
+    second: forestgraveyardgameassets_Fulltilemap_163
+  - first:
+      213: -5398748018463621030
+    second: forestgraveyardgameassets_Fulltilemap_164
+  - first:
+      213: -2615908608346462479
+    second: forestgraveyardgameassets_Fulltilemap_165
+  - first:
+      213: 4026452476053210177
+    second: forestgraveyardgameassets_Fulltilemap_166
+  - first:
+      213: -5026878191754909261
+    second: forestgraveyardgameassets_Fulltilemap_167
+  - first:
+      213: -6349967544611949045
+    second: forestgraveyardgameassets_Fulltilemap_168
+  - first:
+      213: 615472377546940565
+    second: forestgraveyardgameassets_Fulltilemap_169
+  - first:
+      213: 4058764253077188065
+    second: forestgraveyardgameassets_Fulltilemap_170
+  - first:
+      213: 5314358315677587490
+    second: forestgraveyardgameassets_Fulltilemap_171
+  - first:
+      213: -323743711183666287
+    second: forestgraveyardgameassets_Fulltilemap_172
+  - first:
+      213: -2369829660201337864
+    second: forestgraveyardgameassets_Fulltilemap_173
+  - first:
+      213: -5499125062755235600
+    second: forestgraveyardgameassets_Fulltilemap_174
+  - first:
+      213: 3612497046666327300
+    second: forestgraveyardgameassets_Fulltilemap_175
+  - first:
+      213: -5484780240496794489
+    second: forestgraveyardgameassets_Fulltilemap_176
+  - first:
+      213: 8833627858695720272
+    second: forestgraveyardgameassets_Fulltilemap_177
+  - first:
+      213: -7854276921105355126
+    second: forestgraveyardgameassets_Fulltilemap_178
+  - first:
+      213: 2501692701470195729
+    second: forestgraveyardgameassets_Fulltilemap_179
+  - first:
+      213: -2590619274194926703
+    second: forestgraveyardgameassets_Fulltilemap_180
+  - first:
+      213: -1016112262034314708
+    second: forestgraveyardgameassets_Fulltilemap_181
+  - first:
+      213: 3016745518622850425
+    second: forestgraveyardgameassets_Fulltilemap_182
+  - first:
+      213: -7513086383301689652
+    second: forestgraveyardgameassets_Fulltilemap_183
+  - first:
+      213: 5213508034696961968
+    second: forestgraveyardgameassets_Fulltilemap_184
+  - first:
+      213: 1622649771918429315
+    second: forestgraveyardgameassets_Fulltilemap_185
+  - first:
+      213: -8024105712934515136
+    second: forestgraveyardgameassets_Fulltilemap_186
+  - first:
+      213: 2891892123731702865
+    second: forestgraveyardgameassets_Fulltilemap_187
+  - first:
+      213: 7451438284566093735
+    second: forestgraveyardgameassets_Fulltilemap_188
+  - first:
+      213: -3588653275737861772
+    second: forestgraveyardgameassets_Fulltilemap_189
+  - first:
+      213: -493073158428467560
+    second: forestgraveyardgameassets_Fulltilemap_190
+  - first:
+      213: -5950041014709092729
+    second: forestgraveyardgameassets_Fulltilemap_191
+  - first:
+      213: 7064492963675158517
+    second: forestgraveyardgameassets_Fulltilemap_192
+  - first:
+      213: -1095680855054184860
+    second: forestgraveyardgameassets_Fulltilemap_193
+  - first:
+      213: 1270070930093364069
+    second: forestgraveyardgameassets_Fulltilemap_194
+  - first:
+      213: 8128055337542225058
+    second: forestgraveyardgameassets_Fulltilemap_195
+  - first:
+      213: -103102366250138113
+    second: forestgraveyardgameassets_Fulltilemap_196
+  - first:
+      213: 4919269596714742741
+    second: forestgraveyardgameassets_Fulltilemap_197
+  - first:
+      213: -3523686503616904124
+    second: forestgraveyardgameassets_Fulltilemap_198
+  - first:
+      213: -2953822985700624220
+    second: forestgraveyardgameassets_Fulltilemap_199
+  - first:
+      213: 675964485945079840
+    second: forestgraveyardgameassets_Fulltilemap_200
+  - first:
+      213: 1523877159672433074
+    second: forestgraveyardgameassets_Fulltilemap_201
+  - first:
+      213: 5127948742805208039
+    second: forestgraveyardgameassets_Fulltilemap_202
+  - first:
+      213: -1564860497541054978
+    second: forestgraveyardgameassets_Fulltilemap_203
+  - first:
+      213: -7473395530393476777
+    second: forestgraveyardgameassets_Fulltilemap_204
+  - first:
+      213: 6687327686284100968
+    second: forestgraveyardgameassets_Fulltilemap_205
+  - first:
+      213: -1242637847796435087
+    second: forestgraveyardgameassets_Fulltilemap_206
+  - first:
+      213: 5848640424069451772
+    second: forestgraveyardgameassets_Fulltilemap_207
+  - first:
+      213: -5684520081913393542
+    second: forestgraveyardgameassets_Fulltilemap_208
+  - first:
+      213: -179669974110107767
+    second: forestgraveyardgameassets_Fulltilemap_209
+  - first:
+      213: -4647922690814593251
+    second: forestgraveyardgameassets_Fulltilemap_210
+  - first:
+      213: 377400470536721678
+    second: forestgraveyardgameassets_Fulltilemap_211
+  - first:
+      213: 5038478369586377284
+    second: forestgraveyardgameassets_Fulltilemap_212
+  - first:
+      213: -7894545297935669940
+    second: forestgraveyardgameassets_Fulltilemap_213
+  - first:
+      213: -4943490444957195887
+    second: forestgraveyardgameassets_Fulltilemap_214
+  - first:
+      213: 6630913870240466465
+    second: forestgraveyardgameassets_Fulltilemap_215
+  - first:
+      213: -6761592569953199830
+    second: forestgraveyardgameassets_Fulltilemap_216
+  - first:
+      213: 4121356878845859382
+    second: forestgraveyardgameassets_Fulltilemap_217
+  - first:
+      213: -497001656631818427
+    second: forestgraveyardgameassets_Fulltilemap_218
+  - first:
+      213: 1752641180966743915
+    second: forestgraveyardgameassets_Fulltilemap_219
+  - first:
+      213: -6323281896357104701
+    second: forestgraveyardgameassets_Fulltilemap_220
+  - first:
+      213: -5409323692753928573
+    second: forestgraveyardgameassets_Fulltilemap_221
+  - first:
+      213: 265120406053303597
+    second: forestgraveyardgameassets_Fulltilemap_222
+  - first:
+      213: 6642502682118706648
+    second: forestgraveyardgameassets_Fulltilemap_223
+  - first:
+      213: -6654835421512595039
+    second: forestgraveyardgameassets_Fulltilemap_224
+  - first:
+      213: 3630962231583746012
+    second: forestgraveyardgameassets_Fulltilemap_225
+  - first:
+      213: -8116309416940735943
+    second: forestgraveyardgameassets_Fulltilemap_226
+  - first:
+      213: 7340695964164530608
+    second: forestgraveyardgameassets_Fulltilemap_227
+  - first:
+      213: -4318040057045566317
+    second: forestgraveyardgameassets_Fulltilemap_228
+  - first:
+      213: -1578497717252054676
+    second: forestgraveyardgameassets_Fulltilemap_229
+  - first:
+      213: -2325455852570129013
+    second: forestgraveyardgameassets_Fulltilemap_230
+  - first:
+      213: -1355814369294938864
+    second: forestgraveyardgameassets_Fulltilemap_231
+  - first:
+      213: -2240237621020902260
+    second: forestgraveyardgameassets_Fulltilemap_232
+  - first:
+      213: 3177891904722261358
+    second: forestgraveyardgameassets_Fulltilemap_233
+  - first:
+      213: -670228848061779356
+    second: forestgraveyardgameassets_Fulltilemap_234
+  - first:
+      213: 349969949899725203
+    second: forestgraveyardgameassets_Fulltilemap_235
+  - first:
+      213: -7906933586807890195
+    second: forestgraveyardgameassets_Fulltilemap_236
+  - first:
+      213: -7783254506862841074
+    second: forestgraveyardgameassets_Fulltilemap_237
+  - first:
+      213: -2837315713271732285
+    second: forestgraveyardgameassets_Fulltilemap_238
+  - first:
+      213: -6778750005484021524
+    second: forestgraveyardgameassets_Fulltilemap_239
+  - first:
+      213: 4202364329614874071
+    second: forestgraveyardgameassets_Fulltilemap_240
+  - first:
+      213: -7535781712882654085
+    second: forestgraveyardgameassets_Fulltilemap_241
+  - first:
+      213: 1181721712905532061
+    second: forestgraveyardgameassets_Fulltilemap_242
+  - first:
+      213: -4401209820724727137
+    second: forestgraveyardgameassets_Fulltilemap_243
+  - first:
+      213: 8909572834031821610
+    second: forestgraveyardgameassets_Fulltilemap_244
+  - first:
+      213: -1688009051313412850
+    second: forestgraveyardgameassets_Fulltilemap_245
+  - first:
+      213: -5373062714374247062
+    second: forestgraveyardgameassets_Fulltilemap_246
+  - first:
+      213: -1131862369175617560
+    second: forestgraveyardgameassets_Fulltilemap_247
+  - first:
+      213: 9144462192330788406
+    second: forestgraveyardgameassets_Fulltilemap_248
+  - first:
+      213: 952193918897075888
+    second: forestgraveyardgameassets_Fulltilemap_249
+  - first:
+      213: -3320904127899124653
+    second: forestgraveyardgameassets_Fulltilemap_250
+  - first:
+      213: 7618917388384605197
+    second: forestgraveyardgameassets_Fulltilemap_251
+  - first:
+      213: 2794812511390700442
+    second: forestgraveyardgameassets_Fulltilemap_252
+  - first:
+      213: -7556655546924554163
+    second: forestgraveyardgameassets_Fulltilemap_253
+  - first:
+      213: 3759796024493739883
+    second: forestgraveyardgameassets_Fulltilemap_254
+  - first:
+      213: -5582286653726133455
+    second: forestgraveyardgameassets_Fulltilemap_255
+  - first:
+      213: -5976261526412686088
+    second: forestgraveyardgameassets_Fulltilemap_256
+  - first:
+      213: 6519274884181737837
+    second: forestgraveyardgameassets_Fulltilemap_257
+  - first:
+      213: 1165659662192062418
+    second: forestgraveyardgameassets_Fulltilemap_258
+  - first:
+      213: 9153463336331141790
+    second: forestgraveyardgameassets_Fulltilemap_259
+  - first:
+      213: 8046267559662308364
+    second: forestgraveyardgameassets_Fulltilemap_260
+  - first:
+      213: -4749432940255769059
+    second: forestgraveyardgameassets_Fulltilemap_261
+  - first:
+      213: -2980183633411951430
+    second: forestgraveyardgameassets_Fulltilemap_262
+  - first:
+      213: 3098831908956893314
+    second: forestgraveyardgameassets_Fulltilemap_263
+  - first:
+      213: -8627065095347196104
+    second: forestgraveyardgameassets_Fulltilemap_264
+  - first:
+      213: -5667000252294975987
+    second: forestgraveyardgameassets_Fulltilemap_265
+  - first:
+      213: -2137682437187988763
+    second: forestgraveyardgameassets_Fulltilemap_266
+  - first:
+      213: 7767138541932382757
+    second: forestgraveyardgameassets_Fulltilemap_267
+  - first:
+      213: -6337605985481988538
+    second: forestgraveyardgameassets_Fulltilemap_268
+  - first:
+      213: -8450636096125012828
+    second: forestgraveyardgameassets_Fulltilemap_269
+  - first:
+      213: -3139021959717581823
+    second: forestgraveyardgameassets_Fulltilemap_270
+  - first:
+      213: 6516878323889031992
+    second: forestgraveyardgameassets_Fulltilemap_271
+  - first:
+      213: -8498008520448371528
+    second: forestgraveyardgameassets_Fulltilemap_272
+  - first:
+      213: -2213012594317220063
+    second: forestgraveyardgameassets_Fulltilemap_273
+  - first:
+      213: 1674085919917087872
+    second: forestgraveyardgameassets_Fulltilemap_274
+  - first:
+      213: 2456444717874214986
+    second: forestgraveyardgameassets_Fulltilemap_275
+  - first:
+      213: 6877791035322545782
+    second: forestgraveyardgameassets_Fulltilemap_276
+  - first:
+      213: -7706743698387275089
+    second: forestgraveyardgameassets_Fulltilemap_277
+  - first:
+      213: 7390555520948936974
+    second: forestgraveyardgameassets_Fulltilemap_278
+  - first:
+      213: 1845441695885710181
+    second: forestgraveyardgameassets_Fulltilemap_279
+  - first:
+      213: 3463058670530184677
+    second: forestgraveyardgameassets_Fulltilemap_280
+  - first:
+      213: -6511120404361655662
+    second: forestgraveyardgameassets_Fulltilemap_281
+  - first:
+      213: 4073520096424708410
+    second: forestgraveyardgameassets_Fulltilemap_282
+  - first:
+      213: -5946496461134417374
+    second: forestgraveyardgameassets_Fulltilemap_283
+  - first:
+      213: 6754731811451498619
+    second: forestgraveyardgameassets_Fulltilemap_284
+  - first:
+      213: -1279559549557337652
+    second: forestgraveyardgameassets_Fulltilemap_285
+  - first:
+      213: 2736835906429312864
+    second: forestgraveyardgameassets_Fulltilemap_286
+  - first:
+      213: 8297885725297965784
+    second: forestgraveyardgameassets_Fulltilemap_287
+  - first:
+      213: -6764659270575685813
+    second: forestgraveyardgameassets_Fulltilemap_288
+  - first:
+      213: 5239093016210974244
+    second: forestgraveyardgameassets_Fulltilemap_289
+  - first:
+      213: -4694545320587892436
+    second: forestgraveyardgameassets_Fulltilemap_290
+  - first:
+      213: 7370469864919113305
+    second: forestgraveyardgameassets_Fulltilemap_291
+  - first:
+      213: 5080735279351221548
+    second: forestgraveyardgameassets_Fulltilemap_292
+  - first:
+      213: -3393403849771884283
+    second: forestgraveyardgameassets_Fulltilemap_293
+  - first:
+      213: -847908626035773111
+    second: forestgraveyardgameassets_Fulltilemap_294
+  - first:
+      213: -1315412568708203836
+    second: forestgraveyardgameassets_Fulltilemap_295
+  - first:
+      213: -2876708636106115362
+    second: forestgraveyardgameassets_Fulltilemap_296
+  - first:
+      213: 2622541376678601038
+    second: forestgraveyardgameassets_Fulltilemap_297
+  - first:
+      213: 5445356098949404667
+    second: forestgraveyardgameassets_Fulltilemap_298
+  - first:
+      213: 2217679320214583248
+    second: forestgraveyardgameassets_Fulltilemap_299
+  - first:
+      213: 4000417256069145611
+    second: forestgraveyardgameassets_Fulltilemap_300
+  - first:
+      213: -1412369280423947247
+    second: forestgraveyardgameassets_Fulltilemap_301
+  - first:
+      213: 3479756910653136430
+    second: forestgraveyardgameassets_Fulltilemap_302
+  - first:
+      213: 1221876504935835940
+    second: forestgraveyardgameassets_Fulltilemap_303
+  - first:
+      213: 2007794954307807438
+    second: forestgraveyardgameassets_Fulltilemap_304
+  - first:
+      213: -5806471635070677413
+    second: forestgraveyardgameassets_Fulltilemap_305
+  - first:
+      213: 5412922989389848048
+    second: forestgraveyardgameassets_Fulltilemap_306
+  - first:
+      213: 3716686685997020751
+    second: forestgraveyardgameassets_Fulltilemap_307
+  - first:
+      213: -7690450153589854032
+    second: forestgraveyardgameassets_Fulltilemap_308
+  - first:
+      213: 2619269903195191337
+    second: forestgraveyardgameassets_Fulltilemap_309
+  - first:
+      213: -5836604512778373909
+    second: forestgraveyardgameassets_Fulltilemap_310
+  - first:
+      213: -2085961310894722956
+    second: forestgraveyardgameassets_Fulltilemap_311
+  - first:
+      213: 7306580208977054664
+    second: forestgraveyardgameassets_Fulltilemap_312
+  - first:
+      213: 8547890200576570576
+    second: forestgraveyardgameassets_Fulltilemap_313
+  - first:
+      213: -6513837138529069145
+    second: forestgraveyardgameassets_Fulltilemap_314
+  - first:
+      213: -7978618619107964107
+    second: forestgraveyardgameassets_Fulltilemap_315
+  - first:
+      213: 7667189116479553344
+    second: forestgraveyardgameassets_Fulltilemap_316
+  - first:
+      213: 8403099399457992644
+    second: forestgraveyardgameassets_Fulltilemap_317
+  - first:
+      213: -9177811748653232577
+    second: forestgraveyardgameassets_Fulltilemap_318
+  - first:
+      213: -3360216193981977152
+    second: forestgraveyardgameassets_Fulltilemap_319
+  - first:
+      213: 3238371606348988710
+    second: forestgraveyardgameassets_Fulltilemap_320
+  - first:
+      213: 2105113986762718347
+    second: forestgraveyardgameassets_Fulltilemap_321
+  - first:
+      213: -8763333468943681174
+    second: forestgraveyardgameassets_Fulltilemap_322
+  - first:
+      213: 8398560861819772705
+    second: forestgraveyardgameassets_Fulltilemap_323
+  - first:
+      213: -7900969359147659722
+    second: forestgraveyardgameassets_Fulltilemap_324
+  - first:
+      213: 4560466014200821130
+    second: forestgraveyardgameassets_Fulltilemap_325
+  - first:
+      213: 6732047194400146803
+    second: forestgraveyardgameassets_Fulltilemap_326
+  - first:
+      213: 4539090012043140020
+    second: forestgraveyardgameassets_Fulltilemap_327
+  - first:
+      213: 276168030898190575
+    second: forestgraveyardgameassets_Fulltilemap_328
+  - first:
+      213: -4665160885581596315
+    second: forestgraveyardgameassets_Fulltilemap_329
+  - first:
+      213: -9031797215169671246
+    second: forestgraveyardgameassets_Fulltilemap_330
+  - first:
+      213: 2147338162691951919
+    second: forestgraveyardgameassets_Fulltilemap_331
+  - first:
+      213: -5102262899984722797
+    second: forestgraveyardgameassets_Fulltilemap_332
+  - first:
+      213: 5210739766601683564
+    second: forestgraveyardgameassets_Fulltilemap_333
+  - first:
+      213: 2561929692509877628
+    second: forestgraveyardgameassets_Fulltilemap_334
+  - first:
+      213: 7448138731448158197
+    second: forestgraveyardgameassets_Fulltilemap_335
+  - first:
+      213: 8225073570736804174
+    second: forestgraveyardgameassets_Fulltilemap_336
+  - first:
+      213: -8940885285487878308
+    second: forestgraveyardgameassets_Fulltilemap_337
+  - first:
+      213: -3996607362835945777
+    second: forestgraveyardgameassets_Fulltilemap_338
+  - first:
+      213: -5215976695884736230
+    second: forestgraveyardgameassets_Fulltilemap_339
+  - first:
+      213: 7052104864018389753
+    second: forestgraveyardgameassets_Fulltilemap_340
+  - first:
+      213: 2478271690874338888
+    second: forestgraveyardgameassets_Fulltilemap_341
+  - first:
+      213: -7733600987741800407
+    second: forestgraveyardgameassets_Fulltilemap_342
+  - first:
+      213: 4994217507518000791
+    second: forestgraveyardgameassets_Fulltilemap_343
+  - first:
+      213: -1617087318145892378
+    second: forestgraveyardgameassets_Fulltilemap_344
+  - first:
+      213: 6948556658819241830
+    second: forestgraveyardgameassets_Fulltilemap_345
+  - first:
+      213: 8946734963695138271
+    second: forestgraveyardgameassets_Fulltilemap_346
+  - first:
+      213: -3153331948349381218
+    second: forestgraveyardgameassets_Fulltilemap_347
+  - first:
+      213: -3510402069486257460
+    second: forestgraveyardgameassets_Fulltilemap_348
+  - first:
+      213: -2883007249836999958
+    second: forestgraveyardgameassets_Fulltilemap_349
+  - first:
+      213: 6800689209201618729
+    second: forestgraveyardgameassets_Fulltilemap_350
+  - first:
+      213: 3022372987390131717
+    second: forestgraveyardgameassets_Fulltilemap_351
+  - first:
+      213: 543902625214240198
+    second: forestgraveyardgameassets_Fulltilemap_352
+  - first:
+      213: 1901194773150919187
+    second: forestgraveyardgameassets_Fulltilemap_353
+  - first:
+      213: 18583260341272562
+    second: forestgraveyardgameassets_Fulltilemap_354
+  - first:
+      213: 2384801662004575672
+    second: forestgraveyardgameassets_Fulltilemap_355
+  - first:
+      213: 5157795588156260274
+    second: forestgraveyardgameassets_Fulltilemap_356
+  - first:
+      213: -8640625034521434603
+    second: forestgraveyardgameassets_Fulltilemap_357
+  - first:
+      213: 1474900552294959388
+    second: forestgraveyardgameassets_Fulltilemap_358
+  - first:
+      213: -9136849991262933206
+    second: forestgraveyardgameassets_Fulltilemap_359
+  - first:
+      213: -5274748366258768272
+    second: forestgraveyardgameassets_Fulltilemap_360
+  - first:
+      213: 5266470977276128319
+    second: forestgraveyardgameassets_Fulltilemap_361
+  - first:
+      213: -5569576249938405121
+    second: forestgraveyardgameassets_Fulltilemap_362
+  - first:
+      213: 1210768505602098909
+    second: forestgraveyardgameassets_Fulltilemap_363
+  - first:
+      213: 7482523288771515636
+    second: forestgraveyardgameassets_Fulltilemap_364
+  - first:
+      213: -4911147775334936540
+    second: forestgraveyardgameassets_Fulltilemap_365
+  - first:
+      213: -6774365485210968912
+    second: forestgraveyardgameassets_Fulltilemap_366
+  - first:
+      213: -4784528606373940679
+    second: forestgraveyardgameassets_Fulltilemap_367
+  - first:
+      213: -1497778087313244164
+    second: forestgraveyardgameassets_Fulltilemap_368
+  - first:
+      213: 4912687474014810005
+    second: forestgraveyardgameassets_Fulltilemap_369
+  - first:
+      213: 7999336507613626049
+    second: forestgraveyardgameassets_Fulltilemap_370
+  - first:
+      213: 9196414406787237670
+    second: forestgraveyardgameassets_Fulltilemap_371
+  - first:
+      213: -7805564015729365948
+    second: forestgraveyardgameassets_Fulltilemap_372
+  - first:
+      213: 7787026713296892889
+    second: forestgraveyardgameassets_Fulltilemap_373
+  - first:
+      213: -767914831083019130
+    second: forestgraveyardgameassets_Fulltilemap_374
+  - first:
+      213: -4049743966781515161
+    second: forestgraveyardgameassets_Fulltilemap_375
+  - first:
+      213: 7775100202541945886
+    second: forestgraveyardgameassets_Fulltilemap_376
+  - first:
+      213: -8371114363527549161
+    second: forestgraveyardgameassets_Fulltilemap_377
+  - first:
+      213: -577666613378275047
+    second: forestgraveyardgameassets_Fulltilemap_378
+  - first:
+      213: 1997906987666719582
+    second: forestgraveyardgameassets_Fulltilemap_379
+  - first:
+      213: 970812297080369882
+    second: forestgraveyardgameassets_Fulltilemap_380
+  - first:
+      213: -1311448757508314671
+    second: forestgraveyardgameassets_Fulltilemap_381
+  - first:
+      213: -1346641181058142276
+    second: forestgraveyardgameassets_Fulltilemap_382
+  - first:
+      213: -5140413508489134677
+    second: forestgraveyardgameassets_Fulltilemap_383
+  - first:
+      213: 4289270639278825588
+    second: forestgraveyardgameassets_Fulltilemap_384
+  - first:
+      213: -8795857092575734768
+    second: forestgraveyardgameassets_Fulltilemap_385
+  - first:
+      213: 8987277609557096728
+    second: forestgraveyardgameassets_Fulltilemap_386
+  - first:
+      213: 2082053392388673483
+    second: forestgraveyardgameassets_Fulltilemap_387
+  - first:
+      213: -2042180171521280077
+    second: forestgraveyardgameassets_Fulltilemap_388
+  - first:
+      213: 6363994662309667138
+    second: forestgraveyardgameassets_Fulltilemap_389
+  - first:
+      213: -2920347011436154666
+    second: forestgraveyardgameassets_Fulltilemap_390
+  - first:
+      213: -8515018410562049920
+    second: forestgraveyardgameassets_Fulltilemap_391
+  - first:
+      213: 7973184606701955037
+    second: forestgraveyardgameassets_Fulltilemap_392
+  - first:
+      213: -5859567421890067154
+    second: forestgraveyardgameassets_Fulltilemap_393
+  - first:
+      213: -7327655180831211967
+    second: forestgraveyardgameassets_Fulltilemap_394
+  - first:
+      213: -5363624430589607675
+    second: forestgraveyardgameassets_Fulltilemap_395
+  - first:
+      213: -398309758938394909
+    second: forestgraveyardgameassets_Fulltilemap_396
+  - first:
+      213: -3603249458143790645
+    second: forestgraveyardgameassets_Fulltilemap_397
+  - first:
+      213: -8757992544971743640
+    second: forestgraveyardgameassets_Fulltilemap_398
+  - first:
+      213: -6153467962601616339
+    second: forestgraveyardgameassets_Fulltilemap_399
+  - first:
+      213: -1561686934504981080
+    second: forestgraveyardgameassets_Fulltilemap_400
+  - first:
+      213: 2347212835967416048
+    second: forestgraveyardgameassets_Fulltilemap_401
+  - first:
+      213: -4585102863094766043
+    second: forestgraveyardgameassets_Fulltilemap_402
+  - first:
+      213: 5754887465512510731
+    second: forestgraveyardgameassets_Fulltilemap_403
+  - first:
+      213: -6977923455132950750
+    second: forestgraveyardgameassets_Fulltilemap_404
+  - first:
+      213: 3124716818417030045
+    second: forestgraveyardgameassets_Fulltilemap_405
+  - first:
+      213: 796766805291446812
+    second: forestgraveyardgameassets_Fulltilemap_406
+  - first:
+      213: 1399055819505263415
+    second: forestgraveyardgameassets_Fulltilemap_407
+  - first:
+      213: 97022762773544360
+    second: forestgraveyardgameassets_Fulltilemap_408
+  - first:
+      213: 5734095772216730413
+    second: forestgraveyardgameassets_Fulltilemap_409
+  - first:
+      213: 5952139822264496185
+    second: forestgraveyardgameassets_Fulltilemap_410
+  - first:
+      213: 2937468222306962829
+    second: forestgraveyardgameassets_Fulltilemap_411
+  - first:
+      213: -2346383741498263222
+    second: forestgraveyardgameassets_Fulltilemap_412
+  - first:
+      213: -4488478061189386883
+    second: forestgraveyardgameassets_Fulltilemap_413
+  - first:
+      213: 8688463685457477430
+    second: forestgraveyardgameassets_Fulltilemap_414
+  - first:
+      213: 4213321766507574127
+    second: forestgraveyardgameassets_Fulltilemap_415
+  - first:
+      213: -9179118290360091447
+    second: forestgraveyardgameassets_Fulltilemap_416
+  - first:
+      213: -4923963642895075465
+    second: forestgraveyardgameassets_Fulltilemap_417
+  - first:
+      213: 1140506659168332591
+    second: forestgraveyardgameassets_Fulltilemap_418
+  - first:
+      213: 8973878643649366549
+    second: forestgraveyardgameassets_Fulltilemap_419
+  - first:
+      213: 3223627247145911158
+    second: forestgraveyardgameassets_Fulltilemap_420
+  - first:
+      213: -3765189970200683639
+    second: forestgraveyardgameassets_Fulltilemap_421
+  - first:
+      213: -3204790689476090858
+    second: forestgraveyardgameassets_Fulltilemap_422
+  - first:
+      213: 5600865327561770099
+    second: forestgraveyardgameassets_Fulltilemap_423
+  - first:
+      213: 1644695689387255444
+    second: forestgraveyardgameassets_Fulltilemap_424
+  - first:
+      213: 3388568579532068525
+    second: forestgraveyardgameassets_Fulltilemap_425
+  - first:
+      213: -1339900414178256441
+    second: forestgraveyardgameassets_Fulltilemap_426
+  - first:
+      213: -5265610044672081875
+    second: forestgraveyardgameassets_Fulltilemap_427
+  - first:
+      213: 40442104086929220
+    second: forestgraveyardgameassets_Fulltilemap_428
+  - first:
+      213: -1452571343391548454
+    second: forestgraveyardgameassets_Fulltilemap_429
+  - first:
+      213: -306800083931448666
+    second: forestgraveyardgameassets_Fulltilemap_430
+  - first:
+      213: -1761932698693637613
+    second: forestgraveyardgameassets_Fulltilemap_431
+  - first:
+      213: -1057812153138856472
+    second: forestgraveyardgameassets_Fulltilemap_432
+  - first:
+      213: 4747671817885915252
+    second: forestgraveyardgameassets_Fulltilemap_433
+  - first:
+      213: -7589583946812540142
+    second: forestgraveyardgameassets_Fulltilemap_434
+  - first:
+      213: 6192285624978952628
+    second: forestgraveyardgameassets_Fulltilemap_435
+  - first:
+      213: -4427107094018172407
+    second: forestgraveyardgameassets_Fulltilemap_436
+  - first:
+      213: 7578968807624642678
+    second: forestgraveyardgameassets_Fulltilemap_437
+  - first:
+      213: -4644040787979732567
+    second: forestgraveyardgameassets_Fulltilemap_438
+  - first:
+      213: -1766693748890400891
+    second: forestgraveyardgameassets_Fulltilemap_439
+  - first:
+      213: -765184878451137735
+    second: forestgraveyardgameassets_Fulltilemap_440
+  - first:
+      213: 1525138936748731750
+    second: forestgraveyardgameassets_Fulltilemap_441
+  - first:
+      213: -7587592467641013798
+    second: forestgraveyardgameassets_Fulltilemap_442
+  - first:
+      213: -1402383224868654140
+    second: forestgraveyardgameassets_Fulltilemap_443
+  - first:
+      213: 4466032253714102461
+    second: forestgraveyardgameassets_Fulltilemap_444
+  - first:
+      213: 7572516575426581598
+    second: forestgraveyardgameassets_Fulltilemap_445
+  - first:
+      213: -3045002464428531792
+    second: forestgraveyardgameassets_Fulltilemap_446
+  - first:
+      213: 1453709858899796264
+    second: forestgraveyardgameassets_Fulltilemap_447
+  - first:
+      213: -2634159222561693235
+    second: forestgraveyardgameassets_Fulltilemap_448
+  - first:
+      213: 7631757406953404365
+    second: forestgraveyardgameassets_Fulltilemap_449
+  - first:
+      213: -1232165463181726255
+    second: forestgraveyardgameassets_Fulltilemap_450
+  - first:
+      213: -4739452015894683415
+    second: forestgraveyardgameassets_Fulltilemap_451
+  - first:
+      213: 6014705399427503060
+    second: forestgraveyardgameassets_Fulltilemap_452
+  - first:
+      213: -752749632179762373
+    second: forestgraveyardgameassets_Fulltilemap_453
+  - first:
+      213: 3652633682127131762
+    second: forestgraveyardgameassets_Fulltilemap_454
+  - first:
+      213: 8850824823754839848
+    second: forestgraveyardgameassets_Fulltilemap_455
+  - first:
+      213: 8853215676351701069
+    second: forestgraveyardgameassets_Fulltilemap_456
+  - first:
+      213: -8398098070645976346
+    second: forestgraveyardgameassets_Fulltilemap_457
+  - first:
+      213: -9055004102531419924
+    second: forestgraveyardgameassets_Fulltilemap_458
+  - first:
+      213: 8362989709775364479
+    second: forestgraveyardgameassets_Fulltilemap_459
+  - first:
+      213: 5677969988390649109
+    second: forestgraveyardgameassets_Fulltilemap_460
+  - first:
+      213: 8301242196026244652
+    second: forestgraveyardgameassets_Fulltilemap_461
+  - first:
+      213: 3806420670144196009
+    second: forestgraveyardgameassets_Fulltilemap_462
+  - first:
+      213: -7595106053496703657
+    second: forestgraveyardgameassets_Fulltilemap_463
+  - first:
+      213: 6034882580186724305
+    second: forestgraveyardgameassets_Fulltilemap_464
+  - first:
+      213: 1060165450235425433
+    second: forestgraveyardgameassets_Fulltilemap_465
+  - first:
+      213: 4482989543584216897
+    second: forestgraveyardgameassets_Fulltilemap_466
+  - first:
+      213: -2397482763019837322
+    second: forestgraveyardgameassets_Fulltilemap_467
+  - first:
+      213: 2588802419640788823
+    second: forestgraveyardgameassets_Fulltilemap_468
+  - first:
+      213: -8960398038289793837
+    second: forestgraveyardgameassets_Fulltilemap_469
+  - first:
+      213: 649381772619696716
+    second: forestgraveyardgameassets_Fulltilemap_470
+  - first:
+      213: -2688859260497521154
+    second: forestgraveyardgameassets_Fulltilemap_471
+  - first:
+      213: 1162671619583431832
+    second: forestgraveyardgameassets_Fulltilemap_472
+  - first:
+      213: -3835876683702529129
+    second: forestgraveyardgameassets_Fulltilemap_473
+  - first:
+      213: 775918952023621820
+    second: forestgraveyardgameassets_Fulltilemap_474
+  - first:
+      213: -8764780676611149329
+    second: forestgraveyardgameassets_Fulltilemap_475
+  - first:
+      213: -3146467557559478464
+    second: forestgraveyardgameassets_Fulltilemap_476
+  - first:
+      213: -6107664407982062982
+    second: forestgraveyardgameassets_Fulltilemap_477
+  - first:
+      213: -3041738859234630255
+    second: forestgraveyardgameassets_Fulltilemap_478
+  - first:
+      213: -297561531102319926
+    second: forestgraveyardgameassets_Fulltilemap_479
+  - first:
+      213: 6317772264262748073
+    second: forestgraveyardgameassets_Fulltilemap_480
+  - first:
+      213: 8394053857376572695
+    second: forestgraveyardgameassets_Fulltilemap_481
+  - first:
+      213: 8068451726814711580
+    second: forestgraveyardgameassets_Fulltilemap_482
+  - first:
+      213: 6230185253089468536
+    second: forestgraveyardgameassets_Fulltilemap_483
+  - first:
+      213: -1357703977480857186
+    second: forestgraveyardgameassets_Fulltilemap_484
+  - first:
+      213: 8323404392140748477
+    second: forestgraveyardgameassets_Fulltilemap_485
+  - first:
+      213: -3903594853725111664
+    second: forestgraveyardgameassets_Fulltilemap_486
+  - first:
+      213: 7922721608935509113
+    second: forestgraveyardgameassets_Fulltilemap_487
+  - first:
+      213: -6459133097560534125
+    second: forestgraveyardgameassets_Fulltilemap_488
+  - first:
+      213: 6993268921837703677
+    second: forestgraveyardgameassets_Fulltilemap_489
+  - first:
+      213: 8623554252041187379
+    second: forestgraveyardgameassets_Fulltilemap_490
+  - first:
+      213: 8803189430102271823
+    second: forestgraveyardgameassets_Fulltilemap_491
+  - first:
+      213: -4741694569553959826
+    second: forestgraveyardgameassets_Fulltilemap_492
+  - first:
+      213: -6178305968126054158
+    second: forestgraveyardgameassets_Fulltilemap_493
+  - first:
+      213: 8326673645225757051
+    second: forestgraveyardgameassets_Fulltilemap_494
+  - first:
+      213: 5652468943854618793
+    second: forestgraveyardgameassets_Fulltilemap_495
+  - first:
+      213: 5390809219415753934
+    second: forestgraveyardgameassets_Fulltilemap_496
+  - first:
+      213: 960237304074771920
+    second: forestgraveyardgameassets_Fulltilemap_497
+  - first:
+      213: -2323879862642737773
+    second: forestgraveyardgameassets_Fulltilemap_498
+  - first:
+      213: 6825411460292391781
+    second: forestgraveyardgameassets_Fulltilemap_499
+  - first:
+      213: -8298934403012107126
+    second: forestgraveyardgameassets_Fulltilemap_500
+  - first:
+      213: -4455990323577105289
+    second: forestgraveyardgameassets_Fulltilemap_501
+  - first:
+      213: 6846952617482218357
+    second: forestgraveyardgameassets_Fulltilemap_502
+  - first:
+      213: 5467817644253870854
+    second: forestgraveyardgameassets_Fulltilemap_503
+  - first:
+      213: -69312448072194114
+    second: forestgraveyardgameassets_Fulltilemap_504
+  - first:
+      213: -5035676612948062030
+    second: forestgraveyardgameassets_Fulltilemap_505
+  - first:
+      213: -473125151608389521
+    second: forestgraveyardgameassets_Fulltilemap_506
+  - first:
+      213: 5568223502073254147
+    second: forestgraveyardgameassets_Fulltilemap_507
+  - first:
+      213: -7716855571810157987
+    second: forestgraveyardgameassets_Fulltilemap_508
+  - first:
+      213: -1412562774915926717
+    second: forestgraveyardgameassets_Fulltilemap_509
+  - first:
+      213: 8260598477241823610
+    second: forestgraveyardgameassets_Fulltilemap_510
+  - first:
+      213: -5681125815463747989
+    second: forestgraveyardgameassets_Fulltilemap_511
+  - first:
+      213: -3066240578550692970
+    second: forestgraveyardgameassets_Fulltilemap_512
+  - first:
+      213: -829872657290213298
+    second: forestgraveyardgameassets_Fulltilemap_513
+  - first:
+      213: 3209901643692886864
+    second: forestgraveyardgameassets_Fulltilemap_514
+  - first:
+      213: 8027148626817742353
+    second: forestgraveyardgameassets_Fulltilemap_515
+  - first:
+      213: 2219153043610261431
+    second: forestgraveyardgameassets_Fulltilemap_516
+  - first:
+      213: 6324538327466749944
+    second: forestgraveyardgameassets_Fulltilemap_517
+  - first:
+      213: -7947320443603162323
+    second: forestgraveyardgameassets_Fulltilemap_518
+  - first:
+      213: -8086111334293250870
+    second: forestgraveyardgameassets_Fulltilemap_519
+  - first:
+      213: 5874204981602012718
+    second: forestgraveyardgameassets_Fulltilemap_520
+  - first:
+      213: -8656862763738932410
+    second: forestgraveyardgameassets_Fulltilemap_521
+  - first:
+      213: 2373228965417591539
+    second: forestgraveyardgameassets_Fulltilemap_522
+  - first:
+      213: 2495530774825440638
+    second: forestgraveyardgameassets_Fulltilemap_523
+  - first:
+      213: -5498955242349017793
+    second: forestgraveyardgameassets_Fulltilemap_524
+  - first:
+      213: -1860311674186528518
+    second: forestgraveyardgameassets_Fulltilemap_525
+  - first:
+      213: -319215066476928084
+    second: forestgraveyardgameassets_Fulltilemap_526
+  - first:
+      213: -2879418081062403323
+    second: forestgraveyardgameassets_Fulltilemap_527
+  - first:
+      213: -1530118882601642238
+    second: forestgraveyardgameassets_Fulltilemap_528
+  - first:
+      213: 5182013222572876197
+    second: forestgraveyardgameassets_Fulltilemap_529
+  - first:
+      213: 5023546698917512207
+    second: forestgraveyardgameassets_Fulltilemap_530
+  - first:
+      213: 337142490424019457
+    second: forestgraveyardgameassets_Fulltilemap_531
+  - first:
+      213: 2778869676862056745
+    second: forestgraveyardgameassets_Fulltilemap_532
+  - first:
+      213: 8109423722103141428
+    second: forestgraveyardgameassets_Fulltilemap_533
+  - first:
+      213: 6691361934002996749
+    second: forestgraveyardgameassets_Fulltilemap_534
+  - first:
+      213: -9116870747329278534
+    second: forestgraveyardgameassets_Fulltilemap_535
+  - first:
+      213: -3528705965294257332
+    second: forestgraveyardgameassets_Fulltilemap_536
+  - first:
+      213: -3928704199198512115
+    second: forestgraveyardgameassets_Fulltilemap_537
+  - first:
+      213: 8071645658200244461
+    second: forestgraveyardgameassets_Fulltilemap_538
+  - first:
+      213: -4268004793800679225
+    second: forestgraveyardgameassets_Fulltilemap_539
+  - first:
+      213: -3800613528107369786
+    second: forestgraveyardgameassets_Fulltilemap_540
+  - first:
+      213: 7563898877613209515
+    second: forestgraveyardgameassets_Fulltilemap_541
+  - first:
+      213: -498845140291454225
+    second: forestgraveyardgameassets_Fulltilemap_542
+  - first:
+      213: -4845581648271917332
+    second: forestgraveyardgameassets_Fulltilemap_543
+  - first:
+      213: -7937823696323710416
+    second: forestgraveyardgameassets_Fulltilemap_544
+  - first:
+      213: 2291119747802045732
+    second: forestgraveyardgameassets_Fulltilemap_545
+  - first:
+      213: -5092269438628352760
+    second: forestgraveyardgameassets_Fulltilemap_546
+  - first:
+      213: -6779790578785828501
+    second: forestgraveyardgameassets_Fulltilemap_547
+  - first:
+      213: 8521419482749412271
+    second: forestgraveyardgameassets_Fulltilemap_548
+  - first:
+      213: 7271184906569415886
+    second: forestgraveyardgameassets_Fulltilemap_549
+  - first:
+      213: 1432772416974774702
+    second: forestgraveyardgameassets_Fulltilemap_550
+  - first:
+      213: 67022480838429057
+    second: forestgraveyardgameassets_Fulltilemap_551
+  - first:
+      213: 1415901491101969172
+    second: forestgraveyardgameassets_Fulltilemap_552
+  - first:
+      213: -6017907696115537989
+    second: forestgraveyardgameassets_Fulltilemap_553
+  - first:
+      213: -680083114647223993
+    second: forestgraveyardgameassets_Fulltilemap_554
+  - first:
+      213: -5352159216120474705
+    second: forestgraveyardgameassets_Fulltilemap_555
+  - first:
+      213: -8289593755600445507
+    second: forestgraveyardgameassets_Fulltilemap_556
+  - first:
+      213: -6393268791919513126
+    second: forestgraveyardgameassets_Fulltilemap_557
+  - first:
+      213: 358489011214968071
+    second: forestgraveyardgameassets_Fulltilemap_558
+  - first:
+      213: -701352182962524390
+    second: forestgraveyardgameassets_Fulltilemap_559
+  - first:
+      213: 7426881009302674064
+    second: forestgraveyardgameassets_Fulltilemap_560
+  - first:
+      213: -5586421863054663148
+    second: forestgraveyardgameassets_Fulltilemap_561
+  - first:
+      213: -5008219509612179852
+    second: forestgraveyardgameassets_Fulltilemap_562
+  - first:
+      213: 5764989321935392383
+    second: forestgraveyardgameassets_Fulltilemap_563
+  - first:
+      213: 7548052169942737955
+    second: forestgraveyardgameassets_Fulltilemap_564
+  - first:
+      213: 5095100555188465443
+    second: forestgraveyardgameassets_Fulltilemap_565
+  - first:
+      213: -2307430493547847617
+    second: forestgraveyardgameassets_Fulltilemap_566
+  - first:
+      213: 5842481224621543371
+    second: forestgraveyardgameassets_Fulltilemap_567
+  - first:
+      213: -6783862439768608833
+    second: forestgraveyardgameassets_Fulltilemap_568
+  - first:
+      213: -1644255238235643610
+    second: forestgraveyardgameassets_Fulltilemap_569
+  - first:
+      213: 639996830804421629
+    second: forestgraveyardgameassets_Fulltilemap_570
+  - first:
+      213: -3196815881344498368
+    second: forestgraveyardgameassets_Fulltilemap_571
+  - first:
+      213: 9103538989704831617
+    second: forestgraveyardgameassets_Fulltilemap_572
+  - first:
+      213: 8950420432468967803
+    second: forestgraveyardgameassets_Fulltilemap_573
+  - first:
+      213: 3420650984954291772
+    second: forestgraveyardgameassets_Fulltilemap_574
+  - first:
+      213: -4815322334875679626
+    second: forestgraveyardgameassets_Fulltilemap_575
+  - first:
+      213: 1663563677506762805
+    second: forestgraveyardgameassets_Fulltilemap_576
+  - first:
+      213: 4598032733092861078
+    second: forestgraveyardgameassets_Fulltilemap_577
+  - first:
+      213: -3497230645181790844
+    second: forestgraveyardgameassets_Fulltilemap_578
+  - first:
+      213: 4555709554093975035
+    second: forestgraveyardgameassets_Fulltilemap_579
+  - first:
+      213: 79119629124019709
+    second: forestgraveyardgameassets_Fulltilemap_580
+  - first:
+      213: 2350050907356971645
+    second: forestgraveyardgameassets_Fulltilemap_581
+  - first:
+      213: -6613062684405546483
+    second: forestgraveyardgameassets_Fulltilemap_582
+  - first:
+      213: 7835504785244125610
+    second: forestgraveyardgameassets_Fulltilemap_583
+  - first:
+      213: 2513834837620231169
+    second: forestgraveyardgameassets_Fulltilemap_584
+  - first:
+      213: 3760371684505658976
+    second: forestgraveyardgameassets_Fulltilemap_585
+  - first:
+      213: 3440532787583749875
+    second: forestgraveyardgameassets_Fulltilemap_586
+  - first:
+      213: -1455780194307822131
+    second: forestgraveyardgameassets_Fulltilemap_587
+  - first:
+      213: 3331113429340991394
+    second: forestgraveyardgameassets_Fulltilemap_588
+  - first:
+      213: -6676191891130644073
+    second: forestgraveyardgameassets_Fulltilemap_589
+  - first:
+      213: -267234106669360542
+    second: forestgraveyardgameassets_Fulltilemap_590
+  - first:
+      213: 5915631761901602265
+    second: forestgraveyardgameassets_Fulltilemap_591
+  - first:
+      213: -8390902273604304225
+    second: forestgraveyardgameassets_Fulltilemap_592
+  - first:
+      213: -1244403576666547400
+    second: forestgraveyardgameassets_Fulltilemap_593
+  - first:
+      213: -9105791897888364166
+    second: forestgraveyardgameassets_Fulltilemap_594
+  - first:
+      213: -1988632977805522178
+    second: forestgraveyardgameassets_Fulltilemap_595
+  - first:
+      213: 789596280786750393
+    second: forestgraveyardgameassets_Fulltilemap_596
+  - first:
+      213: -4663593193714068165
+    second: forestgraveyardgameassets_Fulltilemap_597
+  - first:
+      213: -6044494940605071533
+    second: forestgraveyardgameassets_Fulltilemap_598
+  - first:
+      213: -5848227611871363158
+    second: forestgraveyardgameassets_Fulltilemap_599
+  - first:
+      213: -8911509906417062882
+    second: forestgraveyardgameassets_Fulltilemap_600
+  - first:
+      213: -662735582805803190
+    second: forestgraveyardgameassets_Fulltilemap_601
+  - first:
+      213: 2479783798380558289
+    second: forestgraveyardgameassets_Fulltilemap_602
+  - first:
+      213: 3836434308146832950
+    second: forestgraveyardgameassets_Fulltilemap_603
+  - first:
+      213: 1363792663337756478
+    second: forestgraveyardgameassets_Fulltilemap_604
+  - first:
+      213: 8968506864990426255
+    second: forestgraveyardgameassets_Fulltilemap_605
+  - first:
+      213: -7519362215207462782
+    second: forestgraveyardgameassets_Fulltilemap_606
+  - first:
+      213: 5837712750202092728
+    second: forestgraveyardgameassets_Fulltilemap_607
+  - first:
+      213: 1100051960990751179
+    second: forestgraveyardgameassets_Fulltilemap_608
+  - first:
+      213: -3514271663758597072
+    second: forestgraveyardgameassets_Fulltilemap_609
+  - first:
+      213: 6353236884220282123
+    second: forestgraveyardgameassets_Fulltilemap_610
+  - first:
+      213: -6134968661368141501
+    second: forestgraveyardgameassets_Fulltilemap_611
+  - first:
+      213: -7325111463232039498
+    second: forestgraveyardgameassets_Fulltilemap_612
+  - first:
+      213: -4587260444772308513
+    second: forestgraveyardgameassets_Fulltilemap_613
+  - first:
+      213: 7390517962109793056
+    second: forestgraveyardgameassets_Fulltilemap_614
+  - first:
+      213: -2295663376905466167
+    second: forestgraveyardgameassets_Fulltilemap_615
+  - first:
+      213: 3403624887589355432
+    second: forestgraveyardgameassets_Fulltilemap_616
+  - first:
+      213: 1768760617482090990
+    second: forestgraveyardgameassets_Fulltilemap_617
+  - first:
+      213: 3235630749118001993
+    second: forestgraveyardgameassets_Fulltilemap_618
+  - first:
+      213: 7170613099316676496
+    second: forestgraveyardgameassets_Fulltilemap_619
+  - first:
+      213: 5971269611107161973
+    second: forestgraveyardgameassets_Fulltilemap_620
+  - first:
+      213: 7162783440516022053
+    second: forestgraveyardgameassets_Fulltilemap_621
+  - first:
+      213: 6135436407206791135
+    second: forestgraveyardgameassets_Fulltilemap_622
+  - first:
+      213: 2880432596511659216
+    second: forestgraveyardgameassets_Fulltilemap_623
+  - first:
+      213: 2011705245071193258
+    second: forestgraveyardgameassets_Fulltilemap_624
+  - first:
+      213: -8462755865499642765
+    second: forestgraveyardgameassets_Fulltilemap_625
+  - first:
+      213: 1938661910218230281
+    second: forestgraveyardgameassets_Fulltilemap_626
+  - first:
+      213: 3647843416062823588
+    second: forestgraveyardgameassets_Fulltilemap_627
+  - first:
+      213: 7176606530986065023
+    second: forestgraveyardgameassets_Fulltilemap_628
+  - first:
+      213: -8142448650077582404
+    second: forestgraveyardgameassets_Fulltilemap_629
+  - first:
+      213: -8375133674325433746
+    second: forestgraveyardgameassets_Fulltilemap_630
+  - first:
+      213: 9129940302394461632
+    second: forestgraveyardgameassets_Fulltilemap_631
+  - first:
+      213: 9057166450475706800
+    second: forestgraveyardgameassets_Fulltilemap_632
+  - first:
+      213: 2428659679786592701
+    second: forestgraveyardgameassets_Fulltilemap_633
+  - first:
+      213: 3381786544201491765
+    second: forestgraveyardgameassets_Fulltilemap_634
+  - first:
+      213: -3895280172246717242
+    second: forestgraveyardgameassets_Fulltilemap_635
+  - first:
+      213: -962722265890311607
+    second: forestgraveyardgameassets_Fulltilemap_636
+  - first:
+      213: -6613398471762096860
+    second: forestgraveyardgameassets_Fulltilemap_637
+  - first:
+      213: -3284379777809790813
+    second: forestgraveyardgameassets_Fulltilemap_638
+  - first:
+      213: 4944838244113238093
+    second: forestgraveyardgameassets_Fulltilemap_639
+  - first:
+      213: 6048459500843013824
+    second: forestgraveyardgameassets_Fulltilemap_640
+  - first:
+      213: 5695038356293520985
+    second: forestgraveyardgameassets_Fulltilemap_641
+  - first:
+      213: -1283421627529931906
+    second: forestgraveyardgameassets_Fulltilemap_642
+  - first:
+      213: -1966593263618119230
+    second: forestgraveyardgameassets_Fulltilemap_643
+  - first:
+      213: 990622747664799624
+    second: forestgraveyardgameassets_Fulltilemap_644
+  - first:
+      213: 1799670228518293671
+    second: forestgraveyardgameassets_Fulltilemap_645
+  - first:
+      213: -5375413889277084605
+    second: forestgraveyardgameassets_Fulltilemap_646
+  - first:
+      213: -5268402663564341183
+    second: forestgraveyardgameassets_Fulltilemap_647
+  - first:
+      213: 3603426553881346362
+    second: forestgraveyardgameassets_Fulltilemap_648
+  - first:
+      213: 2042612992920198223
+    second: forestgraveyardgameassets_Fulltilemap_649
+  - first:
+      213: 4964955888678781815
+    second: forestgraveyardgameassets_Fulltilemap_650
+  - first:
+      213: 5657226770391529934
+    second: forestgraveyardgameassets_Fulltilemap_651
+  - first:
+      213: -6397462277923638695
+    second: forestgraveyardgameassets_Fulltilemap_652
+  - first:
+      213: 8963533958662879519
+    second: forestgraveyardgameassets_Fulltilemap_653
+  - first:
+      213: 8364892545313155686
+    second: forestgraveyardgameassets_Fulltilemap_654
+  - first:
+      213: 4959185071277134580
+    second: forestgraveyardgameassets_Fulltilemap_655
+  - first:
+      213: -110528996307229658
+    second: forestgraveyardgameassets_Fulltilemap_656
+  - first:
+      213: 4985987307927587111
+    second: forestgraveyardgameassets_Fulltilemap_657
+  - first:
+      213: 7176022761745569486
+    second: forestgraveyardgameassets_Fulltilemap_658
+  - first:
+      213: 1091901429837031532
+    second: forestgraveyardgameassets_Fulltilemap_659
+  - first:
+      213: 4268332079150705812
+    second: forestgraveyardgameassets_Fulltilemap_0
+  - first:
+      213: 5497058119971898471
+    second: forestgraveyardgameassets_Fulltilemap_1
+  - first:
+      213: -2702777155201256900
+    second: forestgraveyardgameassets_Fulltilemap_2
+  - first:
+      213: -6308756312042897267
+    second: forestgraveyardgameassets_Fulltilemap_3
+  - first:
+      213: 4162657894323148620
+    second: forestgraveyardgameassets_Fulltilemap_4
+  - first:
+      213: -5305149003362399291
+    second: forestgraveyardgameassets_Fulltilemap_5
+  - first:
+      213: 7839294437512578311
+    second: forestgraveyardgameassets_Fulltilemap_6
+  - first:
+      213: -5352235652009017934
+    second: forestgraveyardgameassets_Fulltilemap_7
+  - first:
+      213: -9138919573998028120
+    second: forestgraveyardgameassets_Fulltilemap_8
+  - first:
+      213: 6736364287676864156
+    second: forestgraveyardgameassets_Fulltilemap_9
+  - first:
+      213: 6055711044850827983
+    second: forestgraveyardgameassets_Fulltilemap_10
+  - first:
+      213: 5511518812398543856
+    second: forestgraveyardgameassets_Fulltilemap_11
+  - first:
+      213: 8268403747439914675
+    second: forestgraveyardgameassets_Fulltilemap_12
+  - first:
+      213: -7915268989496099149
+    second: forestgraveyardgameassets_Fulltilemap_13
+  - first:
+      213: 8374888920767656815
+    second: forestgraveyardgameassets_Fulltilemap_14
+  - first:
+      213: 8107923120763618320
+    second: forestgraveyardgameassets_Fulltilemap_15
+  - first:
+      213: -8483585091260432742
+    second: forestgraveyardgameassets_Fulltilemap_16
+  - first:
+      213: -1276537184107500186
+    second: forestgraveyardgameassets_Fulltilemap_17
+  - first:
+      213: 6907760981024186573
+    second: forestgraveyardgameassets_Fulltilemap_18
+  - first:
+      213: -1316590473269957317
+    second: forestgraveyardgameassets_Fulltilemap_19
+  - first:
+      213: 9109028303797268426
+    second: forestgraveyardgameassets_Fulltilemap_20
+  - first:
+      213: -5101874595502203943
+    second: forestgraveyardgameassets_Fulltilemap_21
+  - first:
+      213: 3802903765217655628
+    second: forestgraveyardgameassets_Fulltilemap_22
+  - first:
+      213: 4882295131906356439
+    second: forestgraveyardgameassets_Fulltilemap_23
+  - first:
+      213: 3104386285043564845
+    second: forestgraveyardgameassets_Fulltilemap_24
+  - first:
+      213: 1320820231368848596
+    second: forestgraveyardgameassets_Fulltilemap_25
+  - first:
+      213: 5857639791167167061
+    second: forestgraveyardgameassets_Fulltilemap_26
+  - first:
+      213: 3644657317410723249
+    second: forestgraveyardgameassets_Fulltilemap_27
+  - first:
+      213: -4687124157969811184
+    second: forestgraveyardgameassets_Fulltilemap_28
+  - first:
+      213: 8170626091609408136
+    second: forestgraveyardgameassets_Fulltilemap_29
+  - first:
+      213: -1702381193987583057
+    second: forestgraveyardgameassets_Fulltilemap_30
+  - first:
+      213: -641084473955846585
+    second: forestgraveyardgameassets_Fulltilemap_31
+  - first:
+      213: -2201262507583655488
+    second: forestgraveyardgameassets_Fulltilemap_32
+  - first:
+      213: 3022800764503003878
+    second: forestgraveyardgameassets_Fulltilemap_33
+  - first:
+      213: 5578260760467726450
+    second: forestgraveyardgameassets_Fulltilemap_34
+  - first:
+      213: -1193816171889063224
+    second: forestgraveyardgameassets_Fulltilemap_35
+  - first:
+      213: -3853693169554574467
+    second: forestgraveyardgameassets_Fulltilemap_36
+  - first:
+      213: 9013107298212676886
+    second: forestgraveyardgameassets_Fulltilemap_37
+  - first:
+      213: 4517960065850770338
+    second: forestgraveyardgameassets_Fulltilemap_38
+  - first:
+      213: -2688837470210903277
+    second: forestgraveyardgameassets_Fulltilemap_39
+  - first:
+      213: -2212158597762877684
+    second: forestgraveyardgameassets_Fulltilemap_40
+  - first:
+      213: 1911136897145670200
+    second: forestgraveyardgameassets_Fulltilemap_41
+  - first:
+      213: 8358573238758258641
+    second: forestgraveyardgameassets_Fulltilemap_42
+  - first:
+      213: 1645301454132868386
+    second: forestgraveyardgameassets_Fulltilemap_43
+  - first:
+      213: 4302070257839909799
+    second: forestgraveyardgameassets_Fulltilemap_44
+  - first:
+      213: 470182770728818876
+    second: forestgraveyardgameassets_Fulltilemap_45
+  - first:
+      213: 9124275246382423209
+    second: forestgraveyardgameassets_Fulltilemap_46
+  - first:
+      213: 5610778421372123346
+    second: forestgraveyardgameassets_Fulltilemap_47
+  - first:
+      213: -7648598976483612912
+    second: forestgraveyardgameassets_Fulltilemap_48
+  - first:
+      213: 3012873850284992041
+    second: forestgraveyardgameassets_Fulltilemap_49
+  - first:
+      213: 4640222357615790597
+    second: forestgraveyardgameassets_Fulltilemap_50
+  - first:
+      213: -8756823180073993667
+    second: forestgraveyardgameassets_Fulltilemap_51
+  - first:
+      213: 6769140892512456457
+    second: forestgraveyardgameassets_Fulltilemap_52
+  - first:
+      213: 3212775183510161376
+    second: forestgraveyardgameassets_Fulltilemap_53
+  - first:
+      213: -6751149718167159084
+    second: forestgraveyardgameassets_Fulltilemap_54
+  - first:
+      213: -3950639629014151613
+    second: forestgraveyardgameassets_Fulltilemap_55
+  - first:
+      213: -4562638611680354343
+    second: forestgraveyardgameassets_Fulltilemap_56
+  - first:
+      213: 7862751191703707194
+    second: forestgraveyardgameassets_Fulltilemap_57
+  - first:
+      213: 1686788052390092046
+    second: forestgraveyardgameassets_Fulltilemap_58
+  - first:
+      213: 449424789815686673
+    second: forestgraveyardgameassets_Fulltilemap_59
+  - first:
+      213: 8649240186713982293
+    second: forestgraveyardgameassets_Fulltilemap_60
+  - first:
+      213: 6769583112617672558
+    second: forestgraveyardgameassets_Fulltilemap_61
+  - first:
+      213: 1743883271950898905
+    second: forestgraveyardgameassets_Fulltilemap_62
+  - first:
+      213: 3978059052461203395
+    second: forestgraveyardgameassets_Fulltilemap_63
+  - first:
+      213: -5628145927373523604
+    second: forestgraveyardgameassets_Fulltilemap_64
+  - first:
+      213: 3309625005310304165
+    second: forestgraveyardgameassets_Fulltilemap_65
+  - first:
+      213: 5101022268196000703
+    second: forestgraveyardgameassets_Fulltilemap_66
+  - first:
+      213: -2527347837024538283
+    second: forestgraveyardgameassets_Fulltilemap_67
+  - first:
+      213: -1103557578431994644
+    second: forestgraveyardgameassets_Fulltilemap_68
+  - first:
+      213: 5682302176025792086
+    second: forestgraveyardgameassets_Fulltilemap_69
+  - first:
+      213: 1385098744217285804
+    second: forestgraveyardgameassets_Fulltilemap_70
+  - first:
+      213: -7399419470746581723
+    second: forestgraveyardgameassets_Fulltilemap_71
+  - first:
+      213: 3853234131210119688
+    second: forestgraveyardgameassets_Fulltilemap_72
+  - first:
+      213: -6829966915488540110
+    second: forestgraveyardgameassets_Fulltilemap_73
+  - first:
+      213: 3089775933416291276
+    second: forestgraveyardgameassets_Fulltilemap_74
+  - first:
+      213: -8501996199455525301
+    second: forestgraveyardgameassets_Fulltilemap_75
+  - first:
+      213: 6269529293402924558
+    second: forestgraveyardgameassets_Fulltilemap_76
+  - first:
+      213: -2919968833551452395
+    second: forestgraveyardgameassets_Fulltilemap_77
+  - first:
+      213: -7369250958263035222
+    second: forestgraveyardgameassets_Fulltilemap_78
+  - first:
+      213: 6314638787760042461
+    second: forestgraveyardgameassets_Fulltilemap_79
+  - first:
+      213: 7840693622734708899
+    second: forestgraveyardgameassets_Fulltilemap_80
+  - first:
+      213: 2778726277661249632
+    second: forestgraveyardgameassets_Fulltilemap_81
+  - first:
+      213: 7513186926163076887
+    second: forestgraveyardgameassets_Fulltilemap_82
+  - first:
+      213: 7787169740644039812
+    second: forestgraveyardgameassets_Fulltilemap_83
+  - first:
+      213: -152442318637059155
+    second: forestgraveyardgameassets_Fulltilemap_84
+  - first:
+      213: 126064825155752093
+    second: forestgraveyardgameassets_Fulltilemap_85
+  - first:
+      213: 926395876343466935
+    second: forestgraveyardgameassets_Fulltilemap_86
+  - first:
+      213: -7324937870788436484
+    second: forestgraveyardgameassets_Fulltilemap_87
+  - first:
+      213: -4381339626770926916
+    second: forestgraveyardgameassets_Fulltilemap_88
+  - first:
+      213: -4455326947169552839
+    second: forestgraveyardgameassets_Fulltilemap_89
+  - first:
+      213: -2840805575623750924
+    second: forestgraveyardgameassets_Fulltilemap_90
+  - first:
+      213: 4759062154854973387
+    second: forestgraveyardgameassets_Fulltilemap_91
+  - first:
+      213: 2994027147214213665
+    second: forestgraveyardgameassets_Fulltilemap_92
+  - first:
+      213: 8271790807508890095
+    second: forestgraveyardgameassets_Fulltilemap_93
+  - first:
+      213: -5583519883294923672
+    second: forestgraveyardgameassets_Fulltilemap_94
+  - first:
+      213: 7503891561378647624
+    second: forestgraveyardgameassets_Fulltilemap_95
+  - first:
+      213: 5108457498396161848
+    second: forestgraveyardgameassets_Fulltilemap_96
+  - first:
+      213: 700112143707850341
+    second: forestgraveyardgameassets_Fulltilemap_97
+  - first:
+      213: -398285655409234043
+    second: forestgraveyardgameassets_Fulltilemap_98
+  - first:
+      213: 6016477382782274876
+    second: forestgraveyardgameassets_Fulltilemap_99
+  - first:
+      213: 5080327812964037967
+    second: forestgraveyardgameassets_Fulltilemap_100
+  - first:
+      213: -6236397576429129886
+    second: forestgraveyardgameassets_Fulltilemap_101
+  - first:
+      213: -8832307139753862791
+    second: forestgraveyardgameassets_Fulltilemap_102
+  - first:
+      213: 4558682908712237346
+    second: forestgraveyardgameassets_Fulltilemap_103
+  - first:
+      213: 575530945398897890
+    second: forestgraveyardgameassets_Fulltilemap_104
+  - first:
+      213: -6202743156445327043
+    second: forestgraveyardgameassets_Fulltilemap_105
+  - first:
+      213: 8967286243587036659
+    second: forestgraveyardgameassets_Fulltilemap_106
+  - first:
+      213: -747286696191845233
+    second: forestgraveyardgameassets_Fulltilemap_107
+  - first:
+      213: 4815504302659724906
+    second: forestgraveyardgameassets_Fulltilemap_108
+  - first:
+      213: -2093336825650943545
+    second: forestgraveyardgameassets_Fulltilemap_109
+  - first:
+      213: 1950564635378158404
+    second: forestgraveyardgameassets_Fulltilemap_110
+  - first:
+      213: -7789277377344965151
+    second: forestgraveyardgameassets_Fulltilemap_111
+  - first:
+      213: 1916359665423762157
+    second: forestgraveyardgameassets_Fulltilemap_112
+  - first:
+      213: -3392105451004793415
+    second: forestgraveyardgameassets_Fulltilemap_113
+  - first:
+      213: -5459966083629894528
+    second: forestgraveyardgameassets_Fulltilemap_114
+  - first:
+      213: -2466826995800902577
+    second: forestgraveyardgameassets_Fulltilemap_115
+  - first:
+      213: 440529394577126372
+    second: forestgraveyardgameassets_Fulltilemap_116
+  - first:
+      213: 1872425200375766024
+    second: forestgraveyardgameassets_Fulltilemap_117
+  - first:
+      213: -4498329190058833822
+    second: forestgraveyardgameassets_Fulltilemap_118
+  - first:
+      213: 6012779153564463773
+    second: forestgraveyardgameassets_Fulltilemap_119
+  - first:
+      213: -8951243975992174460
+    second: forestgraveyardgameassets_Fulltilemap_120
+  - first:
+      213: -1828484526201802169
+    second: forestgraveyardgameassets_Fulltilemap_121
+  - first:
+      213: -862576081992756027
+    second: forestgraveyardgameassets_Fulltilemap_122
+  - first:
+      213: 7605754580144563582
+    second: forestgraveyardgameassets_Fulltilemap_123
+  - first:
+      213: -812857307555241652
+    second: forestgraveyardgameassets_Fulltilemap_124
+  - first:
+      213: -8845158370437458214
+    second: forestgraveyardgameassets_Fulltilemap_125
+  - first:
+      213: -3115015870432245455
+    second: forestgraveyardgameassets_Fulltilemap_126
+  - first:
+      213: 6939223443521167528
+    second: forestgraveyardgameassets_Fulltilemap_127
+  - first:
+      213: -2835566694900636073
+    second: forestgraveyardgameassets_Fulltilemap_128
+  - first:
+      213: -4431353271771697735
+    second: forestgraveyardgameassets_Fulltilemap_129
+  - first:
+      213: -2634944208393900750
+    second: forestgraveyardgameassets_Fulltilemap_130
+  - first:
+      213: -7672492199904294924
+    second: forestgraveyardgameassets_Fulltilemap_131
+  - first:
+      213: 2422788404748854349
+    second: forestgraveyardgameassets_Fulltilemap_132
+  - first:
+      213: 6326548755713993085
+    second: forestgraveyardgameassets_Fulltilemap_133
+  - first:
+      213: 2024948725669155577
+    second: forestgraveyardgameassets_Fulltilemap_134
+  - first:
+      213: 6612595925600615383
+    second: forestgraveyardgameassets_Fulltilemap_135
+  - first:
+      213: 8627584734809232283
+    second: forestgraveyardgameassets_Fulltilemap_136
+  - first:
+      213: -1714196588957348105
+    second: forestgraveyardgameassets_Fulltilemap_137
+  - first:
+      213: -7709948345800447351
+    second: forestgraveyardgameassets_Fulltilemap_138
+  - first:
+      213: -1598136580409649702
+    second: forestgraveyardgameassets_Fulltilemap_139
+  - first:
+      213: -7268643203824798353
+    second: forestgraveyardgameassets_Fulltilemap_140
+  - first:
+      213: 3700291179034698915
+    second: forestgraveyardgameassets_Fulltilemap_141
+  - first:
+      213: 4840662676976821021
+    second: forestgraveyardgameassets_Fulltilemap_142
+  - first:
+      213: -3444500876258266265
+    second: forestgraveyardgameassets_Fulltilemap_143
+  - first:
+      213: -75530910466445747
+    second: forestgraveyardgameassets_Fulltilemap_144
+  - first:
+      213: 575983811113672230
+    second: forestgraveyardgameassets_Fulltilemap_145
+  - first:
+      213: -7189961785294930029
+    second: forestgraveyardgameassets_Fulltilemap_146
+  - first:
+      213: -6280494012288965436
+    second: forestgraveyardgameassets_Fulltilemap_147
+  - first:
+      213: 3299162465728881740
+    second: forestgraveyardgameassets_Fulltilemap_148
+  - first:
+      213: -7777219980367139523
+    second: forestgraveyardgameassets_Fulltilemap_149
+  - first:
+      213: 7775163122238104784
+    second: forestgraveyardgameassets_Fulltilemap_150
+  - first:
+      213: -99020080799808931
+    second: forestgraveyardgameassets_Fulltilemap_151
+  - first:
+      213: -960872955186790268
+    second: forestgraveyardgameassets_Fulltilemap_152
+  - first:
+      213: 7671767100356966408
+    second: forestgraveyardgameassets_Fulltilemap_153
+  - first:
+      213: -8763192159700270837
+    second: forestgraveyardgameassets_Fulltilemap_154
+  - first:
+      213: 2118572967374826595
+    second: forestgraveyardgameassets_Fulltilemap_155
+  - first:
+      213: 5410493202391713331
+    second: forestgraveyardgameassets_Fulltilemap_156
+  - first:
+      213: 23824805164641903
+    second: forestgraveyardgameassets_Fulltilemap_157
+  - first:
+      213: 7097863910223316414
+    second: forestgraveyardgameassets_Fulltilemap_158
+  - first:
+      213: 1463147328974443759
+    second: forestgraveyardgameassets_Fulltilemap_159
+  - first:
+      213: -7533648107547081925
+    second: forestgraveyardgameassets_Fulltilemap_160
+  - first:
+      213: -3322976806408061522
+    second: forestgraveyardgameassets_Fulltilemap_161
+  - first:
+      213: -8296387106745619503
+    second: forestgraveyardgameassets_Fulltilemap_162
+  - first:
+      213: 1788695804871523206
+    second: forestgraveyardgameassets_Fulltilemap_163
+  - first:
+      213: 972968063456575519
+    second: forestgraveyardgameassets_Fulltilemap_164
+  - first:
+      213: 4219596173663402068
+    second: forestgraveyardgameassets_Fulltilemap_165
+  - first:
+      213: -1488153008961800636
+    second: forestgraveyardgameassets_Fulltilemap_166
+  - first:
+      213: 1733691748432518418
+    second: forestgraveyardgameassets_Fulltilemap_167
+  - first:
+      213: -7983498695291972938
+    second: forestgraveyardgameassets_Fulltilemap_168
+  - first:
+      213: 7888788475398801118
+    second: forestgraveyardgameassets_Fulltilemap_169
+  - first:
+      213: 7769128166726313427
+    second: forestgraveyardgameassets_Fulltilemap_170
+  - first:
+      213: -8346415243793696255
+    second: forestgraveyardgameassets_Fulltilemap_171
+  - first:
+      213: 5387290092790670518
+    second: forestgraveyardgameassets_Fulltilemap_172
+  - first:
+      213: -6494796519611645556
+    second: forestgraveyardgameassets_Fulltilemap_173
+  - first:
+      213: -367529600486661330
+    second: forestgraveyardgameassets_Fulltilemap_174
+  - first:
+      213: 3585399216645149332
+    second: forestgraveyardgameassets_Fulltilemap_175
+  - first:
+      213: -5628864656853543703
+    second: forestgraveyardgameassets_Fulltilemap_176
+  - first:
+      213: -3499776758231705853
+    second: forestgraveyardgameassets_Fulltilemap_177
+  - first:
+      213: -3725481734383828522
+    second: forestgraveyardgameassets_Fulltilemap_178
+  - first:
+      213: 7317892184339301747
+    second: forestgraveyardgameassets_Fulltilemap_179
+  - first:
+      213: -4456689013062983321
+    second: forestgraveyardgameassets_Fulltilemap_180
+  - first:
+      213: 5698018574377579758
+    second: forestgraveyardgameassets_Fulltilemap_181
+  - first:
+      213: 8855168619581042180
+    second: forestgraveyardgameassets_Fulltilemap_182
+  - first:
+      213: -1312107152706009401
+    second: forestgraveyardgameassets_Fulltilemap_183
+  - first:
+      213: 104985909843570500
+    second: forestgraveyardgameassets_Fulltilemap_184
+  - first:
+      213: -4999297855272954096
+    second: forestgraveyardgameassets_Fulltilemap_185
+  - first:
+      213: 8706076561662518561
+    second: forestgraveyardgameassets_Fulltilemap_186
+  - first:
+      213: 7817183797721157343
+    second: forestgraveyardgameassets_Fulltilemap_187
+  - first:
+      213: 219037347341374359
+    second: forestgraveyardgameassets_Fulltilemap_188
+  - first:
+      213: -6393914071904743747
+    second: forestgraveyardgameassets_Fulltilemap_189
+  - first:
+      213: 6545682125158019642
+    second: forestgraveyardgameassets_Fulltilemap_190
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cae2159692c3b30800000000000000
+      internalID: 4268332079150705812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7640a964c39794c40800000000000000
+      internalID: 5497058119971898471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32303d4f7ecd7ad0800000000000000
+      internalID: -2702777155201256900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d800e263f8bc278a0800000000000000
+      internalID: -6308756312042897267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c475b98dc4bb4c930800000000000000
+      internalID: 4162657894323148620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb011ed6135066b0800000000000000
+      internalID: -5305149003362399291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70502ada1c4cacc60800000000000000
+      internalID: 7839294437512578311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd32d7280a09b5b0800000000000000
+      internalID: -5352235652009017934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aabbf841190c2180800000000000000
+      internalID: -9138919573998028120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c965b9cf0af5c7d50800000000000000
+      internalID: 6736364287676864156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc24eba5c153a0450800000000000000
+      internalID: 6055711044850827983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3e5e99829dc7c40800000000000000
+      internalID: 5511518812398543856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be2aa186654fb270800000000000000
+      internalID: 8268403747439914675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be7b6b7ac0572290800000000000000
+      internalID: -7915268989496099149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63f5b3f915993470800000000000000
+      internalID: 8374888920767656815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014ca47ee11258070800000000000000
+      internalID: 8107923120763618320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e3f95be40444a80800000000000000
+      internalID: -8483585091260432742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66de1b6c134d84ee0800000000000000
+      internalID: -1276537184107500186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0204b630c4ddf50800000000000000
+      internalID: 6907760981024186573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3da41ea0f78abde0800000000000000
+      internalID: -1316590473269957317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfa0d80bf4c96e70800000000000000
+      internalID: 9109028303797268426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db508616108239b0800000000000000
+      internalID: -5101874595502203943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b3bc863d0a6c430800000000000000
+      internalID: 3802903765217655628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4b5e11e8561c340800000000000000
+      internalID: 4882295131906356439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21cd95e0eef41b20800000000000000
+      internalID: 3104386285043564845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4b3ee900f745210800000000000000
+      internalID: 1320820231368848596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a56beda548a4150800000000000000
+      internalID: 5857639791167167061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_27
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b55b4c158c649230800000000000000
+      internalID: 3644657317410723249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019be0a696df3feb0800000000000000
+      internalID: -4687124157969811184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882cae6f325e36170800000000000000
+      internalID: 8170626091609408136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_30
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3901cd25def58e0800000000000000
+      internalID: -1702381193987583057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746f7da41196a17f0800000000000000
+      internalID: -641084473955846585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c13712896b8371e0800000000000000
+      internalID: -2201262507583655488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e21bf2a74523f920800000000000000
+      internalID: 3022800764503003878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270ed245b96f96d40800000000000000
+      internalID: 5578260760467726450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca8f6b4486be6fe0800000000000000
+      internalID: -1193816171889063224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73b953ea7ee48ac0800000000000000
+      internalID: -3853693169554574467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6158270955df41d70800000000000000
+      internalID: 9013107298212676886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a38f622eb403be30800000000000000
+      internalID: 4517960065850770338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313b15121945faad0800000000000000
+      internalID: -2688837470210903277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c077481d975dc41e0800000000000000
+      internalID: -2212158597762877684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a828fd1e8b58a10800000000000000
+      internalID: 1911136897145670200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7b545331e9ff370800000000000000
+      internalID: 8358573238758258641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225f50294f845d610800000000000000
+      internalID: 1645301454132868386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab225d2b1604bb30800000000000000
+      internalID: 4302070257839909799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8dcc42dbc668600800000000000000
+      internalID: 470182770728818876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac938d7effef9e70800000000000000
+      internalID: 9124275246382423209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8ff4f3f3d7ddd40800000000000000
+      internalID: 5610778421372123346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017274141c7bad590800000000000000
+      internalID: -7648598976483612912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926ec4fcdc0efc920800000000000000
+      internalID: 3012873850284992041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ac38836a1656040800000000000000
+      internalID: 4640222357615790597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a78ce96b3897680800000000000000
+      internalID: -8756823180073993667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f86ccf6c1d0fd50800000000000000
+      internalID: 6769140892512456457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e74054e102169c20800000000000000
+      internalID: 3212775183510161376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4defa27b9191f42a0800000000000000
+      internalID: -6751149718167159084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ec70550328c29c0800000000000000
+      internalID: -3950639629014151613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df9f484b504ea0c0800000000000000
+      internalID: -4562638611680354343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e57cadc8a1e1d60800000000000000
+      internalID: 7862751191703707194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d9512fbcca86710800000000000000
+      internalID: 1686788052390092046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_59
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116f736177dac3600800000000000000
+      internalID: 449424789815686673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_60
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555ce1acf16480870800000000000000
+      internalID: 8649240186713982293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_61
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f3f0169f362fd50800000000000000
+      internalID: 6769583112617672558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_62
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6116aa894833810800000000000000
+      internalID: 1743883271950898905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf1a7da1a7e43730800000000000000
+      internalID: 3978059052461203395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_64
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65f6d6291fc4e1b0800000000000000
+      internalID: -5628145927373523604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af554d38662eed20800000000000000
+      internalID: 3309625005310304165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb31e2ff9b87ac640800000000000000
+      internalID: 5101022268196000703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_67
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551fc4e588e0decd0800000000000000
+      internalID: -2527347837024538283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_68
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4ee54ba306fa0f0800000000000000
+      internalID: -1103557578431994644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e427419b79bde40800000000000000
+      internalID: 5682302176025792086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_70
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca439e328fbd83310800000000000000
+      internalID: 1385098744217285804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_71
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5258a06f13bff4990800000000000000
+      internalID: -7399419470746581723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_72
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80aa03be600797530800000000000000
+      internalID: 3853234131210119688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_73
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a92aee6451731a0800000000000000
+      internalID: -6829966915488540110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_74
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb34d257d611ea20800000000000000
+      internalID: 3089775933416291276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_75
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b467bb98087d20a80800000000000000
+      internalID: -8501996199455525301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_76
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06ef2acca7d10750800000000000000
+      internalID: 6269529293402924558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_77
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51734f801df2a77d0800000000000000
+      internalID: -2919968833551452395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa56042c492bb990800000000000000
+      internalID: -7369250958263035222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_79
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd13755658a12a750800000000000000
+      internalID: 6314638787760042461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_80
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0e5cfde4dbfcc60800000000000000
+      internalID: 7840693622734708899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_81
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060da04c3d4009620800000000000000
+      internalID: 2778726277661249632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7172f09e3b3344860800000000000000
+      internalID: 7513186926163076887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c32c4fe95911c60800000000000000
+      internalID: 7787169740644039812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_84
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3b6e4d48a62edf0800000000000000
+      internalID: -152442318637059155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_85
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9094126a4fdfb100800000000000000
+      internalID: 126064825155752093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbc6da24283bdc00800000000000000
+      internalID: 926395876343466935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_87
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd59d1d0d7985a90800000000000000
+      internalID: -7324937870788436484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_88
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2f9f1a2da5233c0800000000000000
+      internalID: -4381339626770926916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_89
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936bbb33fbf7b22c0800000000000000
+      internalID: -4455326947169552839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_90
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa4ff4516e6398d0800000000000000
+      internalID: -2840805575623750924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_91
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfb224b0d59b0240800000000000000
+      internalID: 4759062154854973387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_92
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122549dc3dbec8920800000000000000
+      internalID: 2994027147214213665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1b8e1e9ed4bc270800000000000000
+      internalID: 8271790807508890095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_94
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86420e7bf3a5382b0800000000000000
+      internalID: -5583519883294923672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_95
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e86052e9d232860800000000000000
+      internalID: 7503891561378647624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_96
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837751e6703e4e640800000000000000
+      internalID: 5108457498396161848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566c4ac094c47b900800000000000000
+      internalID: 700112143707850341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_98
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fe23e7e41097af0800000000000000
+      internalID: -398285655409234043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_99
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dc8ef8d42de7350800000000000000
+      internalID: 6016477382782274876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_100
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45324aaa33f08640800000000000000
+      internalID: 5080327812964037967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_101
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fa5d2327dd379a0800000000000000
+      internalID: -6236397576429129886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_102
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97913d3b3775d6580800000000000000
+      internalID: -8832307139753862791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_103
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229ff69d3f1b34f30800000000000000
+      internalID: 4558682908712237346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_104
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecfeb57852bcf700800000000000000
+      internalID: 575530945398897890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_105
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31571776fd6be9a0800000000000000
+      internalID: -6202743156445327043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5904ce353327c70800000000000000
+      internalID: 8967286243587036659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_107
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c1c1885ba11a5f0800000000000000
+      internalID: -747286696191845233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_108
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66e56e46ab14d240800000000000000
+      internalID: 4815504302659724906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_109
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9e4df7f39f2f2e0800000000000000
+      internalID: -2093336825650943545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_110
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b872b833cc11b10800000000000000
+      internalID: 1950564635378158404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_111
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5fd52ae7de6e390800000000000000
+      internalID: -7789277377344965151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_112
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2487f56f6489a10800000000000000
+      internalID: 1916359665423762157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_113
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd61308012dce0d0800000000000000
+      internalID: -3392105451004793415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_114
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0843f8b66cd4a34b0800000000000000
+      internalID: -5459966083629894528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_115
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4471f8cae114cdd0800000000000000
+      internalID: -2466826995800902577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_116
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e333ec76231d1600800000000000000
+      internalID: 440529394577126372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_117
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c13e89cc03cf910800000000000000
+      internalID: 1872425200375766024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_118
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268c5cf4f69b291c0800000000000000
+      internalID: -4498329190058833822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_119
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92751978cea17350800000000000000
+      internalID: 6012779153564463773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4889121970bc6c380800000000000000
+      internalID: -8951243975992174460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_121
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742717ad20bef96e0800000000000000
+      internalID: -1828484526201802169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_122
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4d211af938704f0800000000000000
+      internalID: -862576081992756027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_123
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75215e5e711d8960800000000000000
+      internalID: 7605754580144563582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_124
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41e612e59628b4f0800000000000000
+      internalID: -812857307555241652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad69004635faf3580800000000000000
+      internalID: -8845158370437458214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_126
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1398e25e19d35c4d0800000000000000
+      internalID: -3115015870432245455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_127
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a06420d4f21d4060800000000000000
+      internalID: 6939223443521167528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756e48d4d1b06a8d0800000000000000
+      internalID: -2835566694900636073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_129
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd68c97daba082c0800000000000000
+      internalID: -4431353271771697735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d65b7f33cce6bd0800000000000000
+      internalID: -2634944208393900750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_131
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7cfbaaef4d58590800000000000000
+      internalID: -7672492199904294924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_132
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44adf6b7397f9120800000000000000
+      internalID: 2422788404748854349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_133
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79a586e29a6cc750800000000000000
+      internalID: 6326548755713993085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_134
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2d3e923201a1c10800000000000000
+      internalID: 2024948725669155577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_135
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbbe9495f8a4cb50800000000000000
+      internalID: 6612595925600615383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_136
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9313ebfa965bb770800000000000000
+      internalID: 8627584734809232283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_137
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fec208d843f538e0800000000000000
+      internalID: -1714196588957348105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_138
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a24fb14d2c00590800000000000000
+      internalID: -7709948345800447351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_139
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad510265f3742d9e0800000000000000
+      internalID: -1598136580409649702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_140
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6537fc5487902b90800000000000000
+      internalID: -7268643203824798353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_141
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4efdbe8331a5330800000000000000
+      internalID: 3700291179034698915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_142
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13e1bace0d7d2340800000000000000
+      internalID: 4840662676976821021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763ba1ae3bca230d0800000000000000
+      internalID: -3444500876258266265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_144
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ee5108909a3fef0800000000000000
+      internalID: -75530910466445747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_145
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e5ec9793e4ef700800000000000000
+      internalID: 575983811113672230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_146
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fbcdea9df183c90800000000000000
+      internalID: -7189961785294930029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_147
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c46c87a8f337d8a0800000000000000
+      internalID: -6280494012288965436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_148
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44621a68caf8cd20800000000000000
+      internalID: 3299162465728881740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_149
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d652222a3c11490800000000000000
+      internalID: -7777219980367139523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_150
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d428b34aade6eb60800000000000000
+      internalID: 7775163122238104784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_151
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d520c4ad2c530aef0800000000000000
+      internalID: -99020080799808931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_152
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480cfcf532b4aa2f0800000000000000
+      internalID: -960872955186790268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_153
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8083e40f787977a60800000000000000
+      internalID: 7671767100356966408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_154
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01c39ef823e26680800000000000000
+      internalID: -8763192159700270837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_155
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c2f1f93eea66d10800000000000000
+      internalID: 2118572967374826595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_156
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336493cc6eee51b40800000000000000
+      internalID: 5410493202391713331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_157
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e6ea8b884a45000800000000000000
+      internalID: 23824805164641903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_158
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb50de8ce9da08260800000000000000
+      internalID: 7097863910223316414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_159
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4559d5eb42e4410800000000000000
+      internalID: 1463147328974443759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_160
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33ccde06fa137790800000000000000
+      internalID: -7533648107547081925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_161
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead7f21533a62e1d0800000000000000
+      internalID: -3322976806408061522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_162
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbeb4fe1ef4ddc80800000000000000
+      internalID: -8296387106745619503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_163
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b399c8b59b2d810800000000000000
+      internalID: 1788695804871523206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_164
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1001287c4da08d00800000000000000
+      internalID: 972968063456575519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_165
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458fdc21d540f8a30800000000000000
+      internalID: 4219596173663402068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_166
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446376119b4095be0800000000000000
+      internalID: -1488153008961800636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_167
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d985fa57f4f0810800000000000000
+      internalID: 1733691748432518418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_168
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2d35a2c3ae43190800000000000000
+      internalID: -7983498695291972938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_169
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed64750625b9a7d60800000000000000
+      internalID: 7888788475398801118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_170
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d52430b7ec71db60800000000000000
+      internalID: 7769128166726313427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_171
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a75c59e839b2c80800000000000000
+      internalID: -8346415243793696255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_172
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4e4cadbcf73ca40800000000000000
+      internalID: 5387290092790670518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_173
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81ca10f9f8ddd5a0800000000000000
+      internalID: -6494796519611645556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_174
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e232d8e86c546eaf0800000000000000
+      internalID: -367529600486661330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492191e5795e1c130800000000000000
+      internalID: 3585399216645149332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_176
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e45e77ea6142e1b0800000000000000
+      internalID: -5628864656853543703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_177
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3075e6cb49b4e6fc0800000000000000
+      internalID: -3499776758231705853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_178
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d188dcd91e6c4cc0800000000000000
+      internalID: -3725481734383828522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_179
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375c6287b206e8560800000000000000
+      internalID: 7317892184339301747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_180
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761aef584f8a622c0800000000000000
+      internalID: -4456689013062983321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_181
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee47a5934bd631f40800000000000000
+      internalID: 5698018574377579758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_182
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e605c51f0e3ea70800000000000000
+      internalID: 8855168619581042180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_183
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c685b71f757acde0800000000000000
+      internalID: -1312107152706009401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_184
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fa5a6f02cf47100800000000000000
+      internalID: 104985909843570500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_185
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017551a861dee9ab0800000000000000
+      internalID: -4999297855272954096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_186
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125af3d818232d870800000000000000
+      internalID: 8706076561662518561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_187
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdecb1f2f373c7c60800000000000000
+      internalID: 7817183797721157343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_188
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79393d09e4d2a0300800000000000000
+      internalID: 219037347341374359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_189
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe0fbb27014447a0800000000000000
+      internalID: -6393914071904743747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forestgraveyardgameassets_Fulltilemap_190
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32faaa563fe6da50800000000000000
+      internalID: 6545682125158019642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
