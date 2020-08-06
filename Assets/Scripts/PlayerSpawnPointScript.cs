@@ -95,6 +95,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public void Rewind()
     {
+        pickCharacterDUUMguy();
+        //pickCharacter(currentCharacter);
         for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
         {
             characterPool[i].transform.position = spawnPool[i].transform.position;

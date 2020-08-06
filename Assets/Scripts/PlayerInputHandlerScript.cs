@@ -186,7 +186,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void activeAI(bool b)
     {
-        resetRewind();
+        resetRecordRewind();
 
         if (AI != b)
         {
@@ -358,7 +358,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     }
 
-    void resetRewind()
+    void resetRecordRewind()
     {
         //currentEvent = null;
         moveDir = new Vector2();
@@ -380,6 +380,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
         weaponTypeScript.Rewind();
         useSecondaryScript.Rewind();
         playerStates.Rewind();
+        activeAI(AI);
+
     }
 
     Vector2 getMousePosition()

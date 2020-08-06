@@ -257,7 +257,7 @@ public class UseSecondaryScript : MonoBehaviour
         //print("Hooking");
         //print((target.transform.position - transform.position).magnitude);
         findTarget();
-        if (target == null)
+        if (target == null||!target.activeSelf)
         {
             stop();
             return;
