@@ -135,7 +135,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (inSight)
         {
-            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized,Player,gameObject);
+            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized, gameObject,Player);
         }
     }
 

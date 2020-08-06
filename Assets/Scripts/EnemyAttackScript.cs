@@ -18,7 +18,6 @@ public class EnemyAttackScript : MonoBehaviour
     }
     public void shoot(Vector3 v,GameObject s, GameObject t)
     {
-        print("Enemy shoot");
         weaponTypeScript.shootingPoint.transform.up = v;
         weaponTypeScript.fireWeapon(s,t);
     }

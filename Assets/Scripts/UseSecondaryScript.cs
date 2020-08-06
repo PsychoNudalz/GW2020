@@ -312,7 +312,7 @@ public class UseSecondaryScript : MonoBehaviour
                     {
                         if (!target.GetComponent<PickupScript>().used)
                         {
-                            GetComponent<WeaponTypeScript>().Ammo += target.GetComponent<PickupScript>().amout;
+                            GetComponent<WeaponTypeScript>().addAmmo(target.GetComponent<PickupScript>().amout);
                             target.GetComponent<PickupScript>().used = true;
                         }
                     }

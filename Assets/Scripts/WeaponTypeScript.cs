@@ -207,6 +207,7 @@ public class WeaponTypeScript : MonoBehaviour
     public void addAmmo(float amout)
     {
         ammo += amout;
+        print("Added " + amout + ", increased to " + ammo);
     }
 
     public string getWeaponType()
@@ -332,8 +333,8 @@ public class WeaponTypeScript : MonoBehaviour
         projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
         projectile.GetComponent<ProjectileScript>().setShooter(s);
         projectile.GetComponent<ProjectileScript>().setTarget(t);
-
         projectile.GetComponent<ProjectileScript>().shoot();
+        
         currentSpread += spreadIncreaseRate;
 
     }
