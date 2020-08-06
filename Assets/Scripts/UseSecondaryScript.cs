@@ -191,7 +191,25 @@ public class UseSecondaryScript : MonoBehaviour
 
     public void use()
     {
-        activatingSecondary = true;
+        switch(weaponEnum)
+        {
+            case WeaponEnum.Hook:
+                activatingSecondary = true;
+                break;
+            case WeaponEnum.Grab:
+                if (timeNow_grabCooldown <= 0)
+                {
+                    activatingSecondary = true;
+
+                }
+                else
+                {
+                    activatingSecondary = false;
+
+                }
+                break;
+        }
+
         return;
     }
     public void stop()
@@ -232,6 +250,7 @@ public class UseSecondaryScript : MonoBehaviour
     {
         //print("Hooking");
         //print((target.transform.position - transform.position).magnitude);
+        findTarget();
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
 
@@ -324,6 +343,8 @@ public class UseSecondaryScript : MonoBehaviour
             //isUsing_Extra = true;
             timeNow_grabCooldown = grabCooldown;
             print("Grab Successful");
+            activatingSecondary = false;
+
             return true;
         }
         else if (flick <= 0)
@@ -340,6 +361,8 @@ public class UseSecondaryScript : MonoBehaviour
 
     public void storeObject()
     {
+        activatingSecondary = false;
+
         if (storedObject != null)
         {
             dropObject();

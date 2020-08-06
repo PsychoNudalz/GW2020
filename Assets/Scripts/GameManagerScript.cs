@@ -64,9 +64,14 @@ public class GameManagerScript : MonoBehaviour
 
     public void Rewind()
     {
+        wave = 0;
         foreach(RewindObjectScript r in rewindList)
         {
             r.Rewind();
+        }
+        foreach(EnemySpawnWaveHandler e in enemySpawnWaveHandlers)
+        {
+            e.Rewind();
         }
     }
     

@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: 0
-  shootingProjectile: {fileID: 7771340794768746149, guid: 3332a6cdf27cf3b428fb2b964a6b3af9,
+  shootingProjectile: {fileID: 1258392439395229572, guid: 82986efc2d481d745a7fbc315957ad4f,
     type: 3}
   shootingPoint: {fileID: 4715143882362509847}
   animator: {fileID: 8460897108318988547}

@@ -184,8 +184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5f5cc9e5b05ba44beb955346a3ad38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAttackScript: {fileID: 0}
   maxHealth: 50
   currentHealth: 0
+  Player: {fileID: 0}
+  PlayerPool: []
+  des: {fileID: 0}
+  rangeToFindPlayer: 0
+  inSight: 0
+  playerLastPosition: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enemySpawnWaveHandler: {fileID: 0}
 --- !u!61 &2980567777482474535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -336,7 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb9a821e7236704394860e56288426d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 136968695066540787, guid: 8bdf71b49400db04aadf9e2007fe06f2,
+  projectile: {fileID: 8007690218284419059, guid: 1763199508f455d47826717a85fac952,
     type: 3}
-  timeBetweenShoot: 5
-  timeNow: 0
+  weaponTypeScript: {fileID: 0}

@@ -129,8 +129,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 0.8
+  m_AngularDrag: 0.25
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -179,11 +179,11 @@ MonoBehaviour:
   decayValue: 1
   prefab: {fileID: 3854933030064526600}
   rb: {fileID: 3867884601069492342}
-  force: 50000
-  spin: 10000
+  force: 45000
+  spin: 7000
   damage: 10
   objectDamageMultiplier: 5
-  minVelocity: 2
+  minVelocity: 0.5
   hitRecord: []
 --- !u!114 &1601753281949617996
 MonoBehaviour:

@@ -11,11 +11,7 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        foreach (GameObject g in Enemies)
-        {
-            g.SetActive(false);
-            //Instantiate()
-        }
+        Rewind();
     }
 
     // Update is called once per frame
@@ -56,5 +52,15 @@ public class EnemySpawnWaveHandler : MonoBehaviour
             }
         }
         return waveClear;
+    }
+
+    public void Rewind()
+    {
+        startWave = false;
+        waveClear = false;
+        foreach (GameObject g in Enemies)
+        {
+            g.SetActive(false);
+        }
     }
 }

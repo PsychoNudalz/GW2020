@@ -148,7 +148,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void recordEvent()
     {
-        print(name + " new record");
+        //print(name + " new record");
         newEvent();
         //print(context.action.actionMap.ToString());
         if (moveDir.magnitude > 0)
@@ -337,13 +337,13 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 //playerMovementScript.aimWeapon(et.mouseLocation);
                 //print("AI using");
 
-                useSecondaryScript.activatingSecondary = true;
+                useSecondaryScript.isUsing = true;
             }
             else if (s.Equals("StopUse"))
             {
                 //print("AI stop using");
 
-                useSecondaryScript.activatingSecondary = false;
+                useSecondaryScript.isUsing = false;
 
             }
         }

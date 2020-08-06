@@ -328,6 +328,8 @@ MonoBehaviour:
   weaponTypeScript: {fileID: 1079763995}
   useSecondaryScript: {fileID: 2926540081131492961}
   AI: 0
+  currentEvents: []
+  savedEvents: []
   moveDir: {x: 0, y: 0}
   mousePosition: {x: 0, y: 0}
   isFiring: 0
@@ -336,6 +338,12 @@ MonoBehaviour:
   startTime: 0
   currentEventPointer: 0
   timeNow_playBack: 0
+  currentEvent:
+    moveDir: {x: 0, y: 0}
+    mouseLocation: {x: 0, y: 0}
+    duration: 0
+    timeStart: 0
+    characterLocation: {x: 0, y: 0, z: 0}
   currentCounter: 0
   savedCounter: 0
   isCurrentEventEmpty: 0
@@ -387,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: 2
-  shootingProjectile: {fileID: 6533508861881584018, guid: 4a82af4697b03bf4f939e52446ad8de2,
+  shootingProjectile: {fileID: 1192470269689925743, guid: db934477044bace4d98c1d6bc892878c,
     type: 3}
   shootingPoint: {fileID: 7868093751180948416}
   animator: {fileID: 39450019}

@@ -11,6 +11,10 @@ public class ProjectileScript : MonoBehaviour
     public float maxVelocity;
     public float damage;
     public float timeToLive = 1f;
+    [Header("Effect")]
+    public ParticleSystem startPS;
+    public ParticleSystem endPS;
+
     [Header("Seeker")]
     public bool isSeeker = false;
     public float seekerforce;
@@ -32,6 +36,10 @@ public class ProjectileScript : MonoBehaviour
     }
     public void shoot()
     {
+        ParticleSystem tempPS = Instantiate(startPS, transform.position, transform.rotation);
+        tempPS.Play();
+        Destroy(tempPS,tempPS.main.duration);
+        //startPS.Play();
         rb.AddForce(transform.up * projectileforce * rb.mass);
         //print(transform.forward * projectileforce * rb.mass);
         if (spin != 0)
@@ -73,6 +81,10 @@ public class ProjectileScript : MonoBehaviour
     {
         if (tagList.Contains(collision.tag))
         {
+            ParticleSystem tempPS =  Instantiate(endPS,transform.position,transform.rotation);
+            tempPS.Play();
+            Destroy(tempPS, tempPS.main.duration);
+
             Destroy(gameObject);
             EnemyScript e1;
             PlayerStates e2;
