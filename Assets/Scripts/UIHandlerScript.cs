@@ -8,6 +8,7 @@ public class UIHandlerScript : MonoBehaviour
 {
     public PlayerSpawnPointScript playerSpawn;
     [SerializeField] GameObject currentChaaracter;
+    public GameObject characterPicker;
 
     [Header("Health")]
     public PlayerStates playerStates;
@@ -36,17 +37,32 @@ public class UIHandlerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
-        updateCurrentCharacter();
-
-        displayHealth();
-        displayAmmo();
-        displayGrab();
-        if (isLogger)
+            updateCurrentCharacter();
+        if (currentChaaracter != null)
         {
 
-        displayLog();
+
+            displayHealth();
+            displayAmmo();
+            displayGrab();
+            if (isLogger)
+            {
+
+                displayLog();
+            }
+        } else
+        {
+            if (!characterPicker.activeSelf)
+            {
+                characterPicker.SetActive(true);
+            }
+            else 
+            {
+                //characterPicker.SetActive(false);
+
+            }
         }
     }
 
@@ -57,7 +73,7 @@ public class UIHandlerScript : MonoBehaviour
 
     void displayAmmo()
     {
-        ammoTextBox.text = weaponTypeScript.currentMag + "/" + weaponTypeScript.Ammo+"\n";
+        ammoTextBox.text = weaponTypeScript.currentMag + "/" + weaponTypeScript.Ammo + "\n";
 
     }
 
@@ -83,7 +99,7 @@ public class UIHandlerScript : MonoBehaviour
     void displayLog()
     {
         string text = "";
-        foreach(EventType e in playerInput.savedEvents)
+        foreach (EventType e in playerInput.savedEvents)
         {
             text += e.ToString();
         }
@@ -92,7 +108,13 @@ public class UIHandlerScript : MonoBehaviour
 
     public void updateCurrentCharacter()
     {
-        if (!currentChaaracter.Equals(playerSpawn.currentCharacter))
+        if (playerSpawn.currentCharacter== null)
+        {
+            currentChaaracter = null;
+            return;
+        }
+        
+        else
         {
             currentChaaracter = playerSpawn.currentCharacter;
             playerStates = currentChaaracter.GetComponent<PlayerStates>();
@@ -107,7 +129,25 @@ public class UIHandlerScript : MonoBehaviour
 
         }
     }
+    public void pickChracterVRguy()
+    {
+        playerSpawn.pickChracterVRguy();
+        characterPicker.SetActive(false);
 
+    }
+
+    public void pickCharacterDUUMguy()
+    {
+        playerSpawn.pickCharacterDUUMguy();
+        characterPicker.SetActive(false);
+
+    }
+    public void pickCharacterVG()
+    {
+        playerSpawn.pickCharacterVG();
+        characterPicker.SetActive(false);
+
+    }
 
 
 }

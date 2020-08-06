@@ -1,11 +1,13 @@
 ﻿using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerSpawnPointScript : MonoBehaviour
 {
+    //public InputMaster controls;
 
     public GameObject gameManager;
     public GameObject currentCharacter;
@@ -42,7 +44,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
+        //controls = new InputMaster();
         gameManager = GameObject.FindGameObjectWithTag("Manager");
         soundManager = gameManager.GetComponent<SoundManager>();
 
@@ -53,7 +55,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
         spawnPool.Add(VengfulGirl_spawn);
-        pickChracterVRguy();
+        //pickChracterVRguy();
         //pickCharacterDUUMguy();
 
 
@@ -68,6 +70,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         {
             //currentCharacter.GetComponent<PlayerInputHandlerScript>().replayEvents();
             //Rewind();
+            startRewind();
 
         }
         if (kb.pKey.isPressed)
@@ -89,24 +92,22 @@ public class PlayerSpawnPointScript : MonoBehaviour
         {
             pickCharacterVG();
         }
-        playerDeathRoutine();
+
+        if (currentCharacter != null)
+        {
+            playerDeathRoutine();
+
+        }
+        if (currentCharacter != null && isRewinding)
+        {
+            finishRewind();
+        }
     }
 
 
     public void Rewind()
     {
-        /*
-        if (currentCharacter.Equals(VRguy))
-        {
-            pickCharacterDUUMguy();
 
-        }
-        else
-        {
-            pickChracterVRguy();
-        }
-        */
-        //pickCharacter(currentCharacter);
         for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
         {
             characterPool[i].transform.position = spawnPool[i].transform.position;
@@ -114,31 +115,21 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
         }
 
+
     }
 
     public void pickChracterVRguy()
     {
         pickCharacter(VRguy);
-        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-
     }
 
     public void pickCharacterDUUMguy()
     {
         pickCharacter(DUUMguy);
-        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-
-
     }
     public void pickCharacterVG()
     {
         pickCharacter(VengfulGirl);
-        //VRguy.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-        //DUUMguy.GetComponent<PlayerInputHandlerScript>().activeAI(false);
-
-
     }
 
 
@@ -180,23 +171,39 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public void movePlayer(InputAction.CallbackContext context)
     {
+        if (currentCharacter== null)
+        {
+            return;
+        }
         currentCharacter.GetComponent<PlayerInputHandlerScript>().movePlayer(context);
     }
 
     public void shoot(InputAction.CallbackContext context)
     {
+        if (currentCharacter == null)
+        {
+            return;
+        }
         currentCharacter.GetComponent<PlayerInputHandlerScript>().shoot(context);
 
 
     }
     public void useWeapon(InputAction.CallbackContext context)
     {
+        if (currentCharacter == null)
+        {
+            return;
+        }
 
         currentCharacter.GetComponent<PlayerInputHandlerScript>().useWeapon(context);
 
     }
     public void reload(InputAction.CallbackContext context)
     {
+        if (currentCharacter == null)
+        {
+            return;
+        }
         currentCharacter.GetComponent<PlayerInputHandlerScript>().reload(context);
 
     }
@@ -217,6 +224,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public bool isPlayerDead()
     {
+
         bool temp = currentCharacter.GetComponent<PlayerStates>().checkDie();
         if (playerIsDead != temp & !isRewinding)
         {
@@ -241,14 +249,17 @@ public class PlayerSpawnPointScript : MonoBehaviour
         print("Start Rewinding");
         gameManager.GetComponent<TimeManagerScript>().slowDown(rewindTimeScale, rewindTime);
         yield return new WaitForSeconds(rewindTime * rewindTimeScale);
-        //Rewind();
-        //gameManager.GetComponent<TimeManagerScript>().resetTime();
+
+        print("Finish Slowmotion");
+
+    }
+    void finishRewind()
+    {
+        print("finish rewind");
+        pickCharacter(currentCharacter);
         gameManager.GetComponent<GameManagerScript>().Rewind();
         isRewinding = false;
         playSound_RewindFinish();
-
-        print("Finish Rewinding");
-
     }
 
     void playerDeathRoutine()
@@ -256,6 +267,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
         if (isPlayerDead() && !isRewinding)
         {
             playSound_Death();
+            currentCharacter = null;
+
             StartCoroutine(startRewind());
 
             //Rewind();
@@ -269,4 +282,17 @@ public class PlayerSpawnPointScript : MonoBehaviour
         soundManager.Play(sound_Death.name);
 
     }
+    /*
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
+    */
+
+
 }

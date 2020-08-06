@@ -55,7 +55,7 @@ public class GameManagerScript : MonoBehaviour
     void checkRewind()
     {
         kb = InputSystem.GetDevice<Keyboard>();
-        if (kb.iKey.isPressed|| kb.pKey.isPressed|| kb.oKey.isPressed || kb.lKey.isPressed)
+        if (kb.iKey.isPressed)
         {
             //print("rewinding world");
             Rewind();

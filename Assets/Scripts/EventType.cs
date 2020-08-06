@@ -6,7 +6,7 @@ using UnityEngine;
     [Serializable]
 public class EventType
 {
-    public List<LogType> logs = new List<LogType>();
+    public List<LogType> logs;
     public Vector2 moveDir;
     public Vector2 mouseLocation;
     public float duration = 0;
@@ -18,7 +18,9 @@ public class EventType
         timeStart = Time.time;
         moveDir = d;
         mouseLocation = v;
-        
+        logs = new List<LogType>();
+
+
     }
 
     public void addLog(string s)
@@ -30,7 +32,14 @@ public class EventType
     {
         duration = Time.time - timeStart;
         characterLocation = loc;
+        
+        if (logs == null)
+        {
+            logs = new List<LogType>();
+            addLog("Null");
 
+        }
+        
     }
 
     public override string ToString()
