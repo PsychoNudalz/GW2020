@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerSpawnPointScript : MonoBehaviour
 {
+    public GameObject gameManager;
     public GameObject currentCharacter;
     public List<GameObject> characterPool = new List<GameObject>();
     public List<Transform> spawnPool = new List<Transform>();
@@ -23,8 +24,12 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     [Header("Input")]
     public PlayerInput playerInputComponent;
-
     Keyboard kb;
+
+    [Header("Sounds")]
+    public SoundManager soundManager;
+    public Sound sound_RewindFinish;
+    //public Sound sound_RewindFinish;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,8 +43,13 @@ public class PlayerSpawnPointScript : MonoBehaviour
         pickChracterVRguy();
         //pickCharacterDUUMguy();
 
+        gameManager = GameObject.FindGameObjectWithTag("Manager");
+        soundManager = gameManager.GetComponent<SoundManager>();
+
+
 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -80,6 +90,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
             characterPool[i].transform.position = spawnPool[i].transform.position;
 
         }
+        playSound_RewindFinish();
     }
 
     public void pickChracterVRguy()
@@ -165,5 +176,11 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         currentCharacter.GetComponent<PlayerInputHandlerScript>().reload(context);
 
+    }
+
+
+    void playSound_RewindFinish()
+    {
+        soundManager.Play("RewindFinish");
     }
 }

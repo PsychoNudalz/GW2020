@@ -12,6 +12,7 @@ TagManager:
   - Pickup
   - MovableObject
   - RewindObject
+  - Manager
   layers:
   - Default
   - TransparentFX
