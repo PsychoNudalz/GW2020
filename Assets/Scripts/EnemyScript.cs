@@ -123,7 +123,7 @@ public class EnemyScript : MonoBehaviour
         foreach (GameObject p in PlayerPool)
         {
             dis = (transform.position - p.transform.position).magnitude;
-            if ( dis < closestDis)
+            if (dis < closestDis)
             {
                 closestDis = dis;
                 Player = p;
@@ -135,8 +135,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (inSight)
         {
-
-            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized);
+            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized,Player,gameObject);
         }
     }
 

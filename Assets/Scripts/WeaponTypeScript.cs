@@ -169,6 +169,9 @@ public class WeaponTypeScript : MonoBehaviour
                     break;
                 case WeaponEnum.Claw:
                     break;
+                case WeaponEnum.EnemyWeapon:
+                    break;
+
             }
         }
         else
@@ -176,8 +179,30 @@ public class WeaponTypeScript : MonoBehaviour
             //activeFire = false;
         }
         //print("shoot at "+transform.up);
-
     }
+
+    public void fireWeapon(GameObject s, GameObject t)
+    {
+        if (consumeAmmo())
+        {
+            playSound_Fire();
+            //activeFire = true;
+            switch (weapon)
+            {
+                case WeaponEnum.EnemyWeapon:
+                    enemyShot(s, t);
+                    break;
+
+            }
+        }
+        else
+        {
+            //activeFire = false;
+        }
+        //print("shoot at "+transform.up);
+    }
+
+
 
     public void addAmmo(float amout)
     {
@@ -224,10 +249,10 @@ public class WeaponTypeScript : MonoBehaviour
         else
         {
             isReloading = false;
-            if (Ammo +currentMag < maxInMag)
+            if (Ammo + currentMag < maxInMag)
             {
                 currentMag += Ammo;
-                Ammo  = 0;
+                Ammo = 0;
             }
             else
             {
@@ -284,16 +309,40 @@ public class WeaponTypeScript : MonoBehaviour
         Quaternion randomSpread;
         randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
         projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
+
         projectile.GetComponent<ProjectileScript>().shoot();
         currentSpread += spreadIncreaseRate;
 
 
     }
 
+
+    void enemyShot(GameObject s, GameObject t)
+    {
+
+        animator.SetTrigger("Shoot");
+
+        if (currentSpread > spreadAngle)
+        {
+            currentSpread = spreadAngle - spreadIncreaseRate;
+        }
+        GameObject projectile;
+        Quaternion randomSpread;
+        randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
+        projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
+        projectile.GetComponent<ProjectileScript>().setShooter(s);
+        projectile.GetComponent<ProjectileScript>().setTarget(t);
+
+        projectile.GetComponent<ProjectileScript>().shoot();
+        currentSpread += spreadIncreaseRate;
+
+    }
     void playSound_Fire()
     {
         soundManager.Play(sound_Fire.name);
 
     }
+
+
 
 }

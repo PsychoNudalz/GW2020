@@ -9,6 +9,5 @@ enum WeaponEnum
     Shotgun,
     Hook,
     Grab,
-    Echo,
-    Interact
+    EnemyWeapon
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949bb39147cdac049b5952ffc7480d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpawnPointScript: {fileID: 0}
   enemySpawnWaveHandlers:
   - {fileID: 0}
   - {fileID: 0}

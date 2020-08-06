@@ -19,7 +19,11 @@ public class ProjectileScript : MonoBehaviour
     public bool isSeeker = false;
     public float seekerforce;
     public string targetTag = "Player";
-    [SerializeField] Transform target;
+    [Header("Target")]
+    [SerializeField] GameObject shooter;
+    [SerializeField] GameObject target;
+
+
     [Header("Extra")]
     public float spin;
     public string[] tagList = { "Enemy", "Object", "Obstacle", "MovableObject" };
@@ -29,7 +33,7 @@ public class ProjectileScript : MonoBehaviour
     {
         if (isSeeker)
         {
-            target = GameObject.FindGameObjectWithTag(targetTag).transform;
+            //target = GameObject.FindGameObjectWithTag(targetTag).transform;
             seekTarget();
             shoot();
         }
@@ -68,7 +72,11 @@ public class ProjectileScript : MonoBehaviour
 
     private void seekTarget()
     {
-        transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(target.position-transform.position, Vector3.up),Vector3.forward);
+        if (target == null)
+        {
+            return;
+        }
+        transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(target.transform.position-transform.position, Vector3.up),Vector3.forward);
         rb.AddForce(transform.up * seekerforce*Time.deltaTime * rb.mass);
         if (rb.velocity.magnitude > maxVelocity)
         {
@@ -104,5 +112,14 @@ public class ProjectileScript : MonoBehaviour
                 e3.takeDamage(damage);
             }
         }
+    }
+
+    public void setTarget(GameObject t)
+    {
+        target = t;
+    }
+    public void setShooter(GameObject t)
+    {
+        shooter = t;
     }
 }
