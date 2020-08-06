@@ -185,7 +185,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         try
         {
-        soundManager.Play("RewindFinish");
+        soundManager.Play(sound_RewindFinish.name);
 
         } catch (System.Exception e)
         {

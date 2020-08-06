@@ -23,13 +23,9 @@ public class SoundManager : MonoBehaviour
 			DontDestroyOnLoad(gameObject);
 		}
 		*/
+		updateSounds();
 
 	}
-
-    private void Start()
-    {
-		updateSounds();
-    }
 
 
 	void updateSounds()
@@ -50,7 +46,7 @@ public class SoundManager : MonoBehaviour
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)
 		{
-			Debug.LogWarning("Sound: " + name + " not found!");
+			Debug.LogWarning("Sound: " + sound + " not found!");
 			return;
 		}
 
