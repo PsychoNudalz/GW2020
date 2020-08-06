@@ -34,6 +34,11 @@ public class PlayerSpawnPointScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
+        gameManager = GameObject.FindGameObjectWithTag("Manager");
+        soundManager = gameManager.GetComponent<SoundManager>();
+
+        
         characterPool.Add(DUUMguy);
         characterPool.Add(VRguy);
         characterPool.Add(VengfulGirl);
@@ -42,10 +47,6 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(VengfulGirl_spawn);
         pickChracterVRguy();
         //pickCharacterDUUMguy();
-
-        gameManager = GameObject.FindGameObjectWithTag("Manager");
-        soundManager = gameManager.GetComponent<SoundManager>();
-
 
 
     }
@@ -90,6 +91,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
             characterPool[i].transform.position = spawnPool[i].transform.position;
 
         }
+
         playSound_RewindFinish();
     }
 
@@ -178,9 +180,17 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     }
 
-
+    ///*
     void playSound_RewindFinish()
     {
+        try
+        {
         soundManager.Play("RewindFinish");
+
+        } catch (System.Exception e)
+        {
+            Debug.LogWarning("Failed to play");
+        }
     }
+    //*/
 }

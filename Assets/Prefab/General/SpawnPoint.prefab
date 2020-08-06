@@ -36,6 +36,7 @@ Transform:
   - {fileID: 5318016001156032324}
   - {fileID: 8458614093802326525}
   - {fileID: 1430483489426230211}
+  - {fileID: 4719583569946010718}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c2018176311594098b3f08d32d65f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   currentCharacter: {fileID: 6750108052901669953}
   characterPool: []
   spawnPool: []
@@ -62,6 +64,8 @@ MonoBehaviour:
   VengfulGirl: {fileID: 8458614093802326526}
   VengfulGirl_spawn: {fileID: 1430483489426230211}
   playerInputComponent: {fileID: 1752289130}
+  soundManager: {fileID: 0}
+  sound_RewindFinish: {fileID: 2228172397566723376}
 --- !u!114 &1752289130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +251,57 @@ Transform:
   m_Father: {fileID: 4062737966260310221}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6594391316015471532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4719583569946010718}
+  - component: {fileID: 2228172397566723376}
+  m_Layer: 8
+  m_Name: RewindFinish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4719583569946010718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594391316015471532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4062737966260310221}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2228172397566723376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594391316015471532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc86ceee3d028a49b891311d63d792f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: RewindFinish
+  clip: {fileID: 8300000, guid: 26da09d5b77fee44eb9b41dce854e777, type: 3}
+  volume: 0.75
+  volumeVariance: 0.1
+  pitch: 1
+  pitchVariance: 0.1
+  loop: 0
+  source: {fileID: 0}
 --- !u!1001 &282018970986699927
 PrefabInstance:
   m_ObjectHideFlags: 0
