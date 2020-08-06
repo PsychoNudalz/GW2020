@@ -95,7 +95,17 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public void Rewind()
     {
-        pickCharacterDUUMguy();
+        /*
+        if (currentCharacter.Equals(VRguy))
+        {
+            pickCharacterDUUMguy();
+
+        }
+        else
+        {
+            pickChracterVRguy();
+        }
+        */
         //pickCharacter(currentCharacter);
         for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
         {
@@ -230,7 +240,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         isRewinding = true;
         print("Start Rewinding");
         gameManager.GetComponent<TimeManagerScript>().slowDown(rewindTimeScale, rewindTime);
-        yield return new WaitForSeconds(rewindTime*rewindTimeScale);
+        yield return new WaitForSeconds(rewindTime * rewindTimeScale);
         //Rewind();
         //gameManager.GetComponent<TimeManagerScript>().resetTime();
         gameManager.GetComponent<GameManagerScript>().Rewind();
@@ -243,7 +253,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     void playerDeathRoutine()
     {
-        if (isPlayerDead() &&!isRewinding)
+        if (isPlayerDead() && !isRewinding)
         {
             playSound_Death();
             StartCoroutine(startRewind());
