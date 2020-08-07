@@ -43,6 +43,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public Sound sound_Rewinding;
     public Sound sound_RewindFinish;
     public Sound sound_Death;
+    public Sound sound_Theme;
+
 
     //public Sound sound_RewindFinish;
 
@@ -261,8 +263,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
         print("Start Rewinding");
         gameManager.GetComponent<TimeManagerScript>().slowDown(rewindTimeScale, rewindTime);
         yield return new WaitForSeconds(rewindTime * rewindTimeScale);
+        soundManager.stopAllSound();
+        playSound_Theme();
         isRewinding = true;
-
         print("Finish Slowmotion");
 
     }
@@ -275,6 +278,20 @@ public class PlayerSpawnPointScript : MonoBehaviour
         isRewinding = false;
         gameManager.GetComponent<TimeManagerScript>().setStartTime();
         playSound_RewindFinish();
+        playSound_Theme();
+    }
+
+    void playSound_Theme()
+    {
+        if (currentCharacter == null)
+        {
+            soundManager.Play(sound_Theme.name);
+        }
+        else
+        {
+            soundManager.Stop(sound_Theme.name);
+            soundManager.Play(currentCharacter.GetComponent<PlayerStates>().sound_Theme.name);
+        }
     }
 
     IEnumerator playRewindEffect()
@@ -292,7 +309,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         if (isPlayerDead() && !isRewinding)
         {
-            playSound_Death();
+            //playSound_Death();
             currentCharacter = null;
 
             StartCoroutine(startRewind());

@@ -23532,16 +23532,6 @@ PrefabInstance:
       propertyPath: cinemachine
       value: 
       objectReference: {fileID: 244496535}
-    - target: {fileID: 1484018411462098370, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: rewindTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1484018411462098370, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: rewindTimeScale
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3731415870866096757, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: useCooldown

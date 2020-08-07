@@ -185,6 +185,62 @@ MonoBehaviour:
   maxDistance: 30
   loop: 0
   source: {fileID: 0}
+--- !u!1 &2917893761935651164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4301150577743959850}
+  - component: {fileID: 66317402778363966}
+  m_Layer: 0
+  m_Name: ThemeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4301150577743959850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917893761935651164}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026000023, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7868093750151994098}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &66317402778363966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917893761935651164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc86ceee3d028a49b891311d63d792f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DUUMTheme
+  isUnique: 0
+  clip: {fileID: 8300000, guid: d6c25a682929cad49af8eee31f3668c1, type: 3}
+  volume: 0.75
+  volumeVariance: 0.1
+  pitch: 1
+  pitchVariance: 0.1
+  spatialBlend: 0
+  reverbZoneMix: 0
+  minDistance: 10
+  maxDistance: 20
+  loop: 1
+  source: {fileID: 0}
 --- !u!1 &4224857315163183167
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +451,7 @@ Transform:
   - {fileID: 7868093750802002687}
   - {fileID: 4931536959322239137}
   - {fileID: 7673323066898437222}
+  - {fileID: 4301150577743959850}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -487,7 +544,7 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   sound_Death: {fileID: 918413675906541038}
   sound_Hit: {fileID: 4768608554391591048}
-  sound_Theme: {fileID: 0}
+  sound_Theme: {fileID: 66317402778363966}
 --- !u!114 &7068625388550635107
 MonoBehaviour:
   m_ObjectHideFlags: 0

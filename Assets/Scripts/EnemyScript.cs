@@ -15,6 +15,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject Player;
     public GameObject[] PlayerPool;
     public AIDestinationSetter des;
+    public Seeker seeker;
     public float rangeToFindPlayer;
     [SerializeField] bool inSight;
     [SerializeField] Vector3 playerLastPosition;

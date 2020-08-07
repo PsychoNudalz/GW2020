@@ -44,6 +44,8 @@ public class PlayerStates : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            stopSound_Theme();
+            playSound_Death();
             gameObject.SetActive(false);
             isDead = true;
             //enemySpawnWaveHandler.Enemies.Remove(gameObject);
@@ -70,5 +72,10 @@ public class PlayerStates : MonoBehaviour
 
         soundManager.Play(sound_Death.name);
 
+    }
+
+    void stopSound_Theme()
+    {
+        soundManager.Stop(sound_Theme.name);
     }
 }
