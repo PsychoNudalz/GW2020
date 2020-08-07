@@ -274,6 +274,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
         print("finish rewind");
         pickCharacter(currentCharacter);
         //playRewindEffect();
+        soundManager.stopAllSound();
+
         gameManager.GetComponent<GameManagerScript>().Rewind();
         isRewinding = false;
         gameManager.GetComponent<TimeManagerScript>().setStartTime();

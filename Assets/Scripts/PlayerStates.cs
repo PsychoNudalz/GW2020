@@ -76,6 +76,7 @@ public class PlayerStates : MonoBehaviour
 
     void stopSound_Theme()
     {
+        print(name + " stoping theme");
         soundManager.Stop(sound_Theme.name);
     }
 }
