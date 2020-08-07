@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6098664633620602093}
   - component: {fileID: 6098664633620602091}
   - component: {fileID: 1403450194125162709}
+  - component: {fileID: 6368700255967934053}
   m_Layer: 14
   m_Name: HazardBarrel
   m_TagString: MovableObject
@@ -96,6 +97,20 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 50
   rb: {fileID: 0}
+--- !u!114 &6368700255967934053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098664633620602092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f23e8465de40d43a8656b8ab72b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 6098664635001068138}
+  decayValue: 1
 --- !u!1 &6098664635001068140
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +160,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ba674932c71c6db4a84123e224f7002d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

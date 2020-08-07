@@ -98,7 +98,7 @@ public class PlayerMovementScript : MonoBehaviour
         Vector3 originalScale = gun.transform.localScale;
         Quaternion angle = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
         Quaternion angle2 = Quaternion.AngleAxis(-Vector2.SignedAngle((mousePosition - transform.position), Vector2.up), transform.forward);
-        print(name + " , " + angle2.eulerAngles  + " , " + angle.eulerAngles);
+        //print(name + " , " + angle2.eulerAngles  + " , " + angle.eulerAngles);
         gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, angle, 0.9f);
         if (gun.transform.rotation.eulerAngles.z < 180f && gun.transform.rotation.eulerAngles.z > 0)
         {

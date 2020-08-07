@@ -77,6 +77,21 @@ public class UseSecondaryScript : MonoBehaviour
         if (timeNow_useCooldown > 0)
         {
             timeNow_useCooldown -= Time.deltaTime;
+            switch (weaponEnum)
+            {
+                case WeaponEnum.Fish:
+                    updateFishLine();
+                    break;
+            }
+        }
+        else
+        {
+            switch (weaponEnum)
+            {
+                case WeaponEnum.Fish:
+                    extraGameObject.SetActive(false);
+                    break;
+            }
         }
 
         if ((target == null && storedObject != null))
@@ -118,6 +133,15 @@ public class UseSecondaryScript : MonoBehaviour
 
                     }
 
+                    break;
+                case WeaponEnum.Fish:
+                    if (timeNow_useCooldown <= 0)
+                    {
+                        fishTarget();
+                    }
+                    else
+                    {
+                    }
                     break;
             }
         }
@@ -260,6 +284,11 @@ public class UseSecondaryScript : MonoBehaviour
 
                 break;
             case WeaponEnum.Fish:
+                if (extraGameObject.activeSelf)
+                {
+                    extraGameObject.SetActive(false);
+
+                }
                 oldMousePosition = new Vector2(-3000, -3000);
 
                 break;
@@ -302,7 +331,7 @@ public class UseSecondaryScript : MonoBehaviour
         extraGameObject.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(chainDir, Vector2.up), Vector3.forward);
         extraGameObject.transform.localScale = new Vector3(1, (target.transform.position - extraTransform.position).magnitude * transform.localScale.y * 2f, 1);
         Vector2 dir = (target.transform.position - extraTransform.position).normalized;
-        rb.AddForce(dir * extraGOForce * Time.deltaTime);
+        rb.AddForce(dir * extraGOForce * GetComponent<Rigidbody2D>().mass * Time.deltaTime);
     }
 
 
@@ -388,10 +417,12 @@ public class UseSecondaryScript : MonoBehaviour
 
             if (checkGrab())
             {
-                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target, target.transform.position, target.transform.rotation));
-                target.SetActive(false);
+                //extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target, target.transform.position, target.transform.rotation));
+                //target.SetActive(false);
                 playSound_Use1();
+                fishPull();
                 //rb = target.GetComponent<Rigidbody2D>();
+                /*
                 if (target.CompareTag("Pickup"))
                 {
                     try
@@ -413,15 +444,11 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 activatingSecondary = false;
                 throwFlag = false;
+                */
 
-                //target = null;
-                //rb.gravityScale = 1;
-                //print("moving " + target.name + target.transform.position);
             }
-            //activatingSecondary = false;
-            //storedFlag = false;
-            //storedObject = null;
-            //timeNow_grabCooldown = grabCooldown;
+
+
         }
 
     }
@@ -430,12 +457,34 @@ public class UseSecondaryScript : MonoBehaviour
     {
         playSound_Use1();
         extraGameObject.SetActive(true);
+        print("Fishing "+target);
+        //updateFishLine();
+        Vector2 dir = (target.transform.position - extraTransform.position).normalized;
+        try
+        {
+            rb = target.GetComponent<Rigidbody2D>();
+            rb.AddForce(-dir * extraGOForce*rb.mass);
+            //rb.velocity = (-dir * extraGOForce);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(target + " could not find rb to fish");
+        }
+    }
+
+    void updateFishLine()
+    {
+        if (target == null)
+        {
+            activatingSecondary = false;
+            extraGameObject.SetActive(false);
+            return;
+        }
         extraGameObject.transform.position = target.transform.position;
         Vector2 chainDir = (extraTransform.position - target.transform.position).normalized;
         extraGameObject.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(chainDir, Vector2.up), Vector3.forward);
         extraGameObject.transform.localScale = new Vector3(1, (target.transform.position - extraTransform.position).magnitude * transform.localScale.y * 2f, 1);
-        Vector2 dir = (target.transform.position - extraTransform.position).normalized;
-        target.GetComponent<Rigidbody2D>().AddForce(dir * extraGOForce);
+
     }
 
     public bool checkGrab()

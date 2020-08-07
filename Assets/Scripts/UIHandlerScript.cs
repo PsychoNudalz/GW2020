@@ -205,7 +205,7 @@ public class UIHandlerScript : MonoBehaviour
     {
         if (Cursor.visible)
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
         if (!Crosshair.gameObject.activeSelf)
         {

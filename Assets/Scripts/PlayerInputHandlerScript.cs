@@ -341,7 +341,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void playEvent(EventType et)
     {
-        print(name + "Current Event: " + et);
+        //print(name + "Current Event: " + et);
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
         playerMovementScript.setMousePosition(et.mouseLocation);

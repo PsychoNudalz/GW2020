@@ -459,9 +459,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_Mass: 200
+  m_LinearDrag: 10
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: ad3f010bc82905f409f9eea0c2c43d43, type: 2}
   m_Interpolate: 0
@@ -642,8 +642,9 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 0}
   throwFlag: 0
-  grabCooldown: 3
-  timeNow_grabCooldown: 0
+  useCooldown: 1
+  timeNow_useCooldown: 0
+  minRange: 0
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 324873280155028769}
