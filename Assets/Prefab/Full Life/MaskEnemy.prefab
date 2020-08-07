@@ -533,15 +533,15 @@ MonoBehaviour:
   ammo: 999999
   Ammo_Max: 999999
   Ammo_Cost: 1
-  maxInMag: 20
-  currentMag: 20
-  reloadTime: 2
+  maxInMag: 10
+  currentMag: 10
+  reloadTime: 3
   timeNow_reload: 0
   isReloading: 0
   autoload: 0
   autoloadRate: 10
   isFiring: 0
-  rpm: 450
+  rpm: 360
   spreadIncreaseRate: 10
   spreadDecreaseRate: 7
   projectilePerShot: 0
