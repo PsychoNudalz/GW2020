@@ -290,7 +290,9 @@ public class WeaponTypeScript : MonoBehaviour
         Quaternion randomSpread;
         for (int i = 0; i < projectilePerShot; i++)
         {
-            randomSpread = Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.forward);
+            //randomSpread = Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.forward);
+            randomSpread = Quaternion.AngleAxis(-spreadAngle+i*(spreadAngle*2)/projectilePerShot, Vector3.forward);
+            print(name + "  " + i + "  " + randomSpread.eulerAngles);
             projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
             projectile.GetComponent<ProjectileScript>().shoot();
             print("fire " + i);
