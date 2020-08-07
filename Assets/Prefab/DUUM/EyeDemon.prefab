@@ -337,6 +337,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   PlayerPool: []
   des: {fileID: 2131382331}
+  seeker: {fileID: 0}
   rangeToFindPlayer: 20
   inSight: 0
   playerLastPosition: {x: 0, y: 0, z: 0}
@@ -424,7 +425,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 7
-  pickNextWaypointDist: 10
+  pickNextWaypointDist: 2
   endReachedDistance: 1
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -516,7 +517,7 @@ MonoBehaviour:
   autoloadRate: 10
   isFiring: 0
   rpm: 450
-  spreadIncreaseRate: 10
+  spreadIncreaseRate: 1
   spreadDecreaseRate: 7
   projectilePerShot: 0
   spreadAngle: 20

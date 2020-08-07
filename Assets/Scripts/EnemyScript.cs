@@ -76,7 +76,8 @@ public class EnemyScript : MonoBehaviour
         {
             walkToTarget();
 
-        } else if (!des.target.Equals(Player))
+        }
+        else if (!des.target.Equals(Player))
         {
             walkToTarget();
 
@@ -116,6 +117,7 @@ public class EnemyScript : MonoBehaviour
         {
             print(name + " cant see player moving");
             des.target = Player.transform;
+            //seeker.
             return true;
         }
         else
@@ -141,7 +143,7 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
-            Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.red);
+        Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.red);
         return false;
     }
     void updatePlayerPosition()
@@ -150,11 +152,15 @@ public class EnemyScript : MonoBehaviour
         double closestDis = double.PositiveInfinity;
         foreach (GameObject p in PlayerPool)
         {
-            dis = (transform.position - p.transform.position).magnitude;
-            if (dis < closestDis)
+            if (p.activeSelf)
             {
-                closestDis = dis;
-                Player = p;
+                dis = (transform.position - p.transform.position).magnitude;
+                if (dis < closestDis)
+                {
+                    closestDis = dis;
+                    Player = p;
+                }
+
             }
         }
     }

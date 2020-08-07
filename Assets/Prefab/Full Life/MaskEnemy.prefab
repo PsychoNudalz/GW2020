@@ -362,6 +362,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   PlayerPool: []
   des: {fileID: 464628036188201248}
+  seeker: {fileID: 0}
   rangeToFindPlayer: 10
   inSight: 0
   playerLastPosition: {x: 0, y: 0, z: 0}
@@ -449,7 +450,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 7
-  pickNextWaypointDist: 10
+  pickNextWaypointDist: 1
   endReachedDistance: 4
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
