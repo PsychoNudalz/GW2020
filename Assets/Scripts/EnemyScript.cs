@@ -142,7 +142,7 @@ public class EnemyScript : MonoBehaviour
     public void Rewind()
     {
         currentHealth = maxHealth;
-
+        //print(name + " heath " + currentHealth);
     }
     void playSound_Hit()
     {

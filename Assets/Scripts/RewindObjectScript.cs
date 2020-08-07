@@ -31,6 +31,8 @@ public class RewindObjectScript : MonoBehaviour
 
     public void Rewind()
     {
+        //foreach (GameObject g in transform.)
+
         for (int j = 0; j < rewindObjects.Count; j++)
         {
             currentObject = rewindObjects[j];
@@ -40,6 +42,7 @@ public class RewindObjectScript : MonoBehaviour
             currentObject.transform.rotation = initialRotation[j];
             if (currentObject.CompareTag("Enemy"))
             {
+                print("Rewind enemy " + currentObject);
                 EnemyScript i;
                 if (currentObject.TryGetComponent<EnemyScript>(out i))
                 {

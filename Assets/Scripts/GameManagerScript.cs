@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public bool gameWin = false;
+
     public PlayerSpawnPointScript playerSpawnPointScript;
 
     public List<EnemySpawnWaveHandler> enemySpawnWaveHandlers = new List<EnemySpawnWaveHandler>();
@@ -49,6 +51,10 @@ public class GameManagerScript : MonoBehaviour
                     enemySpawnWaveHandlers[wave].setStartWave(true);
                 }
             }
+        }
+        else
+        {
+            gameWin = true;
         }
     }
 
