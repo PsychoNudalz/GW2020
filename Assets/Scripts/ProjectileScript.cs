@@ -42,7 +42,7 @@ public class ProjectileScript : MonoBehaviour
     {
         ParticleSystem tempPS = Instantiate(startPS, transform.position, transform.rotation);
         tempPS.Play();
-        Destroy(tempPS,tempPS.main.duration);
+        Destroy(tempPS.gameObject,tempPS.main.duration);
         //startPS.Play();
         rb.AddForce(transform.up * projectileforce * rb.mass);
         //print(transform.forward * projectileforce * rb.mass);
@@ -91,7 +91,7 @@ public class ProjectileScript : MonoBehaviour
         {
             ParticleSystem tempPS =  Instantiate(endPS,transform.position,transform.rotation);
             tempPS.Play();
-            Destroy(tempPS, tempPS.main.duration);
+            Destroy(tempPS.gameObject, tempPS.main.duration);
 
             Destroy(gameObject);
             EnemyScript e1;

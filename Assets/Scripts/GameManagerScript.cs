@@ -15,7 +15,7 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         GameObject[] gl = GameObject.FindGameObjectsWithTag("RewindObject");
-        foreach(GameObject g in gl)
+        foreach (GameObject g in gl)
         {
             RewindObjectScript r;
             if (g.TryGetComponent<RewindObjectScript>(out r))
@@ -68,14 +68,23 @@ public class GameManagerScript : MonoBehaviour
     {
         wave = 0;
         playerSpawnPointScript.Rewind();
-        foreach(RewindObjectScript r in rewindList)
+        foreach (RewindObjectScript r in rewindList)
         {
             r.Rewind();
         }
-        foreach(EnemySpawnWaveHandler e in enemySpawnWaveHandlers)
+        foreach (EnemySpawnWaveHandler e in enemySpawnWaveHandlers)
         {
             e.Rewind();
         }
     }
-    
+
+    public void destroyAllProjectiles()
+    {
+        ProjectileScript[] pro = FindObjectsOfType<ProjectileScript>();
+        foreach (ProjectileScript p in pro)
+        {
+            Destroy(p.gameObject);
+        }
+    }
+
 }

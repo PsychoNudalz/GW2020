@@ -509,7 +509,7 @@ MonoBehaviour:
   Ammo_Cost: 1
   maxInMag: 1
   currentMag: 1
-  reloadTime: 2
+  reloadTime: 5
   timeNow_reload: 0
   isReloading: 0
   autoload: 0

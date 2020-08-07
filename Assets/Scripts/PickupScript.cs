@@ -10,6 +10,6 @@ public class PickupScript : MonoBehaviour
     // Start is called before the first frame update
     public void Rewind()
     {
-        used = true;
+        used = false;
     }
 }
