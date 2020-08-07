@@ -165,7 +165,7 @@ public class UIHandlerScript : MonoBehaviour
     IEnumerator playRewindEffect()
     {
         rewindEffect.SetActive(true);
-        playSound_Rewinding();
+        //playSound_Rewinding();
         Material effect = rewindEffect.GetComponentInChildren<RawImage>().material;
         effect.SetFloat("_TimeNow", Time.time);
         yield return new WaitForSeconds(rewindEffectDuration);

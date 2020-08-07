@@ -1364,7 +1364,7 @@ MonoBehaviour:
   rewindEffect: {fileID: 2355063717549178403}
   rewindEffectDuration: 0.5
   soundManager: {fileID: 0}
-  sound_Rewinding: {fileID: 0}
+  sound_Rewinding: {fileID: 7077621033772290385}
 --- !u!1 &8454812653477904414
 GameObject:
   m_ObjectHideFlags: 0

@@ -416,8 +416,8 @@ MonoBehaviour:
   playerInput: {x: 0, y: 0, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 7868093749533679557}
-  midScale: 0.01
-  maxDistance: 5
+  midScale: 0.4
+  maxDistance: 3
   gun: {fileID: 7868093750802002686}
   AI: 0
   animator: {fileID: 7868093751398536989}
@@ -500,11 +500,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  timeManager: {fileID: 0}
   playerMovementScript: {fileID: 7868093750151994099}
   playerStates: {fileID: 2183118846252424406}
   weaponTypeScript: {fileID: 1079763995}
   useSecondaryScript: {fileID: 2926540081131492961}
   AI: 0
+  isStartPlayBack: 0
   currentEvents: []
   savedEvents: []
   moveDir: {x: 0, y: 0}
@@ -515,11 +518,13 @@ MonoBehaviour:
   startTime: 0
   currentEventPointer: 0
   timeNow_playBack: 0
+  currentTime: 0
   currentEvent:
+    logs: []
     moveDir: {x: 0, y: 0}
     mouseLocation: {x: 0, y: 0}
-    duration: 0
     timeStart: 0
+    timeEnd: 0
     characterLocation: {x: 0, y: 0, z: 0}
   currentCounter: 0
   savedCounter: 0

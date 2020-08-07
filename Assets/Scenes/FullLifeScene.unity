@@ -14938,10 +14938,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6750108052901669955, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: midScale
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750108052901669955, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: maxDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088307432791613046, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: midScale
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088307432791613046, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: maxDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7887881914195376870, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: AI
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458614093802326524, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: midScale
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458614093802326524, guid: dbcf4ec0358ff7a47967449f44815c5a,
+        type: 3}
+      propertyPath: maxDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8812084805637942636, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}

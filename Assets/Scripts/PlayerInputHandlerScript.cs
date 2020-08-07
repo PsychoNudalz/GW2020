@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandlerScript : MonoBehaviour
 {
     public InputMaster controls;
+    public Camera cam;
 
     //[SerializeField]private InputActionAsset inputActions;
     [Header("Scripts")]
@@ -45,7 +46,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         controls = new InputMaster();
         timeManager = FindObjectOfType<TimeManagerScript>();
-
+        cam = FindObjectOfType<Camera>();
         /*
         controls.Player.Movement.performed += ctx => movePlayer(ctx.ReadValue<Vector2>());
         controls.Player.Shoot.performed += ctx => shoot();
@@ -421,8 +422,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     Vector2 getMousePosition()
     {
-        mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
-
+        //mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+        mousePosition = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         return mousePosition;
     }
 

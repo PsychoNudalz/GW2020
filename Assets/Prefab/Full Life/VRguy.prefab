@@ -467,8 +467,8 @@ MonoBehaviour:
   playerInput: {x: 0, y: 0, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 8845117446329741737}
-  midScale: 0.01
-  maxDistance: 5
+  midScale: 0.4
+  maxDistance: 3
   gun: {fileID: 8845117447073897618}
   AI: 0
   animator: {fileID: 8845117446561053041}
@@ -551,6 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a555e12a79d0641a5a38cbbc9344e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   timeManager: {fileID: 0}
   playerMovementScript: {fileID: 8845117445844956319}
   playerStates: {fileID: 1737981894}
@@ -1010,12 +1011,12 @@ PrefabInstance:
     - target: {fileID: 2607295571760003822, guid: 575cda9f88f335940a681a54014c6147,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.373
       objectReference: {fileID: 0}
     - target: {fileID: 2607295571760003822, guid: 575cda9f88f335940a681a54014c6147,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.067
       objectReference: {fileID: 0}
     - target: {fileID: 2607295571760003822, guid: 575cda9f88f335940a681a54014c6147,
         type: 3}
