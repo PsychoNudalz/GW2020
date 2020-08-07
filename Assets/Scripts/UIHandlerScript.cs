@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UIHandlerScript : MonoBehaviour
@@ -9,6 +10,10 @@ public class UIHandlerScript : MonoBehaviour
     public PlayerSpawnPointScript playerSpawn;
     [SerializeField] GameObject currentChaaracter;
     public GameObject characterPicker;
+
+    [Header("Crosshair")]
+    public Transform Crosshair;
+    public Camera cam;
 
     [Header("Health")]
     public PlayerStates playerStates;
@@ -47,10 +52,11 @@ public class UIHandlerScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-            updateCurrentCharacter();
+        updateCurrentCharacter();
         if (currentChaaracter != null)
         {
 
+            updateCrosshair();
 
             displayHealth();
             displayAmmo();
@@ -60,13 +66,23 @@ public class UIHandlerScript : MonoBehaviour
 
                 displayLog();
             }
-        } else
+        }
+        else
         {
             if (!characterPicker.activeSelf)
             {
+                if (!Cursor.visible)
+                {
+                    Cursor.visible = true;
+                }
+                if (Crosshair.gameObject.activeSelf)
+                {
+                    Crosshair.gameObject.SetActive(false);
+
+                }
                 characterPicker.SetActive(true);
             }
-            else 
+            else
             {
                 //characterPicker.SetActive(false);
 
@@ -116,12 +132,12 @@ public class UIHandlerScript : MonoBehaviour
 
     public void updateCurrentCharacter()
     {
-        if (playerSpawn.currentCharacter== null)
+        if (playerSpawn.currentCharacter == null)
         {
             currentChaaracter = null;
             return;
         }
-        
+
         else
         {
             currentChaaracter = playerSpawn.currentCharacter;
@@ -183,6 +199,21 @@ public class UIHandlerScript : MonoBehaviour
         {
             Debug.LogWarning("Failed to play");
         }
+    }
+
+    void updateCrosshair()
+    {
+        if (Cursor.visible)
+        {
+            Cursor.visible = false;
+        }
+        if (!Crosshair.gameObject.activeSelf)
+        {
+            Crosshair.gameObject.SetActive(true);
+
+        }
+
+        Crosshair.position = Mouse.current.position.ReadValue();
     }
 
 }

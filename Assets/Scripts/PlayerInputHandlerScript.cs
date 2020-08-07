@@ -312,6 +312,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
         if (currentEventPointer >= currentEvents.Count)
         {
+            resetRecordPara();
+            playEvent(new EventType(new Vector2(0, 0), new Vector2(0, 0), currentTime));
             //print(name + " event empty");
             return;
         }

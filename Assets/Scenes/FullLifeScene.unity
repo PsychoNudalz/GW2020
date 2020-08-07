@@ -14878,11 +14878,6 @@ PrefabInstance:
       propertyPath: cinemachine
       value: 
       objectReference: {fileID: 244496535}
-    - target: {fileID: 2840954388188538650, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4062737966260310221, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14937,26 +14932,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750108052901669955, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: midScale
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750108052901669955, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: maxDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088307432791613046, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: midScale
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088307432791613046, guid: dbcf4ec0358ff7a47967449f44815c5a,
-        type: 3}
-      propertyPath: maxDistance
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7887881914195376870, guid: dbcf4ec0358ff7a47967449f44815c5a,
         type: 3}
@@ -97466,6 +97441,11 @@ PrefabInstance:
     - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,

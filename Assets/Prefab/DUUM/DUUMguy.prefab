@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ef5df3dace8a04f99b947a699c4b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  MaxHealth: 150
   currentHealth: 0
   isDead: 0
   killer: {fileID: 0}
