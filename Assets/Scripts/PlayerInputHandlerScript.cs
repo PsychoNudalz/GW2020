@@ -76,7 +76,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
         */
         //print(isUsing);
         //events = new List<EventType>();
-        getMousePosition();
+        //getMousePosition();
+        if (!AI)
+        {
+            getMousePosition();
+            playerMovementScript.setMousePosition(mousePosition);
+        }
 
 
         currentTime = timeManager.currentTime;
@@ -352,6 +357,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             else if (s.Equals("Shoot"))
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
+                //StartCoroutine(waitForAim(0.1f));
 
                 weaponTypeScript.fireWeapon();
             }

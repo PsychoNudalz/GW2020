@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerSpawnPointScript : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public float rewindTime;
     public float rewindTimeScale;
     [SerializeField] bool isRewinding = true;
+    [Header("Rewind Effect")]
+    public GameObject rewindEffect;
+    public float rewindEffectDuration = 1f;
     [Header("Camera")]
     public CinemachineVirtualCamera cinemachine;
     [Header("DUUMguy")]
@@ -36,6 +40,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     [Header("Sounds")]
     public SoundManager soundManager;
+    public Sound sound_Rewinding;
     public Sound sound_RewindFinish;
     public Sound sound_Death;
 
@@ -104,6 +109,9 @@ public class PlayerSpawnPointScript : MonoBehaviour
         {
             pickCharacterVG();
         }
+
+
+        //Player Death Rewind Routine
 
         if (currentCharacter != null)
         {
@@ -225,18 +233,6 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     }
 
-    void playSound_RewindFinish()
-    {
-        try
-        {
-            soundManager.Play(sound_RewindFinish.name);
-
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogWarning("Failed to play");
-        }
-    }
 
 
     public bool isPlayerDead()
@@ -262,10 +258,10 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     IEnumerator startRewind()
     {
-        isRewinding = true;
         print("Start Rewinding");
         gameManager.GetComponent<TimeManagerScript>().slowDown(rewindTimeScale, rewindTime);
         yield return new WaitForSeconds(rewindTime * rewindTimeScale);
+        isRewinding = true;
 
         print("Finish Slowmotion");
 
@@ -274,10 +270,22 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         print("finish rewind");
         pickCharacter(currentCharacter);
+        //playRewindEffect();
         gameManager.GetComponent<GameManagerScript>().Rewind();
         isRewinding = false;
         gameManager.GetComponent<TimeManagerScript>().setStartTime();
         playSound_RewindFinish();
+    }
+
+    IEnumerator playRewindEffect()
+    {
+        rewindEffect.SetActive(true);
+        playSound_Rewinding();
+        Material effect = rewindEffect.GetComponentInChildren<RawImage>().material;
+        effect.SetFloat("_TimeNow", Time.time);
+        yield return new WaitForSeconds(rewindEffectDuration);
+        rewindEffect.SetActive(false);
+        //effect.SetFloat("_Speed", 1f);
     }
 
     void playerDeathRoutine()
@@ -293,12 +301,42 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
         }
     }
+
+
+    //Sounds
     void playSound_Death()
     {
         print("play death sound");
 
         soundManager.Play(sound_Death.name);
 
+    }
+
+
+    void playSound_Rewinding()
+    {
+        try
+        {
+            soundManager.Play(sound_Rewinding.name);
+
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning("Failed to play");
+        }
+    }
+
+    void playSound_RewindFinish()
+    {
+        try
+        {
+            soundManager.Play(sound_RewindFinish.name);
+
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning("Failed to play");
+        }
     }
     /*
     private void OnEnable()

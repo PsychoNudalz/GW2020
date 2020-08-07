@@ -25,11 +25,19 @@ public class UIHandlerScript : MonoBehaviour
     public bool updateLogger = true;
     public PlayerInputHandlerScript playerInput;
     public TextMeshProUGUI eventTextBox;
+    [Header("Rewind Effect")]
+    public GameObject rewindEffect;
+    public float rewindEffectDuration = .5f;
+    [Header("Sounds")]
+    public SoundManager soundManager;
+    public Sound sound_Rewinding;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
+
         if (playerSpawn != null)
         {
             updateCurrentCharacter();
@@ -131,23 +139,50 @@ public class UIHandlerScript : MonoBehaviour
     }
     public void pickChracterVRguy()
     {
-        playerSpawn.pickChracterVRguy();
         characterPicker.SetActive(false);
+        StartCoroutine(playRewindEffect());
+        playerSpawn.pickChracterVRguy();
+
 
     }
 
     public void pickCharacterDUUMguy()
     {
-        playerSpawn.pickCharacterDUUMguy();
         characterPicker.SetActive(false);
+        StartCoroutine(playRewindEffect());
+        playerSpawn.pickCharacterDUUMguy();
+
 
     }
     public void pickCharacterVG()
     {
-        playerSpawn.pickCharacterVG();
         characterPicker.SetActive(false);
+        StartCoroutine(playRewindEffect());
+        playerSpawn.pickCharacterVG();
 
     }
 
+    IEnumerator playRewindEffect()
+    {
+        rewindEffect.SetActive(true);
+        playSound_Rewinding();
+        Material effect = rewindEffect.GetComponentInChildren<RawImage>().material;
+        effect.SetFloat("_TimeNow", Time.time);
+        yield return new WaitForSeconds(rewindEffectDuration);
+        rewindEffect.SetActive(false);
+        //effect.SetFloat("_Speed", 1f);
+    }
+    void playSound_Rewinding()
+    {
+        try
+        {
+            soundManager.Play(sound_Rewinding.name);
+
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning("Failed to play");
+        }
+    }
 
 }

@@ -35,23 +35,31 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (!AI)
         {
-            mousePosition= Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+            //mousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
 
         }
 
         playerControls();
         updateAnimation();
-        aimWeapon(mousePosition);
+        if (AI)
+        {
+            hardAimWeapon(mousePosition);
+        }
+        else
+        {
+            aimWeapon(mousePosition);
+
+        }
         setMidPosition();
     }
 
     void playerControls()
     {
-        
+
         //playerInput.x = Input.GetAxisRaw("Horizontal");
         //playerInput.y = Input.GetAxisRaw("Vertical");
         //rb.velocity = playerInput.normalized * moveSpeed ;
-        transform.position += playerInput.normalized * moveSpeed*Time.deltaTime;
+        transform.position += playerInput.normalized * moveSpeed * Time.deltaTime;
     }
 
     public void inputPlayerControls(InputAction.CallbackContext context)
@@ -75,7 +83,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             displace = displace.normalized * maxDistance;
         }
-        midpoint.transform.position = Vector2.Lerp(midpoint.transform.position, transform.position + displace,Time.deltaTime*3f) ;
+        midpoint.transform.position = Vector2.Lerp(midpoint.transform.position, transform.position + displace, Time.deltaTime * 3f);
         //print(mousePosition + ", " + transform.position + ", " + midpoint.transform.position + ", " + new Vector3(Screen.width / 2, Screen.height / 2));
     }
 
@@ -90,6 +98,30 @@ public class PlayerMovementScript : MonoBehaviour
         Vector3 originalScale = gun.transform.localScale;
         Quaternion angle = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
         gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, angle, 0.9f);
+        if (gun.transform.rotation.eulerAngles.z < 180f && gun.transform.rotation.eulerAngles.z > 0)
+        {
+            originalScale.x = 1;
+
+        }
+        else
+        {
+            originalScale.x = -1;
+
+        }
+        gun.transform.localScale = originalScale;
+    }
+
+    public void hardAimWeapon(Vector2 v)
+    {
+        //gun.transform.LookAt((Vector2)midpoint.transform.position);
+        //setMousePosition(v);
+
+        Vector2 dir = mousePosition - transform.position;
+        dir.Normalize();
+        //print(gun.transform.rotation.eulerAngles.z);
+        Vector3 originalScale = gun.transform.localScale;
+        Quaternion angle = Quaternion.AngleAxis(-Vector2.SignedAngle(dir, Vector2.up), transform.forward);
+        gun.transform.rotation = angle;
         if (gun.transform.rotation.eulerAngles.z < 180f && gun.transform.rotation.eulerAngles.z > 0)
         {
             originalScale.x = 1;
