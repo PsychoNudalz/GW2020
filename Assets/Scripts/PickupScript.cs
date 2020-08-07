@@ -12,4 +12,16 @@ public class PickupScript : MonoBehaviour
     {
         used = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (!used)
+            {
+                collision.gameObject.GetComponentInChildren<WeaponTypeScript>().addAmmo(amout);
+                gameObject.SetActive(false);
+                used = true;
+            }
+        }
+    }
 }

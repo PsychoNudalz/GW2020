@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41e911609ef3ab459d994f48b798e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: 5
+  weapon: 6
   shootingProjectile: {fileID: 8007690218284419059, guid: 1763199508f455d47826717a85fac952,
     type: 3}
   shootingPoint: {fileID: 1570511569719979822}

@@ -9,5 +9,6 @@ enum WeaponEnum
     Shotgun,
     Hook,
     Grab,
+    Fish,
     EnemyWeapon
 }

@@ -32,8 +32,11 @@ public class UseSecondaryScript : MonoBehaviour
     [SerializeField] bool storedFlag;
     public Transform throwPoint;
     [SerializeField] bool throwFlag;
-    public float grabCooldown = 1f;
-    [SerializeField] float timeNow_grabCooldown;
+    public float useCooldown = 1f;
+    [SerializeField] float timeNow_useCooldown;
+    [Header("Fish")]
+    public float minRange;
+
 
     [Header("AI")]
     public bool AI = false;
@@ -71,9 +74,9 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
 
-        if (timeNow_grabCooldown > 0)
+        if (timeNow_useCooldown > 0)
         {
-            timeNow_grabCooldown -= Time.deltaTime;
+            timeNow_useCooldown -= Time.deltaTime;
         }
 
         if ((target == null && storedObject != null))
@@ -99,7 +102,7 @@ public class UseSecondaryScript : MonoBehaviour
                     }
                     break;
                 case WeaponEnum.Grab:
-                    if (timeNow_grabCooldown <= 0)
+                    if (timeNow_useCooldown <= 0)
                     {
                         if (grabMode)
                         {
@@ -197,13 +200,28 @@ public class UseSecondaryScript : MonoBehaviour
 
     public void use()
     {
-        switch(weaponEnum)
+        if (timeNow_useCooldown <= 0)
+        {
+            activatingSecondary = true;
+
+        }
+        else
+        {
+            activatingSecondary = false;
+
+        }
+        /*
+        switch (weaponEnum)
         {
             case WeaponEnum.Hook:
-                activatingSecondary = true;
+                if (timeNow_useCooldown <= 0)
+                {
+                    activatingSecondary = true;
+                }
+
                 break;
             case WeaponEnum.Grab:
-                if (timeNow_grabCooldown <= 0)
+                if (timeNow_useCooldown <= 0)
                 {
                     activatingSecondary = true;
 
@@ -215,6 +233,7 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 break;
         }
+        */
 
         return;
     }
@@ -237,7 +256,10 @@ public class UseSecondaryScript : MonoBehaviour
                 }
                 break;
             case WeaponEnum.Grab:
-                //print("old mouse reset");
+                oldMousePosition = new Vector2(-3000, -3000);
+
+                break;
+            case WeaponEnum.Fish:
                 oldMousePosition = new Vector2(-3000, -3000);
 
                 break;
@@ -252,12 +274,17 @@ public class UseSecondaryScript : MonoBehaviour
 
     }
 
+
+
+    //Uses
+
     void shootHook()
     {
         //print("Hooking");
         //print((target.transform.position - transform.position).magnitude);
+
         findTarget();
-        if (target == null||!target.activeSelf)
+        if (target == null || !target.activeSelf)
         {
             stop();
             return;
@@ -339,6 +366,77 @@ public class UseSecondaryScript : MonoBehaviour
         }
 
     }
+    void fishTarget()
+    {
+        findTarget();
+        currentMousePosition = Mouse.current.position.ReadValue();
+        if (target == null)
+        {
+            print("No target to grab");
+            //print("stoping");
+            //isUsing_Extra = false;
+            activatingSecondary = false;
+            storedFlag = false;
+
+            stop();
+            return;
+        }
+        else
+        {
+
+            print("Grabing " + target.name);
+
+            if (checkGrab())
+            {
+                extraGameObject.GetComponent<VRHandMovementScript>().pickUp(Instantiate(target, target.transform.position, target.transform.rotation));
+                target.SetActive(false);
+                playSound_Use1();
+                //rb = target.GetComponent<Rigidbody2D>();
+                if (target.CompareTag("Pickup"))
+                {
+                    try
+                    {
+                        if (!target.GetComponent<PickupScript>().used)
+                        {
+                            GetComponent<WeaponTypeScript>().addAmmo(target.GetComponent<PickupScript>().amout);
+                            target.GetComponent<PickupScript>().used = true;
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        print("Error: " + e.Message);
+                    }
+                }
+                else if (target.CompareTag("Object"))
+                {
+                    storeObject();
+                }
+                activatingSecondary = false;
+                throwFlag = false;
+
+                //target = null;
+                //rb.gravityScale = 1;
+                //print("moving " + target.name + target.transform.position);
+            }
+            //activatingSecondary = false;
+            //storedFlag = false;
+            //storedObject = null;
+            //timeNow_grabCooldown = grabCooldown;
+        }
+
+    }
+
+    void fishPull()
+    {
+        playSound_Use1();
+        extraGameObject.SetActive(true);
+        extraGameObject.transform.position = target.transform.position;
+        Vector2 chainDir = (extraTransform.position - target.transform.position).normalized;
+        extraGameObject.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(chainDir, Vector2.up), Vector3.forward);
+        extraGameObject.transform.localScale = new Vector3(1, (target.transform.position - extraTransform.position).magnitude * transform.localScale.y * 2f, 1);
+        Vector2 dir = (target.transform.position - extraTransform.position).normalized;
+        target.GetComponent<Rigidbody2D>().AddForce(dir * extraGOForce);
+    }
 
     public bool checkGrab()
     {
@@ -354,7 +452,7 @@ public class UseSecondaryScript : MonoBehaviour
         if ((flick > 1) || AI)
         {
             //isUsing_Extra = true;
-            timeNow_grabCooldown = grabCooldown;
+            timeNow_useCooldown = useCooldown;
             print("Grab Successful");
             activatingSecondary = false;
 
@@ -420,7 +518,7 @@ public class UseSecondaryScript : MonoBehaviour
         storedFlag = false;
         throwFlag = false;
         storedObject = null;
-        timeNow_grabCooldown = grabCooldown;
+        timeNow_useCooldown = useCooldown;
         //Destroy(storedObject);
         //StartCoroutine(cooldownTillGrab());
     }
@@ -449,11 +547,11 @@ public class UseSecondaryScript : MonoBehaviour
         }
     }
 
-    
+
 
     IEnumerator cooldownTillGrab()
     {
-        yield return new WaitForSeconds(grabCooldown);
+        yield return new WaitForSeconds(useCooldown);
         activatingSecondary = false;
         storedFlag = false;
         throwFlag = false;

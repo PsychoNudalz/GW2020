@@ -969,7 +969,7 @@ MonoBehaviour:
   range: 1.5
   layerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 133120
   outlineColour: {r: 1, g: 0.61538076, b: 0, a: 1}
   tagList:
   - Object
@@ -990,8 +990,9 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 8845117446913875373}
   throwFlag: 0
-  grabCooldown: 1
-  timeNow_grabCooldown: 0
+  useCooldown: 1
+  timeNow_useCooldown: 0
+  minRange: 0
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 3155862711895259627}
