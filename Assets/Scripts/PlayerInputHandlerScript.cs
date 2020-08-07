@@ -432,7 +432,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     void setEndPosition(Vector3 loc)
     {
         transform.position = loc;
-        print(name + " position set to " + loc);
+        //print(name + " position set to " + loc);
     }
 
     public void startPlayBack()

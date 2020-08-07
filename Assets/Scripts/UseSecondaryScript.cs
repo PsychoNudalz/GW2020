@@ -322,7 +322,7 @@ public class UseSecondaryScript : MonoBehaviour
         if (target == null || !target.activeSelf)
         {
             timeNow_useCooldown = useCooldown;
-
+ 
             stop();
             return;
         }
@@ -565,7 +565,7 @@ public class UseSecondaryScript : MonoBehaviour
         playSound_Use2();
 
         GameObject throwObject = storedObject;
-        Vector3 newPoint = throwPoint.position + throwPoint.up * 1f;
+        Vector3 newPoint = throwPoint.position + throwPoint.up * .2f;
         resetStoreObject(newPoint, throwPoint.rotation);
         throwObject.SetActive(true);
         InteractableObjectScript interactableObjectScript;
@@ -588,7 +588,7 @@ public class UseSecondaryScript : MonoBehaviour
         //throwFlag = true;
 
 
-        Vector3 newPoint = throwPoint.position + throwPoint.up * 1.2f;
+        Vector3 newPoint = throwPoint.position + throwPoint.up * .5f;
         resetStoreObject(newPoint, throwPoint.rotation);
         storedObject = null;
         storedFlag = false;

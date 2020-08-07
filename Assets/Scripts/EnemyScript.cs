@@ -115,7 +115,7 @@ public class EnemyScript : MonoBehaviour
 
         if (!inSight)
         {
-            print(name + " cant see player moving");
+            //print(name + " cant see player moving");
             des.target = Player.transform;
             //seeker.
             return true;

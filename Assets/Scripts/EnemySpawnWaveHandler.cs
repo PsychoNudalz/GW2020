@@ -12,14 +12,19 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     public List<Quaternion> initialRotation = new List<Quaternion>();
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            Enemies.Add(transform.GetChild(i).gameObject);
-            initialPosition.Add(transform.GetChild(i).position);
-            initialRotation.Add(transform.GetChild(i).rotation);
+            if (!Enemies.Contains(transform.GetChild(i).gameObject))
+            {
+                print(name + " Adding " + transform.GetChild(i).gameObject);
+                Enemies.Add(transform.GetChild(i).gameObject);
+                initialPosition.Add(transform.GetChild(i).position);
+                initialRotation.Add(transform.GetChild(i).rotation);
 
+
+            }
         }
         Rewind();
     }
@@ -50,6 +55,10 @@ public class EnemySpawnWaveHandler : MonoBehaviour
                 Destroy(effect, 5f);
             }
         }
+        else
+        {
+            //Rewind();
+        }
         return startWave;
     }
 
@@ -74,8 +83,16 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     public void Rewind()
     {
 
-        startWave = false;
+        setStartWave(false);
         waveClear = false;
+        for (int j = 0; j < Enemies.Count; j++)
+        {
+            GameObject currentObject = Enemies[j];
+            currentObject.SetActive(true);
+
+            currentObject.transform.position = initialPosition[j];
+            currentObject.transform.rotation = initialRotation[j];
+        }
         foreach (GameObject g in Enemies)
         {
             g.SetActive(true);
