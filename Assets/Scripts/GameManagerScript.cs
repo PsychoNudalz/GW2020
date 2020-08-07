@@ -44,6 +44,7 @@ public class GameManagerScript : MonoBehaviour
             {
                 wave += 1;
             }
+            /*
             else
             {
                 if (!enemySpawnWaveHandlers[wave].startWave)
@@ -51,6 +52,7 @@ public class GameManagerScript : MonoBehaviour
                     enemySpawnWaveHandlers[wave].setStartWave(true);
                 }
             }
+            */
         }
         else
         {

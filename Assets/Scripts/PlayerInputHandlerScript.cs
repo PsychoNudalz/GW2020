@@ -177,7 +177,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     public void recordEvent()
     {
-        print(name + " new record");
+        //print(name + " new record");
         newEvent();
         //print(context.action.actionMap.ToString());
         if (moveDir.magnitude > 0)

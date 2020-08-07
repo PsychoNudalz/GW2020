@@ -459,7 +459,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 200
+  m_Mass: 5
   m_LinearDrag: 10
   m_AngularDrag: 10
   m_GravityScale: 0
@@ -622,10 +622,11 @@ MonoBehaviour:
   range: 10
   layerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8704
   outlineColour: {r: 1, g: 0, b: 0, a: 1}
   tagList:
   - Enemy
+  - Object
   isUsing: 0
   activatingSecondary: 0
   timeTillNewTarget: 2
@@ -633,7 +634,7 @@ MonoBehaviour:
   extraGameObject: {fileID: 482521689}
   extraTransform: {fileID: 7868093751180948417}
   rb: {fileID: 7868093750151994108}
-  extraGOForce: 2500
+  extraGOForce: 7500
   grabMode: 0
   isUsing_Extra: 0
   currentMousePosition: {x: 0, y: 0}

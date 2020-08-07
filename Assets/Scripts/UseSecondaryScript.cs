@@ -331,7 +331,7 @@ public class UseSecondaryScript : MonoBehaviour
         extraGameObject.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(chainDir, Vector2.up), Vector3.forward);
         extraGameObject.transform.localScale = new Vector3(1, (target.transform.position - extraTransform.position).magnitude * transform.localScale.y * 2f, 1);
         Vector2 dir = (target.transform.position - extraTransform.position).normalized;
-        rb.AddForce(dir * extraGOForce * GetComponent<Rigidbody2D>().mass * Time.deltaTime);
+        rb.AddForce(dir * extraGOForce * GetComponentInParent<Rigidbody2D>().mass * Time.deltaTime);
     }
 
 

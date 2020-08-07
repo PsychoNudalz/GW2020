@@ -29,6 +29,13 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     {
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!startWave)
+        {
+            setStartWave(true);
+        }
+    }
 
     public bool setStartWave(bool t)
     {
@@ -52,7 +59,7 @@ public class EnemySpawnWaveHandler : MonoBehaviour
         {
             return false;
         }
-        waveClear = true;
+        waveClear = true && startWave;
         foreach (GameObject g in Enemies)
         {
             if (g.activeSelf)

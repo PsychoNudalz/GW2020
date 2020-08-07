@@ -71,6 +71,11 @@ public class EnemyScript : MonoBehaviour
         updatePlayerPosition();
         inSight = checkPlayerInsight();
         shootOnShot();
+        if (des.target == null)
+        {
+            walkToTarget();
+
+        }
 
     }
 
@@ -93,9 +98,21 @@ public class EnemyScript : MonoBehaviour
         return currentHealth;
     }
 
-    void getProjectileLayerMask()
-    {
 
+
+    public bool walkToTarget()
+    {
+        if (!inSight && !des.target.Equals(Player))
+        {
+            print(name + " cant see player moving");
+            des.target = Player.transform;
+            return true;
+        }
+        else
+        {
+            des.target = null;
+            return false;
+        }
     }
 
     bool checkPlayerInsight()
@@ -103,17 +120,18 @@ public class EnemyScript : MonoBehaviour
         Vector3 dir = (Player.transform.position - transform.position).normalized;
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, dir, rangeToFindPlayer, layerMask);
-        Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.green);
 
         if (hit)
         {
             if (hit.collider.CompareTag("Player"))
             {
+                Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.green);
                 playerLastPosition = Player.transform.position;
                 return true;
             }
-            return false;
         }
+
+            Debug.DrawRay(transform.position, (dir) * rangeToFindPlayer, Color.red);
         return false;
     }
     void updatePlayerPosition()
@@ -135,7 +153,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (inSight)
         {
-            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized, gameObject,Player);
+            enemyAttackScript.shoot((playerLastPosition - transform.position).normalized, gameObject, Player);
         }
     }
 
