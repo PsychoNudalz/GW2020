@@ -75,6 +75,10 @@ public class EnemyScript : MonoBehaviour
         {
             walkToTarget();
 
+        } else if (!des.target.Equals(Player))
+        {
+            walkToTarget();
+
         }
 
     }
@@ -102,7 +106,12 @@ public class EnemyScript : MonoBehaviour
 
     public bool walkToTarget()
     {
-        if (!inSight && !des.target.Equals(Player))
+        if (Player == null)
+        {
+            return false;
+        }
+
+        if (!inSight)
         {
             print(name + " cant see player moving");
             des.target = Player.transform;
@@ -110,7 +119,7 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            des.target = null;
+            des.target = transform;
             return false;
         }
     }

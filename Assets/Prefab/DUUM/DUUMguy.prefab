@@ -583,8 +583,8 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 7868093751180948416}
   animator: {fileID: 39450019}
-  ammo: 100
-  Ammo_Max: 100
+  ammo: 30
+  Ammo_Max: 30
   Ammo_Cost: 2
   maxInMag: 2
   currentMag: 2
@@ -643,7 +643,7 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 0}
   throwFlag: 0
-  useCooldown: 1
+  useCooldown: 5
   timeNow_useCooldown: 0
   minRange: 0
   AI: 0

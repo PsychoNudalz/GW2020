@@ -474,8 +474,8 @@ MonoBehaviour:
   playerInput: {x: 0, y: 0, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
   midpoint: {fileID: 176608247067100602}
-  midScale: 0.4
-  maxDistance: 3
+  midScale: 0.55
+  maxDistance: 7
   gun: {fileID: 176608245790402689}
   AI: 0
   animator: {fileID: 176608246301150562}

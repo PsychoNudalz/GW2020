@@ -14,7 +14,6 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rewind();
         for (int i = 0; i < transform.childCount; i++)
         {
             Enemies.Add(transform.GetChild(i).gameObject);
@@ -22,6 +21,7 @@ public class EnemySpawnWaveHandler : MonoBehaviour
             initialRotation.Add(transform.GetChild(i).rotation);
 
         }
+        Rewind();
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class EnemySpawnWaveHandler : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!startWave)
+        if (!startWave && collision.CompareTag("Player"))
         {
             setStartWave(true);
         }

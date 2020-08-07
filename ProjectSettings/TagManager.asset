@@ -32,9 +32,9 @@ TagManager:
   - Projectile
   - MovableObject
   - Rewind
-  - TestLayer
-  - Pickup
   - 
+  - Pickup
+  - UnmovableArea
   - 
   - 
   - 
@@ -69,4 +69,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3953159445
+    locked: 0
+  - name: MapForeground
+    uniqueID: 864617333
     locked: 0

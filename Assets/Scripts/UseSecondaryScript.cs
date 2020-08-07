@@ -189,6 +189,11 @@ public class UseSecondaryScript : MonoBehaviour
 
     void findTarget()
     {
+        
+        if (timeNow_useCooldown> 0)
+        {
+            return;
+        }
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, transform.up, range, layerMask);
 
@@ -268,6 +273,7 @@ public class UseSecondaryScript : MonoBehaviour
         {
             case WeaponEnum.Hook:
                 activatingSecondary = false;
+
                 if (extraGameObject.activeSelf)
                 {
                     extraGameObject.SetActive(false);
@@ -315,11 +321,15 @@ public class UseSecondaryScript : MonoBehaviour
         findTarget();
         if (target == null || !target.activeSelf)
         {
+            timeNow_useCooldown = useCooldown;
+
             stop();
             return;
         }
         if ((target.transform.position - transform.position).magnitude <= 1.5f)
         {
+
+            timeNow_useCooldown = useCooldown;
 
             stop();
             return;
