@@ -11,6 +11,7 @@ public class GameManagerScript : MonoBehaviour
     public List<EnemySpawnWaveHandler> enemySpawnWaveHandlers = new List<EnemySpawnWaveHandler>();
     [SerializeField] int wave;
     public List<RewindObjectScript> rewindList = new List<RewindObjectScript>();
+    public int rewindCounter = 0;
     Keyboard kb;
 
     // Start is called before the first frame update
@@ -57,6 +58,7 @@ public class GameManagerScript : MonoBehaviour
         else
         {
             gameWin = true;
+            FindObjectOfType<mainMenuScript>().show_GameWin();
         }
     }
 
@@ -74,6 +76,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void Rewind()
     {
+        rewindCounter++;
         wave = 0;
         playerSpawnPointScript.Rewind();
         foreach (RewindObjectScript r in rewindList)

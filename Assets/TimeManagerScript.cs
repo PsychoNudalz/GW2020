@@ -9,6 +9,11 @@ public class TimeManagerScript : MonoBehaviour
     public float currentTime = 0;
     public float startTime = 0;
 
+
+    public void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     private void LateUpdate()
     {
         resetWorldTime();
