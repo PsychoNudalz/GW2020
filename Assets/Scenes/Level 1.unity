@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -106201,81 +106201,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6756954729880364746, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756954729880364746, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756954729880364746, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756954729880364746, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6756954729880364746, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045805833134572266, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: playerStates
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: weaponTypeScript
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: useSecondaryScript
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
         type: 3}
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 1466230003}
-    - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: playerInput
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8454812653477447546, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
         type: 3}
       propertyPath: cam
@@ -106391,30 +106321,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8843515407299483214, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8843515407299483214, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8843515407299483214, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8843515407299483214, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8843515407299483214, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a8f970ca20ccf44c8c3b059407ab1e5, type: 3}
+--- !u!1 &8454812654006085768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8454812653477447551, guid: 9a8f970ca20ccf44c8c3b059407ab1e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 8454812654006085767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8454812654006085769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454812654006085768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80722c5297a32d645a13fde5a728478d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 0}
