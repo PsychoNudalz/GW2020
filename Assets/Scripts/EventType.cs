@@ -9,13 +9,15 @@ public class EventType
     public List<LogType> logs;
     public Vector2 moveDir;
     public Vector2 mouseLocation;
-    public float duration = 0;
+    //public float duration = 0;
     public float timeStart;
+    public float timeEnd;
     public Vector3 characterLocation;
 
-    public EventType(Vector2 d, Vector2 v)
+    public EventType(Vector2 d, Vector2 v,float t)
     {
-        timeStart = Time.time;
+        timeStart = t;
+        timeEnd = t;
         moveDir = d;
         mouseLocation = v;
         logs = new List<LogType>();
@@ -28,9 +30,10 @@ public class EventType
         logs.Add(new LogType(s));
     }
 
-    public void endLog(Vector3 loc)
+    public void endLog(Vector3 loc,float t)
     {
-        duration = Time.time - timeStart;
+        //duration = Time.time - timeStart;
+        timeEnd = t;
         characterLocation = loc;
         
         if (logs == null)
@@ -44,7 +47,7 @@ public class EventType
 
     public override string ToString()
     {
-        return ("Logs: " + logs.Count + "    Duration: " + duration+"\n"+ moveDir + "\n");
+        return ("Logs: " + logs.Count + "    Time End: " + timeEnd+"\n"+ moveDir + "\n");
     }
 
 }

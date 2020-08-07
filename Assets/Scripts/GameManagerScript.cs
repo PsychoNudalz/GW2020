@@ -30,7 +30,7 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         enemySpawnWave();
-        checkRewind();
+        //checkRewind();
     }
 
     void enemySpawnWave()

@@ -6,6 +6,13 @@ public class TimeManagerScript : MonoBehaviour
 {
     public float slowdownFactor = 0.05f;
     public float slowdownLength = 2f;
+    public float currentTime = 0;
+    public float startTime = 0;
+
+    private void LateUpdate()
+    {
+        resetWorldTime();
+    }
 
     public void slowDown(float factor, float length)
     {
@@ -21,6 +28,16 @@ public class TimeManagerScript : MonoBehaviour
         print("reseting");
         Time.timeScale = 1;
         //Time.fixedDeltaTime = Time.timeScale * .2f;
+    }
+
+    public void resetWorldTime()
+    {
+        currentTime = Time.time - startTime;
+    }
+
+    public void setStartTime()
+    {
+        startTime = Time.time;
     }
 
     IEnumerator waitTillReset(float t)

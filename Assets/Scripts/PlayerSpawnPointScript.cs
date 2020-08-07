@@ -17,7 +17,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public bool playerIsDead;
     public float rewindTime;
     public float rewindTimeScale;
-    [SerializeField] bool isRewinding = false;
+    [SerializeField] bool isRewinding = true;
     [Header("Camera")]
     public CinemachineVirtualCamera cinemachine;
     [Header("DUUMguy")]
@@ -57,7 +57,13 @@ public class PlayerSpawnPointScript : MonoBehaviour
         spawnPool.Add(VengfulGirl_spawn);
         //pickChracterVRguy();
         //pickCharacterDUUMguy();
+        for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
+        {
+            characterPool[i].transform.position = spawnPool[i].transform.position;
+            characterPool[i].GetComponent<PlayerInputHandlerScript>().activeAI(true);
+            characterPool[i].GetComponent<PlayerInputHandlerScript>().Rewind();
 
+        }
 
     }
 
@@ -65,12 +71,18 @@ public class PlayerSpawnPointScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         kb = InputSystem.GetDevice<Keyboard>();
         if (kb.iKey.isPressed)
         {
             //currentCharacter.GetComponent<PlayerInputHandlerScript>().replayEvents();
             //Rewind();
-            startRewind();
+            //startRewind();
+            if (currentCharacter != null)
+            {
+                currentCharacter.GetComponent<PlayerStates>().takeDamage(100);
+                playerDeathRoutine();
+            }
 
         }
         if (kb.pKey.isPressed)
@@ -101,6 +113,11 @@ public class PlayerSpawnPointScript : MonoBehaviour
         if (currentCharacter != null && isRewinding)
         {
             finishRewind();
+        }
+        if (isRewinding)
+        {
+            gameManager.GetComponent<TimeManagerScript>().setStartTime();
+
         }
     }
 
@@ -171,7 +188,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     public void movePlayer(InputAction.CallbackContext context)
     {
-        if (currentCharacter== null)
+        if (currentCharacter == null)
         {
             return;
         }
@@ -259,6 +276,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         pickCharacter(currentCharacter);
         gameManager.GetComponent<GameManagerScript>().Rewind();
         isRewinding = false;
+        gameManager.GetComponent<TimeManagerScript>().setStartTime();
         playSound_RewindFinish();
     }
 

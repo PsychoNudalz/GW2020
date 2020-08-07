@@ -62,7 +62,7 @@ MonoBehaviour:
   playerIsDead: 0
   rewindTime: 1
   rewindTimeScale: 0.05
-  isRewinding: 0
+  isRewinding: 1
   cinemachine: {fileID: 0}
   DUUMguy: {fileID: 7088307432791613044}
   DUUMguy_spawn: {fileID: 8442068968486875990}

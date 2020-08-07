@@ -12,13 +12,14 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     //[SerializeField]private InputActionAsset inputActions;
     [Header("Scripts")]
+    public TimeManagerScript timeManager;
     public PlayerMovementScript playerMovementScript;
     public PlayerStates playerStates;
     public WeaponTypeScript weaponTypeScript;
     public UseSecondaryScript useSecondaryScript;
     [Header("AI")]
     public bool AI = false;
-    public bool startPlayBack = false;
+    public bool isStartPlayBack = false;
     public List<EventType> currentEvents = new List<EventType>();
     public List<EventType> savedEvents = new List<EventType>();
 
@@ -43,6 +44,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     private void Awake()
     {
         controls = new InputMaster();
+        timeManager = FindObjectOfType<TimeManagerScript>();
 
         /*
         controls.Player.Movement.performed += ctx => movePlayer(ctx.ReadValue<Vector2>());
@@ -58,9 +60,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
-        currentTime = Time.time - startTime;
         /*
         kb = InputSystem.GetDevice<Keyboard>();
         if (kb.pKey.isPressed)
@@ -78,8 +79,9 @@ public class PlayerInputHandlerScript : MonoBehaviour
         getMousePosition();
 
 
+        currentTime = timeManager.currentTime;
 
-        if (AI && startPlayBack)
+        if (AI && isStartPlayBack)
         {
             playBackEvents();
         }
@@ -130,7 +132,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     public void newEvent()
     {
         endEvent();
-        currentEvent = new EventType(moveDir, getMousePosition());
+        currentEvent = new EventType(moveDir, getMousePosition(),currentTime);
 
 
     }
@@ -139,7 +141,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         if (currentEvent != null)
         {
-            currentEvent.endLog(transform.position);
+            currentEvent.endLog(transform.position,currentTime);
             savedEvents.Add(currentEvent);
         }
         currentEvent = null;
@@ -149,13 +151,22 @@ public class PlayerInputHandlerScript : MonoBehaviour
     {
         endEvent();
         //add empty event
-        currentEvent = new EventType(new Vector2(), new Vector2(1000, 10000));
-        currentEvent.endLog(transform.position);
+        ///*
+        currentEvent = new EventType(new Vector2(), new Vector2(1000, 10000),currentTime);
+        currentEvent.endLog(transform.position, currentTime);
         savedEvents.Add(currentEvent);
-
+        //*/
         currentEvent = null;
-        resetRecordRewind();
+        resetRecordPara();
 
+    }
+
+    public void startRecording()
+    {
+        currentEvent = null;
+        currentEvents = new List<EventType>();
+        savedEvents = new List<EventType>();
+        newEvent();
     }
 
     public void recordEvent()
@@ -211,9 +222,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             else
             {
                 print(name + " swapping to Player");
-                currentEvents = new List<EventType>();
-                savedEvents = new List<EventType>();
-                //newEvent();
+                startRecording();
             }
         }
 
@@ -223,12 +232,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
         useSecondaryScript.AI = AI;
         if (AI)
         {
-            //loadEventList();
+            loadEventList();
             //playerInputComponent.enabled = false;
         }
         else
         {
-            startTime = Time.time;
+            //startTime = currentTime;
             //newEvent();
         }
         /*
@@ -254,7 +263,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             savedEvents.Add(eventType);
         }
 
-        startTime = Time.time;
+        startTime = currentTime;
 
     }
     /*
@@ -306,7 +315,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             print(name + " currentEvent is null");
             return;
         }
-        if (Time.time - startTime < currentEvent.duration)
+        if (currentTime < currentEvent.timeEnd)
         {
             playEvent(currentEvent);
         }
@@ -314,7 +323,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         {
             //when current event finish
             setEndPosition(currentEvent.characterLocation);
-            startTime = Time.time;
+            startTime = currentTime;
             currentEventPointer++;
         }
     }
@@ -375,7 +384,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
 
     }
 
-    void resetRecordRewind()
+    void resetRecordPara()
     {
         //currentEvent = null;
         moveDir = new Vector2(0,0);
@@ -383,7 +392,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         isFiring = false;
         isUsing = false;
         isReloading = false;
-        startTime = Time.time;
+        //startTime = currentTime;
     }
 
 
@@ -392,13 +401,15 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //endEvent();
         //print("Rewind to current"+currentEvent);
         //replayEvents();
-        loadEventList();
+        //loadEventList();
         currentEventPointer = 0;
         weaponTypeScript.Rewind();
         useSecondaryScript.Rewind();
         playerStates.Rewind();
+        playerMovementScript.playerControls(new Vector3(0, 0, 0));
         //activeAI(true);
-        startPlayBackAI();
+        startPlayBack();
+        
 
     }
 
@@ -415,14 +426,19 @@ public class PlayerInputHandlerScript : MonoBehaviour
         print(name + " position set to " + loc);
     }
 
-    public void startPlayBackAI()
+    public void startPlayBack()
     {
-        if (!startPlayBack)
+        startTime = 0;
+
+        if (!isStartPlayBack)
         {
-            startPlayBack = true;
-            startTime = Time.time;
+            isStartPlayBack = true;
             
             //loadEventList();
+        }
+        if (!AI)
+        {
+            startRecording();
         }
     }
     private void OnEnable()
@@ -433,6 +449,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     private void OnDisable()
     {
         controls.Disable();
+        print(name + "death time " + currentTime);
     }
 
 
