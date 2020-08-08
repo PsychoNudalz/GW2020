@@ -34,22 +34,22 @@ public class mainMenuScript : MonoBehaviour
     }
     public void toMainMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
 
     }
 
     public void toHelpMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void startLevel1()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(2);
     }
     public void startLevel2()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene(3);
     }
 
     public void quitGame()
@@ -59,6 +59,7 @@ public class mainMenuScript : MonoBehaviour
 
     public void show_HelpMenu()
     {
+        showCursor();
         if (!isPaused)
         {
             isPaused = true;
@@ -69,6 +70,7 @@ public class mainMenuScript : MonoBehaviour
 
     public void close_HelpMenu()
     {
+        hideCursor();
         isPaused = false;
         helpMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -76,6 +78,8 @@ public class mainMenuScript : MonoBehaviour
 
     public void show_GameWin()
     {
+        showCursor();
+
         isPaused = true;
         Time.timeScale = 0f;
         mainMenu.SetActive(true);
@@ -89,6 +93,20 @@ public class mainMenuScript : MonoBehaviour
             rewindCounter.text = gameManager.rewindCounter.ToString();
         }
     }
+    void showCursor()
+    {
+        if (!Cursor.visible)
+        {
+            Cursor.visible = true;
+        }
+    }
 
+    void hideCursor()
+    {
+        if (Cursor.visible)
+        {
+            Cursor.visible = false;
+        }
+    }
 
 }

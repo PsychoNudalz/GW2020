@@ -181,7 +181,7 @@ MonoBehaviour:
   rb: {fileID: 3867884601069492342}
   force: 45000
   spin: 7000
-  damage: 10
+  damage: 25
   objectDamageMultiplier: 5
   minVelocity: 0.5
   hitRecord: []

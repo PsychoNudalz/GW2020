@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 791711426268454165, guid: e1baea8bdb2158042af575b6d1145225,
         type: 3}
       propertyPath: m_TagString
-      value: Projectile
+      value: EnemyProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 8806105669409516074, guid: e1baea8bdb2158042af575b6d1145225,
         type: 3}

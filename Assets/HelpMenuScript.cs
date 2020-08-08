@@ -70,12 +70,18 @@ public class HelpMenuScript : MonoBehaviour
 
     public void startLevel1()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(2);
     }
 
     public void closeMenu()
     {
         gameObject.SetActive(false);
+    }
+
+    public void toMainMenu()
+    {
+        SceneManager.LoadScene(0);
+
     }
 
 }
