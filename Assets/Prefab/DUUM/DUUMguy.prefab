@@ -640,12 +640,12 @@ MonoBehaviour:
     type: 3}
   shootingPoint: {fileID: 7868093751180948416}
   animator: {fileID: 39450019}
-  ammo: 30
-  Ammo_Max: 30
+  ammo: 20
+  Ammo_Max: 20
   Ammo_Cost: 2
   maxInMag: 2
   currentMag: 2
-  reloadTime: 1.75
+  reloadTime: 1.5
   timeNow_reload: 0
   isReloading: 0
   autoload: 0
@@ -654,8 +654,8 @@ MonoBehaviour:
   rpm: 45
   spreadIncreaseRate: 0
   spreadDecreaseRate: 0
-  projectilePerShot: 8
-  spreadAngle: 30
+  projectilePerShot: 10
+  spreadAngle: 40
   spreadDebug: 0
   currentSpread: 0
   timeBetweenShot: 0

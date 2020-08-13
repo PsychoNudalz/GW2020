@@ -110,17 +110,17 @@ PrefabInstance:
     - target: {fileID: 1026569281088305541, guid: d6bd3760515108f4291b809c084a47e4,
         type: 3}
       propertyPath: projectileforce
-      value: 1000
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 1026569281088305541, guid: d6bd3760515108f4291b809c084a47e4,
         type: 3}
       propertyPath: damage
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1026569281088305541, guid: d6bd3760515108f4291b809c084a47e4,
         type: 3}
       propertyPath: timeToLive
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1026569281088305541, guid: d6bd3760515108f4291b809c084a47e4,
         type: 3}
