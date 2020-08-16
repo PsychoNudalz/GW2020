@@ -14,7 +14,7 @@ public class TimeManagerScript : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         resetWorldTime();
     }

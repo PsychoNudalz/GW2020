@@ -360,7 +360,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             else if (s.Equals("Shoot"))
             {
                 //playerMovementScript.aimWeapon(et.mouseLocation);
-                //StartCoroutine(waitForAim(0.1f));
+                //StartCoroutine(waitForShoot(0.02f));
 
                 weaponTypeScript.fireWeapon();
             }
@@ -385,10 +385,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
         }
     }
 
-    IEnumerator waitForAim(float f)
+    IEnumerator waitForShoot(float f)
     {
         print("waiting");
         yield return new WaitForSeconds(f);
+        weaponTypeScript.fireWeapon();
+
         print("wait finish");
 
     }

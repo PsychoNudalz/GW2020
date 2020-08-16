@@ -32,7 +32,7 @@ TagManager:
   - Projectile
   - MovableObject
   - Rewind
-  - 
+  - Projectile_Des
   - Pickup
   - UnmovableArea
   - 

@@ -255,6 +255,8 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     void spawnGrave()
     {
+        soundManager.stopAllSound();
+
         Instantiate(grave, currentCharacter.transform.position, Quaternion.identity);
     }
 

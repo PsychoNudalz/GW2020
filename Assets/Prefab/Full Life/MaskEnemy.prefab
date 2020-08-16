@@ -436,7 +436,7 @@ MonoBehaviour:
   PlayerPool: []
   des: {fileID: 464628036188201248}
   seeker: {fileID: 0}
-  rangeToFindPlayer: 8
+  rangeToFindPlayer: 9
   inSight: 0
   playerLastPosition: {x: 0, y: 0, z: 0}
   layerMask:
