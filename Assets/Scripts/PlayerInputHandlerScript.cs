@@ -359,7 +359,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             }
             else if (s.Equals("Shoot"))
             {
-                //playerMovementScript.aimWeapon(et.mouseLocation);
+                playerMovementScript.hardAimWeapon(et.mouseLocation);
                 //StartCoroutine(waitForShoot(0.02f));
 
                 weaponTypeScript.fireWeapon();

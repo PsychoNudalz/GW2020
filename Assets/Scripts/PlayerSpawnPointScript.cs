@@ -30,10 +30,12 @@ public class PlayerSpawnPointScript : MonoBehaviour
     [Header("VRguy")]
     public GameObject VRguy;
     public Transform VRguy_spawn;
-    [Header("VengfulGirl")]
-    public GameObject VengfulGirl;
-    public Transform VengfulGirl_spawn;
-
+    [Header("DomNuk")]
+    public GameObject DomNuk;
+    public Transform DomNuk_spawn;
+    [Header("Skullguy")]
+    public GameObject Skullguy;
+    public Transform Skullguy_spawn;
     [Header("Input")]
     public PlayerInput playerInputComponent;
     Keyboard kb;
@@ -58,10 +60,13 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
         characterPool.Add(DUUMguy);
         characterPool.Add(VRguy);
-        characterPool.Add(VengfulGirl);
+        characterPool.Add(DomNuk);
+        characterPool.Add(Skullguy);
         spawnPool.Add(DUUMguy_spawn);
         spawnPool.Add(VRguy_spawn);
-        spawnPool.Add(VengfulGirl_spawn);
+        spawnPool.Add(DomNuk_spawn);
+        spawnPool.Add(Skullguy_spawn);
+
         //pickChracterVRguy();
         //pickCharacterDUUMguy();
         for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
@@ -109,7 +114,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
         }
         else if (kb.lKey.isPressed)
         {
-            pickCharacterVG();
+            pickCharacterDN();
         }
 
 
@@ -154,10 +159,16 @@ public class PlayerSpawnPointScript : MonoBehaviour
     {
         pickCharacter(DUUMguy);
     }
-    public void pickCharacterVG()
+    public void pickCharacterDN()
     {
-        pickCharacter(VengfulGirl);
+        pickCharacter(DomNuk);
     }
+
+    public void pickCharacterSkullguy()
+    {
+        pickCharacter(Skullguy);
+    }
+
 
 
     void pickCharacter(GameObject g)
