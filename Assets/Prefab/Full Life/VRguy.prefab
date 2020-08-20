@@ -1136,8 +1136,9 @@ MonoBehaviour:
   ammo: 20
   Ammo_Max: 20
   Ammo_Cost: 1
-  maxInMag: 8
-  currentMag: 8
+  maxInMag: 9
+  currentMag: 9
+  ammoPickupModifier: 10
   reloadTime: 2
   timeNow_reload: 0
   isReloading: 0

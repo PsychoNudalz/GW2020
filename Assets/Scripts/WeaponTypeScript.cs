@@ -22,10 +22,12 @@ public class WeaponTypeScript : MonoBehaviour
     public float Ammo_Cost = 10;
     public float maxInMag;
     public float currentMag;
+    public float ammoPickupModifier = 2f;
+    [Header("Reload")]
     public float reloadTime;
     [SerializeField] private float timeNow_reload;
     public bool isReloading;
-    public bool autoload = true;
+    public bool autoload = false;
     public float autoloadRate = 10f;
     [Header("Fire Behaviour")]
     [SerializeField] bool isFiring = false;
@@ -206,7 +208,7 @@ public class WeaponTypeScript : MonoBehaviour
 
     public void addAmmo(float amout)
     {
-        ammo += amout;
+        ammo += amout*ammoPickupModifier;
         print("Added " + amout + ", increased to " + ammo);
     }
 

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 1
-  amout: 10
+  amout: 1
   used: 0
   sound_Pickup: {fileID: 7466503440976026105}
 --- !u!114 &-7719370686782126448
