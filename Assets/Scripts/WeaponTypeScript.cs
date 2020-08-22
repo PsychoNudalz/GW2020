@@ -306,10 +306,6 @@ public class WeaponTypeScript : MonoBehaviour
         //animator.SetBool("Shoot", true);
         animator.SetTrigger("Shoot");
 
-        if (currentSpread > spreadAngle)
-        {
-            currentSpread = spreadAngle - spreadIncreaseRate;
-        }
         GameObject projectile;
         Quaternion randomSpread;
         randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
@@ -317,6 +313,10 @@ public class WeaponTypeScript : MonoBehaviour
 
         projectile.GetComponent<ProjectileScript>().shoot();
         currentSpread += spreadIncreaseRate;
+        if (currentSpread > spreadAngle)
+        {
+            currentSpread = spreadAngle;
+        }
 
 
     }

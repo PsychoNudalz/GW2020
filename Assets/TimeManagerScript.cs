@@ -51,6 +51,9 @@ public class TimeManagerScript : MonoBehaviour
         resetTime();
     }
 
-
+    public string getCurrentTimeDisplay()
+    {
+        return currentTime.ToString();
+    }
 
 }

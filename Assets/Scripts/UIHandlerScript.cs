@@ -21,10 +21,15 @@ public class UIHandlerScript : MonoBehaviour
     [Header("Ammo")]
     public WeaponTypeScript weaponTypeScript;
     public TextMeshProUGUI ammoTextBox;
+    public Animator ammoIconAnimator;
     [Header("Stored Object")]
     public Image image;
     public UseSecondaryScript useSecondaryScript;
     public Sprite emptySprite;
+    [Header("Current Time")]
+    public TimeManagerScript timeManagerScript;
+    public TextMeshProUGUI currentTimeTextBox;
+    //public float currentTime;
     [Header("Logger")]
     public bool isLogger;
     public bool updateLogger = true;
@@ -42,7 +47,7 @@ public class UIHandlerScript : MonoBehaviour
     void Start()
     {
         soundManager = FindObjectOfType<SoundManager>();
-
+        timeManagerScript = FindObjectOfType<TimeManagerScript>();
         if (playerSpawn != null)
         {
             updateCurrentCharacter();
@@ -50,7 +55,7 @@ public class UIHandlerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         updateCurrentCharacter();
         if (currentChaaracter != null)
@@ -61,11 +66,13 @@ public class UIHandlerScript : MonoBehaviour
             displayHealth();
             displayAmmo();
             displayGrab();
+            updateAmmoIcon();
             if (isLogger)
             {
 
                 displayLog();
             }
+            updateCurrentTime();
         }
         else
         {
@@ -144,6 +151,7 @@ public class UIHandlerScript : MonoBehaviour
             playerStates = currentChaaracter.GetComponent<PlayerStates>();
             PlayerInputHandlerScript pi = currentChaaracter.GetComponent<PlayerInputHandlerScript>();
             weaponTypeScript = pi.weaponTypeScript;
+            setReloadAnimationSpeed();
             useSecondaryScript = pi.useSecondaryScript;
             if (updateLogger)
             {
@@ -223,5 +231,18 @@ public class UIHandlerScript : MonoBehaviour
         Crosshair.position = Mouse.current.position.ReadValue();
     }
 
+    void setReloadAnimationSpeed()
+    {
+        ammoIconAnimator.speed = 1 / weaponTypeScript.reloadTime;
+    }
+
+    void updateAmmoIcon()
+    {
+        ammoIconAnimator.SetBool("isReloading", weaponTypeScript.isReloading);
+    }
+    void updateCurrentTime()
+    {
+        currentTimeTextBox.text = timeManagerScript.getCurrentTimeDisplay();
+    }
 
 }

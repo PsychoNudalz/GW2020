@@ -373,9 +373,9 @@ MonoBehaviour:
   autoload: 0
   autoloadRate: 0.1
   isFiring: 0
-  rpm: 420
-  spreadIncreaseRate: 5
-  spreadDecreaseRate: 30
+  rpm: 480
+  spreadIncreaseRate: 15
+  spreadDecreaseRate: 40
   projectilePerShot: 1
   spreadAngle: 30
   spreadDebug: 1
