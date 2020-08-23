@@ -14,6 +14,60 @@ TextureImporter:
   - first:
       213: -6078013350829290552
     second: Skull guy_gun_3
+  - first:
+      213: -4022940595042023883
+    second: Skull guy_gun_0
+  - first:
+      213: 3431435477342454216
+    second: Skull guy_gun_1
+  - first:
+      213: -6847734959660600521
+    second: Skull guy_gun_2
+  - first:
+      213: 2846359823326608182
+    second: Skull guy_gun_3
+  - first:
+      213: -5518003474288729508
+    second: Skull guy_gun_4
+  - first:
+      213: -3825109517165168477
+    second: Skull guy_gun_5
+  - first:
+      213: 8972998163313638891
+    second: Skull guy_gun_6
+  - first:
+      213: 2355247361135600927
+    second: Skull guy_gun_7
+  - first:
+      213: 8745946854890314967
+    second: Skull guy_gun_8
+  - first:
+      213: 2110705779233687971
+    second: Skull guy_gun_9
+  - first:
+      213: 5787283008852190543
+    second: Skull guy_gun_10
+  - first:
+      213: 8942176547711918942
+    second: Skull guy_gun_11
+  - first:
+      213: 1782839196679052571
+    second: Skull guy_gun_12
+  - first:
+      213: 8804240921244768412
+    second: Skull guy_gun_13
+  - first:
+      213: -3467314888225325254
+    second: Skull guy_gun_14
+  - first:
+      213: 8665503717970493213
+    second: Skull guy_gun_15
+  - first:
+      213: -6423095239795141234
+    second: Skull guy_gun_16
+  - first:
+      213: 3045114292996631704
+    second: Skull guy_gun_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d3969a0e4572e00800000000000000
-      internalID: 1019877164514360638
+      spriteID: 5368500e7d4ab28c0800000000000000
+      internalID: -4022940595042023883
       vertices: []
       indices: 
       edges: []
@@ -146,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5481d9e30343c5900800000000000000
-      internalID: 674471426012289093
+      spriteID: 8c18ba8d268ee9f20800000000000000
+      internalID: 3431435477342454216
       vertices: []
       indices: 
       edges: []
@@ -167,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eab08b5392cf8b50800000000000000
-      internalID: 6597705917272210147
+      spriteID: 733f765c555f7f0a0800000000000000
+      internalID: -6847734959660600521
       vertices: []
       indices: 
       edges: []
@@ -188,8 +242,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cb0db36f0f86aba0800000000000000
-      internalID: -6078013350829290552
+      spriteID: 63b735cbd2d408720800000000000000
+      internalID: 2846359823326608182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5226a5631d1c63b0800000000000000
+      internalID: -5518003474288729508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a87762192b7aeac0800000000000000
+      internalID: -3825109517165168477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedba8ed94e768c70800000000000000
+      internalID: 8972998163313638891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15e9ae0ff48fa020800000000000000
+      internalID: 2355247361135600927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc9e269358df5970800000000000000
+      internalID: 8745946854890314967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9869429bbba4d10800000000000000
+      internalID: 2110705779233687971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e945fb3f805050800000000000000
+      internalID: 5787283008852190543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53a235413ef81c70800000000000000
+      internalID: 8942176547711918942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull guy_gun_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d92b1bdcaedb810800000000000000
+      internalID: 1782839196679052571
       vertices: []
       indices: 
       edges: []

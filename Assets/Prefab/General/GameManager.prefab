@@ -45,12 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949bb39147cdac049b5952ffc7480d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameWin: 0
   playerSpawnPointScript: {fileID: 0}
   enemySpawnWaveHandlers:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   wave: 0
   rewindList: []
+  rewindCounter: 0
 --- !u!114 &2359610555821490262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,3 +85,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowdownFactor: 0.05
   slowdownLength: 2
+  currentTime: 0
+  startTime: 0

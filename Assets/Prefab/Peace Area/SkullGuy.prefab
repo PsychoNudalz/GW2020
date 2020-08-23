@@ -46,7 +46,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.9386792, b: 0.9651106, a: 1}
+  m_Color: {r: 0.6567283, g: 0.8867924, b: 0.6974897, a: 1}
   m_Intensity: 0.7
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: cdef6425e168e56b75038933eb0b6d2b
@@ -374,10 +374,10 @@ MonoBehaviour:
   autoloadRate: 0.1
   isFiring: 0
   rpm: 480
-  spreadIncreaseRate: 15
+  spreadIncreaseRate: 7
   spreadDecreaseRate: 40
   projectilePerShot: 1
-  spreadAngle: 30
+  spreadAngle: 25
   spreadDebug: 1
   currentSpread: 0
   timeBetweenShot: 0
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.8490566, b: 0.15653007, a: 1}
   m_Intensity: 0.7
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: cdef6425e168e56b75038933eb0b6d2b

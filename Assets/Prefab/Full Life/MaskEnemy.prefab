@@ -608,6 +608,7 @@ MonoBehaviour:
   Ammo_Cost: 1
   maxInMag: 10
   currentMag: 10
+  ammoPickupModifier: 2
   reloadTime: 3
   timeNow_reload: 0
   isReloading: 0

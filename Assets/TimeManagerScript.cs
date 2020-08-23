@@ -53,7 +53,7 @@ public class TimeManagerScript : MonoBehaviour
 
     public string getCurrentTimeDisplay()
     {
-        return currentTime.ToString();
+        return (((int)(currentTime*100f))/100f).ToString();
     }
 
 }

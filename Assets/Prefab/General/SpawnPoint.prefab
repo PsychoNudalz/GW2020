@@ -170,7 +170,18 @@ MonoBehaviour:
     m_ActionId: 1ff018bb-b5bf-46b7-a9d1-26f5db8c2763
     m_ActionName: Player/Reload[/Keyboard/r]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d8650891-aa4c-4670-a502-9523664ff27e
     m_ActionName: Player/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
@@ -553,6 +564,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grave
       objectReference: {fileID: 0}
+    - target: {fileID: 7426844386936665918, guid: 62712840605724b40bf65423bd4bf127,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426844386936665918, guid: 62712840605724b40bf65423bd4bf127,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[7]
+      value: 864617333
+      objectReference: {fileID: 0}
     - target: {fileID: 7679823616445747468, guid: 62712840605724b40bf65423bd4bf127,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,6 +731,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4062737966260310221}
     m_Modifications:
+    - target: {fileID: 3289350285936893998, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: AI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4570052267440093197, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}
       propertyPath: range
@@ -1001,6 +1027,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DomNook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178943193130126366, guid: 83030d46a57f6914cb196c8923abc2ec,
+        type: 3}
+      propertyPath: extraGOForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178943193130126366, guid: 83030d46a57f6914cb196c8923abc2ec,
+        type: 3}
+      propertyPath: useCooldown
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83030d46a57f6914cb196c8923abc2ec, type: 3}

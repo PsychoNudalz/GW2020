@@ -1149,7 +1149,7 @@ MonoBehaviour:
   spreadIncreaseRate: 10
   spreadDecreaseRate: 15
   projectilePerShot: 1
-  spreadAngle: 20
+  spreadAngle: 15
   spreadDebug: 1
   currentSpread: 0
   timeBetweenShot: 0

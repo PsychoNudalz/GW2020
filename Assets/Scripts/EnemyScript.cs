@@ -11,7 +11,15 @@ public class EnemyScript : MonoBehaviour
     [Header("States")]
     public float maxHealth;
     [SerializeField] float currentHealth;
+    public bool immune = false;
+    public bool canRegen = false;
+    public float regenAmount = 10f;
+
+    [Header("Damage PopUp")]
+    public DamagePopUpPoolScript damagePopUpPoolScript;
+
     [Header("Player Finder")]
+    public bool stationary = false;
     public GameObject Player;
     public GameObject[] PlayerPool;
     public AIDestinationSetter des;
@@ -23,6 +31,11 @@ public class EnemyScript : MonoBehaviour
 
     [Header("Spawn")]
     [SerializeField] EnemySpawnWaveHandler enemySpawnWaveHandler;
+
+    [Header("Colour Change")]
+    public bool canChangeColour;
+    public SpriteRenderer sprite;
+    public Color targetColour;
 
     [Header("Sound")]
     public SoundManager soundManager;
@@ -72,14 +85,22 @@ public class EnemyScript : MonoBehaviour
         updatePlayerPosition();
         inSight = checkPlayerInsight();
         shootOnShot();
-        if (des.target == null)
+        if (canRegen)
         {
-            walkToTarget();
-
+            regenHealth();
         }
-        else if (!des.target.Equals(Player))
+        if (!stationary)
         {
-            walkToTarget();
+            if (des.target == null)
+            {
+                walkToTarget();
+
+            }
+            else if (!des.target.Equals(Player))
+            {
+                walkToTarget();
+
+            }
 
         }
 
@@ -87,7 +108,7 @@ public class EnemyScript : MonoBehaviour
 
     void checkDie()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !immune)
         {
             playSound_Death();
             gameObject.SetActive(false);
@@ -98,8 +119,14 @@ public class EnemyScript : MonoBehaviour
     public float takeDamage(float damage)
     {
         playSound_Hit();
-        currentHealth -= damage;
+        if (currentHealth > -1)
+        {
+            currentHealth -= damage;
+
+        }
+        damagePopUpPoolScript.newDamageValue(damage);
         checkDie();
+        updateColour();
 
         return currentHealth;
     }
@@ -170,6 +197,25 @@ public class EnemyScript : MonoBehaviour
         if (inSight)
         {
             enemyAttackScript.shoot((playerLastPosition - transform.position).normalized, gameObject, Player);
+        }
+    }
+
+    void regenHealth()
+    {
+        if (currentHealth < maxHealth && canRegen)
+        {
+            currentHealth += regenAmount * Time.deltaTime;
+            updateColour();
+        }
+    }
+
+    void updateColour()
+    {
+        if (canChangeColour)
+        {
+            Color temp = (targetColour * (1 - currentHealth / maxHealth));
+            sprite.color = new Color(temp.r, temp.g, temp.b, 1);
+
         }
     }
 
