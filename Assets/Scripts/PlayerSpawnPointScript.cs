@@ -97,25 +97,7 @@ public class PlayerSpawnPointScript : MonoBehaviour
             }
 
         }
-        if (kb.pKey.isPressed)
-        {
-            //currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(false);
 
-            //Rewind();
-            pickChracterVRguy();
-
-        }
-        else if (kb.oKey.isPressed)
-        {
-            //currentCharacter.GetComponent<PlayerInputHandlerScript>().activeAI(true);
-
-            //Rewind();
-            pickCharacterDUUMguy();
-        }
-        else if (kb.lKey.isPressed)
-        {
-            pickCharacterDN();
-        }
 
 
         //Player Death Rewind Routine

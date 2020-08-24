@@ -374,16 +374,20 @@ MonoBehaviour:
   autoloadRate: 0.1
   isFiring: 0
   rpm: 480
-  spreadIncreaseRate: 7
+  spreadIncreaseRate: 8
   spreadDecreaseRate: 40
   projectilePerShot: 1
   spreadAngle: 25
+  nonRandomSpread: 1
+  spreadMultiplierPrime: 23
   spreadDebug: 1
+  randomSpread: {x: 0, y: 0, z: 0, w: 0}
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
   soundManager: {fileID: 0}
   sound_Fire: {fileID: 240737114679616561}
+  playerInputHandlerScript: {fileID: 0}
 --- !u!114 &7286327250758187724
 MonoBehaviour:
   m_ObjectHideFlags: 0

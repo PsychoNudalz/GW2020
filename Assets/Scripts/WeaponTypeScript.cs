@@ -36,7 +36,10 @@ public class WeaponTypeScript : MonoBehaviour
     public float spreadDecreaseRate;
     public int projectilePerShot;
     public float spreadAngle;
+    public bool nonRandomSpread = false;
+    public float spreadMultiplierPrime = 97;
     public bool spreadDebug;
+    [SerializeField] Quaternion randomSpread;
     [SerializeField] private float currentSpread = 0;
     [SerializeField] private float timeBetweenShot;
     [SerializeField] private float timeNow_rpm;
@@ -44,8 +47,11 @@ public class WeaponTypeScript : MonoBehaviour
 
     [Header("Sound")]
     public SoundManager soundManager;
-
     public Sound sound_Fire;
+
+
+    [Header("PlayerInputHandler")]
+    public PlayerInputHandlerScript playerInputHandlerScript;
 
     //public bool fireWhenFull;
     //[SerializeField] private bool full;
@@ -56,7 +62,7 @@ public class WeaponTypeScript : MonoBehaviour
     {
         timeBetweenShot = 60f / rpm;
         soundManager = FindObjectOfType<SoundManager>();
-
+        playerInputHandlerScript = GetComponentInParent<PlayerInputHandlerScript>();
 
     }
 
@@ -158,6 +164,7 @@ public class WeaponTypeScript : MonoBehaviour
         if (consumeAmmo())
         {
             playSound_Fire();
+            //playerInputHandlerScript.recordShootEvent();
             //activeFire = true;
             switch (weapon)
             {
@@ -208,7 +215,7 @@ public class WeaponTypeScript : MonoBehaviour
 
     public void addAmmo(float amout)
     {
-        ammo += amout*ammoPickupModifier;
+        ammo += amout * ammoPickupModifier;
         print("Added " + amout + ", increased to " + ammo);
     }
 
@@ -289,11 +296,11 @@ public class WeaponTypeScript : MonoBehaviour
     void shotgunShot()
     {
         GameObject projectile;
-        Quaternion randomSpread;
+        //Quaternion randomSpread;
         for (int i = 0; i < projectilePerShot; i++)
         {
             //randomSpread = Quaternion.AngleAxis(Random.Range(-spreadAngle, spreadAngle), Vector3.forward);
-            randomSpread = Quaternion.AngleAxis(-spreadAngle+i*(spreadAngle*2)/projectilePerShot, Vector3.forward);
+            randomSpread = Quaternion.AngleAxis(-spreadAngle + i * (spreadAngle * 2) / projectilePerShot, Vector3.forward);
             print(name + "  " + i + "  " + randomSpread.eulerAngles);
             projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
             projectile.GetComponent<ProjectileScript>().shoot();
@@ -307,8 +314,17 @@ public class WeaponTypeScript : MonoBehaviour
         animator.SetTrigger("Shoot");
 
         GameObject projectile;
-        Quaternion randomSpread;
-        randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
+        //Quaternion randomSpread;
+        if (!nonRandomSpread || currentSpread<1f)
+        {
+            randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
+        }
+        else
+        {
+            float tempRandomValue = (currentMag*spreadMultiplierPrime % (currentSpread * 2)) - currentSpread;
+            randomSpread = Quaternion.AngleAxis(tempRandomValue, Vector3.forward);
+
+        }
         projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
 
         projectile.GetComponent<ProjectileScript>().shoot();
@@ -332,13 +348,13 @@ public class WeaponTypeScript : MonoBehaviour
             currentSpread = spreadAngle - spreadIncreaseRate;
         }
         GameObject projectile;
-        Quaternion randomSpread;
+        //Quaternion randomSpread;
         randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
         projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
         projectile.GetComponent<ProjectileScript>().setShooter(s);
         projectile.GetComponent<ProjectileScript>().setTarget(t);
         projectile.GetComponent<ProjectileScript>().shoot();
-        
+
         currentSpread += spreadIncreaseRate;
 
     }

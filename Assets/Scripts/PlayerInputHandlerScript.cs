@@ -111,8 +111,8 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //mousePosition = Mouse.current.position.ReadValue();
         //playerMovementScript.aimWeapon(mousePosition);
         getMousePosition();
-        weaponTypeScript.toggleFiring(context.performed);
         isFiring = context.performed;
+        weaponTypeScript.toggleFiring(context.performed);
         recordEvent();
 
     }
@@ -209,6 +209,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
             currentEvent.addLog("Reload");
         }
 
+    }
+
+    public void recordShootEvent()
+    {
+        newEvent();
+        currentEvent.addLog("Shoot");
 
     }
 
