@@ -175,7 +175,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         newEvent();
     }
 
-    public void recordEvent()
+    public void recordEvent(bool weaponFire = false, Quaternion fireDirection = new Quaternion())
     {
         //print(name + " new record");
         newEvent();
@@ -208,15 +208,21 @@ public class PlayerInputHandlerScript : MonoBehaviour
         {
             currentEvent.addLog("Reload");
         }
+        if (weaponFire)
+        {
+            currentEvent.setFiredToTrue(fireDirection);
+        }
 
     }
 
+    /*
     public void recordShootEvent()
     {
         newEvent();
         currentEvent.addLog("Shoot");
 
     }
+    */
 
     public void activeAI(bool b)
     {
@@ -300,7 +306,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //savedEvents = e;
         foreach (EventType eventType in savedEvents)
         {
-            currentEvents.Add(eventType);
+            currentEvents.Add(new EventType(eventType));
         }
 
     }
@@ -368,7 +374,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 playerMovementScript.hardAimWeapon(et.mouseLocation);
                 //StartCoroutine(waitForShoot(0.02f));
 
-                weaponTypeScript.fireWeapon();
+                //weaponTypeScript.fireWeapon();
             }
             else if (s.Equals("Reload"))
             {
@@ -388,6 +394,12 @@ public class PlayerInputHandlerScript : MonoBehaviour
                 useSecondaryScript.isUsing = false;
 
             }
+        }
+
+        if (et.weaponFire)
+        {
+            weaponTypeScript.fireWeaponForced(et.fireDirection);
+            et.weaponFire = false;
         }
     }
 

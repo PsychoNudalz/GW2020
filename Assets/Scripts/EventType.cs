@@ -13,6 +13,8 @@ public class EventType
     public float timeStart;
     public float timeEnd;
     public Vector3 characterLocation;
+    public bool weaponFire = false;
+    public Quaternion fireDirection;
 
     public EventType(Vector2 d, Vector2 v,float t)
     {
@@ -21,8 +23,18 @@ public class EventType
         moveDir = d;
         mouseLocation = v;
         logs = new List<LogType>();
+    }
 
-
+    public EventType(EventType e)
+    {
+        logs = e.logs;
+        moveDir = e.moveDir;
+        mouseLocation = e.mouseLocation;
+        timeStart = e.timeStart;
+        timeEnd = e.timeEnd;
+        characterLocation = e.characterLocation;
+        weaponFire = e.weaponFire;
+        fireDirection = e.fireDirection;
     }
 
     public void addLog(string s)
@@ -43,6 +55,11 @@ public class EventType
 
         }
         
+    }
+    public void setFiredToTrue(Quaternion dir)
+    {
+        weaponFire = true;
+        fireDirection = dir;
     }
 
     public override string ToString()

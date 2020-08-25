@@ -40,6 +40,7 @@ public class WeaponTypeScript : MonoBehaviour
     public float spreadMultiplierPrime = 97;
     public bool spreadDebug;
     [SerializeField] Quaternion randomSpread;
+    [SerializeField] Quaternion firedDirection;
     [SerializeField] private float currentSpread = 0;
     [SerializeField] private float timeBetweenShot;
     [SerializeField] private float timeNow_rpm;
@@ -164,8 +165,6 @@ public class WeaponTypeScript : MonoBehaviour
         if (consumeAmmo())
         {
             playSound_Fire();
-            //playerInputHandlerScript.recordShootEvent();
-            //activeFire = true;
             switch (weapon)
             {
                 case WeaponEnum.Shotgun:
@@ -176,10 +175,7 @@ public class WeaponTypeScript : MonoBehaviour
                     pistolShot();
                     //launcher.GetComponent<TrapLaunchPointScript>().fire();
                     break;
-                case WeaponEnum.Claw:
-                    break;
-                case WeaponEnum.EnemyWeapon:
-                    break;
+
 
             }
         }
@@ -188,6 +184,26 @@ public class WeaponTypeScript : MonoBehaviour
             //activeFire = false;
         }
         //print("shoot at "+transform.up);
+    }
+
+    public void fireWeaponForced(Quaternion dir)
+    {
+        playSound_Fire();
+        //playerInputHandlerScript.recordShootEvent();
+        //activeFire = true;
+        switch (weapon)
+        {
+            case WeaponEnum.Shotgun:
+                shotgunShot();
+                //launcher.GetComponent<MissileLaunchPointScript>().fire();
+                break;
+            case WeaponEnum.Pistol:
+                pistolShot(dir);
+                //launcher.GetComponent<TrapLaunchPointScript>().fire();
+                break;
+
+
+        }
     }
 
     public void fireWeapon(GameObject s, GameObject t)
@@ -306,6 +322,8 @@ public class WeaponTypeScript : MonoBehaviour
             projectile.GetComponent<ProjectileScript>().shoot();
             print("fire " + i);
         }
+        playerInputHandlerScript.recordEvent(true);
+
     }
 
     void pistolShot()
@@ -315,17 +333,19 @@ public class WeaponTypeScript : MonoBehaviour
 
         GameObject projectile;
         //Quaternion randomSpread;
-        if (!nonRandomSpread || currentSpread<1f)
+        if (!nonRandomSpread || currentSpread < 1f)
         {
             randomSpread = Quaternion.AngleAxis(Random.Range(-currentSpread, currentSpread), Vector3.forward);
         }
         else
         {
-            float tempRandomValue = (currentMag*spreadMultiplierPrime % (currentSpread * 2)) - currentSpread;
+            float tempRandomValue = (currentMag * spreadMultiplierPrime % (currentSpread * 2)) - currentSpread;
             randomSpread = Quaternion.AngleAxis(tempRandomValue, Vector3.forward);
 
         }
-        projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, randomSpread * shootingPoint.transform.rotation);
+        firedDirection = randomSpread * shootingPoint.transform.rotation;
+
+        projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, firedDirection );
 
         projectile.GetComponent<ProjectileScript>().shoot();
         currentSpread += spreadIncreaseRate;
@@ -333,9 +353,28 @@ public class WeaponTypeScript : MonoBehaviour
         {
             currentSpread = spreadAngle;
         }
+        playerInputHandlerScript.recordEvent(true, firedDirection);
 
 
     }
+    void pistolShot(Quaternion dir)
+    {
+        //animator.SetBool("Shoot", true);
+        animator.SetTrigger("Shoot");
+
+        GameObject projectile;
+        firedDirection = dir;
+
+        projectile = Instantiate(shootingProjectile, shootingPoint.transform.position, firedDirection);
+
+        projectile.GetComponent<ProjectileScript>().shoot();
+
+        //playerInputHandlerScript.recordEvent(true);
+
+
+    }
+
+
 
 
     void enemyShot(GameObject s, GameObject t)

@@ -124,9 +124,16 @@ public class EnemyScript : MonoBehaviour
             currentHealth -= damage;
 
         }
-        damagePopUpPoolScript.newDamageValue(damage);
         checkDie();
+        try
+        {
+        damagePopUpPoolScript.newDamageValue(damage);
         updateColour();
+
+        } catch(System.Exception e)
+        {
+            Debug.LogError(name + " Failed to display damage");
+        }
 
         return currentHealth;
     }

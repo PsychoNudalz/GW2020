@@ -382,6 +382,7 @@ MonoBehaviour:
   spreadMultiplierPrime: 23
   spreadDebug: 1
   randomSpread: {x: 0, y: 0, z: 0, w: 0}
+  firedDirection: {x: 0, y: 0, z: 0, w: 0}
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
@@ -557,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ef5df3dace8a04f99b947a699c4b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 150
+  MaxHealth: 80
   currentHealth: 0
   isDead: 0
   killer: {fileID: 0}
@@ -603,6 +604,8 @@ MonoBehaviour:
     timeStart: 0
     timeEnd: 0
     characterLocation: {x: 0, y: 0, z: 0}
+    weaponFire: 0
+    fireDirection: {x: 0, y: 0, z: 0, w: 0}
   currentCounter: 0
   savedCounter: 0
   isCurrentEventEmpty: 0
