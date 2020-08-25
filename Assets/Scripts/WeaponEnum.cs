@@ -10,5 +10,6 @@ enum WeaponEnum
     Hook,
     Grab,
     Fish,
-    EnemyWeapon
+    EnemyWeapon,
+    Deploy
 }

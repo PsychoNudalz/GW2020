@@ -33,9 +33,15 @@ public class UseSecondaryScript : MonoBehaviour
     public Transform throwPoint;
     [SerializeField] bool throwFlag;
     public float useCooldown = 1f;
-    [SerializeField] float timeNow_useCooldown;
+    public float timeNow_useCooldown;
     [Header("Fish")]
     public float minRange;
+    [Header("Deply")]
+    public GameObject deployObject;
+    public Transform deployPosition;
+    public int deployAmount;
+    [SerializeField] List<GameObject> deployPool;
+    [SerializeField] int deplyPoolPointer = -1;
 
 
     [Header("AI")]
@@ -50,6 +56,18 @@ public class UseSecondaryScript : MonoBehaviour
     void Awake()
     {
         soundManager = FindObjectOfType<SoundManager>();
+        switch (weaponEnum)
+        {
+            case WeaponEnum.Deploy:
+                //deployPool = new List<GameObject>(deployAmount);
+
+                for (int i = 0; i < deployAmount; i++)
+                {
+                    deployPool.Add(Instantiate(deployObject, transform.position, Quaternion.identity));
+                    deployPool[i].SetActive(false);
+                }
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -141,6 +159,12 @@ public class UseSecondaryScript : MonoBehaviour
                     }
                     else
                     {
+                    }
+                    break;
+                case WeaponEnum.Deploy:
+                    if (timeNow_useCooldown <= 0)
+                    {
+                        deployCover();
                     }
                     break;
             }
@@ -598,11 +622,59 @@ public class UseSecondaryScript : MonoBehaviour
         //Destroy(storedObject);
     }
 
+    public void deployCover()
+    {
+        Vector3 newPoint = deployPosition.position + transform.rotation * ( (Vector3.up * range));
+        GameObject currentDeploy = getNextDeploy();
+
+        //Instantiate(deployObject, newPoint, Quaternion.identity);
+        //print("deploy at: " + newPoint);
+        currentDeploy.SetActive(true);
+        currentDeploy.transform.position = newPoint;
+        DestructableScript d;
+        if (currentDeploy.TryGetComponent<DestructableScript>(out d))
+        {
+            currentDeploy.GetComponent<DestructableScript>().Rewind();
+
+        }
+
+
+        timeNow_useCooldown = useCooldown;
+        playSound_Use1();
+    }
+
+    GameObject getNextDeploy()
+    {
+        foreach (GameObject g in deployPool)
+        {
+            if (!g.gameObject.activeSelf)
+            {
+                return g;
+            }
+        }
+
+        deplyPoolPointer = (deplyPoolPointer + 1) % deployAmount;
+        return deployPool[deplyPoolPointer];
+
+    }
+
     public void Rewind()
     {
         if (storedObject != null)
         {
             dropObject();
+        }
+        switch (weaponEnum)
+        {
+            case WeaponEnum.Deploy:
+                //deployPool = new List<GameObject>(deployAmount);
+
+                foreach(GameObject g in deployPool)
+                {
+                    //deployPool.Add(Instantiate(deployObject, transform.position, Quaternion.identity));
+                    g.SetActive(false);
+                }
+                break;
         }
     }
 

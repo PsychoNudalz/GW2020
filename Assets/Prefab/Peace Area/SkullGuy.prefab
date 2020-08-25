@@ -401,9 +401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2211f28b4bd9849a5f43fc5011eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 3
+  weaponEnum: 7
   target: {fileID: 0}
-  range: 10
+  range: 1.5
   layerMask:
     serializedVersion: 2
     m_Bits: 8704
@@ -418,18 +418,25 @@ MonoBehaviour:
   extraGameObject: {fileID: 5585330732416048884}
   extraTransform: {fileID: 2355946796395913068}
   rb: {fileID: 2355946797441906257}
-  extraGOForce: 7500
+  extraGOForce: 0
   grabMode: 0
   isUsing_Extra: 0
   currentMousePosition: {x: 0, y: 0}
   oldMousePosition: {x: 0, y: 0}
-  storedObject: {fileID: 0}
+  storedObject: {fileID: 6311922650500097909, guid: 9a30e64f75e79624da93dce061834479,
+    type: 3}
   storedFlag: 0
-  throwPoint: {fileID: 0}
+  throwPoint: {fileID: 2355946796395913068}
   throwFlag: 0
   useCooldown: 5
   timeNow_useCooldown: 0
   minRange: 0
+  deployObject: {fileID: 6104130086903181513, guid: ccc675f957eb50147bef5c36465695f7,
+    type: 3}
+  deployPosition: {fileID: 2355946797441906271}
+  deployAmount: 3
+  deployPool: []
+  deplyPoolPointer: -1
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 5260549832657969548}

@@ -357,8 +357,10 @@ public class PlayerInputHandlerScript : MonoBehaviour
         string s;
         playerMovementScript.playerControls(new Vector2(0, 0));
         playerMovementScript.setMousePosition(et.mouseLocation);
+        playerMovementScript.hardAimWeapon(et.mouseLocation);
+
         //StartCoroutine(waitForAim(0.1f));
-        
+
         foreach (LogType l in et.logs)
         {
             s = l.inputType;
@@ -371,7 +373,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
             }
             else if (s.Equals("Shoot"))
             {
-                playerMovementScript.hardAimWeapon(et.mouseLocation);
+                //playerMovementScript.hardAimWeapon(et.mouseLocation);
                 //StartCoroutine(waitForShoot(0.02f));
 
                 //weaponTypeScript.fireWeapon();

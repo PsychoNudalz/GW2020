@@ -22,8 +22,9 @@ public class UIHandlerScript : MonoBehaviour
     public WeaponTypeScript weaponTypeScript;
     public TextMeshProUGUI ammoTextBox;
     public Animator ammoIconAnimator;
-    [Header("Stored Object")]
+    [Header("Secondary")]
     public Image image;
+    public TextMeshProUGUI secondaryCooldown;
     public UseSecondaryScript useSecondaryScript;
     public Sprite emptySprite;
     [Header("Current Time")]
@@ -66,6 +67,7 @@ public class UIHandlerScript : MonoBehaviour
             displayHealth();
             displayAmmo();
             displayGrab();
+            displaySecondaryCooldown();
             updateAmmoIcon();
             if (isLogger)
             {
@@ -124,6 +126,26 @@ public class UIHandlerScript : MonoBehaviour
         catch (System.Exception e)
         {
             print("Error");
+        }
+    }
+
+    void displaySecondaryCooldown()
+    {
+        if (useSecondaryScript.timeNow_useCooldown > 0)
+        {
+            if (!secondaryCooldown.gameObject.activeSelf)
+            {
+                secondaryCooldown.gameObject.SetActive(true);
+
+            }
+            secondaryCooldown.text = Mathf.Round(useSecondaryScript.timeNow_useCooldown).ToString();
+        } else
+        {
+            if (secondaryCooldown.gameObject.activeSelf)
+            {
+                secondaryCooldown.gameObject.SetActive(false);
+
+            }
         }
     }
 

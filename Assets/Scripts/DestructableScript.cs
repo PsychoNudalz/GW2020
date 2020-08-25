@@ -8,6 +8,7 @@ public class DestructableScript : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
     public Rigidbody2D rb;
+    public Animator animator;
 
 
     void Start()
@@ -22,7 +23,6 @@ public class DestructableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkDie();
 
     }
 
@@ -38,6 +38,8 @@ public class DestructableScript : MonoBehaviour
     public float takeDamage(float damage)
     {
         currentHealth -= damage;
+        checkDie();
+
         return currentHealth;
     }
 
@@ -46,5 +48,9 @@ public class DestructableScript : MonoBehaviour
         currentHealth = maxHealth;
         rb.velocity = new Vector2(0, 0);
         rb.angularVelocity = 0;
+        if (animator != null)
+        {
+            animator.SetTrigger("Deploy");
+        }
     }
 }
