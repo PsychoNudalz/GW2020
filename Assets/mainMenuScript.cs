@@ -30,6 +30,8 @@ public class mainMenuScript : MonoBehaviour
         {
             Debug.LogWarning("game manager not found");
         }
+        Cursor.visible = true;
+        Time.timeScale = 1;
 
     }
     public void toMainMenu()
@@ -50,6 +52,10 @@ public class mainMenuScript : MonoBehaviour
     public void startLevel2()
     {
         SceneManager.LoadScene(3);
+    }
+    public void startLevel3()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public void quitGame()

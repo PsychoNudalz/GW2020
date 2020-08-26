@@ -118,10 +118,7 @@ public class UIHandlerScript : MonoBehaviour
             {
                 image.sprite = useSecondaryScript.storedObject.GetComponentInChildren<SpriteRenderer>().sprite;
             }
-            else
-            {
-                image.sprite = emptySprite;
-            }
+
         }
         catch (System.Exception e)
         {
@@ -131,7 +128,7 @@ public class UIHandlerScript : MonoBehaviour
 
     void displaySecondaryCooldown()
     {
-        if (useSecondaryScript.timeNow_useCooldown > 0)
+        if (useSecondaryScript.timeNow_useCooldown > 0.1f)
         {
             if (!secondaryCooldown.gameObject.activeSelf)
             {
@@ -144,6 +141,14 @@ public class UIHandlerScript : MonoBehaviour
             if (secondaryCooldown.gameObject.activeSelf)
             {
                 secondaryCooldown.gameObject.SetActive(false);
+                if (useSecondaryScript.extraGameObject != null)
+                {
+                    image.sprite = useSecondaryScript.extraGameObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                }
+                else
+                {
+                    image.sprite = emptySprite;
+                }
 
             }
         }

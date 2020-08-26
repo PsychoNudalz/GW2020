@@ -364,8 +364,8 @@ MonoBehaviour:
   ammo: 90
   Ammo_Max: 90
   Ammo_Cost: 1
-  maxInMag: 25
-  currentMag: 25
+  maxInMag: 26
+  currentMag: 26
   ammoPickupModifier: 15
   reloadTime: 2
   timeNow_reload: 0
@@ -415,7 +415,8 @@ MonoBehaviour:
   activatingSecondary: 0
   timeTillNewTarget: 2
   timeNo_timeTillNewTarget: 0
-  extraGameObject: {fileID: 5585330732416048884}
+  extraGameObject: {fileID: 6104130086903181513, guid: ccc675f957eb50147bef5c36465695f7,
+    type: 3}
   extraTransform: {fileID: 2355946796395913068}
   rb: {fileID: 2355946797441906257}
   extraGOForce: 0
@@ -1089,9 +1090,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc86ceee3d028a49b891311d63d792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DUUMTheme
+  name: SKTheme
   isUnique: 0
-  clip: {fileID: 8300000, guid: d6c25a682929cad49af8eee31f3668c1, type: 3}
+  clip: {fileID: 8300000, guid: f7e16b0aaef836c43b44854ca4f42e07, type: 3}
   volume: 0.75
   volumeVariance: 0.1
   pitch: 1

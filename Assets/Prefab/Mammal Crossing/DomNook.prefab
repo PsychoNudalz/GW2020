@@ -59,7 +59,7 @@ MonoBehaviour:
   Ammo_Cost: 1
   maxInMag: 1
   currentMag: 1
-  ammoPickupModifier: 2
+  ammoPickupModifier: 1
   reloadTime: 1.5
   timeNow_reload: 0
   isReloading: 0
@@ -71,12 +71,17 @@ MonoBehaviour:
   spreadDecreaseRate: 0
   projectilePerShot: 1
   spreadAngle: 0
+  nonRandomSpread: 0
+  spreadMultiplierPrime: 97
   spreadDebug: 0
+  randomSpread: {x: 0, y: 0, z: 0, w: 0}
+  firedDirection: {x: 0, y: 0, z: 0, w: 0}
   currentSpread: 0
   timeBetweenShot: 0
   timeNow_rpm: 0
   soundManager: {fileID: 0}
   sound_Fire: {fileID: 2420179316093047523}
+  playerInputHandlerScript: {fileID: 0}
 --- !u!114 &5178943193130126366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +123,11 @@ MonoBehaviour:
   useCooldown: 3
   timeNow_useCooldown: 0
   minRange: 0
+  deployObject: {fileID: 0}
+  deployPosition: {fileID: 0}
+  deployAmount: 0
+  deployPool: []
+  deplyPoolPointer: -1
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 7764288569691330398}
@@ -586,6 +596,8 @@ MonoBehaviour:
     timeStart: 0
     timeEnd: 0
     characterLocation: {x: 0, y: 0, z: 0}
+    weaponFire: 0
+    fireDirection: {x: 0, y: 0, z: 0, w: 0}
   currentCounter: 0
   savedCounter: 0
   isCurrentEventEmpty: 0

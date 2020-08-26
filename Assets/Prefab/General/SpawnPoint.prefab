@@ -655,6 +655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DUUMguy
       objectReference: {fileID: 0}
+    - target: {fileID: 7868093750151994097, guid: 00ac04859f92dab43ac602b485b758a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7868093750151994098, guid: 00ac04859f92dab43ac602b485b758a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -781,6 +786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRguy
       objectReference: {fileID: 0}
+    - target: {fileID: 8845117445844956317, guid: e3a514d2d6d5d7e4c845a08873c044f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8845117445844956318, guid: e3a514d2d6d5d7e4c845a08873c044f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -891,6 +901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkullGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355946797441906268, guid: d97cda0b66176d6439d219c135ca0201,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2355946797441906271, guid: d97cda0b66176d6439d219c135ca0201,
         type: 3}
@@ -1027,6 +1042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DomNook
+      objectReference: {fileID: 0}
+    - target: {fileID: 176608247556079758, guid: 83030d46a57f6914cb196c8923abc2ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5178943193130126366, guid: 83030d46a57f6914cb196c8923abc2ec,
         type: 3}
