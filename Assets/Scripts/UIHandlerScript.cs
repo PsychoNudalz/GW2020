@@ -184,25 +184,30 @@ public class UIHandlerScript : MonoBehaviour
             {
                 playerInput = pi;
             }
+            displaySecondaryCooldown();
+            image.sprite = useSecondaryScript.extraGameObject.GetComponentInChildren<SpriteRenderer>().sprite;
 
 
         }
+    }
+    public void pickCharacterCharacter1()
+    {
+        characterPicker.SetActive(false);
+        StartCoroutine(playRewindEffect());
+        playerSpawn.pickCharacterCharacter1();
     }
     public void pickChracterCharacter2()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
         playerSpawn.pickChracterCharacter2();
-
-
     }
 
-    public void pickCharacterCharacter1()
+    public void pickCharacterCharacter3()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
-        playerSpawn.pickCharacterCharacter1();
-
+        playerSpawn.pickCharacterCharacter3();
 
     }
     public void pickCharacterCharacter4()
@@ -210,13 +215,6 @@ public class UIHandlerScript : MonoBehaviour
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
         playerSpawn.pickCharacterCharacter4();
-
-    }
-    public void pickCharacterCharacter3()
-    {
-        characterPicker.SetActive(false);
-        StartCoroutine(playRewindEffect());
-        playerSpawn.pickCharacterCharacter3();
 
     }
 
