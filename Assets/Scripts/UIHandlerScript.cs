@@ -188,35 +188,35 @@ public class UIHandlerScript : MonoBehaviour
 
         }
     }
-    public void pickChracterVRguy()
+    public void pickChracterCharacter2()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
-        playerSpawn.pickChracterVRguy();
+        playerSpawn.pickChracterCharacter2();
 
 
     }
 
-    public void pickCharacterDUUMguy()
+    public void pickCharacterCharacter1()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
-        playerSpawn.pickCharacterDUUMguy();
+        playerSpawn.pickCharacterCharacter1();
 
 
     }
-    public void pickCharacterDN()
+    public void pickCharacterCharacter4()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
-        playerSpawn.pickCharacterDN();
+        playerSpawn.pickCharacterCharacter4();
 
     }
-    public void pickCharacterSkullguy()
+    public void pickCharacterCharacter3()
     {
         characterPicker.SetActive(false);
         StartCoroutine(playRewindEffect());
-        playerSpawn.pickCharacterSkullguy();
+        playerSpawn.pickCharacterCharacter3();
 
     }
 

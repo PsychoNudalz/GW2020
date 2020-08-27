@@ -24,18 +24,18 @@ public class PlayerSpawnPointScript : MonoBehaviour
     public float rewindEffectDuration = 1f;
     [Header("Camera")]
     public CinemachineVirtualCamera cinemachine;
-    [Header("DUUMguy")]
-    public GameObject DUUMguy;
-    public Transform DUUMguy_spawn;
-    [Header("VRguy")]
-    public GameObject VRguy;
-    public Transform VRguy_spawn;
-    [Header("DomNuk")]
-    public GameObject DomNuk;
-    public Transform DomNuk_spawn;
-    [Header("Skullguy")]
-    public GameObject Skullguy;
-    public Transform Skullguy_spawn;
+    [Header("Character1")]
+    public GameObject Character1;
+    public Transform Character1_spawn;
+    [Header("Character2")]
+    public GameObject Character2;
+    public Transform Character2_spawn;
+    [Header("Character3")]
+    public GameObject Character3;
+    public Transform Character3_spawn;
+    [Header("Character4")]
+    public GameObject Character4;
+    public Transform Character4_spawn;
     [Header("Input")]
     public PlayerInput playerInputComponent;
     Keyboard kb;
@@ -58,17 +58,15 @@ public class PlayerSpawnPointScript : MonoBehaviour
         soundManager = gameManager.GetComponent<SoundManager>();
 
 
-        characterPool.Add(DUUMguy);
-        characterPool.Add(VRguy);
-        characterPool.Add(DomNuk);
-        characterPool.Add(Skullguy);
-        spawnPool.Add(DUUMguy_spawn);
-        spawnPool.Add(VRguy_spawn);
-        spawnPool.Add(DomNuk_spawn);
-        spawnPool.Add(Skullguy_spawn);
+        characterPool.Add(Character1);
+        characterPool.Add(Character2);
+        characterPool.Add(Character4);
+        characterPool.Add(Character3);
+        spawnPool.Add(Character1_spawn);
+        spawnPool.Add(Character2_spawn);
+        spawnPool.Add(Character4_spawn);
+        spawnPool.Add(Character3_spawn);
 
-        //pickChracterVRguy();
-        //pickCharacterDUUMguy();
         for (int i = 0; i < spawnPool.Count && i < characterPool.Count; i++)
         {
             characterPool[i].transform.position = spawnPool[i].transform.position;
@@ -132,23 +130,23 @@ public class PlayerSpawnPointScript : MonoBehaviour
 
     }
 
-    public void pickChracterVRguy()
+    public void pickChracterCharacter2()
     {
-        pickCharacter(VRguy);
+        pickCharacter(Character2);
     }
 
-    public void pickCharacterDUUMguy()
+    public void pickCharacterCharacter1()
     {
-        pickCharacter(DUUMguy);
+        pickCharacter(Character1);
     }
-    public void pickCharacterDN()
+    public void pickCharacterCharacter4()
     {
-        pickCharacter(DomNuk);
+        pickCharacter(Character4);
     }
 
-    public void pickCharacterSkullguy()
+    public void pickCharacterCharacter3()
     {
-        pickCharacter(Skullguy);
+        pickCharacter(Character3);
     }
 
 
