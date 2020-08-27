@@ -9777,6 +9777,7 @@ MonoBehaviour:
   isSeeker: 0
   seekerforce: 0
   targetTag: Player
+  shooter: {fileID: 0}
   target: {fileID: 0}
   spin: 200
   tagList:
