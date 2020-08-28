@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExplosiveScript : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public CapsuleCollider2D capsuleCollider;
     public GameObject spriteRenderer;
     [Header("Explosive")]
     public bool isExplosive = false;
@@ -50,10 +51,7 @@ public class ExplosiveScript : MonoBehaviour
         }
     }
 
-    public void spawnExplosive()
-    {
 
-    }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -106,6 +104,7 @@ public class ExplosiveScript : MonoBehaviour
     void holdPosition()
     {
         rb.bodyType = RigidbodyType2D.Static;
+        capsuleCollider.enabled = false;
     }
 
     void setRays()

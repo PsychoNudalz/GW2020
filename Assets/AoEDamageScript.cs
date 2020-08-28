@@ -12,7 +12,7 @@ public class AoEDamageScript : MonoBehaviour
     public float radius;
     public float duration = 5;
     [SerializeField] List<GameObject> damageList;
-    [SerializeField] float cooldown;
+    [SerializeField] float cooldown = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,9 +53,12 @@ public class AoEDamageScript : MonoBehaviour
             EnemyScript e;
             foreach (GameObject g in damageList)
             {
-                if (g.TryGetComponent<EnemyScript>(out e))
+                if (g != null)
                 {
-                    e.takeDamage(damagePerSecond);
+                    if (g.TryGetComponent<EnemyScript>(out e))
+                    {
+                        e.takeDamage(damagePerSecond);
+                    }
                 }
             }
             cooldown = 0;

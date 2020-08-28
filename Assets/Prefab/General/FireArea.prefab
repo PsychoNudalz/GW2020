@@ -69,7 +69,7 @@ MonoBehaviour:
   radius: 3
   duration: 5
   damageList: []
-  cooldown: 0.3417149
+  cooldown: 0.99
 --- !u!1 &1733347018722629150
 GameObject:
   m_ObjectHideFlags: 0
