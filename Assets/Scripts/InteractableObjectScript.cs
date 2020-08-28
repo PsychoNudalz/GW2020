@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InteractableObjectScript : MonoBehaviour
 {
-    public SpriteRenderer renderer;
-    public float decayValue = 1f;
     public GameObject prefab;
     [Header("YEEEET! values")]
     public Rigidbody2D rb;
@@ -16,6 +14,14 @@ public class InteractableObjectScript : MonoBehaviour
     public float objectDamageMultiplier = 1f;
     public float minVelocity;
     [SerializeField] List<GameObject> hitRecord = new List<GameObject>();
+    [Header("Explosive")]
+    public bool isExplosive = false;
+    public GameObject explosiveClusters;
+    public int clusterAmount;
+    [SerializeField] bool isArmed = false;
+    [Header("TripMine")]
+    public float detectRange;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +31,10 @@ public class InteractableObjectScript : MonoBehaviour
 
     private void Update()
     {
-        if (renderer.material.GetFloat("_Outline") > 0f)
-        {
-            renderer.material.SetFloat("_Outline", renderer.material.GetFloat("_Outline") - Time.deltaTime * decayValue);
-        }
-        //print(renderer.material.GetFloat("_Outline"));
+
     }
 
-    public void setOutline(float f)
-    {
-        renderer.material.SetFloat("_Outline", f);
-    }
+
 
     public void YEET()
     {
@@ -81,6 +80,17 @@ public class InteractableObjectScript : MonoBehaviour
                 }
             }
         }
+
+        if (isExplosive)
+        {
+
+        }
+
+    }
+
+
+    public void detonate()
+    {
 
     }
 

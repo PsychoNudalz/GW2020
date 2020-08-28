@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2211f28b4bd9849a5f43fc5011eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 5
+  weaponEnum: 8
   target: {fileID: 0}
   range: 8
   layerMask:
@@ -454,7 +454,8 @@ MonoBehaviour:
   activatingSecondary: 0
   timeTillNewTarget: 2
   timeNo_timeTillNewTarget: 0
-  extraGameObject: {fileID: 8174957681900690218}
+  extraGameObject: {fileID: 7268747349017805996, guid: e6c38d896c776364e988f094174185e6,
+    type: 3}
   extraTransform: {fileID: 2036292401962965682}
   rb: {fileID: 2036292402973504399}
   extraGOForce: 3
@@ -474,6 +475,9 @@ MonoBehaviour:
   deployAmount: 0
   deployPool: []
   deplyPoolPointer: -1
+  throwableObject: {fileID: 7268747349017805996, guid: e6c38d896c776364e988f094174185e6,
+    type: 3}
+  throwPosition: {fileID: 2036292402973504385}
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 8498686345816843346}
@@ -507,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036292402973504386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.72, y: 21.97, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2036292403453623291}

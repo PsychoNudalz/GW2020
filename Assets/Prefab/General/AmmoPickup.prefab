@@ -177,8 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e103f1e41c4bb2458aa8e3f8f970262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 6311922649328072082}
-  decayValue: 1
   prefab: {fileID: 6311922650500097909}
   rb: {fileID: 14092658623543824}
   force: 0
@@ -187,6 +185,11 @@ MonoBehaviour:
   objectDamageMultiplier: 1
   minVelocity: 0
   hitRecord: []
+  isExplosive: 0
+  explosiveClusters: {fileID: 0}
+  clusterAmount: 0
+  isArmed: 0
+  detectRange: 0
 --- !u!114 &6580714524082986851
 MonoBehaviour:
   m_ObjectHideFlags: 0

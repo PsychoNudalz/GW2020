@@ -36,12 +36,19 @@ public class UseSecondaryScript : MonoBehaviour
     public float timeNow_useCooldown;
     [Header("Fish")]
     public float minRange;
+
     [Header("Deply")]
     public GameObject deployObject;
     public Transform deployPosition;
     public int deployAmount;
     [SerializeField] List<GameObject> deployPool;
     [SerializeField] int deplyPoolPointer = -1;
+
+    [Header("Throw")]
+    public GameObject throwableObject;
+    public Transform throwPosition;
+
+   
 
 
     [Header("AI")]
@@ -143,7 +150,7 @@ public class UseSecondaryScript : MonoBehaviour
                         }
                         else
                         {
-                            throwObject();
+                            throwStoredObject();
                         }
                     }
                     else
@@ -165,6 +172,12 @@ public class UseSecondaryScript : MonoBehaviour
                     if (timeNow_useCooldown <= 0)
                     {
                         deployCover();
+                    }
+                    break;
+                case WeaponEnum.Throw:
+                    if (timeNow_useCooldown<= 0)
+                    {
+                        throwObject();
                     }
                     break;
             }
@@ -583,11 +596,10 @@ public class UseSecondaryScript : MonoBehaviour
         storedObject.SetActive(true);
     }
 
-    public void throwObject()
+    public void throwStoredObject()
     {
         throwFlag = true;
         playSound_Use2();
-
         GameObject throwObject = storedObject;
         Vector3 newPoint = throwPoint.position + throwPoint.up * .2f;
         resetStoreObject(newPoint, throwPoint.rotation);
@@ -605,6 +617,8 @@ public class UseSecondaryScript : MonoBehaviour
         //Destroy(storedObject);
         //StartCoroutine(cooldownTillGrab());
     }
+
+
 
     public void dropObject()
     {
@@ -655,6 +669,25 @@ public class UseSecondaryScript : MonoBehaviour
 
         deplyPoolPointer = (deplyPoolPointer + 1) % deployAmount;
         return deployPool[deplyPoolPointer];
+
+    }
+
+    public void throwObject()
+    {
+
+        playSound_Use1();
+
+        currentMousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
+
+
+        Vector3 newPoint = throwPosition.position + transform.rotation * ((Vector3.up * .5f));
+        GameObject throwObject = Instantiate(throwableObject,newPoint, transform.rotation);
+        InteractableObjectScript interactableObjectScript;
+        if (throwObject.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
+        {
+            interactableObjectScript.YEET();
+        }
+        timeNow_useCooldown = useCooldown;
 
     }
 
