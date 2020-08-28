@@ -7,15 +7,16 @@ public class AoEDamageScript : MonoBehaviour
 {
     public float damagePerSecond;
     public CapsuleCollider2D capsuleCollider2D;
-    public ParticleSystem particleSystem;
+    //public ParticleSystem particleSystem;
     public Light2D light;
     public float radius;
+    public float duration = 5;
     [SerializeField] List<GameObject> damageList;
     [SerializeField] float cooldown;
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = new Vector2(radius/2f, radius / 2f);
+        transform.localScale = new Vector2(radius * 2f, radius * 2f);
         setEffect();
 
     }
@@ -24,6 +25,7 @@ public class AoEDamageScript : MonoBehaviour
     void Update()
     {
         doDamageToList();
+        checkDestroy();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -63,10 +65,19 @@ public class AoEDamageScript : MonoBehaviour
 
     void setEffect()
     {
-        ParticleSystem.ShapeModule t = particleSystem.shape;
-        t.radius = radius;
-        ParticleSystem.EmissionModule e = particleSystem.emission;
-        e.rateOverTimeMultiplier =  e.rateOverTime.constant* radius * radius*4;
+        //ParticleSystem.ShapeModule t = particleSystem.shape;
+        //t.radius = radius;
+        //ParticleSystem.EmissionModule e = particleSystem.emission;
+        //e.rateOverTimeMultiplier = e.rateOverTime.constant * radius * radius * 4;
         light.pointLightOuterRadius = radius;
+    }
+
+    void checkDestroy()
+    {
+        duration -= Time.deltaTime;
+        if (duration < 0)
+        {
+            Destroy(transform.parent.gameObject);
+        }
     }
 }

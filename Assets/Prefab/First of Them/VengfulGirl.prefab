@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2211f28b4bd9849a5f43fc5011eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   weaponEnum: 8
   target: {fileID: 0}
   range: 8
@@ -467,7 +468,7 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 0}
   throwFlag: 0
-  useCooldown: 3
+  useCooldown: 1
   timeNow_useCooldown: 0
   minRange: 0
   deployObject: {fileID: 0}

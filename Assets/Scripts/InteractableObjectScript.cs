@@ -16,11 +16,7 @@ public class InteractableObjectScript : MonoBehaviour
     [SerializeField] List<GameObject> hitRecord = new List<GameObject>();
     [Header("Explosive")]
     public bool isExplosive = false;
-    public GameObject explosiveClusters;
-    public int clusterAmount;
-    [SerializeField] bool isArmed = false;
-    [Header("TripMine")]
-    public float detectRange;
+    public ExplosiveScript explosiveScript;
 
 
     // Start is called before the first frame update
@@ -42,6 +38,15 @@ public class InteractableObjectScript : MonoBehaviour
         rb.AddForce(transform.up * force);
         rb.AddTorque(spin);
         print(name + " Yeet ");
+    }
+
+    public void YEETExplosive(Vector3 location)
+    {
+        hitRecord = new List<GameObject>();
+        rb.AddForce(transform.up * force);
+        rb.AddTorque(spin);
+        print(name + " Yeet ");
+        GetComponent<ExplosiveScript>().throwPosition = location;
     }
 
     public void Rewind()
@@ -81,17 +86,9 @@ public class InteractableObjectScript : MonoBehaviour
             }
         }
 
-        if (isExplosive)
-        {
 
-        }
 
     }
 
-
-    public void detonate()
-    {
-
-    }
 
 }

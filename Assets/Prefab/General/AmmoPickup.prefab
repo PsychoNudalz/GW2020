@@ -186,10 +186,7 @@ MonoBehaviour:
   minVelocity: 0
   hitRecord: []
   isExplosive: 0
-  explosiveClusters: {fileID: 0}
-  clusterAmount: 0
-  isArmed: 0
-  detectRange: 0
+  explosiveScript: {fileID: 0}
 --- !u!114 &6580714524082986851
 MonoBehaviour:
   m_ObjectHideFlags: 0

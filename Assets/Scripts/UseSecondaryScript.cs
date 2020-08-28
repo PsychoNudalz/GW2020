@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class UseSecondaryScript : MonoBehaviour
 {
+    public Camera cam;
+
     [Header("Weapon States")]
     [SerializeField] private WeaponEnum weaponEnum;
     public GameObject target;
@@ -63,6 +65,8 @@ public class UseSecondaryScript : MonoBehaviour
     void Awake()
     {
         soundManager = FindObjectOfType<SoundManager>();
+        cam = FindObjectOfType<Camera>();
+
         switch (weaponEnum)
         {
             case WeaponEnum.Deploy:
@@ -677,15 +681,15 @@ public class UseSecondaryScript : MonoBehaviour
 
         playSound_Use1();
 
-        currentMousePosition = Mouse.current.position.ReadValue() - new Vector2(Screen.width / 2, Screen.height / 2);
-
+        currentMousePosition = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
         Vector3 newPoint = throwPosition.position + transform.rotation * ((Vector3.up * .5f));
         GameObject throwObject = Instantiate(throwableObject,newPoint, transform.rotation);
         InteractableObjectScript interactableObjectScript;
         if (throwObject.TryGetComponent<InteractableObjectScript>(out interactableObjectScript))
         {
-            interactableObjectScript.YEET();
+            //interactableObjectScript.YEETExplosive(currentMousePosition);
+            interactableObjectScript.YEETExplosive(transform.position+transform.up*range);
         }
         timeNow_useCooldown = useCooldown;
 

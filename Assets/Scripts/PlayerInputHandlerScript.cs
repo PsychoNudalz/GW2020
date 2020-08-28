@@ -480,7 +480,7 @@ public class PlayerInputHandlerScript : MonoBehaviour
     private void OnDisable()
     {
         controls.Disable();
-        print(name + "death time " + currentTime);
+        //print(name + "death time " + currentTime);
     }
 
     
