@@ -49,6 +49,7 @@ public class UseSecondaryScript : MonoBehaviour
     [Header("Throw")]
     public GameObject throwableObject;
     public Transform throwPosition;
+    [SerializeField] List<GameObject> throwObjectPool;
 
    
 
@@ -658,6 +659,8 @@ public class UseSecondaryScript : MonoBehaviour
 
 
         timeNow_useCooldown = useCooldown;
+        activatingSecondary = false;
+
         playSound_Use1();
     }
 
@@ -692,6 +695,9 @@ public class UseSecondaryScript : MonoBehaviour
             interactableObjectScript.YEETExplosive(transform.position+transform.up*range);
         }
         timeNow_useCooldown = useCooldown;
+        activatingSecondary = false;
+
+        throwObjectPool.Add(throwObject);
 
     }
 
@@ -710,6 +716,13 @@ public class UseSecondaryScript : MonoBehaviour
                 {
                     //deployPool.Add(Instantiate(deployObject, transform.position, Quaternion.identity));
                     g.SetActive(false);
+                }
+                break;
+            case WeaponEnum.Throw:
+                foreach (GameObject g in throwObjectPool)
+                {
+                    //deployPool.Add(Instantiate(deployObject, transform.position, Quaternion.identity));
+                    Destroy(g);
                 }
                 break;
         }

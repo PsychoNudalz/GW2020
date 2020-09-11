@@ -68,8 +68,9 @@ MonoBehaviour:
   light: {fileID: 7138158235177659969}
   radius: 3
   duration: 5
+  damageRate: 0.5
   damageList: []
-  cooldown: 0.99
+  cooldown: 0.4
 --- !u!1 &1733347018722629150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,7 +4918,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 728566763
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 20
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9716,7 +9717,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 728566763
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 20
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

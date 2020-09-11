@@ -11,6 +11,7 @@ public class AoEDamageScript : MonoBehaviour
     public Light2D light;
     public float radius;
     public float duration = 5;
+    public float damageRate = 0.5f;
     [SerializeField] List<GameObject> damageList;
     [SerializeField] float cooldown = 1;
     // Start is called before the first frame update
@@ -48,18 +49,30 @@ public class AoEDamageScript : MonoBehaviour
 
     void doDamageToList()
     {
-        if (cooldown > 1f)
+        if (cooldown > damageRate)
         {
+
             EnemyScript e;
-            foreach (GameObject g in damageList)
+            try
             {
-                if (g != null)
+
+                foreach (GameObject g in damageList)
                 {
-                    if (g.TryGetComponent<EnemyScript>(out e))
+                    if (g == null)
                     {
-                        e.takeDamage(damagePerSecond);
+                        break;
+                    }
+                    if (g.activeSelf)
+                    {
+                        if (g.TryGetComponent<EnemyScript>(out e))
+                        {
+                            e.takeDamage(damagePerSecond);
+                        }
                     }
                 }
+            } catch (System.InvalidOperationException)
+            {
+
             }
             cooldown = 0;
         }
@@ -72,7 +85,7 @@ public class AoEDamageScript : MonoBehaviour
         //t.radius = radius;
         //ParticleSystem.EmissionModule e = particleSystem.emission;
         //e.rateOverTimeMultiplier = e.rateOverTime.constant * radius * radius * 4;
-        light.pointLightOuterRadius = radius;
+        light.pointLightOuterRadius = radius *1.2f;
     }
 
     void checkDestroy()
@@ -83,4 +96,6 @@ public class AoEDamageScript : MonoBehaviour
             Destroy(transform.parent.gameObject);
         }
     }
+
+
 }

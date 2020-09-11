@@ -272,4 +272,5 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}

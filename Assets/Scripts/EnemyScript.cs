@@ -106,14 +106,17 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    void checkDie()
+    bool checkDie()
     {
         if (currentHealth <= 0 && !immune)
         {
             playSound_Death();
             gameObject.SetActive(false);
+            return true;
             //enemySpawnWaveHandler.Enemies.Remove(gameObject);
         }
+        return false;
+
     }
 
     public float takeDamage(float damage)
@@ -124,13 +127,14 @@ public class EnemyScript : MonoBehaviour
             currentHealth -= damage;
 
         }
-        checkDie();
+        damagePopUpPoolScript.newDamageValue(damage, checkDie());
+        
         try
         {
-        damagePopUpPoolScript.newDamageValue(damage);
-        updateColour();
+            updateColour();
 
-        } catch(System.Exception e)
+        }
+        catch (System.Exception e)
         {
             Debug.LogError(name + " Failed to display damage");
         }

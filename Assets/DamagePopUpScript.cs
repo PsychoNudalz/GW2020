@@ -9,12 +9,12 @@ public class DamagePopUpScript : MonoBehaviour
     public float ttl = 2f;
     [SerializeField] float ttl_Current = 0;
     public Vector3 moveDir;
-    [SerializeField] Color textColour;
+    public Color textColour;
 
 
     private void Start()
     {
-        textColour = damageText.color;
+        //textColour = damageText.color;
     }
 
     private void Update()

@@ -55,7 +55,80 @@ MonoBehaviour:
   minDistance: 20
   maxDistance: 30
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
+--- !u!1 &1800480476247198829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8589874699314572489}
+  - component: {fileID: 6447422051327211924}
+  m_Layer: 8
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8589874699314572489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800480476247198829}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036292402054830988}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6447422051327211924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800480476247198829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000eb0b6d2b0571993bcdef6425e168e56bc97052f0
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 0
+  m_PointLightOuterAngle: 50
+  m_PointLightInnerRadius: 3
+  m_PointLightOuterRadius: 6
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1840392495892634303
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +184,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &2036292401476976225
 GameObject:
@@ -380,6 +454,7 @@ Transform:
   - {fileID: 8174957681900690217}
   - {fileID: 191186365434485310}
   - {fileID: 5431424127513448419}
+  - {fileID: 8589874699314572489}
   m_Father: {fileID: 2036292402973504385}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -468,7 +543,7 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 0}
   throwFlag: 0
-  useCooldown: 1
+  useCooldown: 3
   timeNow_useCooldown: 0
   minRange: 0
   deployObject: {fileID: 0}
@@ -479,6 +554,7 @@ MonoBehaviour:
   throwableObject: {fileID: 7268747349017805996, guid: e6c38d896c776364e988f094174185e6,
     type: 3}
   throwPosition: {fileID: 2036292402973504385}
+  throwObjectPool: []
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 8498686345816843346}
@@ -521,6 +597,7 @@ Transform:
   - {fileID: 3819929956672379346}
   - {fileID: 1949590376990047509}
   - {fileID: 8064922252644067247}
+  - {fileID: 7232764508847610297}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -610,6 +687,8 @@ MonoBehaviour:
   currentHealth: 0
   isDead: 0
   killer: {fileID: 0}
+  characterSprite: {fileID: 2036292401476976239}
+  handSprite: {fileID: 2036292401675963209}
   soundManager: {fileID: 0}
   sound_Death: {fileID: 9065065373716253853}
   sound_Hit: {fileID: 3701616421498679803}
@@ -718,6 +797,78 @@ Transform:
   m_Father: {fileID: 2036292402973504385}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4856084066982698747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7232764508847610297}
+  - component: {fileID: 2043157760374080414}
+  m_Layer: 0
+  m_Name: CharacterAura
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7232764508847610297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856084066982698747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036292402973504385}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043157760374080414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856084066982698747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: cdef6425e168e56b
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 7
+  m_PointLightOuterRadius: 10
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &5463708483684348236
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +924,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &7157761038884335431
 GameObject:
@@ -817,7 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc86ceee3d028a49b891311d63d792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DomNukTheme
+  name: VGTheme
   isUnique: 0
   clip: {fileID: 8300000, guid: ea4de25691e81f145a21499d9ebb7a79, type: 3}
   volume: 0.75
@@ -829,6 +981,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 1
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &7421318458652260517
 GameObject:
@@ -885,6 +1038,7 @@ MonoBehaviour:
   minDistance: 20
   maxDistance: 30
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &8174957680217101131
 GameObject:

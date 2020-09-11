@@ -1,9 +1,8 @@
 ﻿using System;
-
-
+using System.Collections.Generic;
 
 [Serializable]
-public class LogType
+public class LogType : IEquatable<LogType>
 {
 
     //[SerializeField] private InputEnum inputEnum;
@@ -55,6 +54,24 @@ public class LogType
         }
         */
     }
+    public override bool Equals(object obj)
+    {
+        return base.Equals(obj as LogType);
+    }
+    public bool Equals(String input)
+    {
 
+        return inputType.Equals(input);
+    }
 
+    public bool Equals(LogType other)
+    {
+        return other != null &&
+               inputType == other.inputType;
+    }
+
+    public override int GetHashCode()
+    {
+        return 1020398523 + EqualityComparer<string>.Default.GetHashCode(inputType);
+    }
 }

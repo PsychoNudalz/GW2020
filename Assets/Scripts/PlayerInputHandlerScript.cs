@@ -483,7 +483,40 @@ public class PlayerInputHandlerScript : MonoBehaviour
         //print(name + "death time " + currentTime);
     }
 
-    
+    public override string ToString()
+    {
+        string tempString = "";
+        if (currentEvent == null)
+        {
+            return "END RECORDING";
+        }
+
+        if (currentEvent.logs.Contains(new LogType("Reload")))
+        {
+            tempString = "Reloading";
+        }
+        else if (currentEvent.logs.Contains(new LogType("Shoot")))
+        {
+            tempString = "Shooting";
+        }
+        else if (currentEvent.logs.Contains(new LogType("Move")))
+        {
+            tempString = "Moving";
+        }
+        else
+        {
+            tempString = "Standby";
+        }
+        return tempString;
+    }
+
+
+    public Sprite getCharacterSprite()
+    {
+        return playerStates.getCharacterSprite();
+    }
+
+
 
 
 }

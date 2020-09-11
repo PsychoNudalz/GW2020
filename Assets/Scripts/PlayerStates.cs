@@ -11,6 +11,9 @@ public class PlayerStates : MonoBehaviour
     public bool isDead = false;
     [Header("Killer")]
     public GameObject killer;
+    [Header("Sprite")]
+    public SpriteRenderer characterSprite;
+    public SpriteRenderer handSprite;
     [Header("Sound")]
     public SoundManager soundManager;
     public Sound sound_Death;
@@ -78,5 +81,10 @@ public class PlayerStates : MonoBehaviour
     {
         print(name + " stoping theme");
         soundManager.Stop(sound_Theme.name);
+    }
+
+    public Sprite getCharacterSprite()
+    {
+        return characterSprite.sprite;
     }
 }

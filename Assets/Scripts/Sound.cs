@@ -29,6 +29,7 @@ public class Sound : MonoBehaviour
 
 
 	public bool loop = false;
+    public bool playOnAwake = false;
 
 
 
@@ -40,7 +41,7 @@ public class Sound : MonoBehaviour
     {
         if (isUnique)
         {
-			name += transform.parent.name;
+			name += transform.parent.name + Time.time;
         }
     }
 }

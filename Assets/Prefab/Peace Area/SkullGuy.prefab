@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2211f28b4bd9849a5f43fc5011eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   weaponEnum: 7
   target: {fileID: 0}
   range: 1.5
@@ -429,15 +430,18 @@ MonoBehaviour:
   storedFlag: 0
   throwPoint: {fileID: 2355946796395913068}
   throwFlag: 0
-  useCooldown: 5
+  useCooldown: 2
   timeNow_useCooldown: 0
   minRange: 0
   deployObject: {fileID: 6104130086903181513, guid: ccc675f957eb50147bef5c36465695f7,
     type: 3}
   deployPosition: {fileID: 2355946797441906271}
-  deployAmount: 3
+  deployAmount: 4
   deployPool: []
   deplyPoolPointer: -1
+  throwableObject: {fileID: 0}
+  throwPosition: {fileID: 0}
+  throwObjectPool: []
   AI: 0
   soundManager: {fileID: 0}
   sound_Use1: {fileID: 5260549832657969548}
@@ -570,6 +574,8 @@ MonoBehaviour:
   currentHealth: 0
   isDead: 0
   killer: {fileID: 0}
+  characterSprite: {fileID: 2355946796748716977}
+  handSprite: {fileID: 2355946796675010199}
   soundManager: {fileID: 0}
   sound_Death: {fileID: 4701134493983738179}
   sound_Hit: {fileID: 1130003844246271013}
@@ -733,6 +739,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &4156052536994672062
 GameObject:
@@ -789,6 +796,7 @@ MonoBehaviour:
   minDistance: 20
   maxDistance: 30
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &5585330730994538133
 GameObject:
@@ -974,6 +982,7 @@ MonoBehaviour:
   minDistance: 20
   maxDistance: 30
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &6752025495815639310
 GameObject:
@@ -1102,6 +1111,7 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 1
+  playOnAwake: 0
   source: {fileID: 0}
 --- !u!1 &8584601880737002642
 GameObject:
@@ -1158,4 +1168,5 @@ MonoBehaviour:
   minDistance: 10
   maxDistance: 20
   loop: 0
+  playOnAwake: 0
   source: {fileID: 0}

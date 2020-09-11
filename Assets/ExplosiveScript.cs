@@ -13,6 +13,8 @@ public class ExplosiveScript : MonoBehaviour
     [SerializeField] List<GameObject> explosiveClusters;
     public int clusterAmount = 1;
     [SerializeField] bool isArmed = false;
+    [SerializeField] bool isExploded = false;
+
     public Vector3 throwPosition;
     [Header("TripMine")]
     public float detectRange;
@@ -23,11 +25,17 @@ public class ExplosiveScript : MonoBehaviour
     [SerializeField] List<string> explodeList;
     [SerializeField] List<string> armList;
 
+    [Header("Sound")]
+    public SoundManager soundManager;
+    public Sound sound_Explosion;
+
     private void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
+
         explosiveClusters = new List<GameObject>(clusterAmount);
         GameObject temp;
-        for (int i = 0; i<clusterAmount; i++)
+        for (int i = 0; i < clusterAmount; i++)
         {
             temp = Instantiate(explosiveClusterObject, transform);
             temp.SetActive(false);
@@ -38,7 +46,7 @@ public class ExplosiveScript : MonoBehaviour
 
     private void Update()
     {
-        if (isArmed)
+        if (isArmed && !isExploded)
         {
             setRays();
         }
@@ -60,7 +68,8 @@ public class ExplosiveScript : MonoBehaviour
         {
             armTrap(collision);
 
-        } else if (explodeList.Contains(collision.collider.tag))
+        }
+        else if (explodeList.Contains(collision.collider.tag))
         {
             detonate();
 
@@ -70,18 +79,23 @@ public class ExplosiveScript : MonoBehaviour
 
     public void detonate()
     {
-        print(name + " kaboom");
-        spriteRenderer.SetActive(false);
-        activeClusters();
-        holdPosition();
-        isArmed = false;
+        if (!isExploded)
+        {
+
+            playSound_Explosion();
+            //print(name + " kaboom");
+            spriteRenderer.SetActive(false);
+            activeClusters();
+            holdPosition();
+            isExploded = true;
+        }
 
     }
 
 
     public void armTrap(Collision2D collision)
     {
-        print(name + " armed");
+        //print(name + " armed");
         holdPosition();
         armAngle = collision.GetContact(0).normal;
         transform.right = collision.GetContact(0).normal;
@@ -89,7 +103,7 @@ public class ExplosiveScript : MonoBehaviour
         transform.position += transform.right * .1f;
         holdPosition();
         isArmed = true;
-        
+
     }
 
     void activeClusters()
@@ -114,12 +128,18 @@ public class ExplosiveScript : MonoBehaviour
         hit = Physics2D.Raycast(transform.position, armAngle, detectRange, layerMask);
         if (hit)
         {
-            print(name + " detect" + hit.collider.gameObject.tag);
+            //print(name + " detect" + hit.collider.gameObject.tag);
             if (explodeList.Contains(hit.collider.tag))
             {
                 detonate();
             }
         }
-        Debug.DrawRay(transform.position, armAngle*detectRange, Color.red);
+        Debug.DrawRay(transform.position, armAngle * detectRange, Color.red);
+    }
+    void playSound_Explosion()
+    {
+        print("play explosion");
+        soundManager.Play(sound_Explosion.name);
+
     }
 }
